@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:policy.app.Views"
+            x:Class="policy.app.Views.MainPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ScrollView VerticalOptions="Fill" HorizontalOptions="Fill">
+                <StackLayout Orientation="Vertical" >
+                    <Image HorizontalOptions="Fill" HeightRequest="300"/>
+                    <TableView HasUnevenRows="True"  HeightRequest="100">
+                        <TableRoot>
+                            <TableSection>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Margin="15" Text="Имя"/>
+                                        <Label Margin="15" Text="Иванов Дмитрий"
+                                               HorizontalOptions="EndAndExpand" />
+                                    </Grid>
+                                </ViewCell>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Margin="15" Text="Город"/>
+                                        <Label Margin="15" Text="Москва"
+                                               HorizontalOptions="EndAndExpand" />
+                                    </Grid>
+                                </ViewCell>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Margin="15" Text="Сфера деят-ти"/>
+                                        <Label Margin="15" Text="Политика"
+                                               HorizontalOptions="EndAndExpand" />
+                                    </Grid>
+                                </ViewCell>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Margin="15" Text="Организация"/>
+                                        <Label Margin="15" Text="Помощник"
+                                               HorizontalOptions="EndAndExpand" />
+                                    </Grid>
+                                </ViewCell>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Text="Нравиться"/>
+                        <Button Grid.Column="1" Text="Просмотрено"/>
+                        <Button Grid.Column="2" Text="Не нравиться"/>
+                    </Grid>
+
+                    <Button HorizontalOptions="Fill" Margin="20" Text="Статистика"/>
+                </StackLayout>
+            </ScrollView>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Text="Профиль" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked" Padding="0"/>
+                <Button Grid.Column="1" Grid.Row="0" Text="Каталог" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="0,1,1,1" Clicked="Button_OnClicked2" Padding="0"/>
+                <Button Grid.Column="0" Grid.Row="1" Text="Рейтинг" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1,0,1,1" Padding="0"/>
+                <Button  Grid.Column="1" Grid.Row="1" Text="О приложении" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="0,0,1,1" Padding="0"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
