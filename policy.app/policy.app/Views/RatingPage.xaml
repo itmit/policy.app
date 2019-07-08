@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="policy.app.Views.CatalogPage"
-             Title="Каталог пользователей">
+             x:Class="policy.app.Views.RatingPage"
+             xmlns:forms="clr-namespace:Xamarin.RangeSlider.Common;assembly=Xamarin.RangeSlider.Common">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -12,11 +12,12 @@
 
             <ScrollView>
                 <StackLayout>
-                    <Label Text="Каталог пользователь" Margin="0, 20" FontSize="18" HorizontalOptions="Center"/>
-                    <Entry Text="Политика" Margin="15"/>
-                    <Entry Text="Россия" Margin="15"/>
+                    <Label Text="Рейтинг пользователей" Margin="0, 20" FontSize="18" HorizontalOptions="Center"/>
+                    <Entry Text="Категории" Margin="15"/>
+                    <Entry Text="От лучшего к худшему"  Margin="15"/>
+                    <Slider Margin="15" Minimum="0" Maximum="100" HorizontalOptions="Fill"/>
                     <Entry Placeholder="Поиск"  Margin="15"/>
-                    <BoxView HorizontalOptions="Fill" Color="Black" HeightRequest="3" Margin="15"/>
+
                     <!--
                     <ListView>
                         <ListView.ItemTemplate>
@@ -75,7 +76,7 @@
                 <Button Text="Профиль" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked"/>
                 <Button Grid.Column="1" Grid.Row="0" Text="Каталог" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked2"/>
                 <Button Grid.Column="0" Grid.Row="1" Text="Рейтинг" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked3"/>
-                <Button  Grid.Column="1" Grid.Row="1" Text="О приложении" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked4"/>
+                <Button Grid.Column="1" Grid.Row="1" Text="О приложении" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked4"/>
             </Grid>
         </Grid>
     </ContentPage.Content>

@@ -14,15 +14,22 @@ namespace policy.app.Views
 
 		private void Button_OnClicked(object sender, EventArgs e)
 		{
-			Navigation.PushAsync(new MainPage());
+			Navigation.PushModalAsync(new MainPage());
 		}
 
 		private void Button_OnClicked2(object sender, EventArgs e)
 		{
-			Task.Run(() =>
-			{
-				Navigation.PushAsync(new CatalogPage());
-			});
+			Navigation.PushModalAsync(new CatalogPage());
+		}
+
+		private void Button_OnClicked3(object sender, EventArgs e)
+		{
+			Navigation.PushModalAsync(new RatingPage());
+		}
+
+		private void Button_OnClicked4(object sender, EventArgs e)
+		{
+			Navigation.PushModalAsync(new AboutPage());
 		}
 	}
 }

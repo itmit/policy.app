@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace policy.app.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CatalogPage : ContentPage
+	public partial class RatingPage : ContentPage
 	{
-		public CatalogPage()
+		public RatingPage()
 		{
 			InitializeComponent();
 		}
@@ -26,7 +26,7 @@ namespace policy.app.Views
 		{
 			Navigation.PushModalAsync(new CatalogPage());
 		}
-
+		
 		private void Button_OnClicked3(object sender, EventArgs e)
 		{
 			Navigation.PushModalAsync(new RatingPage());

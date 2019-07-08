@@ -11,8 +11,8 @@
             </Grid.RowDefinitions>
 
             <ScrollView VerticalOptions="Fill" HorizontalOptions="Fill">
-                <StackLayout Orientation="Vertical" >
-                    <Image HorizontalOptions="Fill" HeightRequest="300"/>
+                <StackLayout Orientation="Vertical" HeightRequest="700">
+                    <Image HorizontalOptions="Fill" HeightRequest="300" Source="avatar.png"/>
                     <TableView HasUnevenRows="True"  HeightRequest="100">
                         <TableRoot>
                             <TableSection>
@@ -73,10 +73,10 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button Text="Профиль" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked" Padding="0"/>
-                <Button Grid.Column="1" Grid.Row="0" Text="Каталог" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="0,1,1,1" Clicked="Button_OnClicked2" Padding="0"/>
-                <Button Grid.Column="0" Grid.Row="1" Text="Рейтинг" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1,0,1,1" Padding="0"/>
-                <Button  Grid.Column="1" Grid.Row="1" Text="О приложении" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="0,0,1,1" Padding="0"/>
+                <Button Text="Профиль" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked"/>
+                <Button Grid.Column="1" Grid.Row="0" Text="Каталог" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked2"/>
+                <Button Grid.Column="0" Grid.Row="1" Text="Рейтинг" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked3"/>
+                <Button Grid.Column="1" Grid.Row="1" Text="О приложении" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked4"/>
             </Grid>
         </Grid>
     </ContentPage.Content>
