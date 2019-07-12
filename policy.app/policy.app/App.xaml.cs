@@ -15,7 +15,7 @@ namespace policy.app
 			InitializeComponent();
 
 			DependencyService.Register<MockDataStore>();
-			MainPage = new MainPage();
+			MainPage = new AuthPage();
 
 
 			/*
