@@ -18,7 +18,7 @@ namespace policy.app.Views
 		}
 
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
             if (Login.Text == "admin")
             {
@@ -28,6 +28,11 @@ namespace policy.app.Views
                     //await Navigation.PushModalAsync(new MainPage());
                 }
             }
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new RegistrationPage();
         }
     }
 }
