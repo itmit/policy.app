@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="policy.app.Pages.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding MessageLabel}"/>
+
+            <Entry Placeholder="E-mail" Text="{Binding Email}" />
+
+            <Entry Placeholder="Телефон" Text="{Binding PhoneNumber}" />
+
+            <Entry Placeholder="Пароль" Text="{Binding Password}" IsPassword="true"/>
+
+            <Entry Placeholder="Подтверждение пароля" Text="{Binding ConfirmPassword}" />
+
+            <DatePicker MinimumDate="01/01/1900"
+                        MaximumDate="12/31/2002"
+                        Date="{Binding DateOfBirthday}" />
+
+            <Button Text="Зарегистрироваться" Command="{Binding OnRegisterButtonClicked}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

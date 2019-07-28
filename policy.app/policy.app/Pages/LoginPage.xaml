@@ -4,9 +4,14 @@
              x:Class="policy.app.Pages.LoginPage">
     <ContentPage.Content>
         <StackLayout>
-            <Entry Placeholder="E-mail"/>
+            <Label Text="{Binding MessageLabel}"/>
 
-            <Entry Placeholder="Password" IsPassword="true"/>
+            <Entry Placeholder="E-mail" Text="{Binding Email}" />
+
+            <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="true"/>
+
+            <Button Text="Войти" Command="{Binding OnLoginButtonClicked}"/>
+            <Button Text="Регистрация" Command="{Binding OnRegisterButtonClicked}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

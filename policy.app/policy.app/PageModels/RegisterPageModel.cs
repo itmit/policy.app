@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Security.Authentication;
-using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Input;
 using FreshMvvm;
-using Newtonsoft.Json;
 using policy.app.Models;
 using policy.app.Services;
 using PropertyChanged;
@@ -16,17 +8,23 @@ using Realms;
 
 namespace policy.app.PageModels
 {
-	/// <summary>
-	/// Представляет модель представления для страницы авторизации.
-	/// </summary>
 	[AddINotifyPropertyChangedInterface]
-	public class LoginPageModel : FreshBasePageModel
+	public class RegisterPageModel : FreshBasePageModel
 	{
 		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает email вводимый пользователем.
 		/// </summary>
 		public string Email
+		{
+			get;
+			set;
+		} = string.Empty;
+
+		/// <summary>
+		/// Возвращает или устанавливает email вводимый пользователем.
+		/// </summary>
+		public string PhoneNumber
 		{
 			get;
 			set;
@@ -51,18 +49,21 @@ namespace policy.app.PageModels
 		} = string.Empty;
 
 		/// <summary>
-		/// Возвращает команду для авторизации.
+		/// Возвращает или устанавливает значение поля подтверждения пароля.
 		/// </summary>
-		public ICommand OnLoginButtonClicked
+		public string ConfirmPassword
 		{
-			get
-			{
-				return new FreshAwaitCommand((param, tcs) =>
-				{
-					OnLoginClicked();
-					tcs.SetResult(true);
-				});
-			}
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает дату рождения.
+		/// </summary>
+		public DateTime DateOfBirthday
+		{
+			get;
+			set;
 		}
 
 		/// <summary>
@@ -74,7 +75,7 @@ namespace policy.app.PageModels
 			{
 				return new FreshAwaitCommand((param, tcs) =>
 				{
-					CoreMethods.PushPageModel<RegisterPageModel>();
+					RegisterAsync();
 				});
 			}
 		}
@@ -82,26 +83,19 @@ namespace policy.app.PageModels
 		private Realm Realm => Realm.GetInstance();
 		#endregion
 
-		#region Private
-		/// <summary>
-		/// Авторизует пользователя при вызове соответствующей команды.
-		/// </summary>
-		private async void OnLoginClicked()
+		private async void RegisterAsync()
 		{
-			User user;
-			try
+			var service = new AuthService();
+			var user = new User()
 			{
-				var service = new AuthService();
-				user = await service.GetUserByTokenAsync(await service.LoginAsync(Email, Password));
-			}
-			catch (AuthenticationException e)
-			{
-				Debug.WriteLine(e);
-				MessageLabel = "Неверно указаны email или пароль";
-				return;
-			}
+				Email = Email,
+				PhoneNumber = PhoneNumber,
+				Birthday = DateOfBirthday
+			};
 
-			App.IsUserLoggedIn = true;
+			user.Token = await service.RegisterAsync(user,
+				Password,
+				ConfirmPassword);
 
 			Realm.Write(() =>
 			{
@@ -110,6 +104,5 @@ namespace policy.app.PageModels
 
 			CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.MainContainer);
 		}
-		#endregion
 	}
 }
