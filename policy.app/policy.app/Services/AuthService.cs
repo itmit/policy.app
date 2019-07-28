@@ -146,7 +146,7 @@ namespace policy.app.Services
 					}
 				});
 
-				response = await client.PostAsync(new Uri(AuthUri), encodedContent);
+				response = await client.PostAsync(new Uri(RegisterUri), encodedContent);
 			}
 
 			var jsonString = await response.Content.ReadAsStringAsync();

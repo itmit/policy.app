@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Security.Authentication;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
@@ -93,9 +95,18 @@ namespace policy.app.PageModels
 				Birthday = DateOfBirthday
 			};
 
-			user.Token = await service.RegisterAsync(user,
-				Password,
-				ConfirmPassword);
+			try
+			{
+				user.Token = await service.RegisterAsync(user,
+														 Password,
+														 ConfirmPassword);
+			}
+			catch (AuthenticationException e)
+			{
+				Debug.WriteLine(e);
+				MessageLabel = "Ошибка регистрации";
+				return;
+			}
 
 			Realm.Write(() =>
 			{
