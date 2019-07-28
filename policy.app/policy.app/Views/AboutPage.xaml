@@ -16,7 +16,7 @@
 
                     <Label Margin="15" HorizontalOptions="Center" Text="Равным образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же консультация с широким активом позволяет оценить значение модели развития. Товарищи! реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации соответствующий условий активизации."></Label>
 
-                    <Label Margin="15" HorizontalOptions="Center" TextColor="Blue" Text="Вы можете написать нам" />
+                    <Button Margin="15" HorizontalOptions="Center" TextColor="Blue" Text="Вы можете написать нам" BorderColor="Transparent" Clicked="Button_Clicked"/>
 
                     <Label Margin="15" HorizontalOptions="Center" TextColor="DarkOrange" Text="Задать вопрос" />
 
@@ -35,10 +35,10 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button Text="Профиль" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked"/>
-                <Button Grid.Column="1" Grid.Row="0" Text="Каталог" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked2"/>
-                <Button Grid.Column="0" Grid.Row="1" Text="Рейтинг" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked3"/>
-                <Button  Grid.Column="1" Grid.Row="1" Text="О приложении" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1" Clicked="Button_OnClicked4"/>
+                <Button Grid.Column="0" Grid.Row="0" Margin="0,0,1,1" Text="профиль" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
+                <Button Grid.Column="1" Grid.Row="0" Margin="1,0,0,1" Text="каталог" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked2" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
+                <Button Grid.Column="0" Grid.Row="1" Margin="0,1,1,0" Text="рейтинг" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked3" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
+                <Button Grid.Column="1" Grid.Row="1" Margin="1,1,0,0" Text="о приложении" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked4" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
             </Grid>
         </Grid>
     </ContentPage.Content>

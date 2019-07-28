@@ -20,7 +20,7 @@ namespace policy.app
 			InitializeComponent();
 
 			DependencyService.Register<MockDataStore>();
-			// MainPage = new MainPage();
+			MainPage = new MainPage();
 
 			var loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
 			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);

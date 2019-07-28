@@ -31,5 +31,10 @@ namespace policy.app.Views
 		{
 			Navigation.PushModalAsync(new AboutPage());
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new WriteToUsPage());
+        }
+    }
 }
