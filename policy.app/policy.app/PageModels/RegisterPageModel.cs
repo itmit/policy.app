@@ -66,7 +66,7 @@ namespace policy.app.PageModels
 		{
 			get;
 			set;
-		}
+		} = new DateTime(2000, 01, 01);
 
 		/// <summary>
 		/// Возвращает команду для кнопки регистрации.

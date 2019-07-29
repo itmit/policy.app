@@ -10,6 +10,9 @@ using policy.app.Models;
 
 namespace policy.app.Services
 {
+	/// <summary>
+	/// Представляет сервис для авторизации.
+	/// </summary>
 	public class AuthService
 	{
 		#region Data
@@ -36,14 +39,14 @@ namespace policy.app.Services
 		#endregion
 		#endregion
 
+		#region Public
 		/// <summary>
 		/// Получает данные авторизованного пользователя по токену.
 		/// </summary>
-		/// <param name="token"></param>
-		/// <returns></returns>
+		/// <param name="token">Токен для получения пользователя</param>
+		/// <returns>Авторизованный пользователь.</returns>
 		public async Task<User> GetUserByTokenAsync(UserToken token)
 		{
-
 			HttpResponseMessage response;
 			using (var client = new HttpClient())
 			{
@@ -59,14 +62,13 @@ namespace policy.app.Services
 			{
 				if (jsonString != null)
 				{
-					JsonDataResponse<User> jsonData = JsonConvert.DeserializeObject<JsonDataResponse<User>>(jsonString);
+					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<User>>(jsonString);
 					jsonData.Data.Token = token;
 					return await Task.FromResult(jsonData.Data);
 				}
 			}
 
 			throw new AuthenticationException($"Пользователь с таким токеном, не найден. Токен: {token.Token}");
-
 		}
 
 		/// <summary>
@@ -83,14 +85,13 @@ namespace policy.app.Services
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(SecretKey);
 
-				var encodedContent = new FormUrlEncodedContent(new Dictionary<string, string> {
+				var encodedContent = new FormUrlEncodedContent(new Dictionary<string, string>
+				{
 					{
-						"login",
-						login
+						"login", login
 					},
 					{
-						"password",
-						pass
+						"password", pass
 					}
 				});
 
@@ -104,7 +105,7 @@ namespace policy.app.Services
 			{
 				if (jsonString != null)
 				{
-					JsonDataResponse<UserToken> jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
+					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
 					return await Task.FromResult(jsonData.Data);
 				}
 			}
@@ -112,37 +113,38 @@ namespace policy.app.Services
 			throw new AuthenticationException($"Возникла ошибка при авторизации. Логин: {login}");
 		}
 
+		/// <summary>
+		/// Отправляет запрос для регистрации, при помощи rest api.
+		/// </summary>
+		/// <param name="user">Пользователь, которого необходимо зарегистрировать.</param>
+		/// <param name="password">Пароль пользователя.</param>
+		/// <param name="confirmPassword">подтверждение пароля.</param>
+		/// <returns>Токен нового пользователя.</returns>
 		public async Task<UserToken> RegisterAsync(User user, string password, string confirmPassword)
 		{
 			HttpResponseMessage response;
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(SecretKey);
-
-				var encodedContent = new FormUrlEncodedContent(new Dictionary<string, string> {
+				var encodedContent = new FormUrlEncodedContent(new Dictionary<string, string>
+				{
 					{
-						"email",
-						user.Email
+						"email", user.Email
 					},
 					{
-						"phone",
-						user.PhoneNumber
+						"phone", user.PhoneNumber
 					},
 					{
-						"password",
-						password
+						"password", password
 					},
 					{
-						"c_password",
-						confirmPassword
+						"c_password", confirmPassword
 					},
 					{
-						"birthday",
-						user.Birthday.ToString()
+						"birthday", user.Birthday.ToString("yyyy-M-d")
 					},
 					{
-						"uid",
-						user.StoredUserGuidString
+						"uid", user.StoredUserGuidString
 					}
 				});
 
@@ -156,12 +158,14 @@ namespace policy.app.Services
 			{
 				if (jsonString != null)
 				{
-					JsonDataResponse<UserToken> jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
+					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
 					return await Task.FromResult(jsonData.Data);
 				}
 			}
 
-			throw new AuthenticationException($"Возникла ошибка при авторизации. Логин: ");
+			// TODO: Написать нормальную ошибку с сообщением из api.
+			throw new AuthenticationException("Возникла ошибка при авторизации. Логин: ");
 		}
+		#endregion
 	}
 }
