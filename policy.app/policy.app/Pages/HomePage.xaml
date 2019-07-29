@@ -1,46 +1,57 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="policy.app.Pages.HomePage">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="4*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <ScrollView VerticalOptions="Fill" HorizontalOptions="Fill">
                 <StackLayout Orientation="Vertical" HeightRequest="700">
-                    <Image HorizontalOptions="Fill" HeightRequest="300" Source="avatar.png"/>
-                    <TableView HasUnevenRows="True"  HeightRequest="100">
+                    <Image HorizontalOptions="Fill" HeightRequest="300" Source="avatar.png" />
+                    <TableView HasUnevenRows="True" HeightRequest="100">
                         <TableRoot>
                             <TableSection>
                                 <ViewCell>
                                     <Grid>
-                                        <Label Margin="15" FontSize="Medium" Text="Имя" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                                        <Label Margin="15" FontSize="Large" TextColor="#19365f" Text="Иванов Дмитрий"
-                                               HorizontalOptions="EndAndExpand" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" />
+                                        <Label Margin="15" FontSize="Medium" Text="Имя"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                                        <Label Margin="15" FontSize="Large" TextColor="#19365f" Text="{Binding Name}"
+                                               HorizontalOptions="EndAndExpand"
+                                               FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" />
                                     </Grid>
                                 </ViewCell>
                                 <ViewCell>
                                     <Grid>
-                                        <Label Margin="15" FontSize="Medium" Text="Город" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                                        <Label Margin="15" FontSize="Medium" TextColor="#19365f" Text="Москва"
-                                               HorizontalOptions="EndAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                        <Label Margin="15" FontSize="Medium" Text="Город"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                                        <Label Margin="15" FontSize="Medium" TextColor="#19365f" Text="{Binding City}"
+                                               HorizontalOptions="EndAndExpand"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
                                     </Grid>
                                 </ViewCell>
                                 <ViewCell>
                                     <Grid>
-                                        <Label Margin="15" FontSize="Medium" Text="Сфера деятельности" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                                        <Label Margin="15" FontSize="Medium" TextColor="#19365f" Text="Политика"
-                                               HorizontalOptions="EndAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                        <Label Margin="15" FontSize="Medium" Text="Сфера деятельности"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                                        <Label Margin="15" FontSize="Medium" TextColor="#19365f"
+                                               Text="{Binding Activity}"
+                                               HorizontalOptions="EndAndExpand"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
                                     </Grid>
                                 </ViewCell>
                                 <ViewCell>
                                     <Grid>
-                                        <Label Margin="15" FontSize="Medium" Text="Организация" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                                        <Label Margin="15" FontSize="Medium" TextColor="#19365f" Text="Помощник"
-                                               HorizontalOptions="EndAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                        <Label Margin="15" FontSize="Medium" Text="Организация"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                                        <Label Margin="15" FontSize="Medium" TextColor="#19365f"
+                                               Text="{Binding Organization}"
+                                               HorizontalOptions="EndAndExpand"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
                                     </Grid>
                                 </ViewCell>
                             </TableSection>
@@ -49,33 +60,42 @@
 
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <Button Text="Нравиться"/>
-                        <Button Grid.Column="1" Text="Просмотрено"/>
-                        <Button Grid.Column="2" Text="Не нравиться"/>
+                        <Button Text="Нравиться" />
+                        <Button Grid.Column="1" Text="Просмотрено" />
+                        <Button Grid.Column="2" Text="Не нравиться" />
                     </Grid>
 
-                    <Button HorizontalOptions="Fill" Margin="20" Text="Статистика"/>
+                    <Button HorizontalOptions="Fill" Margin="20" Text="Статистика" />
                 </StackLayout>
             </ScrollView>
 
             <Grid Grid.Row="1" ColumnSpacing="0" RowSpacing="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Button Grid.Column="0" Grid.Row="0" Margin="0,0,1,1" Text="профиль" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
-                <Button Grid.Column="1" Grid.Row="0" Margin="1,0,0,1" Text="каталог" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked2" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
-                <Button Grid.Column="0" Grid.Row="1" Margin="0,1,1,0" Text="рейтинг" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked3" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
-                <Button Grid.Column="1" Grid.Row="1" Margin="1,1,0,0" Text="о приложении" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked4" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
+                <Button Grid.Column="0" Grid.Row="0" Margin="0,0,1,1" Text="профиль" HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked"
+                        FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium" />
+                <Button Grid.Column="1" Grid.Row="0" Margin="1,0,0,1" Text="каталог" HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked2"
+                        FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium" />
+                <Button Grid.Column="0" Grid.Row="1" Margin="0,1,1,0" Text="рейтинг" HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked3"
+                        FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium" />
+                <Button Grid.Column="1" Grid.Row="1" Margin="1,1,0,0" Text="о приложении"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef"
+                        Clicked="Button_OnClicked4"
+                        FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium" />
             </Grid>
         </Grid>
     </ContentPage.Content>
