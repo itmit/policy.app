@@ -7,6 +7,7 @@ using policy.app.Models;
 using policy.app.Services;
 using PropertyChanged;
 using Realms;
+using Xamarin.Forms;
 
 namespace policy.app.PageModels
 {
@@ -14,42 +15,6 @@ namespace policy.app.PageModels
 	public class RegisterPageModel : FreshBasePageModel
 	{
 		#region Properties
-		/// <summary>
-		/// Возвращает или устанавливает email вводимый пользователем.
-		/// </summary>
-		public string Email
-		{
-			get;
-			set;
-		} = string.Empty;
-
-		/// <summary>
-		/// Возвращает или устанавливает email вводимый пользователем.
-		/// </summary>
-		public string PhoneNumber
-		{
-			get;
-			set;
-		} = string.Empty;
-
-		/// <summary>
-		/// Возвращает или устанавливает пароль вводимый пользователем.
-		/// </summary>
-		public string Password
-		{
-			get;
-			set;
-		} = string.Empty;
-
-		/// <summary>
-		/// Возвращает или устанавливает сообщение выводимое пользователю.
-		/// </summary>
-		public string MessageLabel
-		{
-			get;
-			set;
-		} = string.Empty;
-
 		/// <summary>
 		/// Возвращает или устанавливает значение поля подтверждения пароля.
 		/// </summary>
@@ -69,6 +34,42 @@ namespace policy.app.PageModels
 		} = new DateTime(2000, 01, 01);
 
 		/// <summary>
+		/// Возвращает или устанавливает email вводимый пользователем.
+		/// </summary>
+		public string Email
+		{
+			get;
+			set;
+		} = string.Empty;
+
+		/// <summary>
+		/// Возвращает или устанавливает сообщение выводимое пользователю.
+		/// </summary>
+		public string MessageLabel
+		{
+			get;
+			set;
+		} = string.Empty;
+
+		/// <summary>
+		/// Возвращает или устанавливает пароль вводимый пользователем.
+		/// </summary>
+		public string Password
+		{
+			get;
+			set;
+		} = string.Empty;
+
+		/// <summary>
+		/// Возвращает или устанавливает email вводимый пользователем.
+		/// </summary>
+		public string PhoneNumber
+		{
+			get;
+			set;
+		} = string.Empty;
+
+		/// <summary>
 		/// Возвращает команду для кнопки регистрации.
 		/// </summary>
 		public ICommand OnRegisterButtonClicked
@@ -85,10 +86,14 @@ namespace policy.app.PageModels
 		private Realm Realm => Realm.GetInstance();
 		#endregion
 
+		#region Private
+		/// <summary>
+		/// Вызывает регистрацию пользователя, через IAuthService, а также сохраняет нового пользователя.
+		/// </summary>
 		private async void RegisterAsync()
 		{
-			var service = new AuthService();
-			var user = new User()
+			var service = DependencyService.Get<IAuthService>();
+			var user = new User
 			{
 				Email = Email,
 				PhoneNumber = PhoneNumber,
@@ -97,9 +102,7 @@ namespace policy.app.PageModels
 
 			try
 			{
-				user.Token = await service.RegisterAsync(user,
-														 Password,
-														 ConfirmPassword);
+				user.Token = await service.RegisterAsync(user, Password, ConfirmPassword);
 			}
 			catch (AuthenticationException e)
 			{
@@ -115,5 +118,6 @@ namespace policy.app.PageModels
 
 			CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.MainContainer);
 		}
+		#endregion
 	}
 }

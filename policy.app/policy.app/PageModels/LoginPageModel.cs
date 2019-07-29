@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Net.Http.Headers;
+﻿using System.Diagnostics;
 using System.Security.Authentication;
-using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Input;
 using FreshMvvm;
-using Newtonsoft.Json;
 using policy.app.Models;
 using policy.app.Services;
 using PropertyChanged;
 using Realms;
+using Xamarin.Forms;
 
 namespace policy.app.PageModels
 {
@@ -33,18 +27,18 @@ namespace policy.app.PageModels
 		} = string.Empty;
 
 		/// <summary>
-		/// Возвращает или устанавливает пароль вводимый пользователем.
+		/// Возвращает или устанавливает сообщение выводимое пользователю.
 		/// </summary>
-		public string Password
+		public string MessageLabel
 		{
 			get;
 			set;
 		} = string.Empty;
 
 		/// <summary>
-		/// Возвращает или устанавливает сообщение выводимое пользователю.
+		/// Возвращает или устанавливает пароль вводимый пользователем.
 		/// </summary>
-		public string MessageLabel
+		public string Password
 		{
 			get;
 			set;
@@ -91,7 +85,8 @@ namespace policy.app.PageModels
 			User user;
 			try
 			{
-				var service = new AuthService();
+				var service = DependencyService.Get<IAuthService>();
+
 				user = await service.GetUserByTokenAsync(await service.LoginAsync(Email, Password));
 			}
 			catch (AuthenticationException e)

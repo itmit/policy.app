@@ -18,7 +18,8 @@ namespace policy.app
 		{
 			InitializeComponent();
 
-			DependencyService.Register<MockDataStore>();
+			DependencyService.Register<IAuthService>();
+
 			MainPage = new MainPage();
 
 			var loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
