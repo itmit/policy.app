@@ -22,16 +22,14 @@ namespace policy.app.PageModels
 							 .All<User>();
 			var user = users?.SingleOrDefault();
 
-			if (user == null)
+			if (user != null)
 			{
-				CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.AuthenticationContainer);
-				return;
+				Name = user.Name;
+				City = user.City;
+				Activity = user.FieldOfActivity;
+				Organization = user.Organization;
 			}
 
-			Name = user.Name;
-			City = user.City;
-			Activity = user.FieldOfActivity;
-			Organization = user.Organization;
 		}
 		#endregion
 

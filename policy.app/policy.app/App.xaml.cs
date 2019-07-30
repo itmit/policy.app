@@ -9,6 +9,7 @@ using policy.app.Services;
 using policy.app.Views;
 using Realms;
 
+[assembly: Xamarin.Forms.Dependency(typeof(AuthService))]
 namespace policy.app
 {
 	public partial class App : Application

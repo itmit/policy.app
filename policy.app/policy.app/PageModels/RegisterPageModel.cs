@@ -92,7 +92,7 @@ namespace policy.app.PageModels
 		/// </summary>
 		private async void RegisterAsync()
 		{
-			var service = DependencyService.Get<IAuthService>();
+			var service = new AuthService();
 			var user = new User
 			{
 				Email = Email,

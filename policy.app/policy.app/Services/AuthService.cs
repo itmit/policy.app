@@ -39,6 +39,9 @@ namespace policy.app.Services
 		#endregion
 		#endregion
 
+		public AuthService()
+		{ }
+
 		#region Public
 		/// <summary>
 		/// Получает данные авторизованного пользователя по токену.

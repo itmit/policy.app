@@ -6,7 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using policy.app.Services;
 
+[assembly: Xamarin.Forms.Dependency(typeof(AuthService))]
 namespace policy.app.Droid
 {
     [Activity(Label = "policy.app", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

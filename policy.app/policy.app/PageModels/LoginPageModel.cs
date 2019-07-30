@@ -85,7 +85,7 @@ namespace policy.app.PageModels
 			User user;
 			try
 			{
-				var service = DependencyService.Get<IAuthService>();
+				var service = new AuthService();
 
 				user = await service.GetUserByTokenAsync(await service.LoginAsync(Email, Password));
 			}

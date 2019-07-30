@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using policy.app.Services;
 using UIKit;
 
+[assembly: Xamarin.Forms.Dependency(typeof(AuthService))]
 namespace policy.app.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
