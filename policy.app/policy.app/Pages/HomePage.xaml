@@ -2,7 +2,9 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="policy.app.Pages.HomePage">
+             x:Class="policy.app.Pages.HomePage"
+             NavigationPage.HasNavigationBar="False"
+             >
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -12,7 +14,7 @@
 
             <ScrollView VerticalOptions="Fill" HorizontalOptions="Fill">
                 <StackLayout Orientation="Vertical" HeightRequest="700">
-                    <Image HorizontalOptions="Fill" HeightRequest="300" Source="avatar.png" />
+                    <Image HorizontalOptions="Fill" VerticalOptions="Fill" Source="avatar.png" />
                     <TableView HasUnevenRows="True" HeightRequest="100">
                         <TableRoot>
                             <TableSection>
@@ -54,23 +56,68 @@
                                                FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
                                     </Grid>
                                 </ViewCell>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Margin="15" FontSize="Medium" Text="Должность"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                                        <Label Margin="15" FontSize="Medium" TextColor="#19365f"
+                                               Text="{Binding Doljnost}"
+                                               HorizontalOptions="EndAndExpand"
+                                               FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                                    </Grid>
+                                </ViewCell>
                             </TableSection>
                         </TableRoot>
                     </TableView>
 
-                    <Grid>
+                    <Grid ColumnSpacing="5" Padding="20,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <Button Text="Нравиться" />
-                        <Button Grid.Column="1" Text="Просмотрено" />
-                        <Button Grid.Column="2" Text="Не нравиться" />
+                        <StackLayout>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="100" FontSize="50" TextColor="#228bcc" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                <Image Grid.Column="1" Source="img_131540" WidthRequest="40"/>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="30" FontSize="50" TextColor="#19365f" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                <Image Grid.Column="1" Source="smail"/>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="60" FontSize="50" TextColor="#f07d14" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                <Image Grid.Column="1" Source="img_1315401" WidthRequest="40"/>
+                            </Grid>
+                        </StackLayout>
                     </Grid>
-
-                    <Button HorizontalOptions="Fill" Margin="20" Text="Статистика" />
+                    <StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="icon" Margin="0,0,0,0" WidthRequest="40" HorizontalOptions="End"/>
+                            <Label Grid.Column="1" FontSize="Large" Text="Статистика" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                        </Grid>
+                    </StackLayout>
                 </StackLayout>
             </ScrollView>
 

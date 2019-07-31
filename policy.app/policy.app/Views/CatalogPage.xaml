@@ -63,14 +63,14 @@
                 </StackLayout>
             </ScrollView>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" ColumnSpacing="0" RowSpacing="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Button Grid.Column="0" Grid.Row="0" Margin="0,0,1,1" Text="профиль" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
                 <Button Grid.Column="1" Grid.Row="0" Margin="1,0,0,1" Text="каталог" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#e3e9ef" Clicked="Button_OnClicked2" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" FontSize="Medium"/>
