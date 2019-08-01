@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:policy.app.Controls"
+             x:Class="policy.app.Pages.EditPage">
+    <ContentPage.Content>
+        <StackLayout Margin="25">
+            <Label Text="{Binding MessageLabel}"/>
+            <controls:EntryAuthPage Placeholder="ФИО" Text="{Binding Name}"  FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+            <controls:EntryAuthPage Placeholder="Город" Text="{Binding City}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+            <controls:EntryAuthPage Placeholder="Область деятельности" Text="{Binding FieldOfActivity}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+            <controls:EntryAuthPage Placeholder="Организация" Text="{Binding Organization}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+            <controls:EntryAuthPage Placeholder="Должность" Text="{Binding Position}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+            <Button x:Name="RegisterButton" 
+                    Text="Зарегистрироваться" 
+                    Command="{Binding OnSaveButtonClicked}" 
+                    BorderColor="#228bcc" 
+                    BorderWidth="1" 
+                    BackgroundColor="Transparent" 
+                    HorizontalOptions="Center" 
+                    WidthRequest="250" 
+                    HeightRequest="60" 
+                    TextColor="#228bcc"
+                    CornerRadius="30" 
+                    FontSize="Medium" 
+                    FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
