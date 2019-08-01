@@ -129,6 +129,7 @@ namespace policy.app.Services
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(SecretKey);
+				var date = user.Birthday.ToString("yyyy-MM-dd");
 				var encodedContent = new FormUrlEncodedContent(new Dictionary<string, string>
 				{
 					{
@@ -144,7 +145,7 @@ namespace policy.app.Services
 						"c_password", confirmPassword
 					},
 					{
-						"birthday", user.Birthday.ToString("yyyy-M-d")
+						"birthday", date
 					},
 					{
 						"uid", user.StoredUserGuidString

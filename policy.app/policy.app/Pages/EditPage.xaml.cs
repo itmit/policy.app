@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace policy.app.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RegisterPage : ContentPage
+	public partial class EditPage : ContentPage
 	{
-		public RegisterPage ()
+		public EditPage()
 		{
-			InitializeComponent ();
-		}
-
-		private void Button_OnClicked(object sender, EventArgs e)
-		{
-			RegisterButton.IsEnabled = true;
+			InitializeComponent();
 		}
 	}
 }
