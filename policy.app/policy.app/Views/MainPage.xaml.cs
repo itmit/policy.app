@@ -1,4 +1,5 @@
-﻿using System;
+﻿using policy.app.Pages;
+using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,7 +15,7 @@ namespace policy.app.Views
 
 		private void Button_OnClicked(object sender, EventArgs e)
 		{
-			Navigation.PushModalAsync(new MainPage());
+			Navigation.PushModalAsync(new HomePage());
 		}
 
 		private void Button_OnClicked2(object sender, EventArgs e)

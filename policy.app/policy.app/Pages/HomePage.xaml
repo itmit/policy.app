@@ -2,8 +2,10 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ex="clr-namespace:policy.app.Controls"
              x:Class="policy.app.Pages.HomePage"
              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#f4f5f6"
              >
     <ContentPage.Content>
         <Grid>
@@ -12,10 +14,10 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <ScrollView VerticalOptions="Fill" HorizontalOptions="Fill">
-                <StackLayout Orientation="Vertical" HeightRequest="700">
+            <ScrollView>
+                <StackLayout Orientation="Vertical" HeightRequest="650">
                     <Image HorizontalOptions="Fill" VerticalOptions="Fill" Source="avatar.png" />
-                    <TableView HasUnevenRows="True" HeightRequest="100">
+                    <ex:TableViewHomePage HasUnevenRows="True" RowHeight="-1" HeightRequest="-2" SeparatorColor="Transparent">
                         <TableRoot>
                             <TableSection>
                                 <ViewCell>
@@ -68,55 +70,28 @@
                                 </ViewCell>
                             </TableSection>
                         </TableRoot>
-                    </TableView>
-
-                    <Grid ColumnSpacing="5" Padding="20,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-
-                        <StackLayout>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Text="100" FontSize="50" TextColor="#228bcc" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                                <Image Grid.Column="1" Source="img_131540" WidthRequest="40"/>
-                            </Grid>
+                    </ex:TableViewHomePage>
+                    <StackLayout Orientation="Horizontal" Padding="0" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="100" FontSize="50" TextColor="#228bcc" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                            <Image Source="img_131540" WidthRequest="40"/>
                         </StackLayout>
-                        <StackLayout Grid.Column="1">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Text="30" FontSize="50" TextColor="#19365f" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                                <Image Grid.Column="1" Source="smail"/>
-                            </Grid>
+                        <StackLayout Grid.Column="1" Orientation="Horizontal" Margin="30,0">
+                            <Label Text="30" FontSize="50" TextColor="#19365f" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                            <Image Source="smail"  WidthRequest="40"/>
                         </StackLayout>
-                        <StackLayout Grid.Column="2">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Text="60" FontSize="50" TextColor="#f07d14" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                                <Image Grid.Column="1" Source="img_1315401" WidthRequest="40"/>
-                            </Grid>
+                        <StackLayout Grid.Column="2" Orientation="Horizontal">
+                            <Label Text="60" FontSize="50" TextColor="#f07d14" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                            <Image Source="img_1315401" WidthRequest="40"/>
                         </StackLayout>
-                    </Grid>
-                    <StackLayout>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="icon" Margin="0,0,0,0" WidthRequest="40" HorizontalOptions="End"/>
-                            <Label Grid.Column="1" FontSize="Large" Text="Статистика" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                        </Grid>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Gray" Padding="1" Margin="20,30">
+                        <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
+                            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                                <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
+                                <Label FontSize="30" Text="Статистика" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center" TextColor="#19365f"/>
+                            </StackLayout>
+                        </StackLayout>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
