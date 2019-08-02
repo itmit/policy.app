@@ -12,7 +12,7 @@
             <controls:EntryAuthPage Placeholder="Организация" Text="{Binding Organization}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
             <controls:EntryAuthPage Placeholder="Должность" Text="{Binding Position}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
             <Button x:Name="RegisterButton" 
-                    Text="Зарегистрироваться" 
+                    Text="Сохранить" 
                     Command="{Binding OnSaveButtonClicked}" 
                     BorderColor="#228bcc" 
                     BorderWidth="1" 

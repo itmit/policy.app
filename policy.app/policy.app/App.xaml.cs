@@ -14,33 +14,27 @@ namespace policy.app
 {
 	public partial class App : Application
 	{
-
 		public App()
 		{
 			InitializeComponent();
 
-			DependencyService.Register<IAuthService>();
-
 			MainPage = new MainPage();
 
-			var loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
+			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
 			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
 
-			var mainPage = FreshPageModelResolver.ResolvePageModel<HomePageModel>();
+			Page mainPage = FreshPageModelResolver.ResolvePageModel<HomePageModel>();
 			var mainContainer = new FreshNavigationContainer(mainPage, NavigationContainerNames.MainContainer);
 
-			var realm = Realm.GetInstance();
-			var user = realm.All<User>();
-			var userIsFound = user?.Count() > 0;
+			User user = Realm.GetInstance().All<User>()?.SingleOrDefault();
 
-			if (IsUserLoggedIn | userIsFound)
+			if (IsUserLoggedIn | user != null)
 			{
 				MainPage = mainContainer;
+				return;
 			}
-			else
-			{
-				MainPage = loginContainer;
-			}
+
+			MainPage = loginContainer;
 		}
 
 		public static bool IsUserLoggedIn

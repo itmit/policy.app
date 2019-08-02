@@ -117,6 +117,7 @@ namespace policy.app.PageModels
 			});
 
 			CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.MainContainer);
+			await CoreMethods.PushPageModel<EditPageModel>();
 		}
 		#endregion
 	}
