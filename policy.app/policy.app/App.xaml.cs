@@ -23,7 +23,7 @@ namespace policy.app
 			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
 			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
 
-			Page mainPage = FreshPageModelResolver.ResolvePageModel<HomePageModel>();
+			Page mainPage = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
 			var mainContainer = new FreshNavigationContainer(mainPage, NavigationContainerNames.MainContainer);
 
 			User user = Realm.GetInstance().All<User>()?.SingleOrDefault();

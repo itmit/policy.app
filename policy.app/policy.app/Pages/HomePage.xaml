@@ -1,55 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:policy.app.Views"
-             xmlns:androidSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-             x:Class="policy.app.Pages.HomePage"
-             NavigationPage.HasNavigationBar="false"
-             androidSpecific:TabbedPage.IsSwipePagingEnabled="False"
-             BackgroundColor="#222222"
-             BarBackgroundColor="#2e2e2e"
-             >
-<!--
-    <TabbedPage.Children>
-        <NavigationPage>
-            <NavigationPage.IconImageSource>
-                <FileImageSource File="ic_adjust_black_36dp.png" />
-            </NavigationPage.IconImageSource>
-            <x:Arguments>
-                <views:alarm />
-            </x:Arguments>
-        </NavigationPage>
-        <NavigationPage>
-            <NavigationPage.IconImageSource>
-                <FileImageSource File="ic_call_black_36dp.png" />
-            </NavigationPage.IconImageSource>
-            <x:Arguments>
-                <views:AboutPage/>
-            </x:Arguments>
-        </NavigationPage>
-        <NavigationPage>
-            <NavigationPage.IconImageSource>
-                <FileImageSource File="ic_account_circle_black_36dp.png" />
-            </NavigationPage.IconImageSource>
-            <x:Arguments>
-                <views:LcPage />
-            </x:Arguments>
-        </NavigationPage>
-        <NavigationPage>
-            <NavigationPage.IconImageSource>
-                <FileImageSource File="ic_arrow_back_black_36dp.png" />
-            </NavigationPage.IconImageSource>
-            <x:Arguments>
-                <views:AboutPage />
-            </x:Arguments>
-        </NavigationPage>
-        <NavigationPage>
-            <NavigationPage.IconImageSource>
-                <FileImageSource File="ic_keyboard_tab_black_36dp.png" />
-            </NavigationPage.IconImageSource>
-            <x:Arguments>
-                <views:AboutPage />
-            </x:Arguments>
-        </NavigationPage>
-    -->
-</TabbedPage>
+             x:Class="policy.app.Pages.HomePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <ListView SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding MenuCollection}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HeightRequest="45" HorizontalOptions="Fill">
+                                <Label FontSize="Medium" Text="MenuItem" Margin="10"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

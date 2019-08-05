@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
 using FreshMvvm;
 using policy.app.Models;
 using PropertyChanged;
@@ -18,53 +19,28 @@ namespace policy.app.PageModels
 		/// </summary>
 		public HomePageModel()
 		{
-			var users = Realm.GetInstance()
-							 .All<User>();
-			var user = users?.SingleOrDefault();
-
-			if (user != null)
+			MenuCollection = new ObservableCollection<string>
 			{
-				Name = user.Name;
-				City = user.City;
-				Activity = user.FieldOfActivity;
-				Organization = user.Organization;
-			}
-
+				"1",
+				"2"
+			};
 		}
 		#endregion
 
 		#region Properties
 		/// <summary>
-		/// Возвращает или устанавливает сферу деятельности текущего пользователя.
+		/// Возвращает или устанавливает выбранный пункт меню.
 		/// </summary>
-		public string Activity
+		public string SelectedItem
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// Возвращает или устанавливает город текущего пользователя.
+		/// Возвращает список пунктов меню для домашней страницы.
 		/// </summary>
-		public string City
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает имя текущего пользователя.
-		/// </summary>
-		public string Name
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает организацию текущего пользователя.
-		/// </summary>
-		public string Organization
+		public ObservableCollection<string> MenuCollection
 		{
 			get;
 			set;

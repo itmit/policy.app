@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace policy.app.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : TabbedPage
+	public partial class HomePage : ContentPage
 	{
 		public HomePage()
 		{
