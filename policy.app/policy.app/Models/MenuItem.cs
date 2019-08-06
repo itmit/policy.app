@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace policy.app.Models
 {
@@ -17,13 +18,12 @@ namespace policy.app.Models
 		}
 
 		/// <summary>
-		/// Возвращает или устанавливает страницу для перехода.
+		/// Возвращает или устанавливает тип модели страницы для перехода.
 		/// </summary>
-		public Page Page
+		public Type PageModelType
 		{
 			get;
 			set;
 		}
-
 	}
 }

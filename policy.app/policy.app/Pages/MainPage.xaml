@@ -38,10 +38,13 @@
                 <views:AboutPage />
             </x:Arguments>
         </NavigationPage>
-        <MasterDetailPage >
-            <MasterDetailPage.IconImageSource>
-                <FileImageSource File="ic_action_dehaze.png"/>
-            </MasterDetailPage.IconImageSource>
-        </MasterDetailPage>
+        <NavigationPage>
+            <NavigationPage.IconImageSource>
+                <FileImageSource File="ic_action_dehaze.png" />
+            </NavigationPage.IconImageSource>
+            <x:Arguments>
+                <views:AboutPage />
+            </x:Arguments>
+        </NavigationPage>
     </TabbedPage.Children>
 </TabbedPage>

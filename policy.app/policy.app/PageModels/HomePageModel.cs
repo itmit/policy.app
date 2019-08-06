@@ -19,10 +19,9 @@ namespace policy.app.PageModels
 		/// </summary>
 		public HomePageModel()
 		{
-			MenuCollection = new ObservableCollection<string>
+			MenuCollection = new ObservableCollection<MenuItem>
 			{
-				"1",
-				"2"
+				//new MenuItem
 			};
 		}
 		#endregion
@@ -40,7 +39,7 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Возвращает список пунктов меню для домашней страницы.
 		/// </summary>
-		public ObservableCollection<string> MenuCollection
+		public ObservableCollection<MenuItem> MenuCollection
 		{
 			get;
 			set;
