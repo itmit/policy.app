@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="policy.app.Pages.RatingPage">
+    <ContentPage.Content>
+        <ScrollView>
+                <StackLayout>
+                    <Label Text="Рейтинг пользователей" Margin="0, 20" FontSize="18" HorizontalOptions="Center"/>
+                    <Picker Title="Категории" x:Name="Cat" Margin="15" >
+                        <Picker.Items>
+                            <x:String>Политика</x:String>
+                            <x:String>Музыка</x:String>
+                            <x:String>Кино</x:String>
+                            <x:String>Телевидение</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Picker Title="От лучшего к худшему" Margin="15">
+                        <Picker.Items>
+                            <x:String>От лучшего к худшему</x:String>
+                            <x:String>От худшего к лудшему</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Slider Margin="15" Minimum="0" Maximum="100" HorizontalOptions="Fill"/>
+                    <Entry Placeholder="Поиск"  Margin="15"/>
+
+                    <!--
+                    <ListView>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    -->
+                    <TableView HasUnevenRows="True"  HeightRequest="100">
+                        <TableRoot>
+                            <TableSection>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="user_picture.png" Margin="5"/>
+                                        <Label Margin="15" Text="Пестель Яна"
+                                               VerticalOptions="Center" />
+                                        <Button HeightRequest="30" Margin="0" Padding="5" TextColor="White" Text="политика" CornerRadius="30" BackgroundColor="#3fe9d7" VerticalOptions="Fill" HorizontalOptions="End"/>
+                                    </StackLayout>
+                                </ViewCell>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="user_picture.png" Margin="5"/>
+                                        <Label Margin="15" Text="Ковалев Денис Викторович"
+                                               VerticalOptions="Center" />
+                                        <Button HeightRequest="30" Margin="0" Padding="5" TextColor="White" Text="музыка" CornerRadius="30" BackgroundColor="#f89c49" HorizontalOptions="End"/>
+                                    </StackLayout>
+                                </ViewCell>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="user_picture.png" Margin="5"/>
+                                        <Label Margin="15" Text="Кирченко Ирина Игоревна"
+                                               VerticalOptions="Center" />
+                                        <Button HeightRequest="30" Padding="5" TextColor="White" Text="кино" CornerRadius="30" BackgroundColor="#41f256" HorizontalOptions="End"/>
+                                    </StackLayout>
+                                </ViewCell>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="user_picture.png" Margin="5"/>
+                                        <Label Margin="15" Text="Сеничев Данил Дмитриевич"
+                                               VerticalOptions="Center" />
+                                        <Button HeightRequest="30" Padding="5" TextColor="White" Text="телевиденье" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+                </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

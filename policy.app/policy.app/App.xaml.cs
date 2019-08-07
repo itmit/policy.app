@@ -3,6 +3,7 @@ using System.Linq;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.PageModels;
+using policy.app.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using policy.app.Services;
@@ -14,23 +15,25 @@ namespace policy.app
 {
 	public partial class App : Application
 	{
+
 		public App()
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			var tabbedNavigation = new MainTabbedPage();
+			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
+			tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
+			tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
+			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
 
 			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
 			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
-
-			Page mainPage = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
-			var mainContainer = new FreshNavigationContainer(mainPage, NavigationContainerNames.MainContainer);
 
 			User user = Realm.GetInstance().All<User>()?.SingleOrDefault();
 
 			if (IsUserLoggedIn | user != null)
 			{
-				MainPage = mainContainer;
+				MainPage = tabbedNavigation;
 				return;
 			}
 

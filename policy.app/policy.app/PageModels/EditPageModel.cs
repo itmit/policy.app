@@ -5,6 +5,9 @@ using Realms;
 
 namespace policy.app.PageModels
 {
+	/// <summary>
+	/// Представляет модель представления для страницы изменения данных.
+	/// </summary>
 	[AddINotifyPropertyChangedInterface]
 	public class EditPageModel : FreshBasePageModel
 	{
