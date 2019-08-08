@@ -20,31 +20,43 @@ namespace policy.app
 		{
 			InitializeComponent();
 
-			var tabbedNavigation = new MainTabbedPage();
-			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
-			tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
-			tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
-			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
+			var loginContainer = new FreshNavigationContainer(
+				FreshPageModelResolver.ResolvePageModel<LoginPageModel>(),
+				NavigationContainerNames.AuthenticationContainer
+			);
 
-			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
-			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
-
-			User user = Realm.GetInstance().All<User>()?.SingleOrDefault();
-
-			if (IsUserLoggedIn | user != null)
+			if (IsUserLoggedIn)
 			{
-				MainPage = tabbedNavigation;
+				if (Current.Properties.ContainsKey("FirstUse"))
+				{
+					MainPage = GeMainTabbedPage();
+				}
+				else
+				{
+					Current.Properties["FirstUse"] = false;
+
+					MainPage = FreshPageModelResolver.ResolvePageModel<FirstPageModel>();
+				}
+
 				return;
 			}
 
 			MainPage = loginContainer;
 		}
 
-		public static bool IsUserLoggedIn
+		public static MainTabbedPage GeMainTabbedPage()
 		{
-			get;
-			set;
+			var tabbedNavigation = new MainTabbedPage();
+			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
+			tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
+			tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
+			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
+
+			return tabbedNavigation;
 		}
+
+		public static bool IsUserLoggedIn
+			=> Realm.GetInstance().All<User>()?.SingleOrDefault() != null;
 
 		protected override void OnStart()
 		{

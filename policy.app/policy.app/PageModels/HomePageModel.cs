@@ -1,9 +1,7 @@
 ﻿using System.Collections.ObjectModel;
-using System.Linq;
 using FreshMvvm;
 using policy.app.Models;
 using PropertyChanged;
-using Realms;
 
 namespace policy.app.PageModels
 {
@@ -13,17 +11,20 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class HomePageModel : FreshBasePageModel
 	{
+		#region Data
+		#region Fields
 		/// <summary>
-		/// Определяет выбранный пункт в <see cref="Xamarin.Forms.ListView"/>.
+		/// Определяет выбранный пункт в <see cref="Xamarin.Forms.ListView" />.
 		/// </summary>
 		private MenuItem _selectedItem;
+		#endregion
+		#endregion
 
 		#region .ctor
 		/// <summary>
 		/// Инициализирует модель представления для домашней страницы.
 		/// </summary>
-		public HomePageModel()
-		{
+		public HomePageModel() =>
 			MenuCollection = new ObservableCollection<MenuItem>
 			{
 				new MenuItem
@@ -47,10 +48,18 @@ namespace policy.app.PageModels
 					Title = "Телевидение"
 				}
 			};
-		}
 		#endregion
 
 		#region Properties
+		/// <summary>
+		/// Возвращает список пунктов меню для домашней страницы.
+		/// </summary>
+		public ObservableCollection<MenuItem> MenuCollection
+		{
+			get;
+			set;
+		}
+
 		/// <summary>
 		/// Возвращает или устанавливает выбранный пункт меню.
 		/// </summary>
@@ -62,15 +71,6 @@ namespace policy.app.PageModels
 				CoreMethods.PushPageModel(value.PageModelType, false);
 				_selectedItem = value;
 			}
-		}
-
-		/// <summary>
-		/// Возвращает список пунктов меню для домашней страницы.
-		/// </summary>
-		public ObservableCollection<MenuItem> MenuCollection
-		{
-			get;
-			set;
 		}
 		#endregion
 	}

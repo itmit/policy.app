@@ -7,7 +7,6 @@ using policy.app.Models;
 using policy.app.Services;
 using PropertyChanged;
 using Realms;
-using Xamarin.Forms;
 
 namespace policy.app.PageModels
 {
