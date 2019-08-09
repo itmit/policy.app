@@ -12,7 +12,9 @@
 
             <ScrollView>
                 <StackLayout>
-                    <Label Text="Рейтинг пользователей" Margin="0, 20" FontSize="18" HorizontalOptions="Center"/>
+                    <StackLayout Margin="0,40">
+                        <Label TextColor="#228bcc" FontSize="Large" HorizontalTextAlignment="Center" Text="Рейтинг пользователей"/>
+                    </StackLayout>
                     <Picker Title="Категории" x:Name="Cat" Margin="15" >
                         <Picker.Items>
                             <x:String>Политика</x:String>
@@ -39,7 +41,7 @@
                         </ListView.ItemTemplate>
                     </ListView>
                     -->
-                    <TableView HasUnevenRows="True"  HeightRequest="100">
+                    <TableView HasUnevenRows="True"  HeightRequest="300">
                         <TableRoot>
                             <TableSection>
                                 <ViewCell>
@@ -47,7 +49,7 @@
                                         <Image Source="user_picture.png" Margin="5"/>
                                         <Label Margin="15" Text="Пестель Яна"
                                                VerticalOptions="Center" />
-                                        <Button HeightRequest="30" Margin="0" Padding="5" TextColor="White" Text="политика" CornerRadius="30" BackgroundColor="#3fe9d7" VerticalOptions="Fill" HorizontalOptions="End"/>
+                                        <Label Margin="0" TextColor="White" Text="политика"  BackgroundColor="#3fe9d7" VerticalOptions="Center" HorizontalOptions="End"/>
                                     </StackLayout>
                                 </ViewCell>
                                 <ViewCell>

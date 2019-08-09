@@ -56,6 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LiveXAML">
+      <Version>2.1.72</Version>
+    </PackageReference>
     <PackageReference Include="Realm">
       <Version>4.0.1</Version>
     </PackageReference>
