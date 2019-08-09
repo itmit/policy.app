@@ -5,19 +5,13 @@ using Realms;
 
 namespace policy.app.PageModels
 {
+	/// <summary>
+	/// Представляет модель представления для страницы изменения данных.
+	/// </summary>
 	[AddINotifyPropertyChangedInterface]
 	public class EditPageModel : FreshBasePageModel
 	{
-
-		/// <summary>
-		/// Возвращает или устанавливает ФИО вводимый пользователем.
-		/// </summary>
-		public string Name
-		{
-			get;
-			set;
-		} = string.Empty;
-
+		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает город выводимое пользователю.
 		/// </summary>
@@ -31,6 +25,15 @@ namespace policy.app.PageModels
 		/// Возвращает или устанавливает сфера деятельности вводимое пользователем.
 		/// </summary>
 		public string FieldOfActivity
+		{
+			get;
+			set;
+		} = string.Empty;
+
+		/// <summary>
+		/// Возвращает или устанавливает ФИО вводимый пользователем.
+		/// </summary>
+		public string Name
 		{
 			get;
 			set;
@@ -68,14 +71,16 @@ namespace policy.app.PageModels
 			}
 		}
 
+		private Realm Realm => Realm.GetInstance();
+		#endregion
+
+		#region Private
 		/// <summary>
 		/// Сохраняет введенные пользователем данные.
 		/// </summary>
 		private void SaveChangesAsync()
 		{
-
 		}
-
-		private Realm Realm => Realm.GetInstance();
+		#endregion
 	}
 }

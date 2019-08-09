@@ -3,6 +3,7 @@ using System.Linq;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.PageModels;
+using policy.app.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using policy.app.Services;
@@ -14,34 +15,48 @@ namespace policy.app
 {
 	public partial class App : Application
 	{
+
 		public App()
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			var loginContainer = new FreshNavigationContainer(
+				FreshPageModelResolver.ResolvePageModel<LoginPageModel>(),
+				NavigationContainerNames.AuthenticationContainer
+			);
 
-			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
-			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
-
-			Page mainPage = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
-			var mainContainer = new FreshNavigationContainer(mainPage, NavigationContainerNames.MainContainer);
-
-			User user = Realm.GetInstance().All<User>()?.SingleOrDefault();
-
-			if (IsUserLoggedIn | user != null)
+			if (IsUserLoggedIn)
 			{
-				MainPage = mainContainer;
+				if (Current.Properties.ContainsKey("FirstUse"))
+				{
+					MainPage = GeMainTabbedPage();
+				}
+				else
+				{
+					Current.Properties["FirstUse"] = false;
+
+					MainPage = FreshPageModelResolver.ResolvePageModel<FirstPageModel>();
+				}
+
 				return;
 			}
 
 			MainPage = loginContainer;
 		}
 
-		public static bool IsUserLoggedIn
+		public static MainTabbedPage GeMainTabbedPage()
 		{
-			get;
-			set;
+			var tabbedNavigation = new MainTabbedPage();
+			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
+			tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
+			tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
+			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
+
+			return tabbedNavigation;
 		}
+
+		public static bool IsUserLoggedIn
+			=> Realm.GetInstance().All<User>()?.SingleOrDefault() != null;
 
 		protected override void OnStart()
 		{

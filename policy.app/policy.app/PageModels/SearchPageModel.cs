@@ -4,8 +4,7 @@ using PropertyChanged;
 namespace policy.app.PageModels
 {
 	[AddINotifyPropertyChangedInterface]
-	public class MainPageModel : FreshBasePageModel
+	public class SearchPageModel : FreshBasePageModel
 	{
-		
 	}
 }

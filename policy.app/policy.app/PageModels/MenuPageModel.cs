@@ -6,10 +6,10 @@ using PropertyChanged;
 namespace policy.app.PageModels
 {
 	/// <summary>
-	/// Представляет модель представления для домашней страницы.
+	/// Представляет модель представления для страницы меню.
 	/// </summary>
 	[AddINotifyPropertyChangedInterface]
-	public class HomePageModel : FreshBasePageModel
+	public class MenuPageModel : FreshBasePageModel
 	{
 		#region Data
 		#region Fields
@@ -24,28 +24,33 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Инициализирует модель представления для домашней страницы.
 		/// </summary>
-		public HomePageModel() =>
+		public MenuPageModel() =>
 			MenuCollection = new ObservableCollection<MenuItem>
 			{
 				new MenuItem
 				{
-					PageModelType = typeof(RatingPageModel),
-					Title = "Политика"
+					PageModelType = typeof(ProfilePageModel),
+					Title = "Мой профиль"
 				},
 				new MenuItem
 				{
-					PageModelType = typeof(RatingPageModel),
-					Title = "Музыка"
+					PageModelType = typeof(AboutPageModel),
+					Title = "Избранное"
 				},
 				new MenuItem
 				{
-					PageModelType = typeof(RatingPageModel),
-					Title = "Кино"
+					PageModelType = typeof(AboutPageModel),
+					Title = "Обратная связь"
 				},
 				new MenuItem
 				{
-					PageModelType = typeof(RatingPageModel),
-					Title = "Телевидение"
+					PageModelType = typeof(AboutPageModel),
+					Title = "О нас"
+				},
+				new MenuItem
+				{
+					PageModelType = typeof(FirstPageModel),
+					Title = "Приветствие"
 				}
 			};
 		#endregion

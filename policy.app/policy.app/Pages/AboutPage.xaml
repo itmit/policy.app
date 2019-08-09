@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="policy.app.Pages.AboutPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout HeightRequest="100" Orientation="Horizontal">
+                    <ImageButton Source="ic_navigate_before_grey600_36dp" Margin="0,0,10,0" VerticalOptions="Center" BackgroundColor="Transparent"/>
+                    <Label Text="О приложении" Margin="0, 20" FontSize="40" TextColor="#228bcc" HorizontalOptions="Center" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Fill">
+                    <Label Margin="15" FontSize="Large" HorizontalOptions="CenterAndExpand" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" Text="Равным образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же консультация с широким активом позволяет оценить значение модели развития. Товарищи! реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации соответствующий условий активизации." />
+
+                    <Label Margin="15" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#228bcc" Text="Вы можете написать нам"  FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" />
+
+                    <Button Margin="15" HorizontalOptions="CenterAndExpand"  FontSize="Large" TextColor="#f07d14" Text="Задать вопрос" BorderColor="Transparent" BackgroundColor="Transparent" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+
+                    <Label Margin="15" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#228bcc" Text="Внести предложение по улучшению приложения" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

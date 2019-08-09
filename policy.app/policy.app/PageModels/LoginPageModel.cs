@@ -96,14 +96,21 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			App.IsUserLoggedIn = true;
-
 			Realm.Write(() =>
 			{
 				Realm.Add(user, true);
 			});
 
-			CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.MainContainer);
+			if (Application.Current.Properties.ContainsKey("FirstUse"))
+			{
+				Application.Current.MainPage = App.GeMainTabbedPage();
+			}
+			else
+			{
+				Application.Current.Properties["FirstUse"] = false;
+
+				Application.Current.MainPage = FreshPageModelResolver.ResolvePageModel<FirstPageModel>();
+			}
 		}
 		#endregion
 	}
