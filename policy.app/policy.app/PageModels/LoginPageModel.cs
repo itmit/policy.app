@@ -96,21 +96,14 @@ namespace policy.app.PageModels
 				return;
 			}
 
+			App.IsUserLoggedIn = true;
+
 			Realm.Write(() =>
 			{
 				Realm.Add(user, true);
 			});
 
-			if (Application.Current.Properties.ContainsKey("FirstUse"))
-			{
-				Application.Current.MainPage = App.GeMainTabbedPage();
-			}
-			else
-			{
-				Application.Current.Properties["FirstUse"] = false;
-
-				Application.Current.MainPage = FreshPageModelResolver.ResolvePageModel<FirstPageModel>();
-			}
+			CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.MainContainer);
 		}
 		#endregion
 	}
