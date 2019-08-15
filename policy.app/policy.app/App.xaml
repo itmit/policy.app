@@ -1,8 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="policy.app.App">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="policy.app.App" xmlns:__xl="clr-namespace:__livexaml" __xl:Runtime.Register="C:\Users\admin\source\repos\policy\policy.app\policy.app\App.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <!--Global Styles-->
@@ -11,7 +8,18 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
+            <!-- Template Styles -->
+            <Style x:Key="StartLabelProfilePage" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="FontFamily" Value="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+            </Style>
+            <Style x:Key="EndLabelProfilePage" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="TextColor" Value="#19365f" />
+                <Setter Property="FontFamily" Value="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
-    
 </Application>
