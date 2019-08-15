@@ -26,7 +26,17 @@ namespace policy.app.PageModels
 		{
 			MenuCollection = new ObservableCollection<MenuItem>
 			{
-				new MenuItem
+                new MenuItem
+                {
+                    PageModelType = typeof(ProfilePageModel),
+                    Title = "Мой профиль"
+                },
+                new MenuItem
+                {
+                    PageModelType = typeof(RatingPageModel),
+                    Title = "Рейтинг"
+                },
+                new MenuItem
 				{
 					PageModelType = typeof(RatingPageModel),
 					Title = "Политика"
