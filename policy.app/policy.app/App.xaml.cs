@@ -20,43 +20,31 @@ namespace policy.app
 		{
 			InitializeComponent();
 
-			var loginContainer = new FreshNavigationContainer(
-				FreshPageModelResolver.ResolvePageModel<LoginPageModel>(),
-				NavigationContainerNames.AuthenticationContainer
-			);
-
-			if (IsUserLoggedIn)
-			{
-				if (Current.Properties.ContainsKey("FirstUse"))
-				{
-					MainPage = GeMainTabbedPage();
-				}
-				else
-				{
-					Current.Properties["FirstUse"] = false;
-
-					MainPage = FreshPageModelResolver.ResolvePageModel<FirstPageModel>();
-				}
-
-				return;
-			}
-
-			MainPage = loginContainer;
-		}
-
-		public static MainTabbedPage GeMainTabbedPage()
-		{
 			var tabbedNavigation = new MainTabbedPage();
 			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
 			tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
 			tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
 			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
 
-			return tabbedNavigation;
+			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
+			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
+
+			User user = Realm.GetInstance().All<User>()?.SingleOrDefault();
+
+			if (IsUserLoggedIn | user != null)
+			{
+				MainPage = tabbedNavigation;
+				return;
+			}
+
+			MainPage = loginContainer;
 		}
 
 		public static bool IsUserLoggedIn
-			=> Realm.GetInstance().All<User>()?.SingleOrDefault() != null;
+		{
+			get;
+			set;
+		}
 
 		protected override void OnStart()
 		{
