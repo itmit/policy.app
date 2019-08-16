@@ -15,7 +15,7 @@
                     <StackLayout Margin="0,40">
                         <Label TextColor="#228bcc" FontSize="Large" HorizontalTextAlignment="Center" Text="Рейтинг пользователей"/>
                     </StackLayout>
-                    <Picker Title="Категории" x:Name="Cat" Margin="15" >
+                    <Picker Title="Категории" x:Name="Cat" Margin="15">
                         <Picker.Items>
                             <x:String>Политика</x:String>
                             <x:String>Музыка</x:String>
@@ -31,16 +31,6 @@
                     </Picker>
                     <Slider Margin="15" Minimum="0" Maximum="100" HorizontalOptions="Fill"/>
                     <Entry Placeholder="Поиск"  Margin="15"/>
-
-                    <!--
-                    <ListView>
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                    -->
                     <TableView HasUnevenRows="True"  HeightRequest="300">
                         <TableRoot>
                             <TableSection>
