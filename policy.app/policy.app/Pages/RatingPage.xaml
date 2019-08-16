@@ -2,30 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ex="clr-namespace:policy.app.Controls"
-             x:Class="policy.app.Pages.RatingPage">
+             x:Class="policy.app.Pages.RatingPage"
+             BackgroundColor="#f4f5f6">
     <ContentPage.Content>
         <ScrollView Orientation="Vertical">
             <StackLayout>
                 <StackLayout Margin="40">
                     <Label TextColor="#228bcc" FontSize="35" Text="Рейтинг пользователей" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                 </StackLayout>
-                <StackLayout Margin="15" Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand">
-                    <Picker Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
-                        <Picker.Items>
-                            <x:String>Политика</x:String>
-                            <x:String>Музыка</x:String>
-                            <x:String>Кино</x:String>
-                            <x:String>Телевидение</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
-                <StackLayout Margin="15" Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand">
-                    <Picker Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
-                        <Picker.Items>
-                            <x:String>От лучшего к худшему</x:String>
-                            <x:String>От худшего к лудшему</x:String>
-                        </Picker.Items>
-                    </Picker>
+                <StackLayout Margin="15">
+                    <StackLayout Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" Margin="0,0,0,10">
+                        <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
+                            <Picker.Items>
+                                <x:String>Политика</x:String>
+                                <x:String>Музыка</x:String>
+                                <x:String>Кино</x:String>
+                                <x:String>Телевидение</x:String>
+                            </Picker.Items>
+                        </ex:PickerRating>
+                    </StackLayout>
+                    <StackLayout Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand">
+                        <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
+                            <Picker.Items>
+                                <x:String>От лучшего к худшему</x:String>
+                                <x:String>От худшего к лудшему</x:String>
+                            </Picker.Items>
+                        </ex:PickerRating>
+                    </StackLayout>
                 </StackLayout>
                 <Grid Margin="15,0" RowSpacing="0" ColumnSpacing="0">
                     <Grid.RowDefinitions>
@@ -38,8 +41,8 @@
                     <Label Grid.Row="1" Text="0%" HorizontalOptions="Start" TextColor="#19365f" FontSize="30" Margin="0,0,0,0" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                     <Label Grid.Row="1" Text="100%" HorizontalOptions="End" TextColor="#f89c49" FontSize="30" Margin="0,0,0,0" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                 </Grid>
-                <SearchBar Placeholder="Поиск" Margin="15" BackgroundColor="White"/>
-                <BoxView HeightRequest="1" BackgroundColor="Gray"/>
+                <SearchBar Placeholder="Поиск" Margin="15,0,15,10"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -52,7 +55,7 @@
                         <Label TextColor="White" Text="политика" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>
-                <BoxView HeightRequest="1" BackgroundColor="Gray"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -65,7 +68,7 @@
                         <Label TextColor="White" Text="музыка" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>
-                <BoxView HeightRequest="1" BackgroundColor="Gray"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -78,7 +81,7 @@
                         <Label TextColor="White" Text="кино" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>
-                <BoxView HeightRequest="1" BackgroundColor="Gray"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -91,7 +94,7 @@
                         <Label TextColor="White" Text="телевиденье" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>
-                <BoxView HeightRequest="1" BackgroundColor="Gray"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
