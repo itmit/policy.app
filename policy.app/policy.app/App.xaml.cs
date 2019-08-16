@@ -61,6 +61,11 @@ namespace policy.app
 			tabbedNavigation.Effects.Add(new NoShiftEffect());
 			tabbedNavigation.On<TabBar.Android>()
 				.SetToolbarPlacement(ToolbarPlacement.Bottom);
+			tabbedNavigation.On<TabBar.Android>()
+							.SetIsSwipePagingEnabled(false);
+			tabbedNavigation.BarBackgroundColor = Color.FromHex("#3F51B5");
+			tabbedNavigation.SelectedTabColor = Color.DarkBlue;
+			tabbedNavigation.UnselectedTabColor = Color.LightBlue;
 
 			return tabbedNavigation;
 		}
