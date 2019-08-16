@@ -6,7 +6,7 @@ namespace policy.app.Controls
     {
         //Generate Custom Property
         public static readonly BindableProperty MaxColorProperty = BindableProperty.Create(nameof(MaxColor),
-        typeof(Color), typeof(SliderRating), Color.Gray);
+        typeof(Color), typeof(SliderRating), Color.Default);
 
         //Generate MaxColor Property
         public Color MaxColor
@@ -16,7 +16,7 @@ namespace policy.app.Controls
         }
         //Generate Min Property
         public static readonly BindableProperty MinColorProperty = BindableProperty.Create(nameof(MinColor),
-            typeof(Color), typeof(SliderRating), Color.LightGray);
+            typeof(Color), typeof(SliderRating), Color.Default);
 
         public Color MinColor
         {
@@ -25,7 +25,7 @@ namespace policy.app.Controls
         }
         //Generate Thumb Property
         public static readonly BindableProperty ThumbColorProperty = BindableProperty.Create(nameof(ThumbColor),
-            typeof(Color), typeof(SliderRating), Color.Blue);
+            typeof(Color), typeof(SliderRating), Color.Default);
 
         public Color ThumbColor
         {
