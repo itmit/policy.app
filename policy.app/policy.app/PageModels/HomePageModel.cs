@@ -38,23 +38,8 @@ namespace policy.app.PageModels
                 },
                 new MenuItem
 				{
-					PageModelType = typeof(RatingPageModel),
-					Title = "Политика"
-				},
-				new MenuItem
-				{
-					PageModelType = typeof(RatingPageModel),
-					Title = "Музыка"
-				},
-				new MenuItem
-				{
-					PageModelType = typeof(RatingPageModel),
-					Title = "Кино"
-				},
-				new MenuItem
-				{
-					PageModelType = typeof(RatingPageModel),
-					Title = "Телевидение"
+					PageModelType = typeof(SearchPageModel),
+					Title = "Поиск"
 				}
 			};
 		}

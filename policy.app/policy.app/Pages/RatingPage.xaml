@@ -11,7 +11,7 @@
                     <Label TextColor="#228bcc" FontSize="35" Text="Рейтинг пользователей" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                 </StackLayout>
                 <StackLayout Margin="15">
-                    <StackLayout Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" Margin="0,0,0,10">
+                    <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand" Margin="0,0,0,10">
                         <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
                             <Picker.Items>
                                 <x:String>Политика</x:String>
@@ -21,7 +21,7 @@
                             </Picker.Items>
                         </ex:PickerRating>
                     </StackLayout>
-                    <StackLayout Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand">
+                    <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand">
                         <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
                             <Picker.Items>
                                 <x:String>От лучшего к худшему</x:String>
