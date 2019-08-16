@@ -2,48 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ex="clr-namespace:policy.app.Controls"
-             x:Class="policy.app.Pages.RatingPage">
+             x:Class="policy.app.Pages.RatingPage"
+             BackgroundColor="#f4f5f6">
     <ContentPage.Content>
         <ScrollView Orientation="Vertical">
             <StackLayout>
                 <StackLayout Margin="40">
                     <Label TextColor="#228bcc" FontSize="35" Text="Рейтинг пользователей" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                 </StackLayout>
-                <StackLayout Margin="15" Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand">
-                    <Picker Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
-                        <Picker.Items>
-                            <x:String>Политика</x:String>
-                            <x:String>Музыка</x:String>
-                            <x:String>Кино</x:String>
-                            <x:String>Телевидение</x:String>
-                        </Picker.Items>
-                    </Picker>
+                <StackLayout Margin="15">
+                    <StackLayout Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" Margin="0,0,0,10">
+                        <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
+                            <Picker.Items>
+                                <x:String>Политика</x:String>
+                                <x:String>Музыка</x:String>
+                                <x:String>Кино</x:String>
+                                <x:String>Телевидение</x:String>
+                            </Picker.Items>
+                        </ex:PickerRating>
+                    </StackLayout>
+                    <StackLayout Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand">
+                        <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
+                            <Picker.Items>
+                                <x:String>От лучшего к худшему</x:String>
+                                <x:String>От худшего к лудшему</x:String>
+                            </Picker.Items>
+                        </ex:PickerRating>
+                    </StackLayout>
                 </StackLayout>
-                <StackLayout Margin="15" Padding="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand">
-                    <Picker Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
-                        <Picker.Items>
-                            <x:String>От лучшего к худшему</x:String>
-                            <x:String>От худшего к лудшему</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
-                <ex:SliderRating Margin="15" Minimum="0" Maximum="100" HorizontalOptions="Fill"/>
-                <SearchBar Placeholder="Поиск"  Margin="15"/>
-                <Grid Margin="10,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                <Grid Margin="15,0" RowSpacing="0" ColumnSpacing="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Column="0" Grid.Row="0" Source="user_picture.png" Margin="5"/>
-                    <Label Grid.Column="1" Grid.Row="1" Margin="15" Text="Пестель Яна" VerticalOptions="Center" />
-                    <Button Grid.Column="2" Grid.Row="2" Margin="0" Padding="0" TextColor="White" Text="политика" CornerRadius="0" BackgroundColor="#3fe9d7" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Image Grid.Row="0" Source="circleslider.png" HorizontalOptions="Start" Margin="1,0,0,0"/>
+                    <ex:SliderRating Grid.Row="0" Minimum="0" Maximum="100" HorizontalOptions="Fill" ThumbImage="icon_slider.png" MinColor="LightGray" MaxColor="Gray"/>
+                    <Image Grid.Row="0" Source="circleslider.png" HorizontalOptions="End" Margin="0,0,1,0"/>
+                    <Label Grid.Row="1" Text="0%" HorizontalOptions="Start" TextColor="#19365f" FontSize="30" Margin="0,0,0,0" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label Grid.Row="1" Text="100%" HorizontalOptions="End" TextColor="#f89c49" FontSize="30" Margin="0,0,0,0" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                 </Grid>
+                <SearchBar Placeholder="Поиск" Margin="15,0,15,10"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -51,9 +50,12 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
-                    <Label Grid.Column="2" Margin="15" Text="Ковалев Денис Викторович" VerticalOptions="Center" />
-                    <Button Grid.Column="3" HeightRequest="30" Margin="0" Padding="5" TextColor="White" Text="музыка" CornerRadius="30" BackgroundColor="#f89c49" HorizontalOptions="End"/>
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Пестель Яна" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Frame Grid.Column="2" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#3fe9d7"  HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                        <Label TextColor="White" Text="политика" WidthRequest="100" HorizontalTextAlignment="Center"/>
+                    </Frame>
                 </Grid>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -61,9 +63,12 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
-                    <Label Grid.Column="1" Margin="15" Text="Кирченко Ирина Игоревна" VerticalOptions="Center" />
-                    <Button Grid.Column="2" HeightRequest="30" Padding="5" TextColor="White" Text="кино" CornerRadius="30" BackgroundColor="#41f256" HorizontalOptions="End"/>
+                    <Label Grid.Column="2" Margin="5,0,5,0" Text="Ковалев Денис Викторович" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Frame Grid.Column="3" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#f89c49" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                        <Label TextColor="White" Text="музыка" WidthRequest="100" HorizontalTextAlignment="Center"/>
+                    </Frame>
                 </Grid>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -71,9 +76,25 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
-                    <Label Grid.Column="1" Margin="15" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center" />
-                    <Button Grid.Column="2" HeightRequest="30" Padding="5" TextColor="White" Text="телевиденье" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End"/>
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Кирченко Ирина Игоревна" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Frame Grid.Column="2" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#41f256" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                        <Label TextColor="White" Text="кино" WidthRequest="100" HorizontalTextAlignment="Center"/>
+                    </Frame>
                 </Grid>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
+                <Grid Margin="10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Frame Grid.Column="2" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                        <Label TextColor="White" Text="телевиденье" WidthRequest="100" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </Grid>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
