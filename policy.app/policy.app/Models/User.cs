@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using PropertyChanged;
 using Realms;
 
@@ -9,25 +10,16 @@ namespace policy.app.Models
 	/// </summary>
 	public class User : RealmObject
 	{
-		private Guid _userGuid = Guid.NewGuid();
-		
-		/// <summary>
-		/// Возвращает или устанавливает хранимый ид пользователя, в виде строки.
-		/// </summary>
-		public string StoredUserGuidString
-		{
-			get => _userGuid.ToString();
-			set => _userGuid = new Guid(value);
-		}
-
 		/// <summary>
 		/// Возвращает или устанавливает ид пользователя.
 		/// </summary>
-		public Guid UserGuid
+		[JsonProperty("uid")]
+		public string Guid
 		{
-			get => _userGuid;
-			set => _userGuid = value;
-		}
+			get;
+			set;
+		} = System.Guid.NewGuid()
+				.ToString();
 
 		/// <summary>
 		/// Возвращает или устанавливает почтовый адрес пользователя.
@@ -68,6 +60,7 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или устанавливает область деятельности пользователя.
 		/// </summary>
+		[JsonProperty("field_of_activity")]
 		public string FieldOfActivity
 		{
 			get;
@@ -100,10 +93,11 @@ namespace policy.app.Models
 			get;
 			set;
 		}
-		
+
 		/// <summary>
 		/// Возвращает или задает номер телефона пользователя.
 		/// </summary>
+		[JsonProperty("phone_number")]
 		public string PhoneNumber
 		{
 			get;

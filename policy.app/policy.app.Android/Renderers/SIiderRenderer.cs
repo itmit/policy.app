@@ -12,7 +12,13 @@ namespace policy.app.Droid.Renderers
 {
     public class SIiderRenderer : SliderRenderer
     {
-        private SliderRating view;
+		public SIiderRenderer(Context context)
+			: base(context)
+		{
+
+		}
+
+		private SliderRating view;
 
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Slider> e)
         {

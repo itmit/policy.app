@@ -3,6 +3,7 @@ using FreshMvvm;
 using policy.app.Models;
 using PropertyChanged;
 using Realms;
+using Xamarin.Forms;
 
 namespace policy.app.PageModels
 {
@@ -15,7 +16,13 @@ namespace policy.app.PageModels
 		/// </summary>
 		public ProfilePageModel()
 		{
-			var users = Realm.GetInstance()
+			var app = Application.Current as App;
+			if (app == null)
+			{
+				return;
+			}
+
+			var users = app.Realm
 							 .All<User>();
 			var user = users?.SingleOrDefault();
 

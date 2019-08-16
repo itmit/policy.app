@@ -9,6 +9,10 @@ using Xamarin.Forms.Xaml;
 using policy.app.Services;
 using policy.app.Views;
 using Realms;
+using TabBar = Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using Application = Xamarin.Forms.Application;
+using TabbedPage = Xamarin.Forms.TabbedPage;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AuthService))]
 namespace policy.app
@@ -20,27 +24,48 @@ namespace policy.app
 		{
 			InitializeComponent();
 
-			var tabbedNavigation = new MainTabbedPage();
-			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
-			tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
-			tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
-			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
-
 			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
 			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
 
-			User user = Realm.GetInstance().All<User>()?.SingleOrDefault();
+			User user = Realm.All<User>()?.SingleOrDefault();
 
 			if (IsUserLoggedIn | user != null)
 			{
-				MainPage = tabbedNavigation;
+				IsUserLoggedIn = true;
+				MainPage = InitMainTabbedPage();
+				//MainPage = new TabbedPage1();
 				return;
 			}
 
 			MainPage = loginContainer;
 		}
 
-		public static bool IsUserLoggedIn
+		public Realm Realm
+		{
+			get
+			{
+				var configuration = RealmConfiguration.DefaultConfiguration;
+				configuration.SchemaVersion = 2;
+				return Realm.GetInstance(configuration);
+			}
+		}
+
+		public TabbedPage InitMainTabbedPage()
+		{
+			var tabbedNavigation = new MainTabbedPage();
+			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
+			tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
+			tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
+			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
+
+			tabbedNavigation.Effects.Add(new NoShiftEffect());
+			tabbedNavigation.On<TabBar.Android>()
+				.SetToolbarPlacement(ToolbarPlacement.Bottom);
+
+			return tabbedNavigation;
+		}
+
+		public bool IsUserLoggedIn
 		{
 			get;
 			set;

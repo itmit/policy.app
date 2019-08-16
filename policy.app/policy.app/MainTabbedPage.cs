@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
-using BottomBar.XamarinForms;
 using FreshMvvm;
 using Xamarin.Forms;
 using System.Collections.Generic;
@@ -10,7 +9,7 @@ using policy.app.Pages;
 
 namespace policy.app
 {
-	public class MainTabbedPage : BottomBarPage, IFreshNavigationService
+	public class MainTabbedPage : TabbedPage, IFreshNavigationService
 	{
 		private readonly List<Page> _tabs = new List<Page>();
 		private NavigationPage _previewsPage;
@@ -25,7 +24,7 @@ namespace policy.app
 
 		private void CurrentPageHasChanged(object sender, EventArgs e)
 		{
-			if (sender is TabbedPage tabbedPage)
+			if (sender is Xamarin.Forms.TabbedPage tabbedPage)
 			{
 				if (tabbedPage.CurrentPage is NavigationPage navigationPage)
 				{
@@ -46,6 +45,7 @@ namespace policy.app
 
 		public MainTabbedPage(string navigationServiceName)
 		{
+			CurrentPageChanged += CurrentPageHasChanged;
 			NavigationServiceName = navigationServiceName;
 			RegisterNavigation();
 		}
@@ -73,7 +73,7 @@ namespace policy.app
 
 		internal Page CreateContainerPageSafe(Page page)
 		{
-			if (page is NavigationPage || page is MasterDetailPage || page is TabbedPage)
+			if (page is NavigationPage || page is MasterDetailPage || page is Xamarin.Forms.TabbedPage)
 			{
 				return page;
 			}
