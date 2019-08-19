@@ -1,7 +1,36 @@
-﻿namespace policy.app.PageModels
+﻿using System.Windows.Input;
+using FreshMvvm;
+using PropertyChanged;
+using Xamarin.Forms;
+
+namespace policy.app.PageModels
 {
-	public class FirstPageModel
+	/// <summary>
+	/// Представляет модель представления для первой, приветственной страницы.
+	/// </summary>
+	[AddINotifyPropertyChangedInterface]
+	public class FirstPageModel : FreshBasePageModel
 	{
-		
+		private App _app;
+
+		/// <summary>
+		/// Возвращает команду для авторизации.
+		/// </summary>
+		public ICommand OpenAppCommand
+		{
+			get
+			{
+				return new FreshAwaitCommand((param, tcs) =>
+				{
+					_app = Application.Current as App;
+					if (_app == null)
+					{
+						return;
+					}
+
+					Application.Current.MainPage = _app.InitMainTabbedPage();
+				});
+			}
+		}
 	}
 }

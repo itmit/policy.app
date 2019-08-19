@@ -1,6 +1,13 @@
-﻿namespace policy.app.PageModels
+﻿using FreshMvvm;
+using PropertyChanged;
+
+namespace policy.app.PageModels
 {
-	public class AboutPageModel
+	/// <summary>
+	/// Представляет модель представления для страницы "О нас".
+	/// </summary>
+	[AddINotifyPropertyChangedInterface]
+	public class AboutPageModel: FreshBasePageModel
 	{
 		
 	}
