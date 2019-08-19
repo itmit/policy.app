@@ -9,6 +9,7 @@ using policy.app.Models;
 using policy.app.Services;
 using PropertyChanged;
 using Realms;
+using Realms.Exceptions;
 using Xamarin.Forms;
 
 namespace policy.app.PageModels
@@ -19,6 +20,28 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class EditPageModel : FreshBasePageModel
 	{
+		private readonly App _app;
+
+		public EditPageModel()
+		{
+			_app = Application.Current as App;
+			if (_app != null && !_app.IsUserLoggedIn)
+			{
+				throw new AuthenticationException("Пользователь не авторизован.");
+			}
+
+			User user = _app?.Realm.All<User>()?.SingleOrDefault();
+			if (user == null)
+			{
+				return;
+			}
+
+			Name = user.Name;
+			City = user.City;
+			FieldOfActivity = user.FieldOfActivity;
+			Organization = user.Organization;
+			Position = user.Position;
+		}
 
 		/// <summary>
 		/// Возвращает или устанавливает ФИО вводимый пользователем.
@@ -84,16 +107,9 @@ namespace policy.app.PageModels
 		/// </summary>
 		private void SaveChangesAsync()
 		{
-			var app = Application.Current as App;
-
-			if (app == null)
+			if (_app.IsUserLoggedIn)
 			{
-				return;
-			}
-
-			if (app.IsUserLoggedIn)
-			{
-				var realm = app.Realm;
+				var realm = _app.Realm;
 
 				User user = realm.All<User>()?.SingleOrDefault();
 				if (user != null)

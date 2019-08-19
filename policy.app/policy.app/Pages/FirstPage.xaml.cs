@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace policy.app.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FirstPage : ContentPage
+	public partial class FirstPage : CarouselPage
 	{
 		public FirstPage()
 		{
