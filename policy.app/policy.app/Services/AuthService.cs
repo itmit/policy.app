@@ -148,7 +148,7 @@ namespace policy.app.Services
 						"birthday", date
 					},
 					{
-						"uid", user.StoredUserGuidString
+						"uid", user.Guid
 					}
 				});
 

@@ -82,8 +82,6 @@ namespace policy.app.PageModels
 				});
 			}
 		}
-
-		private Realm Realm => Realm.GetInstance();
 		#endregion
 
 		#region Private
@@ -111,9 +109,15 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			Realm.Write(() =>
+			var app = Application.Current as App;
+			if (app == null)
 			{
-				Realm.Add(user, true);
+				return;
+			}
+			var realm = app.Realm;
+			realm.Write(() =>
+			{
+				realm.Add(user, true);
 			});
 
 			CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.MainContainer);
