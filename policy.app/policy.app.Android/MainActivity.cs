@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using policy.app.Services;
+using ImageCircle.Forms.Plugin.Droid;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AuthService))]
 namespace policy.app.Droid
@@ -20,7 +21,7 @@ namespace policy.app.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-
+            ImageCircleRenderer.Init();
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

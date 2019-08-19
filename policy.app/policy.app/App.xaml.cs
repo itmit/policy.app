@@ -54,8 +54,9 @@ namespace policy.app
 		{
 			var tabbedNavigation = new MainTabbedPage();
 			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
-			tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
-			tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
+            tabbedNavigation.AddTab<FavouritesPageModel>(null, "baseline_grade_white_18dp");
+            tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
+			//tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
 			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
 
 			tabbedNavigation.Effects.Add(new NoShiftEffect());

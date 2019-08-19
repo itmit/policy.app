@@ -27,25 +27,35 @@ namespace policy.app.PageModels
 		public MenuPageModel() =>
 			MenuCollection = new ObservableCollection<MenuItem>
 			{
-				new MenuItem
+                new MenuItem
+                {
+                    PageModelType = typeof(FavouritesPageModel),
+                    Title = "Избранное"
+                },
+                new MenuItem
 				{
 					PageModelType = typeof(ProfilePageModel),
 					Title = "Мой профиль"
 				},
-				new MenuItem
+                new MenuItem
+                {
+                    PageModelType = typeof(ProfilePageModel),
+                    Title = "Опросы"
+                },
+                new MenuItem
+                {
+                    PageModelType = typeof(RatingPageModel),
+                    Title = "Рейтинг"
+                },
+                new MenuItem
 				{
 					PageModelType = typeof(AboutPageModel),
-					Title = "Избранное"
+					Title = "Напишите нам"
 				},
 				new MenuItem
 				{
 					PageModelType = typeof(AboutPageModel),
-					Title = "Обратная связь"
-				},
-				new MenuItem
-				{
-					PageModelType = typeof(AboutPageModel),
-					Title = "О нас"
+					Title = "О приложении"
 				},
 				new MenuItem
 				{
@@ -56,8 +66,13 @@ namespace policy.app.PageModels
 				{
 					PageModelType = typeof(EditPageModel),
 					Title = "Редактировать данные пользователя"
-				}
-			};
+				},
+                new MenuItem
+                {
+                    PageModelType = typeof(AboutPageModel),
+                    Title = "Выход"
+                }
+            };
 		#endregion
 
 		#region Properties
