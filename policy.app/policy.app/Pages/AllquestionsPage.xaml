@@ -35,6 +35,11 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                                  NumberOfTapsRequired="1"
+                                                  />
+                        </Grid.GestureRecognizers>
                         <Label Grid.Column="0" Text="2." TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
                         <Label Grid.Column="1" Text="Опрос №2" TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
                         <StackLayout Grid.Column="2" HorizontalOptions="End" BackgroundColor="#228bcd" VerticalOptions="Center" Padding="15,5">
@@ -50,6 +55,11 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                                  NumberOfTapsRequired="1"
+                                                  />
+                        </Grid.GestureRecognizers>
                         <Label Grid.Column="0" Text="3." TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
                         <Label Grid.Column="1" Text="Опрос №3" TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
                         <StackLayout Grid.Column="2" HorizontalOptions="End" BackgroundColor="#228bcd" VerticalOptions="Center" Padding="15,5">
