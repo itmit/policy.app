@@ -39,7 +39,7 @@ namespace policy.app.PageModels
 				},
                 new MenuItem
                 {
-                    PageModelType = typeof(ProfilePageModel),
+                    PageModelType = typeof(AllquestionsPageModel),
                     Title = "Опросы"
                 },
                 new MenuItem
