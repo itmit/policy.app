@@ -28,6 +28,10 @@
                         <Label Text="Должность" Style="{StaticResource StartLabelProfilePage}"/>
                         <Label Text="{Binding Doljnost}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="star_o.png"/>
+                        <Label Text="Добавить в избранное" Margin="10,0,0,0" FontSize="Medium" TextColor="#f07d14" FontAttributes="Bold" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    </StackLayout>
                     <ScrollView Orientation="Horizontal">
                         <Grid>
                             <Grid.ColumnDefinitions>
