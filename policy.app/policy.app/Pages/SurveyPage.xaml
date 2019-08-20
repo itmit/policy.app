@@ -6,13 +6,47 @@
              mc:Ignorable="d"
              x:Class="policy.app.Pages.SurveyPage">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="1." />
-                    <Label Text="Вопрос"/>
+        <ScrollView VerticalOptions="Fill">
+            <StackLayout Margin="20,10" VerticalOptions="Fill">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="1."  TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
+                        <Label Text="Вопрос"  TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox Color="#228bcc"/>
+                        <Label Text="Вариант 1" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox Color="#228bcc"/>
+                        <Label Text="Вариант 2" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox Color="#228bcc"/>
+                        <Label Text="Вариант 3" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 </StackLayout>
-                <CheckBox IsChecked="true"/>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="2."  TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
+                        <Label Text="Вопрос"  TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox Color="#228bcc"/>
+                        <Label Text="Вариант 1" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox Color="#228bcc"/>
+                        <Label Text="Вариант 2" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox Color="#228bcc"/>
+                        <Label Text="Вариант 3" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
+                </StackLayout>
+                <Button Text="Закончить опрос" TextColor="White" Padding="15,10" Margin="0,0,0,20" BackgroundColor="#228bcc" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
