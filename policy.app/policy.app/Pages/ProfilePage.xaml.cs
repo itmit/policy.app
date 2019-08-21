@@ -15,7 +15,7 @@ namespace policy.app.Pages
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Browser.OpenAsync("https://en.wikipedia.org/wiki/", BrowserLaunchMode.SystemPreferred);
+            Browser.OpenAsync("https://ru.wikipedia.org/wiki/", BrowserLaunchMode.SystemPreferred);
         }
     }
 }

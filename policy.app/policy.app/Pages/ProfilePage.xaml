@@ -9,31 +9,61 @@
                 <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="avatar.png" Aspect="AspectFill"/>
                 <StackLayout Margin="15">
                     <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
                         <Label Text="Имя" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Text="{Binding Name}" Style="{StaticResource EndLabelProfilePage}" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+                        <ScrollView Grid.Column="1" Orientation="Horizontal">
+                            <Label Text="{Binding Name}" Style="{StaticResource EndLabelProfilePage}" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+                        </ScrollView>
                     </Grid>
                     <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
                         <Label Text="Город" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Text="{Binding City}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <ScrollView Grid.Column="1" Orientation="Horizontal">
+                            <Label Text="{Binding City}" Style="{StaticResource EndLabelProfilePage}"/>
+                        </ScrollView>
                     </Grid>
                     <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
                         <Label Text="Сфера деятельности" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Text="{Binding Activity}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <ScrollView Grid.Column="1" Orientation="Horizontal">
+                            <Label Text="{Binding Activity}" Style="{StaticResource EndLabelProfilePage}"/>
+                        </ScrollView>
                     </Grid>
                     <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
                         <Label Text="Организация" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Text="{Binding Organization}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <ScrollView Grid.Column="1" Orientation="Horizontal">
+                            <Label Text="{Binding Organization}" Style="{StaticResource EndLabelProfilePage}"/>
+                        </ScrollView>
                     </Grid>
                     <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
                         <Label Text="Должность" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Text="{Binding Doljnost}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <ScrollView Grid.Column="1" Orientation="Horizontal">
+                            <Label Text="{Binding Doljnost}" Style="{StaticResource EndLabelProfilePage}"/>
+                        </ScrollView>
                     </Grid>
                     <StackLayout Orientation="Horizontal">
                         <Image Source="star_o.png"/>
                         <Label Text="Добавить в избранное" Margin="10,0,0,0" FontSize="Medium" TextColor="#f07d14" FontAttributes="Bold" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                     </StackLayout>
                     <StackLayout>
-                        <Button Text="https://en.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" Clicked="Button_Clicked" HorizontalOptions="Start" />
+                        <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" Clicked="Button_Clicked" HorizontalOptions="Start" />
                     </StackLayout>
                     <ScrollView Orientation="Horizontal">
                         <Grid>

@@ -18,9 +18,9 @@
         </StackLayout>
     </ContentPage>
     <ContentPage>
-        <StackLayout>
+        <StackLayout Margin="20">
             <Label Text="POLICY.APP" FontSize="Title" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-            <Button Text="Далее ->" Command="{Binding OpenAppCommand}"/>
+            <Button Text="Хорошо" Command="{Binding OpenAppCommand}" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" BackgroundColor="#19365f"/>
         </StackLayout>
     </ContentPage>
 </CarouselPage>

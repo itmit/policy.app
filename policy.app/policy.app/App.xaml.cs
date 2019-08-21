@@ -53,7 +53,7 @@ namespace policy.app
 		public TabbedPage InitMainTabbedPage()
 		{
 			var tabbedNavigation = new MainTabbedPage();
-			tabbedNavigation.AddTab<HomePageModel>(null, "ic_action_home.png");
+			tabbedNavigation.AddTab<ProfilePageModel>(null, "ic_action_home.png");
             tabbedNavigation.AddTab<FavouritesPageModel>(null, "baseline_grade_white_18dp");
             tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
 			//tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
