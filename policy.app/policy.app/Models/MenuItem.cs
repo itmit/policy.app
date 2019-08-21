@@ -25,5 +25,14 @@ namespace policy.app.Models
 			get;
 			set;
 		}
-	}
+        /// <summary>
+        /// Путь изображения меню
+        /// </summary>
+        public string ImageSource
+        {
+            get;
+            set;
+        }
+
+    }
 }

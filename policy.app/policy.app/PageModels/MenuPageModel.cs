@@ -29,46 +29,53 @@ namespace policy.app.PageModels
 			{
                 new MenuItem
                 {
+                    ImageSource = "star_o.png",
                     PageModelType = typeof(FavouritesPageModel),
                     Title = "Избранное"
                 },
                 new MenuItem
 				{
-					PageModelType = typeof(ProfilePageModel),
+                    ImageSource = "menu_5.png",
+                    PageModelType = typeof(ProfilePageModel),
 					Title = "Мой профиль"
 				},
                 new MenuItem
                 {
+                    ImageSource = "menu_6.png",
                     PageModelType = typeof(PollPageModel),
                     Title = "Опросы"
                 },
                 new MenuItem
                 {
+                    ImageSource = "menu_2.png",
                     PageModelType = typeof(RatingPageModel),
                     Title = "Рейтинг"
                 },
                 new MenuItem
 				{
-					PageModelType = typeof(AboutPageModel),
+                    ImageSource = "menu_3.png",
+                    PageModelType = typeof(AboutPageModel),
 					Title = "Напишите нам"
 				},
 				new MenuItem
 				{
-					PageModelType = typeof(AboutPageModel),
+                    ImageSource = "menu_7.png",
+                    PageModelType = typeof(AboutPageModel),
 					Title = "О приложении"
 				},
 				new MenuItem
 				{
-					PageModelType = typeof(FirstPageModel),
+                    PageModelType = typeof(FirstPageModel),
 					Title = "Приветствие"
 				},
 				new MenuItem
 				{
-					PageModelType = typeof(EditPageModel),
+                    PageModelType = typeof(EditPageModel),
 					Title = "Редактировать данные пользователя"
 				},
                 new MenuItem
                 {
+                    ImageSource = "menu_4.png",
                     PageModelType = typeof(AboutPageModel),
                     Title = "Выход"
                 }

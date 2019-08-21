@@ -64,9 +64,9 @@ namespace policy.app
 				.SetToolbarPlacement(ToolbarPlacement.Bottom);
 			tabbedNavigation.On<TabBar.Android>()
 							.SetIsSwipePagingEnabled(false);
-			tabbedNavigation.BarBackgroundColor = Color.FromHex("#3F51B5");
-			tabbedNavigation.SelectedTabColor = Color.DarkBlue;
-			tabbedNavigation.UnselectedTabColor = Color.LightBlue;
+			tabbedNavigation.BarBackgroundColor = Color.FromHex("#228bcc");
+			tabbedNavigation.SelectedTabColor = Color.Black;
+			tabbedNavigation.UnselectedTabColor = Color.White;
 
 			return tabbedNavigation;
 		}

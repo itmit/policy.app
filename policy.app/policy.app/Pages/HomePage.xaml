@@ -5,7 +5,7 @@
              x:Class="policy.app.Pages.HomePage">
     <ContentPage.Content>
         <ScrollView>
-            <ListView SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding MenuCollection}">
+            <ListView SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding MenuCollection}" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <viewCell:MenuViewCell/>
