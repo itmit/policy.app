@@ -65,11 +65,13 @@ namespace policy.app.PageModels
 				},
 				new MenuItem
 				{
+                    ImageSource = "menu_8.png",
                     PageModelType = typeof(FirstPageModel),
 					Title = "Приветствие"
 				},
 				new MenuItem
 				{
+                    ImageSource = "menu_9.png",
                     PageModelType = typeof(EditPageModel),
 					Title = "Редактировать данные пользователя"
 				},

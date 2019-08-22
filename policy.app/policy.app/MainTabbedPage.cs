@@ -18,7 +18,7 @@ namespace policy.app
 
 		public MainTabbedPage()
 			: this(Constants.DefaultNavigationServiceName)
-		{
+		{ 
 			CurrentPageChanged += CurrentPageHasChanged;
 		}
 

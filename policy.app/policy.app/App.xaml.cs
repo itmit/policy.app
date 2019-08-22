@@ -33,8 +33,9 @@ namespace policy.app
 			{
 				IsUserLoggedIn = true;
 				MainPage = InitMainTabbedPage();
-				//MainPage = new TabbedPage1();
-				return;
+
+                //MainPage = new TabbedPage1();
+                return;
 			}
 
 			MainPage = loginContainer;
@@ -53,8 +54,9 @@ namespace policy.app
 		public TabbedPage InitMainTabbedPage()
 		{
 			var tabbedNavigation = new MainTabbedPage();
+
 			tabbedNavigation.AddTab<ProfilePageModel>(null, "ic_action_home.png");
-            tabbedNavigation.AddTab<FavouritesPageModel>(null, "baseline_grade_white_18dp");
+            tabbedNavigation.AddTab<FavouritesPageModel>(null, "star_2.png");
             tabbedNavigation.AddTab<SearchPageModel>(null, "ic_action_search.png");
 			//tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
 			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
@@ -68,8 +70,10 @@ namespace policy.app
 			tabbedNavigation.SelectedTabColor = Color.Black;
 			tabbedNavigation.UnselectedTabColor = Color.White;
 
-			return tabbedNavigation;
-		}
+            return tabbedNavigation;
+
+
+        }
 
 		public bool IsUserLoggedIn
 		{

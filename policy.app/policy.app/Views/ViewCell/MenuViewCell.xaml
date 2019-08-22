@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="policy.app.Views.ViewCell.MenuViewCell">
     <ViewCell.View>
-        <StackLayout Orientation="Horizontal" Margin="35,20,0,20" HorizontalOptions="Fill">
-            <Image Source="{Binding ImageSource}"/>
+        <StackLayout Orientation="Horizontal" Margin="35,10,0,10">
+            <Image Source="{Binding ImageSource}" WidthRequest="20" HeightRequest="20"/>
             <Label FontSize="Large" Text="{Binding Title}" TextColor="#19365f" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
         </StackLayout>
     </ViewCell.View>
