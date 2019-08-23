@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="policy.app.Views.WriteToUsPage">
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ex="clr-namespace:policy.app.Controls"
+             mc:Ignorable="d"
+             x:Class="policy.app.Pages.WriteToUsPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand" Margin="25,25">
-            <StackLayout Margin="40">
-                <Label TextColor="#228bcc" FontSize="Large" Text="Напишите нам"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand" Margin="20">
+                <StackLayout HeightRequest="100" HorizontalOptions="Fill">
+                    <Label Text="Напишите нам" Margin="0, 20" FontSize="40" TextColor="#228bcc" VerticalTextAlignment="Center" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Margin="0,15" FontSize="Large" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" 
+                       Text="
 Наш проект является социальным и
 
 направлен на помощь и подтверждает
@@ -25,13 +31,29 @@
 
 информацию и сделаем исправления.
 " />
+                </StackLayout>
+                <BoxView HeightRequest="2" BackgroundColor="#19365f"/>
+                <Entry Placeholder="Тема" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
+                    <Picker.Items>
+                        <x:String>Политика</x:String>
+                        <x:String>Музыка</x:String>
+                        <x:String>Кино</x:String>
+                        <x:String>Телевидение</x:String>
+                    </Picker.Items>
+                </ex:PickerRating>
+                <Label Text="Сообщения" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                <Frame BorderColor="Gray" Padding="0">
+                    <Editor HeightRequest="120" Placeholder="Введите текст..."/>
+                </Frame>
+                <Frame Padding="0" Margin="0,20" HasShadow="True">
+                    <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
+                            <Label FontSize="30" Text="Сохранить" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center" HorizontalOptions="Center" TextColor="#19365f"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
-            <BoxView HeightRequest="1" BackgroundColor="#19365f"/>
-            <Entry Text="Тема" FontSize="Large" />
-            <Entry Text="Категория" FontSize="Large" />
-            <Label Text="Сообщения"/>
-            <Editor HeightRequest="100"/>
-            <Button Text="Сохранить" FontSize="Large" TextColor="#19365f"/>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

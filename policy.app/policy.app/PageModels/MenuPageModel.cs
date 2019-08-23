@@ -54,7 +54,7 @@ namespace policy.app.PageModels
                 new MenuItem
 				{
                     ImageSource = "menu_3.png",
-                    PageModelType = typeof(AboutPageModel),
+                    PageModelType = typeof(WriteToUsPageModel),
 					Title = "Напишите нам"
 				},
 				new MenuItem
