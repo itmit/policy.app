@@ -8,7 +8,7 @@
         <ScrollView Orientation="Vertical">
             <StackLayout>
                 <StackLayout Margin="40">
-                    <Label TextColor="#228bcc" FontSize="35" Text="Рейтинг пользователей" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label TextColor="#228bcc" FontSize="35" Text="Поиск пользователей" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                 </StackLayout>
                 <StackLayout Margin="15">
                     <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand" Margin="0,0,0,10">
@@ -25,7 +25,7 @@
                         <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
                             <Picker.Items>
                                 <x:String>От лучшего к худшему</x:String>
-                                <x:String>От худшего к лудшему</x:String>
+                                <x:String>От худшего к лучшему</x:String>
                             </Picker.Items>
                         </ex:PickerRating>
                     </StackLayout>
@@ -91,7 +91,7 @@
                     <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
                     <Label Grid.Column="1" Margin="5,0,5,0" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                     <Frame Grid.Column="2" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
-                        <Label TextColor="White" Text="телевиденье" WidthRequest="100" HorizontalTextAlignment="Center"/>
+                        <Label TextColor="White" Text="телевидение" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>
                 <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>

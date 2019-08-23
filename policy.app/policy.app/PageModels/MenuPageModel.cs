@@ -49,7 +49,7 @@ namespace policy.app.PageModels
                 {
                     ImageSource = "menu_2.png",
                     PageModelType = typeof(RatingPageModel),
-                    Title = "Рейтинг"
+                    Title = "Поиск пользователей"
                 },
                 new MenuItem
 				{

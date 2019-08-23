@@ -16,5 +16,10 @@ namespace policy.app.Pages
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            
+        }
+    }
 }
