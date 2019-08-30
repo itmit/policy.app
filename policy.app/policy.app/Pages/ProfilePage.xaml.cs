@@ -17,5 +17,10 @@ namespace policy.app.Pages
         {
             Browser.OpenAsync("https://ru.wikipedia.org/wiki/", BrowserLaunchMode.SystemPreferred);
         }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new EditPage());
+        }
     }
 }

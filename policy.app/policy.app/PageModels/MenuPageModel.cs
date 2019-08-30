@@ -28,12 +28,6 @@ namespace policy.app.PageModels
 			MenuCollection = new ObservableCollection<MenuItem>
 			{
                 new MenuItem
-                {
-                    ImageSource = "star_o.png",
-                    PageModelType = typeof(FavouritesPageModel),
-                    Title = "Избранное"
-                },
-                new MenuItem
 				{
                     ImageSource = "menu_5.png",
                     PageModelType = typeof(ProfilePageModel),
@@ -46,12 +40,6 @@ namespace policy.app.PageModels
                     Title = "Опросы"
                 },
                 new MenuItem
-                {
-                    ImageSource = "menu_2.png",
-                    PageModelType = typeof(RatingPageModel),
-                    Title = "Поиск пользователей"
-                },
-                new MenuItem
 				{
                     ImageSource = "menu_3.png",
                     PageModelType = typeof(WriteToUsPageModel),
@@ -62,18 +50,6 @@ namespace policy.app.PageModels
                     ImageSource = "menu_7.png",
                     PageModelType = typeof(AboutPageModel),
 					Title = "О приложении"
-				},
-				new MenuItem
-				{
-                    ImageSource = "menu_8.png",
-                    PageModelType = typeof(FirstPageModel),
-					Title = "Приветствие"
-				},
-				new MenuItem
-				{
-                    ImageSource = "menu_9.png",
-                    PageModelType = typeof(EditPageModel),
-					Title = "Редактировать данные пользователя"
 				},
                 new MenuItem
                 {
@@ -96,16 +72,48 @@ namespace policy.app.PageModels
 
 		/// <summary>
 		/// Возвращает или устанавливает выбранный пункт меню.
-		/// </summary>
+		/// </summary> 
+        /*
 		public MenuItem SelectedItem
 		{
 			get => _selectedItem;
-			set
-			{
-				CoreMethods.PushPageModel(value.PageModelType, false);
-				_selectedItem = value;
-			}
-		}
-		#endregion
-	}
+            set
+            {
+                _selectedItem = value;
+
+                if (value != null)
+                {
+                    CoreMethods.PushPageModel(value.PageModelType, false);
+                }
+
+            }
+        }*/
+        #endregion
+
+        public MenuItem SelectedItem
+        {
+            get
+            {
+                return _selectedItem;
+            }
+            set
+            {
+                _selectedItem = value;
+                if (value != null)
+                    EventSelected.Execute(value);
+            }
+        }
+
+        public Xamarin.Forms.Command<MenuItem> EventSelected
+        {
+            get
+            {
+                return new Xamarin.Forms.Command<MenuItem>( obj => {
+                    if(obj is MenuItem menuItem)
+                    CoreMethods.PushPageModel(menuItem.PageModelType, false);
+                });
+            }
+        }
+
+    }
 }

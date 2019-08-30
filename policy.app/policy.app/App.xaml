@@ -20,6 +20,13 @@
                 <Setter Property="TextColor" Value="#19365f" />
                 <Setter Property="FontFamily" Value="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
             </Style>
+            <Style x:Key="ButtonCategories" TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="WidthRequest" Value="200"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

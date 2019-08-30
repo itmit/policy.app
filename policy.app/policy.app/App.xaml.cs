@@ -55,7 +55,7 @@ namespace policy.app
 		{
 			var tabbedNavigation = new MainTabbedPage();
 
-			tabbedNavigation.AddTab<ProfilePageModel>(null, "ic_action_home.png");
+			tabbedNavigation.AddTab<CategoriesPageModel>(null, "ic_action_home.png");
             tabbedNavigation.AddTab<FavouritesPageModel>(null, "star_2.png");
             tabbedNavigation.AddTab<RatingPageModel>(null, "ic_action_search.png");
             //tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");

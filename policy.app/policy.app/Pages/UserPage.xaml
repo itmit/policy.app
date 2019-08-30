@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:policy.app.Controls"
-             x:Class="policy.app.Pages.ProfilePage">
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="policy.app.Pages.UserPage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">
                 <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="avatar.png" Aspect="AspectFill"/>
-                    <StackLayout Margin="15">
+                <StackLayout Margin="15">
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -53,11 +55,33 @@
                         <Label Text="Добавить в избранное" Margin="10,0,0,0" FontSize="Medium" TextColor="#f07d14" FontAttributes="Bold" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                     </StackLayout>
                     <StackLayout>
-                        <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro"  Clicked="Button_Clicked" HorizontalOptions="Start" />
+                        <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro" Clicked="Button_Clicked" HorizontalOptions="Start" />
                     </StackLayout>
-                    <StackLayout>
-                        <ImageButton Source="user_blue.png" WidthRequest="50" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
-                    </StackLayout>
+                    <ScrollView Orientation="Horizontal">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" HorizontalOptions="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="Like" Text="100" FontSize="45" TextColor="#228bcc" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                <ImageButton Source="img_131540" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
+                            </Grid>
+                            <Grid Grid.Column="2" HorizontalOptions="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="Dislike" Text="60" FontSize="45" TextColor="#f07d14" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                                <ImageButton Source="img_1315401" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" Clicked="ImageButton_Clicked_1"/>
+                            </Grid>
+                        </Grid>
+                    </ScrollView>
                     <Frame Padding="0" Margin="0,20" HasShadow="True">
                         <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
                             <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
