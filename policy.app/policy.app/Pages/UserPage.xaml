@@ -72,6 +72,14 @@
                                 <Label x:Name="Like" Text="100" FontSize="45" TextColor="#228bcc" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                                 <ImageButton Source="img_131540" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
                             </Grid>
+                            <Grid Grid.Column="1" HorizontalOptions="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="meh" Text="100" FontSize="45" TextColor="#101821" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                <ImageButton Source="meh" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" Clicked="ImageButton_Clicked_2"/>
+                            </Grid>
                             <Grid Grid.Column="2" HorizontalOptions="Center">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>

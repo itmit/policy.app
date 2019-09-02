@@ -34,5 +34,12 @@ namespace policy.app.Pages
 
             Dislike.Text = Convert.ToString(_numL);
         }
+
+        private void ImageButton_Clicked_2(object sender, EventArgs e)
+        {
+            var _numL = int.Parse(meh.Text) + 1;
+
+            meh.Text = Convert.ToString(_numL);
+        }
     }
 }

@@ -9,9 +9,9 @@
         <StackLayout VerticalOptions="FillAndExpand">
             <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
-                    <Button Style="{StaticResource ButtonCategories}" Text="политика" BackgroundColor="#3fe9d7" Clicked="OpenListCategories"/>
-                    <Button Style="{StaticResource ButtonCategories}" Text="музыка" BackgroundColor="#f89c49" Clicked="OpenListCategories"/>
-                    <Button Style="{StaticResource ButtonCategories}" Text="кино" BackgroundColor="#41f256" Clicked="OpenListCategories"/>
+                    <Button Style="{StaticResource ButtonCategories}" Text="политика" BackgroundColor="#19365f" Clicked="OpenListCategories"/>
+                    <Button Style="{StaticResource ButtonCategories}" Text="музыка" BackgroundColor="#19365f" Clicked="OpenListCategories"/>
+                    <Button Style="{StaticResource ButtonCategories}" Text="кино" BackgroundColor="#19365f" Clicked="OpenListCategories"/>
                     <Button Style="{StaticResource ButtonCategories}" Text="телевидение" BackgroundColor="#19365f" Clicked="OpenListCategories"/>
                 </StackLayout>
             </ScrollView>

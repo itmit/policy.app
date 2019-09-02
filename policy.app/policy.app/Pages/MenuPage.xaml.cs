@@ -16,5 +16,6 @@ namespace policy.app.Pages
 		{
 			InitializeComponent();
 		}
-	}
+
+    }
 }

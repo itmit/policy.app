@@ -20,8 +20,18 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <ex:CircleImage Grid.Column="0" Source="avatar_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
-                        <Label Grid.Column="1" Text="Пестель Яна" TextColor="#19365f" VerticalOptions="Center" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <ex:CircleImage Grid.Column="1" Grid.Row="0" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
+                        <Label Grid.Column="1" Grid.Row="1" Text="Пестель Яна" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                        <Label Grid.Column="1" Grid.Row="2" Text="Москва" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                        <Label Grid.Column="1" Grid.Row="3" Text="Политика" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                        <Label Grid.Column="1" Grid.Row="4" Text="ИТМИТ" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
                     </Grid>
                     <BoxView HeightRequest="1" BackgroundColor="#dee4ea"/>
                 </StackLayout>
@@ -36,8 +46,18 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <ex:CircleImage Grid.Column="0" Source="avatar_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
-                        <Label Grid.Column="1" Text="Ковалев Денис Викторович" TextColor="#19365f" VerticalOptions="Center" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <ex:CircleImage Grid.Column="1" Grid.Row="0" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
+                        <Label Grid.Column="1" Grid.Row="1" Text="Ковалев Денис Викторович" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                        <Label Grid.Column="1" Grid.Row="2" Text="Санкт-Петербург" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                        <Label Grid.Column="1" Grid.Row="3" Text="Музыка" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                        <Label Grid.Column="1" Grid.Row="4" Text="ИТМИТ" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
                     </Grid>
                     <BoxView HeightRequest="1" BackgroundColor="#dee4ea"/>
                 </StackLayout>

@@ -99,6 +99,7 @@ namespace policy.app.PageModels
             set
             {
                 _selectedItem = value;
+
                 if (value != null)
                     EventSelected.Execute(value);
             }
