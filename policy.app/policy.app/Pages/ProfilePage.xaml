@@ -7,7 +7,10 @@
         <ScrollView>
             <StackLayout Orientation="Vertical">
                 <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="avatar.png" Aspect="AspectFill"/>
-                    <StackLayout Margin="15">
+                <StackLayout Margin="15">
+                    <StackLayout>
+                        <ImageButton Source="user_blue.png" WidthRequest="30" BackgroundColor="Transparent" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
+                    </StackLayout>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -50,9 +53,6 @@
                     </Grid>
                     <StackLayout>
                         <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro"  Clicked="Button_Clicked" HorizontalOptions="Start" />
-                    </StackLayout>
-                    <StackLayout>
-                        <ImageButton Source="user_blue.png" WidthRequest="50" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
                     </StackLayout>
                     <Frame Padding="0" Margin="0,20" HasShadow="True">
                         <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">

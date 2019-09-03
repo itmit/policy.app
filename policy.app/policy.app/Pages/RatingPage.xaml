@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ex="clr-namespace:policy.app.Controls"
+             xmlns:ex1="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="policy.app.Pages.RatingPage"
              BackgroundColor="#f4f5f6">
     <ContentPage.Content>
@@ -49,7 +50,7 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
+                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
                     <Label Grid.Column="1" Margin="5,0,5,0" Text="Пестель Яна" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                     <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f"  HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="политика" WidthRequest="100" HorizontalTextAlignment="Center"/>
@@ -62,7 +63,7 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
+                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
                     <Label Grid.Column="1" Margin="5,0,5,0" Text="Ковалев Денис Викторович" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                     <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="музыка" WidthRequest="100" HorizontalTextAlignment="Center"/>
@@ -75,7 +76,7 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
+                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
                     <Label Grid.Column="1" Margin="5,0,5,0" Text="Кирченко Ирина Игоревна" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                     <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="кино" WidthRequest="100" HorizontalTextAlignment="Center"/>
@@ -88,7 +89,7 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
+                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
                     <Label Grid.Column="1" Margin="5,0,5,0" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
                     <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="телевидение" WidthRequest="100" HorizontalTextAlignment="Center"/>

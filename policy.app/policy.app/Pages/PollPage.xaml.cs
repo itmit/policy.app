@@ -19,7 +19,7 @@ namespace policy.app.Pages
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new AllquestionsPage());
+            Navigation.PushAsync(new AllquestionsPage());
         }
     }
 }

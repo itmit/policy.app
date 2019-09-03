@@ -19,7 +19,7 @@ namespace policy.app.Pages
 
         private void OpenListCategories(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new ListCategoriesPage());
+            Navigation.PushAsync(new ListCategoriesPage());
         }
     }
 }

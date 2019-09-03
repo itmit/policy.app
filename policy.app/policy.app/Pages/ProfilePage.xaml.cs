@@ -20,7 +20,7 @@ namespace policy.app.Pages
 
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new EditPage());
+            Navigation.PushAsync(new EditPage());
         }
     }
 }
