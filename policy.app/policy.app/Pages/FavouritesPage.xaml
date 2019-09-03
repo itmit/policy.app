@@ -16,8 +16,8 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="star_o.png" VerticalOptions="Center"/>
-                        <ex:CircleImage Grid.Column="1" Source="avatar_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
+                        <ImageButton Grid.Column="0" Source="Star_def.png" VerticalOptions="Center" BackgroundColor="Transparent" WidthRequest="30" HeightRequest="30"/>
+                        <ex:CircleImage Grid.Column="1" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
                         <Label Grid.Column="2" Text="Пестель Яна" TextColor="#19365f" VerticalOptions="Center" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
                     </Grid>
                     <BoxView HeightRequest="1" BackgroundColor="#dee4ea"/>
@@ -29,8 +29,8 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="star_o.png" VerticalOptions="Center"/>
-                        <ex:CircleImage Grid.Column="1" Source="avatar_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
+                        <ImageButton Grid.Column="0" Source="Star_def.png" VerticalOptions="Center" BackgroundColor="Transparent" WidthRequest="30" HeightRequest="30"/>
+                        <ex:CircleImage Grid.Column="1" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
                         <Label Grid.Column="2" Text="Ковалев Денис Викторович" TextColor="#19365f" VerticalOptions="Center" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
                     </Grid>
                     <BoxView HeightRequest="1" BackgroundColor="#dee4ea"/>

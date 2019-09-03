@@ -46,12 +46,12 @@
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
                     <Label Grid.Column="1" Margin="5,0,5,0" Text="Пестель Яна" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                    <Frame Grid.Column="2" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#3fe9d7"  HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                    <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f"  HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="политика" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>
@@ -59,12 +59,12 @@
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
-                    <Label Grid.Column="2" Margin="5,0,5,0" Text="Ковалев Денис Викторович" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                    <Frame Grid.Column="3" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#f89c49" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Ковалев Денис Викторович" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="музыка" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>
@@ -72,12 +72,12 @@
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
                     <Label Grid.Column="1" Margin="5,0,5,0" Text="Кирченко Ирина Игоревна" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                    <Frame Grid.Column="2" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#41f256" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                    <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="кино" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>
@@ -85,12 +85,12 @@
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="user_picture.png" Margin="5"/>
                     <Label Grid.Column="1" Margin="5,0,5,0" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                    <Frame Grid.Column="2" MinimumWidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                    <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="телевидение" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Grid>

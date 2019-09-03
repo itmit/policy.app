@@ -11,7 +11,7 @@
                 <ex:CircleImage Source="avatar.png" Margin="0,0,15,0" Aspect="AspectFill" WidthRequest="65" HeightRequest="65"/>
                 <Label Text="Пестель Яна" TextColor="#19365f" VerticalOptions="Center" FontAttributes="Bold" FontSize="30" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
             </StackLayout>
-            <ListView x:Name="ll" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" ItemsSource="{Binding MenuCollection}" HasUnevenRows="True" SeparatorColor="#19365f">
+            <ListView x:Name="ll" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" ItemsSource="{Binding MenuCollection}" HasUnevenRows="True" SeparatorColor="#19365f" ItemSelected="Ll_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <viewCell:MenuViewCell/>

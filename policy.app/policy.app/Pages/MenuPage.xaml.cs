@@ -17,5 +17,10 @@ namespace policy.app.Pages
 			InitializeComponent();
 		}
 
+        private void Ll_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            // then reset SelectedItem
+            ((ListView)sender).SelectedItem = null;
+        }
     }
 }

@@ -48,10 +48,6 @@
                         <Label Text="Должность" Style="{StaticResource StartLabelProfilePage}"/>
                         <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Doljnost}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="star_o.png"/>
-                        <Label Text="Добавить в избранное" Margin="10,0,0,0" FontSize="Medium" TextColor="#f07d14" FontAttributes="Bold" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                    </StackLayout>
                     <StackLayout>
                         <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro"  Clicked="Button_Clicked" HorizontalOptions="Start" />
                     </StackLayout>

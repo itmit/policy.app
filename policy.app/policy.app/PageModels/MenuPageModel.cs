@@ -29,31 +29,31 @@ namespace policy.app.PageModels
 			{
                 new MenuItem
 				{
-                    ImageSource = "menu_5.png",
+                    ImageSource = "menu_1_def.png",
                     PageModelType = typeof(ProfilePageModel),
 					Title = "Мой профиль"
 				},
                 new MenuItem
                 {
-                    ImageSource = "menu_6.png",
+                    ImageSource = "menu_2_def.png",
                     PageModelType = typeof(PollPageModel),
                     Title = "Опросы"
                 },
                 new MenuItem
 				{
-                    ImageSource = "menu_3.png",
+                    ImageSource = "menu_3_def.png",
                     PageModelType = typeof(WriteToUsPageModel),
 					Title = "Напишите нам"
 				},
 				new MenuItem
 				{
-                    ImageSource = "menu_7.png",
+                    ImageSource = "menu_4_def.png",
                     PageModelType = typeof(AboutPageModel),
 					Title = "О приложении"
 				},
                 new MenuItem
                 {
-                    ImageSource = "menu_4.png",
+                    ImageSource = "menu_5_def.png",
                     PageModelType = typeof(AboutPageModel),
                     Title = "Выход"
                 }
