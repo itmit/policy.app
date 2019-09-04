@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="policy.app.Pages.AllquestionsPage">
+             x:Class="policy.app.Pages.AllQuestionsPage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -16,7 +13,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                            <TapGestureRecognizer Command="{Binding OpenSurveyPage}"
                                                   NumberOfTapsRequired="1"
                                                   />
                         </Grid.GestureRecognizers>
@@ -36,7 +33,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                            <TapGestureRecognizer Command="{Binding OpenSurveyPage}"
                                                   NumberOfTapsRequired="1"
                                                   />
                         </Grid.GestureRecognizers>
@@ -56,7 +53,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                            <TapGestureRecognizer Command="{Binding OpenSurveyPage}"
                                                   NumberOfTapsRequired="1"
                                                   />
                         </Grid.GestureRecognizers>

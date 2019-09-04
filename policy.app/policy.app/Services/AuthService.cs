@@ -50,28 +50,28 @@ namespace policy.app.Services
 		/// <returns>Авторизованный пользователь.</returns>
 		public async Task<User> GetUserByTokenAsync(UserToken token)
 		{
-			HttpResponseMessage response;
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{token.TokenType} {token.Token}");
 
-				response = await client.PostAsync(new Uri(DetailsUri), null);
-			}
+				var response = await client.PostAsync(new Uri(DetailsUri), null);
+			
 
-			var jsonString = await response.Content.ReadAsStringAsync();
-			Debug.WriteLine(jsonString);
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
 
-			if (response.IsSuccessStatusCode)
-			{
-				if (jsonString != null)
+				if (response.IsSuccessStatusCode)
 				{
-					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<User>>(jsonString);
-					jsonData.Data.Token = token;
-					return await Task.FromResult(jsonData.Data);
+					if (jsonString != null)
+					{
+						var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<User>>(jsonString);
+						jsonData.Data.Token = token;
+						return await Task.FromResult(jsonData.Data);
+					}
 				}
-			}
 
-			throw new AuthenticationException($"Пользователь с таким токеном, не найден. Токен: {token.Token}");
+				throw new AuthenticationException($"Пользователь с таким токеном, не найден. Токен: {token.Token}");
+			}
 		}
 
 		/// <summary>
@@ -83,7 +83,6 @@ namespace policy.app.Services
 		/// <exception cref="AuthenticationException">Возникает при неудачной авторизации.</exception>
 		public async Task<UserToken> LoginAsync(string login, string pass)
 		{
-			HttpResponseMessage response;
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(SecretKey);
@@ -98,22 +97,22 @@ namespace policy.app.Services
 					}
 				});
 
-				response = await client.PostAsync(new Uri(AuthUri), encodedContent);
-			}
+				var response = await client.PostAsync(new Uri(AuthUri), encodedContent);
+			
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
 
-			var jsonString = await response.Content.ReadAsStringAsync();
-			Debug.WriteLine(jsonString);
-
-			if (response.IsSuccessStatusCode)
-			{
-				if (jsonString != null)
+				if (response.IsSuccessStatusCode)
 				{
-					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
-					return await Task.FromResult(jsonData.Data);
+					if (jsonString != null)
+					{
+						var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
+						return await Task.FromResult(jsonData.Data);
+					}
 				}
-			}
 
-			throw new AuthenticationException($"Возникла ошибка при авторизации. Логин: {login}");
+				throw new AuthenticationException($"Возникла ошибка при авторизации. Логин: {login}");
+			}
 		}
 
 		/// <summary>
@@ -125,7 +124,6 @@ namespace policy.app.Services
 		/// <returns>Токен нового пользователя.</returns>
 		public async Task<UserToken> RegisterAsync(User user, string password, string confirmPassword)
 		{
-			HttpResponseMessage response;
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(SecretKey);
@@ -152,23 +150,23 @@ namespace policy.app.Services
 					}
 				});
 
-				response = await client.PostAsync(new Uri(RegisterUri), encodedContent);
-			}
+				var response = await client.PostAsync(new Uri(RegisterUri), encodedContent);
 
-			var jsonString = await response.Content.ReadAsStringAsync();
-			Debug.WriteLine(jsonString);
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
 
-			if (response.IsSuccessStatusCode)
-			{
-				if (jsonString != null)
+				if (response.IsSuccessStatusCode)
 				{
-					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
-					return await Task.FromResult(jsonData.Data);
+					if (jsonString != null)
+					{
+						var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
+						return await Task.FromResult(jsonData.Data);
+					}
 				}
-			}
 
-			// TODO: Написать нормальную ошибку с сообщением из api.
-			throw new AuthenticationException("Возникла ошибка при авторизации. Логин: ");
+				// TODO: Написать нормальную ошибку с сообщением из api.
+				throw new AuthenticationException("Возникла ошибка при авторизации. Логин: ");
+			}
 		}
 		#endregion
 	}

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
 using PropertyChanged;
@@ -32,7 +33,17 @@ namespace policy.app.PageModels
 				City = user.City;
 				Activity = user.FieldOfActivity;
 				Organization = user.Organization;
+				Position = user.Position;
 			}
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает должность пользователя.
+		/// </summary>
+		public string Position
+		{
+			get;
+			set;
 		}
 		#endregion
 
@@ -44,6 +55,18 @@ namespace policy.app.PageModels
 		{
 			get;
 			set;
+		}
+
+		/// <summary>
+		/// Возвращает команду для открытия страницы редактирования данных пользователя.
+		/// </summary>
+		public ICommand OpenEditPage
+		{
+			get => new FreshAwaitCommand((param, tcs) =>
+			{
+				CoreMethods.PushPageModel<EditPageModel>();
+				tcs.SetResult(true);
+			});
 		}
 
 		/// <summary>

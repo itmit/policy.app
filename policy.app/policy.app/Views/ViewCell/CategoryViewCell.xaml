@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="policy.app.Views.ViewCell.CategoryViewCell">
+    <ViewCell.View>
+        <Button Style="{StaticResource ButtonCategories}" BackgroundColor="#19365f" Text="{Binding Title}"/>
+    </ViewCell.View>
+</ViewCell>

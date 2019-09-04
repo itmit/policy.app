@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Security.Authentication;
@@ -8,8 +7,6 @@ using FreshMvvm;
 using policy.app.Models;
 using policy.app.Services;
 using PropertyChanged;
-using Realms;
-using Realms.Exceptions;
 using Xamarin.Forms;
 
 namespace policy.app.PageModels
@@ -20,10 +17,19 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class EditPageModel : FreshBasePageModel
 	{
-		private readonly App _app;
+		/// <summary>
+		/// Возвращает текущий <see cref="Application"/>.
+		/// </summary>
+		private App _app;
 
-		public EditPageModel()
+		/// <summary>
+		/// Вызывается при загрузке модели представления.
+		/// </summary>
+		/// <param name="initData">Данные, которые были отправлены из модели представления ранее.</param>
+		public override void Init(object initData)
 		{
+			base.Init(initData);
+
 			_app = Application.Current as App;
 			if (_app != null && !_app.IsUserLoggedIn)
 			{

@@ -8,19 +8,8 @@ namespace policy.app.Models
 	/// <summary>
 	/// Представляет модель для сущности пользователя.
 	/// </summary>
-	public class User : RealmObject
+	public class User : RealmObject, IGopher
 	{
-		/// <summary>
-		/// Возвращает или устанавливает ид пользователя.
-		/// </summary>
-		[JsonProperty("uid")]
-		public string Guid
-		{
-			get;
-			set;
-		} = System.Guid.NewGuid()
-				.ToString();
-
 		/// <summary>
 		/// Возвращает или устанавливает почтовый адрес пользователя.
 		/// </summary>
@@ -34,15 +23,6 @@ namespace policy.app.Models
 		/// Возвращает или устанавливает токен пользователя.
 		/// </summary>
 		public UserToken Token
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает имя пользователя.
-		/// </summary>
-		public string Name
 		{
 			get;
 			set;
@@ -77,15 +57,6 @@ namespace policy.app.Models
 		}
 
 		/// <summary>
-		/// Возвращает или устанавливает должность пользователя.
-		/// </summary>
-		public string Position
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
 		/// Возвращает или устанавливает дату рождения пользователя.
 		/// </summary>
 		public DateTimeOffset Birthday
@@ -99,6 +70,56 @@ namespace policy.app.Models
 		/// </summary>
 		[JsonProperty("phone_number")]
 		public string PhoneNumber
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает ид пользователя.
+		/// </summary>
+		[PrimaryKey]
+		[JsonProperty("uid")]
+		public string Guid
+		{
+			get;
+			set;
+		} = System.Guid.NewGuid()
+				  .ToString();
+
+		/// <summary>
+		/// Возвращает или устанавливает имя пользователя.
+		/// </summary>
+		public string Name
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает имя пользователя.
+		/// </summary>
+		[JsonProperty("place_of_work")]
+		public string PlaceOfWork
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает должность пользователя.
+		/// </summary>
+		public string Position
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает источник фотографии.
+		/// </summary>
+		[JsonProperty("photo")]
+		public string PhotoSource
 		{
 			get;
 			set;

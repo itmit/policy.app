@@ -34,7 +34,6 @@ namespace policy.app
 				IsUserLoggedIn = true;
 				MainPage = InitMainTabbedPage();
 
-                //MainPage = new TabbedPage1();
                 return;
 			}
 
@@ -46,7 +45,7 @@ namespace policy.app
 			get
 			{
 				var configuration = RealmConfiguration.DefaultConfiguration;
-				configuration.SchemaVersion = 2;
+				configuration.SchemaVersion = 3;
 				return Realm.GetInstance(configuration);
 			}
 		}

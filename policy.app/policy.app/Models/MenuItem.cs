@@ -26,7 +26,7 @@ namespace policy.app.Models
 			set;
 		}
         /// <summary>
-        /// Путь изображения меню
+        /// Путь изображения меню.
         /// </summary>
         public string ImageSource
         {

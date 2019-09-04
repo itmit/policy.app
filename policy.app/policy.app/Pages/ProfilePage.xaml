@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:policy.app.Controls"
+             xmlns:properties="clr-namespace:policy.app.Properties"
              x:Class="policy.app.Pages.ProfilePage">
     <ContentPage.Content>
         <ScrollView>
@@ -9,14 +9,14 @@
                 <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="avatar.png" Aspect="AspectFill"/>
                 <StackLayout Margin="15">
                     <StackLayout>
-                        <ImageButton Source="user_blue.png" WidthRequest="30" BackgroundColor="Transparent" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
+                        <ImageButton Source="user_blue.png" WidthRequest="30" BackgroundColor="Transparent" HorizontalOptions="End" Command="{Binding OpenEditPage}"/>
                     </StackLayout>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Text="Имя" Style="{StaticResource StartLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.Name}" Style="{StaticResource StartLabelProfilePage}"/>
                         <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Name}" Style="{StaticResource EndLabelProfilePage}" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
                     </Grid>
                     <Grid Margin="0,0,0,8">
@@ -24,7 +24,7 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Text="Город" Style="{StaticResource StartLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.City}" Style="{StaticResource StartLabelProfilePage}"/>
                         <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding City}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
                     <Grid Margin="0,0,0,8">
@@ -32,7 +32,7 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Text="Сфера деятельности" Style="{StaticResource StartLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.FieldOfActivity}" Style="{StaticResource StartLabelProfilePage}"/>
                         <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Activity}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
                     <Grid Margin="0,0,0,8">
@@ -40,7 +40,7 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Text="Организация" Style="{StaticResource StartLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.Organization}" Style="{StaticResource StartLabelProfilePage}"/>
                         <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Organization}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
                     <Grid Margin="0,0,0,8">
@@ -48,8 +48,8 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Text="Должность" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Doljnost}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.Position}" Style="{StaticResource StartLabelProfilePage}"/>
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Position}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
                     <StackLayout>
                         <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro"  Clicked="Button_Clicked" HorizontalOptions="Start" />
@@ -58,7 +58,7 @@
                         <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
                             <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
                                 <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
-                                <Label FontSize="30" Text="Статистика" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center" TextColor="#19365f"/>
+                                <Label FontSize="30" Text="{x:Static properties:Translate.Statistics}" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center" TextColor="#19365f"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>
