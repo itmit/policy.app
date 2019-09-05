@@ -113,5 +113,14 @@ namespace policy.app.Properties {
                 return ResourceManager.GetString("Statistics", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Votes.
+        /// </summary>
+        internal static string Votes {
+            get {
+                return ResourceManager.GetString("Votes", resourceCulture);
+            }
+        }
     }
 }

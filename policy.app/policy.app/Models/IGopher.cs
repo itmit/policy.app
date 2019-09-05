@@ -25,5 +25,10 @@
 		{
 			get;
 		}
+
+		Category Category
+		{
+			get;
+		}
 	}
 }

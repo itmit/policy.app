@@ -9,7 +9,7 @@ namespace policy.app.Models
 		/// Возвращает или устанавливает ид пользователя.
 		/// </summary>
 		[PrimaryKey]
-		[JsonProperty("uid")]
+		[JsonProperty("uuid")]
 		public string Guid
 		{
 			get;
@@ -21,6 +21,12 @@ namespace policy.app.Models
 		/// Возвращает или устанавливает имя пользователя.
 		/// </summary>
 		public string Name
+		{
+			get;
+			set;
+		}
+
+		public Category Category
 		{
 			get;
 			set;
@@ -50,6 +56,24 @@ namespace policy.app.Models
 		/// </summary>
 		[JsonProperty("photo")]
 		public string PhotoSource
+		{
+			get;
+			set;
+		}
+
+		public int Likes
+		{
+			get;
+			set;
+		}
+
+		public int Neutrals
+		{
+			get;
+			set;
+		}
+
+		public int Dislikes
 		{
 			get;
 			set;

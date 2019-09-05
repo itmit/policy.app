@@ -135,4 +135,7 @@
   <data name="Statistics" xml:space="preserve">
     <value>Статистика</value>
   </data>
+  <data name="Votes" xml:space="preserve">
+    <value>Опросы</value>
+  </data>
 </root>

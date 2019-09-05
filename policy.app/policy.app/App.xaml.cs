@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.PageModels;
@@ -52,12 +54,11 @@ namespace policy.app
 
 		public TabbedPage InitMainTabbedPage()
 		{
-			var tabbedNavigation = new MainTabbedPage();
+			var tabbedNavigation = new MainTabbedPage(NavigationContainerNames.MainContainer);
 
 			tabbedNavigation.AddTab<CategoriesPageModel>(null, "ic_action_home.png");
             tabbedNavigation.AddTab<FavouritesPageModel>(null, "star_2.png");
             tabbedNavigation.AddTab<RatingPageModel>(null, "ic_action_search.png");
-            //tabbedNavigation.AddTab<BackTabPageModel>(null, "ic_action_arrow_back.png");
             tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
 
 			tabbedNavigation.Effects.Add(new NoShiftEffect());
@@ -70,8 +71,6 @@ namespace policy.app
 			tabbedNavigation.UnselectedTabColor = Color.White;
 
             return tabbedNavigation;
-
-
         }
 
 		public bool IsUserLoggedIn
@@ -83,6 +82,9 @@ namespace policy.app
 		protected override void OnStart()
 		{
 			// Handle when your app starts
+			var culture = CultureInfo.GetCultureInfo("ru-RU");
+			Thread.CurrentThread.CurrentCulture = culture;
+			Thread.CurrentThread.CurrentUICulture = culture;
 		}
 
 		protected override void OnSleep()

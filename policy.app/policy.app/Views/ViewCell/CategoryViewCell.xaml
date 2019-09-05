@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="policy.app.Views.ViewCell.CategoryViewCell">
     <ViewCell.View>
-        <Button Style="{StaticResource ButtonCategories}" BackgroundColor="#19365f" Text="{Binding Title}"/>
+        <Frame BackgroundColor="#19365f" CornerRadius="10" Margin="0,15" HorizontalOptions="Fill" >
+            <Label Text="{Binding Title}" TextColor="White" HorizontalOptions="Center"/>
+        </Frame>
     </ViewCell.View>
 </ViewCell>

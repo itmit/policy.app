@@ -124,5 +124,10 @@ namespace policy.app.Models
 			get;
 			set;
 		}
+
+		public Category Category
+		{
+			get;
+		}
 	}
 }

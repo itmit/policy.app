@@ -107,7 +107,7 @@ namespace policy.app.Services
 													  new FormUrlEncodedContent(new Dictionary<string, string>
 													  {
 														  {
-															  "suslik_id", guid.ToString()
+															  "suslik_uuid", guid.ToString()
 														  }
 													  }));
 
@@ -115,7 +115,7 @@ namespace policy.app.Services
 				Debug.WriteLine(jsonString);
 
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<Gopher>>(jsonString);
-				if (jsonData.Data == null)
+				if (jsonData.Data != null)
 				{
 
 					return await Task.FromResult(jsonData.Data);
@@ -149,7 +149,10 @@ namespace policy.app.Services
 				Debug.WriteLine(jsonString);
 
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
-
+				foreach (var gopher in jsonData.Data)
+				{
+					gopher.Category = category;
+				}
 				return await Task.FromResult(jsonData.Data);
 			}
 		}

@@ -84,6 +84,14 @@ namespace policy.app.PageModels
 			}
 		}
 
+		public FreshAwaitCommand OpenVotes =>
+			new FreshAwaitCommand((param, tcs) =>
+			{
+				CoreMethods.PushPageModel<PollPageModel>();
+				tcs.SetResult(true);
+			});
+
+
 		/// <summary>
 		/// Возвращает или устанавливает категории.
 		/// </summary>
@@ -95,7 +103,7 @@ namespace policy.app.PageModels
 
 		public Command<Category> EventSelected =>
 			new Command<Category>(obj => {
-				CoreMethods.PushPageModel<UserPageModel>(obj, false, true);
+				CoreMethods.PushPageModel<UsersListPageModel>(obj);
 			});
 	}
 }

@@ -4,13 +4,19 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewCell="clr-namespace:policy.app.Views.ViewCell"
+             xmlns:properties="clr-namespace:policy.app.Properties"
              mc:Ignorable="d"
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
             <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
-                    <ListView ItemsSource="{Binding Categories}" ItemSelected="ListView_OnItemSelected" SelectedItem="{Binding SelectedCategory}" HasUnevenRows="True">
+                    <ListView WidthRequest="200" 
+                              HorizontalOptions="Center" 
+                              ItemsSource="{Binding Categories}" 
+                              ItemSelected="ListView_OnItemSelected"
+                              SelectedItem="{Binding SelectedCategory}" 
+                              HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <viewCell:CategoryViewCell/>
@@ -21,7 +27,7 @@
             </ScrollView>
             <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,15">
-                <Button Style="{StaticResource ButtonCategories}" Text="телевидение" BackgroundColor="#19365f" Clicked="Button_Clicked_1"/>
+                <Button Style="{StaticResource ButtonCategories}" Text="{x:Static properties:Translate.Votes}" BackgroundColor="#19365f" Command="{Binding OpenVotes}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

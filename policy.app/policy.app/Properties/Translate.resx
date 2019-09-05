@@ -135,4 +135,7 @@
   <data name="Statistics" xml:space="preserve">
     <value>Statistics</value>
   </data>
+  <data name="Votes" xml:space="preserve">
+    <value>Votes</value>
+  </data>
 </root>
