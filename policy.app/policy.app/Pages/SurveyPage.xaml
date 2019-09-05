@@ -46,7 +46,7 @@
                     </StackLayout>
                     <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 </StackLayout>
-                <Button Text="Закончить опрос" TextColor="White" Padding="15,10" Margin="0,0,0,20" BackgroundColor="#228bcc" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
+                <Button Text="Закончить опрос" TextColor="White" Padding="15,10" Margin="0,0,0,20" BackgroundColor="#228bcc" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Clicked="Button_Clicked"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

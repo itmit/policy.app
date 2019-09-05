@@ -31,10 +31,6 @@ namespace policy.app.PageModels
 				{
                     ImageSource = "menu_1_def.png"
 				},
-                new MenuItem("Опросы", typeof(PollPageModel))
-                {
-                    ImageSource = "menu_2_def.png"
-                },
                 new MenuItem("Напишите нам", typeof(WriteToUsPageModel))
 				{
                     ImageSource = "menu_3_def.png"

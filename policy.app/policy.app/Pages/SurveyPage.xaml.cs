@@ -16,5 +16,11 @@ namespace policy.app.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Уведомление", "Успешно отправлено", "ОK");
+            Navigation.PushAsync(new PollPage());
+        }
     }
 }

@@ -16,7 +16,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Label Text="Имя" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Name}" Style="{StaticResource EndLabelProfilePage}" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Name}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
@@ -44,7 +44,7 @@
                     </Grid>
                     <StackLayout Orientation="Horizontal">
                         <Image Source="Star_def.png" WidthRequest="25" HeightRequest="25"/>
-                        <Label Text="Добавить в избранное" Margin="10,0,0,0" FontSize="Medium" TextColor="#f07d14" FontAttributes="Bold" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                        <Label Text="Добавить в избранное" Margin="10,0,0,0" FontSize="Medium" TextColor="#f07d14" FontAttributes="Bold"/>
                     </StackLayout>
                     <StackLayout>
                         <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro" Clicked="Button_Clicked" HorizontalOptions="Start" />
@@ -61,7 +61,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="Like" Text="100" FontSize="45" TextColor="#228bcc" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                <Label x:Name="Like" Text="100" FontSize="45" TextColor="#228bcc"/>
                                 <ImageButton Source="img_131540" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
                             </Grid>
                             <Grid Grid.Column="1" HorizontalOptions="Center">
@@ -69,7 +69,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="meh" Text="100" FontSize="45" TextColor="#101821" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                                <Label x:Name="meh" Text="100" FontSize="45" TextColor="#101821"/>
                                 <ImageButton Source="meh" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" Clicked="ImageButton_Clicked_2"/>
                             </Grid>
                             <Grid Grid.Column="2" HorizontalOptions="Center">
@@ -77,7 +77,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="Dislike" Text="60" FontSize="45" TextColor="#f07d14" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
+                                <Label x:Name="Dislike" Text="60" FontSize="45" TextColor="#f07d14"/>
                                 <ImageButton Source="img_1315401" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" Clicked="ImageButton_Clicked_1"/>
                             </Grid>
                         </Grid>
@@ -86,7 +86,7 @@
                         <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
                             <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
                                 <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
-                                <Label FontSize="30" Text="Статистика" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center" TextColor="#19365f"/>
+                                <Label FontSize="30" Text="Статистика" VerticalOptions="Center" TextColor="#19365f"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>
