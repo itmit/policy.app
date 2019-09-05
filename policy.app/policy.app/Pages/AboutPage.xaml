@@ -6,18 +6,18 @@
         <ScrollView>
             <StackLayout>
                 <StackLayout HeightRequest="100" HorizontalOptions="Fill">
-                    <Label Text="О приложении" Margin="0, 20" FontSize="40" TextColor="#228bcc" VerticalTextAlignment="Center" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Text="О приложении" Margin="0, 20" FontSize="40" TextColor="#228bcc" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
                 </StackLayout>
                 <StackLayout HorizontalOptions="Fill">
-                    <Label Margin="15" FontSize="Large" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" 
+                    <Label Margin="15" FontSize="Large" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" 
                            Text="Равным образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же консультация с широким активом позволяет оценить значение модели развития. Товарищи! реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации соответствующий условий активизации." />
-                    <Label Margin="15" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#228bcc" Text="Вы можете написать нам"  FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" />
-                    <Label Margin="15" HorizontalOptions="CenterAndExpand"  FontSize="Large" TextColor="#f07d14" Text="Задать вопрос" BackgroundColor="Transparent" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold">
+                    <Label Margin="15" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#228bcc" Text="Вы можете написать нам" />
+                    <Label Margin="15" HorizontalOptions="CenterAndExpand"  FontSize="Large" TextColor="#f07d14" Text="Задать вопрос" BackgroundColor="Transparent">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" />
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label Margin="15" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#228bcc" HorizontalTextAlignment="Center" Text="Внести предложение по улучшению приложения" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+                    <Label Margin="15" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#228bcc" HorizontalTextAlignment="Center" Text="Внести предложение по улучшению приложения"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

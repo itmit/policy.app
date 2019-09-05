@@ -1,10 +1,12 @@
 ﻿using FreshMvvm;
 using PropertyChanged;
+using Xamarin.Forms;
 
 namespace policy.app.PageModels
 {
     [AddINotifyPropertyChangedInterface]
-    class SurveyPageModel : FreshBasePageModel
+    public class SurveyPageModel : FreshBasePageModel
     {
+
     }
 }

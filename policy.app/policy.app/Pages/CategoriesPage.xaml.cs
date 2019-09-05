@@ -22,7 +22,12 @@ namespace policy.app.Pages
             Navigation.PushAsync(new ListCategoriesPage());
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PollPage());
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
         {
             Navigation.PushAsync(new PollPage());
         }

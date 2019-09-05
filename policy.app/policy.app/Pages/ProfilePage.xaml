@@ -17,7 +17,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Label Text="Имя" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Name}" Style="{StaticResource EndLabelProfilePage}" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Name}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
@@ -58,7 +58,7 @@
                         <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
                             <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
                                 <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
-                                <Label FontSize="30" Text="Статистика" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center" TextColor="#19365f"/>
+                                <Label FontSize="30" Text="Статистика" VerticalOptions="Center" TextColor="#19365f"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>

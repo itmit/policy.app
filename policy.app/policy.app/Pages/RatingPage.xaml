@@ -9,11 +9,11 @@
         <ScrollView Orientation="Vertical">
             <StackLayout>
                 <StackLayout Margin="40">
-                    <Label TextColor="#228bcc" FontSize="35" Text="Поиск пользователей" HorizontalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label TextColor="#228bcc" FontSize="35" Text="Поиск пользователей" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
                 </StackLayout>
                 <StackLayout Margin="15">
                     <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand" Margin="0,0,0,10">
-                        <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
+                        <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
                             <Picker.Items>
                                 <x:String>Политика</x:String>
                                 <x:String>Музыка</x:String>
@@ -23,7 +23,7 @@
                         </ex:PickerRating>
                     </StackLayout>
                     <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand">
-                        <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular">
+                        <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
                             <Picker.Items>
                                 <x:String>От лучшего к худшему</x:String>
                                 <x:String>От худшего к лучшему</x:String>
@@ -39,8 +39,8 @@
                     <Image Grid.Row="0" Source="circleslider.png" HorizontalOptions="Start" Margin="1,0,0,0"/>
                     <ex:SliderRating Grid.Row="0" Minimum="0" Maximum="100" HorizontalOptions="Fill" ThumbImage="icon_slider.png" MinColor="LightGray" MaxColor="Gray"/>
                     <Image Grid.Row="0" Source="circleslider.png" HorizontalOptions="End" Margin="0,0,1,0"/>
-                    <Label Grid.Row="1" Text="0%" HorizontalOptions="Start" TextColor="#19365f" FontSize="30" Margin="0,0,0,0" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
-                    <Label Grid.Row="1" Text="100%" HorizontalOptions="End" TextColor="#f89c49" FontSize="30" Margin="0,0,0,0" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label Grid.Row="1" Text="0%" HorizontalOptions="Start" TextColor="#19365f" FontSize="30" Margin="0,0,0,0" />
+                    <Label Grid.Row="1" Text="100%" HorizontalOptions="End" TextColor="#f89c49" FontSize="30" Margin="0,0,0,0" />
                 </Grid>
                 <SearchBar Placeholder="Поиск" Margin="15,0,15,10"/>
                 <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
@@ -51,7 +51,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
-                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Пестель Яна" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Пестель Яна" VerticalOptions="Center" FontSize="Medium" />
                     <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f"  HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="политика" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
@@ -64,7 +64,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
-                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Ковалев Денис Викторович" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Ковалев Денис Викторович" VerticalOptions="Center" FontSize="Medium" />
                     <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="музыка" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
@@ -77,7 +77,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
-                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Кирченко Ирина Игоревна" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Кирченко Ирина Игоревна" VerticalOptions="Center" FontSize="Medium" />
                     <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="кино" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>
@@ -90,7 +90,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
-                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center" FontSize="Medium" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center" FontSize="Medium" />
                     <Frame Grid.Column="2" WidthRequest="100" Padding="7" CornerRadius="30" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
                         <Label TextColor="White" Text="телевидение" WidthRequest="100" HorizontalTextAlignment="Center"/>
                     </Frame>

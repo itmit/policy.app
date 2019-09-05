@@ -15,7 +15,7 @@
                                               NumberOfTapsRequired="1"/>
                     </StackLayout.GestureRecognizers>
                     <Image Source="AllPoll.png" WidthRequest="50" HeightRequest="50"/>
-                    <Label Text="Все опросы" TextColor="#19365f" FontSize="30" Margin="8,0,0,0" FontAttributes="Bold" VerticalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label Text="Все опросы" TextColor="#19365f" FontSize="30" Margin="8,0,0,0" FontAttributes="Bold" VerticalOptions="Center"/>
                 </StackLayout>
                 <BoxView HeightRequest="1" BackgroundColor="#dee4ea"/>
                 <StackLayout Orientation="Horizontal" Margin="20,25,20,20">
@@ -24,7 +24,7 @@
                                               NumberOfTapsRequired="1"/>
                     </StackLayout.GestureRecognizers>
                     <Image Source="OurPoll.png" WidthRequest="50" HeightRequest="50"/>
-                    <Label Text="Наши опросы" TextColor="#228bcc" FontSize="30" Margin="8,0,0,0" FontAttributes="Bold" VerticalOptions="Center" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                    <Label Text="Наши опросы" TextColor="#228bcc" FontSize="30" Margin="8,0,0,0" FontAttributes="Bold" VerticalOptions="Center"/>
                 </StackLayout>
                 <BoxView HeightRequest="1" BackgroundColor="#dee4ea"/>
             </StackLayout>

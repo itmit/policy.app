@@ -12,13 +12,11 @@
             <Style x:Key="StartLabelProfilePage" TargetType="Label">
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="HorizontalOptions" Value="Start" />
-                <Setter Property="FontFamily" Value="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
             </Style>
             <Style x:Key="EndLabelProfilePage" TargetType="Label">
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="HorizontalOptions" Value="End" />
                 <Setter Property="TextColor" Value="#19365f" />
-                <Setter Property="FontFamily" Value="CormorantGaramondRegular.ttf#CormorantGaramondRegular" />
             </Style>
             <Style x:Key="ButtonCategories" TargetType="Button">
                 <Setter Property="TextColor" Value="White"/>

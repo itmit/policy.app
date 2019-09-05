@@ -6,11 +6,11 @@
     <ContentPage.Content>
         <StackLayout Margin="25">
             <Label Text="{Binding MessageLabel}"/>
-            <controls:EntryAuthPage Placeholder="ФИО" Text="{Binding Name}"  FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
-            <controls:EntryAuthPage Placeholder="Город" Text="{Binding City}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
-            <controls:EntryAuthPage Placeholder="Область деятельности" Text="{Binding FieldOfActivity}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
-            <controls:EntryAuthPage Placeholder="Организация" Text="{Binding Organization}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
-            <controls:EntryAuthPage Placeholder="Должность" Text="{Binding Position}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>
+            <controls:EntryAuthPage Placeholder="ФИО" Text="{Binding Name}"  FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"/>
+            <controls:EntryAuthPage Placeholder="Город" Text="{Binding City}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"/>
+            <controls:EntryAuthPage Placeholder="Область деятельности" Text="{Binding FieldOfActivity}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"/>
+            <controls:EntryAuthPage Placeholder="Организация" Text="{Binding Organization}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"/>
+            <controls:EntryAuthPage Placeholder="Должность" Text="{Binding Position}" FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"/>
             <Button x:Name="RegisterButton" 
                     Text="Сохранить" 
                     Command="{Binding OnSaveButtonClicked}" 
@@ -23,7 +23,6 @@
                     TextColor="#228bcc"
                     CornerRadius="30" 
                     FontSize="Medium" 
-                    FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"
                     />
         </StackLayout>
     </ContentPage.Content>

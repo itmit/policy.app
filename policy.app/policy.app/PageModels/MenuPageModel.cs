@@ -34,12 +34,6 @@ namespace policy.app.PageModels
 					Title = "Мой профиль"
 				},
                 new MenuItem
-                {
-                    ImageSource = "menu_2_def.png",
-                    PageModelType = typeof(PollPageModel),
-                    Title = "Опросы"
-                },
-                new MenuItem
 				{
                     ImageSource = "menu_3_def.png",
                     PageModelType = typeof(WriteToUsPageModel),
