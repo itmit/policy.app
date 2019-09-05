@@ -47,7 +47,7 @@ namespace policy.app
 			get
 			{
 				var configuration = RealmConfiguration.DefaultConfiguration;
-				configuration.SchemaVersion = 3;
+				configuration.SchemaVersion = 4;
 				return Realm.GetInstance(configuration);
 			}
 		}

@@ -20,26 +20,5 @@ namespace policy.app.Pages
         {
             Browser.OpenAsync("https://ru.wikipedia.org/wiki/", BrowserLaunchMode.SystemPreferred);
         }
-
-        private void ImageButton_Clicked(object sender, EventArgs e)
-        {
-            var _numL = int.Parse(Like.Text) + 1;
-
-            Like.Text = Convert.ToString(_numL);
-        }
-
-        private void ImageButton_Clicked_1(object sender, EventArgs e)
-        {
-            var _numL = int.Parse(Dislike.Text) + 1;
-
-            Dislike.Text = Convert.ToString(_numL);
-        }
-
-        private void ImageButton_Clicked_2(object sender, EventArgs e)
-        {
-            var _numL = int.Parse(meh.Text) + 1;
-
-            meh.Text = Convert.ToString(_numL);
-        }
     }
 }
