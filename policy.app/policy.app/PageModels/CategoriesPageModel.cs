@@ -25,6 +25,7 @@ namespace policy.app.PageModels
 		/// Текущий <see cref="Application"/>.
 		/// </summary>
 		private App _app;
+		private Category _selectedCategory;
 
 		/// <summary>
 		/// Вызывается при загрузке модели представления, загружает список категорий.
@@ -36,10 +37,10 @@ namespace policy.app.PageModels
 
 			if (Application.Current is App app)
 			{
+				_app = app;
+
 				if (app.IsUserLoggedIn)
 				{
-					_app = app;
-
 					var token = _app.Realm.All<User>().Single().Token;
 
 					if (token != null && !IsNullOrEmpty(token.Token))
@@ -54,7 +55,22 @@ namespace policy.app.PageModels
 					}
 				}
 			}
+		}
 
+		/// <summary>
+		/// Возвращает или устанавливает выбранную категорию.
+		/// </summary>
+		public Category SelectedCategory
+		{
+			get => _selectedCategory;
+			set
+			{
+				_selectedCategory = value;
+				if (value != null)
+				{
+					EventSelected.Execute(value);
+				}
+			}
 		}
 
 		/// <summary>
@@ -62,7 +78,10 @@ namespace policy.app.PageModels
 		/// </summary>
 		private async void LoadCategories()
 		{
-			Categories = new ObservableCollection<Category>(await _service.GetCategories());
+			if (_service != null)
+			{
+				Categories = new ObservableCollection<Category>(await _service.GetCategories());
+			}
 		}
 
 		/// <summary>
@@ -73,5 +92,10 @@ namespace policy.app.PageModels
 			get;
 			set;
 		} = new ObservableCollection<Category>();
+
+		public Command<Category> EventSelected =>
+			new Command<Category>(obj => {
+				CoreMethods.PushPageModel<UserPageModel>(obj, false, true);
+			});
 	}
 }

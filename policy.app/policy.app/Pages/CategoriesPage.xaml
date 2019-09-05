@@ -7,18 +7,16 @@
              mc:Ignorable="d"
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand">
-            <ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
-                    <ListView ItemsSource="{Binding Categories}" HasUnevenRows="True">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <viewCell:CategoryViewCell/>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackLayout>
-            </ScrollView>
-        </StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+                <ListView ItemsSource="{Binding Categories}" ItemSelected="ListView_OnItemSelected" SelectedItem="{Binding SelectedCategory}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <viewCell:CategoryViewCell/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

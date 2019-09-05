@@ -17,9 +17,9 @@ namespace policy.app.Pages
             InitializeComponent();
         }
 
-        private void OpenListCategories(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ListCategoriesPage());
-        }
-    }
+		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+		{
+			((ListView)sender).SelectedItem = null;
+		}
+	}
 }

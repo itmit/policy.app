@@ -14,7 +14,7 @@
                     <Label Margin="15" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#228bcc" Text="Вы можете написать нам"  FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" />
                     <Label Margin="15" HorizontalOptions="CenterAndExpand"  FontSize="Large" TextColor="#f07d14" Text="Задать вопрос" BackgroundColor="Transparent" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" />
+                            <TapGestureRecognizer Command="{Binding AskCommand}" NumberOfTapsRequired="1" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label Margin="15" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#228bcc" HorizontalTextAlignment="Center" Text="Внести предложение по улучшению приложения" FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold"/>

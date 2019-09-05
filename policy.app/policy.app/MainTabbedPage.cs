@@ -9,52 +9,47 @@ using policy.app.Pages;
 
 namespace policy.app
 {
+	/// <summary>
+	/// Представляет главную страницу меню, отвечающую за навигацию.
+	/// </summary>
 	public class MainTabbedPage : TabbedPage, IFreshNavigationService
 	{
+		/// <summary>
+		/// Список страниц отображаемых в меню.
+		/// </summary>
 		private readonly List<Page> _tabs = new List<Page>();
-		private NavigationPage _previewsPage;
 
-		public IEnumerable TabbedPages => _tabs;
-
+		/// <summary>
+		/// Инициализирует новый экземпляр <see cref="MainTabbedPage"/>.
+		/// </summary>
 		public MainTabbedPage()
-			: this(Constants.DefaultNavigationServiceName)
-		{ 
-			CurrentPageChanged += CurrentPageHasChanged;
-		}
+		{ }
 
-		private void CurrentPageHasChanged(object sender, EventArgs e)
-		{
-			if (sender is Xamarin.Forms.TabbedPage tabbedPage)
-			{
-				if (tabbedPage.CurrentPage is NavigationPage navigationPage)
-				{
-					_previewsPage = navigationPage;
-					return;
-				}
-
-				if (tabbedPage.CurrentPage is BackTabPage)
-				{
-					tabbedPage.CurrentPage = _previewsPage;
-					if (_previewsPage.Navigation.NavigationStack.Count > 0)
-					{
-						PopPage();
-					}
-				}
-			}
-		}
-
+		/// <summary>
+		/// Инициализирует новый экземпляр <see cref="MainTabbedPage"/>, регистрируя сервис навигации.
+		/// </summary>
 		public MainTabbedPage(string navigationServiceName)
 		{
-			CurrentPageChanged += CurrentPageHasChanged;
 			NavigationServiceName = navigationServiceName;
 			RegisterNavigation();
 		}
 
-		protected void RegisterNavigation()
+		/// <summary>
+		/// Регистрирует сервис навигации.
+		/// </summary>
+		private void RegisterNavigation()
 		{
 			FreshIOC.Container.Register<IFreshNavigationService>(this, NavigationServiceName);
 		}
 
+		/// <summary>
+		/// Добавляет страницу в меню.
+		/// </summary>
+		/// <typeparam name="T">Модель представления страницы.</typeparam>
+		/// <param name="title">Заголовок страницы.</param>
+		/// <param name="icon">Иконка страницы.</param>
+		/// <param name="data">Данные передаваемые в меню.</param>
+		/// <returns>Созданная страница.</returns>
 		public virtual Page AddTab<T>(string title, string icon, object data = null) where T : FreshBasePageModel
 		{
 			var page = FreshPageModelResolver.ResolvePageModel<T>(data);
@@ -71,9 +66,14 @@ namespace policy.app
 			return navigationContainer;
 		}
 
-		internal Page CreateContainerPageSafe(Page page)
+		/// <summary>
+		/// Создает страницу навигации, с учетом типа страницы.
+		/// </summary>
+		/// <param name="page">Изначальная страница.</param>
+		/// <returns>Страница навигации.</returns>
+		private Page CreateContainerPageSafe(Page page)
 		{
-			if (page is NavigationPage || page is MasterDetailPage || page is Xamarin.Forms.TabbedPage)
+			if (page is NavigationPage || page is MasterDetailPage || page is TabbedPage)
 			{
 				return page;
 			}
@@ -81,16 +81,14 @@ namespace policy.app
 			return CreateContainerPage(page);
 		}
 
-		protected virtual Page CreateContainerPage(Page page)
-		{
-			if (page is BackTabPage)
-			{
-				return page;
-			}
+		/// <summary>
+		/// Создает страницу навигации.
+		/// </summary>
+		/// <param name="page">Изначальная страница.</param>
+		/// <returns>Страница навигации.</returns>
+		protected virtual Page CreateContainerPage(Page page) => new NavigationPage(page);
 
-			return new NavigationPage(page);
-		}
-
+		
 		public Task PushPage(Page page, FreshBasePageModel model, bool modal = false, bool animate = true)
 		{
 			if (modal)

@@ -9,6 +9,11 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class AboutPageModel: FreshBasePageModel
 	{
-		
+		public FreshAwaitCommand AskCommand 
+			=> new FreshAwaitCommand((param, tcs) =>
+			{
+				// TODO: Написать функционал для задания вопроса.
+				tcs.SetResult(true);
+			});
 	}
 }

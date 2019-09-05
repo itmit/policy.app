@@ -26,21 +26,9 @@ namespace policy.app.PageModels
 		{
 			MenuCollection = new ObservableCollection<MenuItem>
 			{
-                new MenuItem
-                {
-                    PageModelType = typeof(ProfilePageModel),
-                    Title = "Мой профиль"
-                },
-                new MenuItem
-                {
-                    PageModelType = typeof(RatingPageModel),
-                    Title = "Рейтинг"
-                },
-                new MenuItem
-				{
-					PageModelType = typeof(SearchPageModel),
-					Title = "Поиск"
-				}
+                new MenuItem("Мой профиль",typeof(ProfilePageModel)),
+                new MenuItem("Рейтинг", typeof(RatingPageModel)),
+                new MenuItem("Поиск", typeof(SearchPageModel))
 			};
 		}
 		#endregion

@@ -39,6 +39,9 @@ namespace policy.app.Services
 		#endregion
 		#endregion
 
+		/// <summary>
+		/// Инициализирует новый экземпляр <see cref="AuthService"/>.
+		/// </summary>
 		public AuthService()
 		{ }
 
