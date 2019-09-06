@@ -33,7 +33,7 @@
 " />
                 </StackLayout>
                 <BoxView HeightRequest="2" BackgroundColor="#19365f"/>
-                <Entry Placeholder="Тема" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"/>
+                <Entry Placeholder="Тема" FontSize="Large"/>
                 <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
                     <Picker.Items>
                         <x:String>Политика</x:String>
