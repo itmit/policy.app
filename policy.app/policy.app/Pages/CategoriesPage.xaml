@@ -8,8 +8,8 @@
              mc:Ignorable="d"
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand">
-            <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout>
+            <ScrollView>
                 <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
                     <ListView WidthRequest="200" 
                               HorizontalOptions="Center" 

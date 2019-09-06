@@ -94,6 +94,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="NoShiftEffect.cs" />
     <Compile Include="Renderers\EntryLogPageRenderer.cs" />
+    <Compile Include="Renderers\AndroidLongPressedEffect.cs" />
     <Compile Include="Renderers\PickerRatingRenderer.cs" />
     <Compile Include="Renderers\SearchEntryRenderer.cs" />
     <Compile Include="Renderers\SIiderRenderer.cs" />
