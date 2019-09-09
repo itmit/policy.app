@@ -22,6 +22,8 @@ namespace policy.app.Services
 		/// </summary>
 		private const string CategoriesUri = "http://policy.itmit-studio.ru/api/suslik/getCategoryList";
 
+		private const string RateUri = "http://policy.itmit-studio.ru/api/suslik/rateSuslik";
+
 		/// <summary>
 		/// Адрес для получения сусликов по категории.
 		/// </summary>
@@ -125,12 +127,37 @@ namespace policy.app.Services
 			}
 		}
 
-		/// <summary>
-		/// Возвращает всех сусликов категории.
-		/// </summary>
-		/// <param name="category">Категория, отбираемых сусликов.</param>
-		/// <returns>Список сусликов по категории.</returns>
-		public async Task<IEnumerable<Gopher>> GetGophers(Category category)
+		public async Task<bool> Rate(IGopher gopher, RateType rateType)
+		{
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var response = await client.PostAsync(RateUri,
+													  new FormUrlEncodedContent(new Dictionary<string, string>
+													  {
+														  {
+															  "suslik_uuid", gopher.Guid
+														  },
+														  {
+															  "type", rateType.ToString()
+														  }
+													  }));
+
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				return await Task.FromResult(response.IsSuccessStatusCode);
+			}
+		}
+
+			/// <summary>
+			/// Возвращает всех сусликов категории.
+			/// </summary>
+			/// <param name="category">Категория, отбираемых сусликов.</param>
+			/// <returns>Список сусликов по категории.</returns>
+			public async Task<IEnumerable<Gopher>> GetGophers(Category category)
 		{
 			using (var client = new HttpClient())
 			{

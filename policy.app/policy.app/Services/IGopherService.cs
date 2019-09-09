@@ -29,5 +29,7 @@ namespace policy.app.Services
 		/// <param name="guid">ид суслика.</param>
 		/// <returns>Суслик.</returns>
 		Task<Gopher> GetGopher(Guid guid);
+
+		Task<bool> Rate(IGopher gopher, RateType rateType);
 	}
 }

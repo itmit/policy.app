@@ -129,5 +129,23 @@ namespace policy.app.Models
 		{
 			get;
 		}
+
+		public int Likes
+		{
+			get;
+			set;
+		}
+
+		public int Neutrals
+		{
+			get;
+			set;
+		}
+
+		public int Dislikes
+		{
+			get;
+			set;
+		}
 	}
 }

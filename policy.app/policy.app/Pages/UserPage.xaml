@@ -61,24 +61,27 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="Like" Text="{Binding Gopher.Likes}" FontSize="45" TextColor="#228bcc"/>
-                                <ImageButton Source="img_131540" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent"/>
+                                <Label Text="{Binding Likes}" FontSize="45" TextColor="#228bcc"/>
+                                <ImageButton Source="img_131540" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" 
+                                             Command="{Binding SetLike}"/>
                             </Grid>
                             <Grid Grid.Column="1" HorizontalOptions="Center">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="meh" Text="{Binding Gopher.Neutrals}" FontSize="45" TextColor="#101821"/>
-                                <ImageButton Source="meh" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent"/>
+                                <Label Text="{Binding Neutrals}" FontSize="45" TextColor="#101821"/>
+                                <ImageButton Source="meh" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent"
+                                             Command="{Binding SetNeutral}"/>
                             </Grid>
                             <Grid Grid.Column="2" HorizontalOptions="Center">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="Dislike" Text="{Binding Gopher.Dislikes}" FontSize="45" TextColor="#f07d14"/>
-                                <ImageButton Source="img_1315401" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent"/>
+                                <Label x:Name="Dislike" Text="{Binding Dislikes}" FontSize="45" TextColor="#f07d14"/>
+                                <ImageButton Source="img_1315401" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" 
+                                             Command="{Binding SetDislike}"/>
                             </Grid>
                         </Grid>
                     </ScrollView>

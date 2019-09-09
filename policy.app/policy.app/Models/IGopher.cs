@@ -30,5 +30,20 @@
 		{
 			get;
 		}
+
+		int Likes
+		{
+			get;
+		}
+
+		int Neutrals
+		{
+			get;
+		}
+
+		int Dislikes
+		{
+			get;
+		}
 	}
 }
