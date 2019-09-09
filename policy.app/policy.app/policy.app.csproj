@@ -27,9 +27,9 @@
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5">
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.618606" />  
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />  
-    <PackageReference Include="Xamarin.RangeSlider" Version="1.0.1" />
+    <PackageReference Include="Xamarin.RangeSlider" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>

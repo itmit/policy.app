@@ -1,10 +1,12 @@
-﻿using policy.app.Droid.Renderers;
+﻿using policy.app.Controls;
+using policy.app.Droid.Renderers;
+using policy.app.Views.ViewCell;
 using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(ViewCell), typeof(ViewCellItemSelectedCustomRenderer))]
+[assembly: ExportRenderer(typeof(CategoryViewCell), typeof(ViewCellItemSelectedCustomRenderer))]
 
 namespace policy.app.Droid.Renderers
 {

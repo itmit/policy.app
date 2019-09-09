@@ -31,17 +31,6 @@
                         </ex:PickerRating>
                     </StackLayout>
                 </StackLayout>
-                <Grid Margin="15,0" RowSpacing="0" ColumnSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Image Grid.Row="0" Source="circleslider.png" HorizontalOptions="Start" Margin="1,0,0,0"/>
-                    <ex:SliderRating Grid.Row="0" Minimum="0" Maximum="100" HorizontalOptions="Fill" ThumbImageSource="icon_slider.png" MinColor="LightGray" MaxColor="Gray"/>
-                    <Image Grid.Row="0" Source="circleslider.png" HorizontalOptions="End" Margin="0,0,1,0"/>
-                    <Label Grid.Row="1" Text="0%" HorizontalOptions="Start" TextColor="#19365f" FontSize="30" Margin="0,0,0,0" />
-                    <Label Grid.Row="1" Text="100%" HorizontalOptions="End" TextColor="#f89c49" FontSize="30" Margin="0,0,0,0" />
-                </Grid>
                 <SearchBar Placeholder="Поиск" Margin="15,0,15,10"/>
                 <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
                 <Grid Margin="10,0">

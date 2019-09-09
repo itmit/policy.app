@@ -9,10 +9,11 @@
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
         <StackLayout>
-            <ScrollView>
-                <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
-                    <ListView WidthRequest="200" 
-                              HorizontalOptions="Center" 
+            <ScrollView VerticalOptions="Fill">
+                <StackLayout Padding="20">
+                    <ListView HeightRequest="400"
+                              WidthRequest="200" 
+                              HorizontalOptions="Center"
                               ItemsSource="{Binding Categories}" 
                               ItemSelected="ListView_OnItemSelected"
                               SelectedItem="{Binding SelectedCategory}" 

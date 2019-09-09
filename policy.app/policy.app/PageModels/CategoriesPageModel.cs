@@ -81,7 +81,7 @@ namespace policy.app.PageModels
 			if (_service != null)
 			{
 				Categories = new ObservableCollection<Category>(await _service.GetCategories());
-			}
+            }
 		}
 
 		public FreshAwaitCommand OpenVotes =>
