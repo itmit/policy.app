@@ -1,15 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+<effects:NativeListView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
           xmlns:effects="clr-namespace:policy.app.Controls"
           x:Class="policy.app.Views.ViewCell.CategoryViewCell">
     <ViewCell.View>
         <Frame BackgroundColor="#19365f" Padding="15" Margin="0,15" CornerRadius="10" HorizontalOptions="Fill">
-            <Label Text="{Binding Title}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label.Effects>
-                    <effects:LongPressedEffect/>
-                </Label.Effects>
-            </Label>
+            <Label Text="{Binding Title}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
         </Frame>
     </ViewCell.View>
-</ViewCell>
+
+</effects:NativeListView>

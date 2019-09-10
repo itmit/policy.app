@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewCell="clr-namespace:policy.app.Views.ViewCell"
              xmlns:properties="clr-namespace:policy.app.Properties"
+             xmlns:ex="clr-namespace:policy.app.Controls"
              mc:Ignorable="d"
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
