@@ -27,4 +27,7 @@
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#228bcc</item>
   </style>
+  <style name="nonshadow" parent="android:style/Widget.Button">
+    <item name="android:stateListAnimator">@null</item>
+  </style>
 </resources>

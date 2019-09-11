@@ -56,10 +56,10 @@ namespace policy.app
 		{
 			var tabbedNavigation = new MainTabbedPage(NavigationContainerNames.MainContainer);
 
-			tabbedNavigation.AddTab<CategoriesPageModel>(null, "ic_action_home.png");
+            tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<CategoriesPageModel>(null, "ic_action_home.png");
             tabbedNavigation.AddTab<FavouritesPageModel>(null, "star_2.png");
             tabbedNavigation.AddTab<RatingPageModel>(null, "ic_action_search.png");
-            tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
+            tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
 
 			tabbedNavigation.Effects.Add(new NoShiftEffect());
 			tabbedNavigation.On<TabBar.Android>()

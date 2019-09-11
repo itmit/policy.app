@@ -35,7 +35,7 @@ namespace policy.app.PageModels
 				{
                     ImageSource = "menu_3_def.png"
 				},
-				new MenuItem("Напишите нам", typeof(AboutPageModel))
+				new MenuItem("О приложении", typeof(AboutPageModel))
 				{
                     ImageSource = "menu_4_def.png"
 				},

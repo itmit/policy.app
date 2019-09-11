@@ -15,7 +15,8 @@ namespace policy.app.Pages
 		public MenuPage()
 		{
 			InitializeComponent();
-		}
+            ll.SeparatorVisibility = SeparatorVisibility.None;
+        }
 
         private void Ll_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {

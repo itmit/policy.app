@@ -15,11 +15,12 @@ namespace policy.app.Pages
         public CategoriesPage()
         {
             InitializeComponent();
+            NativeList.SeparatorVisibility = SeparatorVisibility.None;
         }
 
 		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
-			((ListView)sender).SelectedItem = null;
+            ((ListView)sender).SelectedItem = null;
 		}
 	}
 }

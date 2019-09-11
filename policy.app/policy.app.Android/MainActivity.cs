@@ -1,13 +1,10 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using policy.app.Services;
+using Android.Runtime;
 using ImageCircle.Forms.Plugin.Droid;
+using policy.app.Services;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AuthService))]
 namespace policy.app.Droid
@@ -17,6 +14,7 @@ namespace policy.app.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
