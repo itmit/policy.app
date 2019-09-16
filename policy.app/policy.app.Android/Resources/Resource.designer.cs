@@ -3196,6 +3196,2265 @@ namespace policy.app.Droid
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_id = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_inflatedId = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_layout = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::TouchEffect.Droid.Resource.Animation.abc_fade_in = global::policy.app.Droid.Resource.Animation.abc_fade_in;
+			global::TouchEffect.Droid.Resource.Animation.abc_fade_out = global::policy.app.Droid.Resource.Animation.abc_fade_out;
+			global::TouchEffect.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::policy.app.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::TouchEffect.Droid.Resource.Animation.abc_popup_enter = global::policy.app.Droid.Resource.Animation.abc_popup_enter;
+			global::TouchEffect.Droid.Resource.Animation.abc_popup_exit = global::policy.app.Droid.Resource.Animation.abc_popup_exit;
+			global::TouchEffect.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::policy.app.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::TouchEffect.Droid.Resource.Animation.abc_slide_in_bottom = global::policy.app.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::TouchEffect.Droid.Resource.Animation.abc_slide_in_top = global::policy.app.Droid.Resource.Animation.abc_slide_in_top;
+			global::TouchEffect.Droid.Resource.Animation.abc_slide_out_bottom = global::policy.app.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::TouchEffect.Droid.Resource.Animation.abc_slide_out_top = global::policy.app.Droid.Resource.Animation.abc_slide_out_top;
+			global::TouchEffect.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::policy.app.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::TouchEffect.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::policy.app.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::TouchEffect.Droid.Resource.Animation.design_snackbar_in = global::policy.app.Droid.Resource.Animation.design_snackbar_in;
+			global::TouchEffect.Droid.Resource.Animation.design_snackbar_out = global::policy.app.Droid.Resource.Animation.design_snackbar_out;
+			global::TouchEffect.Droid.Resource.Animation.EnterFromLeft = global::policy.app.Droid.Resource.Animation.EnterFromLeft;
+			global::TouchEffect.Droid.Resource.Animation.EnterFromRight = global::policy.app.Droid.Resource.Animation.EnterFromRight;
+			global::TouchEffect.Droid.Resource.Animation.ExitToLeft = global::policy.app.Droid.Resource.Animation.ExitToLeft;
+			global::TouchEffect.Droid.Resource.Animation.ExitToRight = global::policy.app.Droid.Resource.Animation.ExitToRight;
+			global::TouchEffect.Droid.Resource.Animator.design_appbar_state_list_animator = global::policy.app.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarDivider = global::policy.app.Droid.Resource.Attribute.actionBarDivider;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarItemBackground = global::policy.app.Droid.Resource.Attribute.actionBarItemBackground;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarPopupTheme = global::policy.app.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarSize = global::policy.app.Droid.Resource.Attribute.actionBarSize;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarSplitStyle = global::policy.app.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarStyle = global::policy.app.Droid.Resource.Attribute.actionBarStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarTabBarStyle = global::policy.app.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarTabStyle = global::policy.app.Droid.Resource.Attribute.actionBarTabStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarTabTextStyle = global::policy.app.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarTheme = global::policy.app.Droid.Resource.Attribute.actionBarTheme;
+			global::TouchEffect.Droid.Resource.Attribute.actionBarWidgetTheme = global::policy.app.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::TouchEffect.Droid.Resource.Attribute.actionButtonStyle = global::policy.app.Droid.Resource.Attribute.actionButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionDropDownStyle = global::policy.app.Droid.Resource.Attribute.actionDropDownStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionLayout = global::policy.app.Droid.Resource.Attribute.actionLayout;
+			global::TouchEffect.Droid.Resource.Attribute.actionMenuTextAppearance = global::policy.app.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.actionMenuTextColor = global::policy.app.Droid.Resource.Attribute.actionMenuTextColor;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeBackground = global::policy.app.Droid.Resource.Attribute.actionModeBackground;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::policy.app.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeCloseDrawable = global::policy.app.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeCopyDrawable = global::policy.app.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeCutDrawable = global::policy.app.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeFindDrawable = global::policy.app.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.actionModePasteDrawable = global::policy.app.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.actionModePopupWindowStyle = global::policy.app.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::policy.app.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeShareDrawable = global::policy.app.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeSplitBackground = global::policy.app.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeStyle = global::policy.app.Droid.Resource.Attribute.actionModeStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::policy.app.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.actionOverflowButtonStyle = global::policy.app.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionOverflowMenuStyle = global::policy.app.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::TouchEffect.Droid.Resource.Attribute.actionProviderClass = global::policy.app.Droid.Resource.Attribute.actionProviderClass;
+			global::TouchEffect.Droid.Resource.Attribute.actionViewClass = global::policy.app.Droid.Resource.Attribute.actionViewClass;
+			global::TouchEffect.Droid.Resource.Attribute.activityChooserViewStyle = global::policy.app.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::TouchEffect.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::policy.app.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::TouchEffect.Droid.Resource.Attribute.alertDialogCenterButtons = global::policy.app.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::TouchEffect.Droid.Resource.Attribute.alertDialogStyle = global::policy.app.Droid.Resource.Attribute.alertDialogStyle;
+			global::TouchEffect.Droid.Resource.Attribute.alertDialogTheme = global::policy.app.Droid.Resource.Attribute.alertDialogTheme;
+			global::TouchEffect.Droid.Resource.Attribute.allowStacking = global::policy.app.Droid.Resource.Attribute.allowStacking;
+			global::TouchEffect.Droid.Resource.Attribute.alpha = global::policy.app.Droid.Resource.Attribute.alpha;
+			global::TouchEffect.Droid.Resource.Attribute.alphabeticModifiers = global::policy.app.Droid.Resource.Attribute.alphabeticModifiers;
+			global::TouchEffect.Droid.Resource.Attribute.arrowHeadLength = global::policy.app.Droid.Resource.Attribute.arrowHeadLength;
+			global::TouchEffect.Droid.Resource.Attribute.arrowShaftLength = global::policy.app.Droid.Resource.Attribute.arrowShaftLength;
+			global::TouchEffect.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::policy.app.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::TouchEffect.Droid.Resource.Attribute.autoSizeMaxTextSize = global::policy.app.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::TouchEffect.Droid.Resource.Attribute.autoSizeMinTextSize = global::policy.app.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::TouchEffect.Droid.Resource.Attribute.autoSizePresetSizes = global::policy.app.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::TouchEffect.Droid.Resource.Attribute.autoSizeStepGranularity = global::policy.app.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::TouchEffect.Droid.Resource.Attribute.autoSizeTextType = global::policy.app.Droid.Resource.Attribute.autoSizeTextType;
+			global::TouchEffect.Droid.Resource.Attribute.background = global::policy.app.Droid.Resource.Attribute.background;
+			global::TouchEffect.Droid.Resource.Attribute.backgroundSplit = global::policy.app.Droid.Resource.Attribute.backgroundSplit;
+			global::TouchEffect.Droid.Resource.Attribute.backgroundStacked = global::policy.app.Droid.Resource.Attribute.backgroundStacked;
+			global::TouchEffect.Droid.Resource.Attribute.backgroundTint = global::policy.app.Droid.Resource.Attribute.backgroundTint;
+			global::TouchEffect.Droid.Resource.Attribute.backgroundTintMode = global::policy.app.Droid.Resource.Attribute.backgroundTintMode;
+			global::TouchEffect.Droid.Resource.Attribute.barLength = global::policy.app.Droid.Resource.Attribute.barLength;
+			global::TouchEffect.Droid.Resource.Attribute.behavior_autoHide = global::policy.app.Droid.Resource.Attribute.behavior_autoHide;
+			global::TouchEffect.Droid.Resource.Attribute.behavior_hideable = global::policy.app.Droid.Resource.Attribute.behavior_hideable;
+			global::TouchEffect.Droid.Resource.Attribute.behavior_overlapTop = global::policy.app.Droid.Resource.Attribute.behavior_overlapTop;
+			global::TouchEffect.Droid.Resource.Attribute.behavior_peekHeight = global::policy.app.Droid.Resource.Attribute.behavior_peekHeight;
+			global::TouchEffect.Droid.Resource.Attribute.behavior_skipCollapsed = global::policy.app.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::TouchEffect.Droid.Resource.Attribute.borderWidth = global::policy.app.Droid.Resource.Attribute.borderWidth;
+			global::TouchEffect.Droid.Resource.Attribute.borderlessButtonStyle = global::policy.app.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.bottomSheetDialogTheme = global::policy.app.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::TouchEffect.Droid.Resource.Attribute.bottomSheetStyle = global::policy.app.Droid.Resource.Attribute.bottomSheetStyle;
+			global::TouchEffect.Droid.Resource.Attribute.buttonBarButtonStyle = global::policy.app.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::policy.app.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::policy.app.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::policy.app.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.buttonBarStyle = global::policy.app.Droid.Resource.Attribute.buttonBarStyle;
+			global::TouchEffect.Droid.Resource.Attribute.buttonGravity = global::policy.app.Droid.Resource.Attribute.buttonGravity;
+			global::TouchEffect.Droid.Resource.Attribute.buttonPanelSideLayout = global::policy.app.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::TouchEffect.Droid.Resource.Attribute.buttonStyle = global::policy.app.Droid.Resource.Attribute.buttonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.buttonStyleSmall = global::policy.app.Droid.Resource.Attribute.buttonStyleSmall;
+			global::TouchEffect.Droid.Resource.Attribute.buttonTint = global::policy.app.Droid.Resource.Attribute.buttonTint;
+			global::TouchEffect.Droid.Resource.Attribute.buttonTintMode = global::policy.app.Droid.Resource.Attribute.buttonTintMode;
+			global::TouchEffect.Droid.Resource.Attribute.cardBackgroundColor = global::policy.app.Droid.Resource.Attribute.cardBackgroundColor;
+			global::TouchEffect.Droid.Resource.Attribute.cardCornerRadius = global::policy.app.Droid.Resource.Attribute.cardCornerRadius;
+			global::TouchEffect.Droid.Resource.Attribute.cardElevation = global::policy.app.Droid.Resource.Attribute.cardElevation;
+			global::TouchEffect.Droid.Resource.Attribute.cardMaxElevation = global::policy.app.Droid.Resource.Attribute.cardMaxElevation;
+			global::TouchEffect.Droid.Resource.Attribute.cardPreventCornerOverlap = global::policy.app.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::TouchEffect.Droid.Resource.Attribute.cardUseCompatPadding = global::policy.app.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::TouchEffect.Droid.Resource.Attribute.checkboxStyle = global::policy.app.Droid.Resource.Attribute.checkboxStyle;
+			global::TouchEffect.Droid.Resource.Attribute.checkedTextViewStyle = global::policy.app.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::TouchEffect.Droid.Resource.Attribute.closeIcon = global::policy.app.Droid.Resource.Attribute.closeIcon;
+			global::TouchEffect.Droid.Resource.Attribute.closeItemLayout = global::policy.app.Droid.Resource.Attribute.closeItemLayout;
+			global::TouchEffect.Droid.Resource.Attribute.collapseContentDescription = global::policy.app.Droid.Resource.Attribute.collapseContentDescription;
+			global::TouchEffect.Droid.Resource.Attribute.collapseIcon = global::policy.app.Droid.Resource.Attribute.collapseIcon;
+			global::TouchEffect.Droid.Resource.Attribute.collapsedTitleGravity = global::policy.app.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::TouchEffect.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::policy.app.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.color = global::policy.app.Droid.Resource.Attribute.color;
+			global::TouchEffect.Droid.Resource.Attribute.colorAccent = global::policy.app.Droid.Resource.Attribute.colorAccent;
+			global::TouchEffect.Droid.Resource.Attribute.colorBackgroundFloating = global::policy.app.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::TouchEffect.Droid.Resource.Attribute.colorButtonNormal = global::policy.app.Droid.Resource.Attribute.colorButtonNormal;
+			global::TouchEffect.Droid.Resource.Attribute.colorControlActivated = global::policy.app.Droid.Resource.Attribute.colorControlActivated;
+			global::TouchEffect.Droid.Resource.Attribute.colorControlHighlight = global::policy.app.Droid.Resource.Attribute.colorControlHighlight;
+			global::TouchEffect.Droid.Resource.Attribute.colorControlNormal = global::policy.app.Droid.Resource.Attribute.colorControlNormal;
+			global::TouchEffect.Droid.Resource.Attribute.colorError = global::policy.app.Droid.Resource.Attribute.colorError;
+			global::TouchEffect.Droid.Resource.Attribute.colorPrimary = global::policy.app.Droid.Resource.Attribute.colorPrimary;
+			global::TouchEffect.Droid.Resource.Attribute.colorPrimaryDark = global::policy.app.Droid.Resource.Attribute.colorPrimaryDark;
+			global::TouchEffect.Droid.Resource.Attribute.colorSwitchThumbNormal = global::policy.app.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::TouchEffect.Droid.Resource.Attribute.commitIcon = global::policy.app.Droid.Resource.Attribute.commitIcon;
+			global::TouchEffect.Droid.Resource.Attribute.contentDescription = global::policy.app.Droid.Resource.Attribute.contentDescription;
+			global::TouchEffect.Droid.Resource.Attribute.contentInsetEnd = global::policy.app.Droid.Resource.Attribute.contentInsetEnd;
+			global::TouchEffect.Droid.Resource.Attribute.contentInsetEndWithActions = global::policy.app.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::TouchEffect.Droid.Resource.Attribute.contentInsetLeft = global::policy.app.Droid.Resource.Attribute.contentInsetLeft;
+			global::TouchEffect.Droid.Resource.Attribute.contentInsetRight = global::policy.app.Droid.Resource.Attribute.contentInsetRight;
+			global::TouchEffect.Droid.Resource.Attribute.contentInsetStart = global::policy.app.Droid.Resource.Attribute.contentInsetStart;
+			global::TouchEffect.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::policy.app.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::TouchEffect.Droid.Resource.Attribute.contentPadding = global::policy.app.Droid.Resource.Attribute.contentPadding;
+			global::TouchEffect.Droid.Resource.Attribute.contentPaddingBottom = global::policy.app.Droid.Resource.Attribute.contentPaddingBottom;
+			global::TouchEffect.Droid.Resource.Attribute.contentPaddingLeft = global::policy.app.Droid.Resource.Attribute.contentPaddingLeft;
+			global::TouchEffect.Droid.Resource.Attribute.contentPaddingRight = global::policy.app.Droid.Resource.Attribute.contentPaddingRight;
+			global::TouchEffect.Droid.Resource.Attribute.contentPaddingTop = global::policy.app.Droid.Resource.Attribute.contentPaddingTop;
+			global::TouchEffect.Droid.Resource.Attribute.contentScrim = global::policy.app.Droid.Resource.Attribute.contentScrim;
+			global::TouchEffect.Droid.Resource.Attribute.controlBackground = global::policy.app.Droid.Resource.Attribute.controlBackground;
+			global::TouchEffect.Droid.Resource.Attribute.counterEnabled = global::policy.app.Droid.Resource.Attribute.counterEnabled;
+			global::TouchEffect.Droid.Resource.Attribute.counterMaxLength = global::policy.app.Droid.Resource.Attribute.counterMaxLength;
+			global::TouchEffect.Droid.Resource.Attribute.counterOverflowTextAppearance = global::policy.app.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.counterTextAppearance = global::policy.app.Droid.Resource.Attribute.counterTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.customNavigationLayout = global::policy.app.Droid.Resource.Attribute.customNavigationLayout;
+			global::TouchEffect.Droid.Resource.Attribute.defaultQueryHint = global::policy.app.Droid.Resource.Attribute.defaultQueryHint;
+			global::TouchEffect.Droid.Resource.Attribute.dialogPreferredPadding = global::policy.app.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::TouchEffect.Droid.Resource.Attribute.dialogTheme = global::policy.app.Droid.Resource.Attribute.dialogTheme;
+			global::TouchEffect.Droid.Resource.Attribute.displayOptions = global::policy.app.Droid.Resource.Attribute.displayOptions;
+			global::TouchEffect.Droid.Resource.Attribute.divider = global::policy.app.Droid.Resource.Attribute.divider;
+			global::TouchEffect.Droid.Resource.Attribute.dividerHorizontal = global::policy.app.Droid.Resource.Attribute.dividerHorizontal;
+			global::TouchEffect.Droid.Resource.Attribute.dividerPadding = global::policy.app.Droid.Resource.Attribute.dividerPadding;
+			global::TouchEffect.Droid.Resource.Attribute.dividerVertical = global::policy.app.Droid.Resource.Attribute.dividerVertical;
+			global::TouchEffect.Droid.Resource.Attribute.drawableSize = global::policy.app.Droid.Resource.Attribute.drawableSize;
+			global::TouchEffect.Droid.Resource.Attribute.drawerArrowStyle = global::policy.app.Droid.Resource.Attribute.drawerArrowStyle;
+			global::TouchEffect.Droid.Resource.Attribute.dropDownListViewStyle = global::policy.app.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::TouchEffect.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::policy.app.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::TouchEffect.Droid.Resource.Attribute.editTextBackground = global::policy.app.Droid.Resource.Attribute.editTextBackground;
+			global::TouchEffect.Droid.Resource.Attribute.editTextColor = global::policy.app.Droid.Resource.Attribute.editTextColor;
+			global::TouchEffect.Droid.Resource.Attribute.editTextStyle = global::policy.app.Droid.Resource.Attribute.editTextStyle;
+			global::TouchEffect.Droid.Resource.Attribute.elevation = global::policy.app.Droid.Resource.Attribute.elevation;
+			global::TouchEffect.Droid.Resource.Attribute.errorEnabled = global::policy.app.Droid.Resource.Attribute.errorEnabled;
+			global::TouchEffect.Droid.Resource.Attribute.errorTextAppearance = global::policy.app.Droid.Resource.Attribute.errorTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::policy.app.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.expanded = global::policy.app.Droid.Resource.Attribute.expanded;
+			global::TouchEffect.Droid.Resource.Attribute.expandedTitleGravity = global::policy.app.Droid.Resource.Attribute.expandedTitleGravity;
+			global::TouchEffect.Droid.Resource.Attribute.expandedTitleMargin = global::policy.app.Droid.Resource.Attribute.expandedTitleMargin;
+			global::TouchEffect.Droid.Resource.Attribute.expandedTitleMarginBottom = global::policy.app.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::TouchEffect.Droid.Resource.Attribute.expandedTitleMarginEnd = global::policy.app.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::TouchEffect.Droid.Resource.Attribute.expandedTitleMarginStart = global::policy.app.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::TouchEffect.Droid.Resource.Attribute.expandedTitleMarginTop = global::policy.app.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::TouchEffect.Droid.Resource.Attribute.expandedTitleTextAppearance = global::policy.app.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::policy.app.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.fabSize = global::policy.app.Droid.Resource.Attribute.fabSize;
+			global::TouchEffect.Droid.Resource.Attribute.fastScrollEnabled = global::policy.app.Droid.Resource.Attribute.fastScrollEnabled;
+			global::TouchEffect.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::policy.app.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::policy.app.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable = global::policy.app.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable = global::policy.app.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.font = global::policy.app.Droid.Resource.Attribute.font;
+			global::TouchEffect.Droid.Resource.Attribute.fontFamily = global::policy.app.Droid.Resource.Attribute.fontFamily;
+			global::TouchEffect.Droid.Resource.Attribute.fontProviderAuthority = global::policy.app.Droid.Resource.Attribute.fontProviderAuthority;
+			global::TouchEffect.Droid.Resource.Attribute.fontProviderCerts = global::policy.app.Droid.Resource.Attribute.fontProviderCerts;
+			global::TouchEffect.Droid.Resource.Attribute.fontProviderFetchStrategy = global::policy.app.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::TouchEffect.Droid.Resource.Attribute.fontProviderFetchTimeout = global::policy.app.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::TouchEffect.Droid.Resource.Attribute.fontProviderPackage = global::policy.app.Droid.Resource.Attribute.fontProviderPackage;
+			global::TouchEffect.Droid.Resource.Attribute.fontProviderQuery = global::policy.app.Droid.Resource.Attribute.fontProviderQuery;
+			global::TouchEffect.Droid.Resource.Attribute.fontStyle = global::policy.app.Droid.Resource.Attribute.fontStyle;
+			global::TouchEffect.Droid.Resource.Attribute.fontWeight = global::policy.app.Droid.Resource.Attribute.fontWeight;
+			global::TouchEffect.Droid.Resource.Attribute.foregroundInsidePadding = global::policy.app.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::TouchEffect.Droid.Resource.Attribute.gapBetweenBars = global::policy.app.Droid.Resource.Attribute.gapBetweenBars;
+			global::TouchEffect.Droid.Resource.Attribute.goIcon = global::policy.app.Droid.Resource.Attribute.goIcon;
+			global::TouchEffect.Droid.Resource.Attribute.headerLayout = global::policy.app.Droid.Resource.Attribute.headerLayout;
+			global::TouchEffect.Droid.Resource.Attribute.height = global::policy.app.Droid.Resource.Attribute.height;
+			global::TouchEffect.Droid.Resource.Attribute.hideOnContentScroll = global::policy.app.Droid.Resource.Attribute.hideOnContentScroll;
+			global::TouchEffect.Droid.Resource.Attribute.hintAnimationEnabled = global::policy.app.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::TouchEffect.Droid.Resource.Attribute.hintEnabled = global::policy.app.Droid.Resource.Attribute.hintEnabled;
+			global::TouchEffect.Droid.Resource.Attribute.hintTextAppearance = global::policy.app.Droid.Resource.Attribute.hintTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.homeAsUpIndicator = global::policy.app.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::TouchEffect.Droid.Resource.Attribute.homeLayout = global::policy.app.Droid.Resource.Attribute.homeLayout;
+			global::TouchEffect.Droid.Resource.Attribute.icon = global::policy.app.Droid.Resource.Attribute.icon;
+			global::TouchEffect.Droid.Resource.Attribute.iconTint = global::policy.app.Droid.Resource.Attribute.iconTint;
+			global::TouchEffect.Droid.Resource.Attribute.iconTintMode = global::policy.app.Droid.Resource.Attribute.iconTintMode;
+			global::TouchEffect.Droid.Resource.Attribute.iconifiedByDefault = global::policy.app.Droid.Resource.Attribute.iconifiedByDefault;
+			global::TouchEffect.Droid.Resource.Attribute.imageButtonStyle = global::policy.app.Droid.Resource.Attribute.imageButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.indeterminateProgressStyle = global::policy.app.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::TouchEffect.Droid.Resource.Attribute.initialActivityCount = global::policy.app.Droid.Resource.Attribute.initialActivityCount;
+			global::TouchEffect.Droid.Resource.Attribute.insetForeground = global::policy.app.Droid.Resource.Attribute.insetForeground;
+			global::TouchEffect.Droid.Resource.Attribute.isLightTheme = global::policy.app.Droid.Resource.Attribute.isLightTheme;
+			global::TouchEffect.Droid.Resource.Attribute.itemBackground = global::policy.app.Droid.Resource.Attribute.itemBackground;
+			global::TouchEffect.Droid.Resource.Attribute.itemIconTint = global::policy.app.Droid.Resource.Attribute.itemIconTint;
+			global::TouchEffect.Droid.Resource.Attribute.itemPadding = global::policy.app.Droid.Resource.Attribute.itemPadding;
+			global::TouchEffect.Droid.Resource.Attribute.itemTextAppearance = global::policy.app.Droid.Resource.Attribute.itemTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.itemTextColor = global::policy.app.Droid.Resource.Attribute.itemTextColor;
+			global::TouchEffect.Droid.Resource.Attribute.keylines = global::policy.app.Droid.Resource.Attribute.keylines;
+			global::TouchEffect.Droid.Resource.Attribute.layout = global::policy.app.Droid.Resource.Attribute.layout;
+			global::TouchEffect.Droid.Resource.Attribute.layoutManager = global::policy.app.Droid.Resource.Attribute.layoutManager;
+			global::TouchEffect.Droid.Resource.Attribute.layout_anchor = global::policy.app.Droid.Resource.Attribute.layout_anchor;
+			global::TouchEffect.Droid.Resource.Attribute.layout_anchorGravity = global::policy.app.Droid.Resource.Attribute.layout_anchorGravity;
+			global::TouchEffect.Droid.Resource.Attribute.layout_behavior = global::policy.app.Droid.Resource.Attribute.layout_behavior;
+			global::TouchEffect.Droid.Resource.Attribute.layout_collapseMode = global::policy.app.Droid.Resource.Attribute.layout_collapseMode;
+			global::TouchEffect.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::policy.app.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::TouchEffect.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::policy.app.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::TouchEffect.Droid.Resource.Attribute.layout_insetEdge = global::policy.app.Droid.Resource.Attribute.layout_insetEdge;
+			global::TouchEffect.Droid.Resource.Attribute.layout_keyline = global::policy.app.Droid.Resource.Attribute.layout_keyline;
+			global::TouchEffect.Droid.Resource.Attribute.layout_scrollFlags = global::policy.app.Droid.Resource.Attribute.layout_scrollFlags;
+			global::TouchEffect.Droid.Resource.Attribute.layout_scrollInterpolator = global::policy.app.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::TouchEffect.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::policy.app.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::TouchEffect.Droid.Resource.Attribute.listDividerAlertDialog = global::policy.app.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::TouchEffect.Droid.Resource.Attribute.listItemLayout = global::policy.app.Droid.Resource.Attribute.listItemLayout;
+			global::TouchEffect.Droid.Resource.Attribute.listLayout = global::policy.app.Droid.Resource.Attribute.listLayout;
+			global::TouchEffect.Droid.Resource.Attribute.listMenuViewStyle = global::policy.app.Droid.Resource.Attribute.listMenuViewStyle;
+			global::TouchEffect.Droid.Resource.Attribute.listPopupWindowStyle = global::policy.app.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::TouchEffect.Droid.Resource.Attribute.listPreferredItemHeight = global::policy.app.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::TouchEffect.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::policy.app.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::TouchEffect.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::policy.app.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::TouchEffect.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::policy.app.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::TouchEffect.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::policy.app.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::TouchEffect.Droid.Resource.Attribute.logo = global::policy.app.Droid.Resource.Attribute.logo;
+			global::TouchEffect.Droid.Resource.Attribute.logoDescription = global::policy.app.Droid.Resource.Attribute.logoDescription;
+			global::TouchEffect.Droid.Resource.Attribute.maxActionInlineWidth = global::policy.app.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::TouchEffect.Droid.Resource.Attribute.maxButtonHeight = global::policy.app.Droid.Resource.Attribute.maxButtonHeight;
+			global::TouchEffect.Droid.Resource.Attribute.measureWithLargestChild = global::policy.app.Droid.Resource.Attribute.measureWithLargestChild;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::policy.app.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteButtonStyle = global::policy.app.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteButtonTint = global::policy.app.Droid.Resource.Attribute.mediaRouteButtonTint;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::policy.app.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::policy.app.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::policy.app.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::policy.app.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::policy.app.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::policy.app.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::policy.app.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteStopDrawable = global::policy.app.Droid.Resource.Attribute.mediaRouteStopDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteTheme = global::policy.app.Droid.Resource.Attribute.mediaRouteTheme;
+			global::TouchEffect.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::policy.app.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.menu = global::policy.app.Droid.Resource.Attribute.menu;
+			global::TouchEffect.Droid.Resource.Attribute.multiChoiceItemLayout = global::policy.app.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::TouchEffect.Droid.Resource.Attribute.navigationContentDescription = global::policy.app.Droid.Resource.Attribute.navigationContentDescription;
+			global::TouchEffect.Droid.Resource.Attribute.navigationIcon = global::policy.app.Droid.Resource.Attribute.navigationIcon;
+			global::TouchEffect.Droid.Resource.Attribute.navigationMode = global::policy.app.Droid.Resource.Attribute.navigationMode;
+			global::TouchEffect.Droid.Resource.Attribute.numericModifiers = global::policy.app.Droid.Resource.Attribute.numericModifiers;
+			global::TouchEffect.Droid.Resource.Attribute.overlapAnchor = global::policy.app.Droid.Resource.Attribute.overlapAnchor;
+			global::TouchEffect.Droid.Resource.Attribute.paddingBottomNoButtons = global::policy.app.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::TouchEffect.Droid.Resource.Attribute.paddingEnd = global::policy.app.Droid.Resource.Attribute.paddingEnd;
+			global::TouchEffect.Droid.Resource.Attribute.paddingStart = global::policy.app.Droid.Resource.Attribute.paddingStart;
+			global::TouchEffect.Droid.Resource.Attribute.paddingTopNoTitle = global::policy.app.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::TouchEffect.Droid.Resource.Attribute.panelBackground = global::policy.app.Droid.Resource.Attribute.panelBackground;
+			global::TouchEffect.Droid.Resource.Attribute.panelMenuListTheme = global::policy.app.Droid.Resource.Attribute.panelMenuListTheme;
+			global::TouchEffect.Droid.Resource.Attribute.panelMenuListWidth = global::policy.app.Droid.Resource.Attribute.panelMenuListWidth;
+			global::TouchEffect.Droid.Resource.Attribute.passwordToggleContentDescription = global::policy.app.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::TouchEffect.Droid.Resource.Attribute.passwordToggleDrawable = global::policy.app.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::TouchEffect.Droid.Resource.Attribute.passwordToggleEnabled = global::policy.app.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::TouchEffect.Droid.Resource.Attribute.passwordToggleTint = global::policy.app.Droid.Resource.Attribute.passwordToggleTint;
+			global::TouchEffect.Droid.Resource.Attribute.passwordToggleTintMode = global::policy.app.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::TouchEffect.Droid.Resource.Attribute.popupMenuStyle = global::policy.app.Droid.Resource.Attribute.popupMenuStyle;
+			global::TouchEffect.Droid.Resource.Attribute.popupTheme = global::policy.app.Droid.Resource.Attribute.popupTheme;
+			global::TouchEffect.Droid.Resource.Attribute.popupWindowStyle = global::policy.app.Droid.Resource.Attribute.popupWindowStyle;
+			global::TouchEffect.Droid.Resource.Attribute.preserveIconSpacing = global::policy.app.Droid.Resource.Attribute.preserveIconSpacing;
+			global::TouchEffect.Droid.Resource.Attribute.pressedTranslationZ = global::policy.app.Droid.Resource.Attribute.pressedTranslationZ;
+			global::TouchEffect.Droid.Resource.Attribute.progressBarPadding = global::policy.app.Droid.Resource.Attribute.progressBarPadding;
+			global::TouchEffect.Droid.Resource.Attribute.progressBarStyle = global::policy.app.Droid.Resource.Attribute.progressBarStyle;
+			global::TouchEffect.Droid.Resource.Attribute.queryBackground = global::policy.app.Droid.Resource.Attribute.queryBackground;
+			global::TouchEffect.Droid.Resource.Attribute.queryHint = global::policy.app.Droid.Resource.Attribute.queryHint;
+			global::TouchEffect.Droid.Resource.Attribute.radioButtonStyle = global::policy.app.Droid.Resource.Attribute.radioButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.ratingBarStyle = global::policy.app.Droid.Resource.Attribute.ratingBarStyle;
+			global::TouchEffect.Droid.Resource.Attribute.ratingBarStyleIndicator = global::policy.app.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::TouchEffect.Droid.Resource.Attribute.ratingBarStyleSmall = global::policy.app.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::TouchEffect.Droid.Resource.Attribute.reverseLayout = global::policy.app.Droid.Resource.Attribute.reverseLayout;
+			global::TouchEffect.Droid.Resource.Attribute.rippleColor = global::policy.app.Droid.Resource.Attribute.rippleColor;
+			global::TouchEffect.Droid.Resource.Attribute.scrimAnimationDuration = global::policy.app.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::TouchEffect.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::policy.app.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::TouchEffect.Droid.Resource.Attribute.searchHintIcon = global::policy.app.Droid.Resource.Attribute.searchHintIcon;
+			global::TouchEffect.Droid.Resource.Attribute.searchIcon = global::policy.app.Droid.Resource.Attribute.searchIcon;
+			global::TouchEffect.Droid.Resource.Attribute.searchViewStyle = global::policy.app.Droid.Resource.Attribute.searchViewStyle;
+			global::TouchEffect.Droid.Resource.Attribute.seekBarStyle = global::policy.app.Droid.Resource.Attribute.seekBarStyle;
+			global::TouchEffect.Droid.Resource.Attribute.selectableItemBackground = global::policy.app.Droid.Resource.Attribute.selectableItemBackground;
+			global::TouchEffect.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::policy.app.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::TouchEffect.Droid.Resource.Attribute.showAsAction = global::policy.app.Droid.Resource.Attribute.showAsAction;
+			global::TouchEffect.Droid.Resource.Attribute.showDividers = global::policy.app.Droid.Resource.Attribute.showDividers;
+			global::TouchEffect.Droid.Resource.Attribute.showText = global::policy.app.Droid.Resource.Attribute.showText;
+			global::TouchEffect.Droid.Resource.Attribute.showTitle = global::policy.app.Droid.Resource.Attribute.showTitle;
+			global::TouchEffect.Droid.Resource.Attribute.singleChoiceItemLayout = global::policy.app.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::TouchEffect.Droid.Resource.Attribute.spanCount = global::policy.app.Droid.Resource.Attribute.spanCount;
+			global::TouchEffect.Droid.Resource.Attribute.spinBars = global::policy.app.Droid.Resource.Attribute.spinBars;
+			global::TouchEffect.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::policy.app.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::TouchEffect.Droid.Resource.Attribute.spinnerStyle = global::policy.app.Droid.Resource.Attribute.spinnerStyle;
+			global::TouchEffect.Droid.Resource.Attribute.splitTrack = global::policy.app.Droid.Resource.Attribute.splitTrack;
+			global::TouchEffect.Droid.Resource.Attribute.srcCompat = global::policy.app.Droid.Resource.Attribute.srcCompat;
+			global::TouchEffect.Droid.Resource.Attribute.stackFromEnd = global::policy.app.Droid.Resource.Attribute.stackFromEnd;
+			global::TouchEffect.Droid.Resource.Attribute.state_above_anchor = global::policy.app.Droid.Resource.Attribute.state_above_anchor;
+			global::TouchEffect.Droid.Resource.Attribute.state_collapsed = global::policy.app.Droid.Resource.Attribute.state_collapsed;
+			global::TouchEffect.Droid.Resource.Attribute.state_collapsible = global::policy.app.Droid.Resource.Attribute.state_collapsible;
+			global::TouchEffect.Droid.Resource.Attribute.statusBarBackground = global::policy.app.Droid.Resource.Attribute.statusBarBackground;
+			global::TouchEffect.Droid.Resource.Attribute.statusBarScrim = global::policy.app.Droid.Resource.Attribute.statusBarScrim;
+			global::TouchEffect.Droid.Resource.Attribute.subMenuArrow = global::policy.app.Droid.Resource.Attribute.subMenuArrow;
+			global::TouchEffect.Droid.Resource.Attribute.submitBackground = global::policy.app.Droid.Resource.Attribute.submitBackground;
+			global::TouchEffect.Droid.Resource.Attribute.subtitle = global::policy.app.Droid.Resource.Attribute.subtitle;
+			global::TouchEffect.Droid.Resource.Attribute.subtitleTextAppearance = global::policy.app.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.subtitleTextColor = global::policy.app.Droid.Resource.Attribute.subtitleTextColor;
+			global::TouchEffect.Droid.Resource.Attribute.subtitleTextStyle = global::policy.app.Droid.Resource.Attribute.subtitleTextStyle;
+			global::TouchEffect.Droid.Resource.Attribute.suggestionRowLayout = global::policy.app.Droid.Resource.Attribute.suggestionRowLayout;
+			global::TouchEffect.Droid.Resource.Attribute.switchMinWidth = global::policy.app.Droid.Resource.Attribute.switchMinWidth;
+			global::TouchEffect.Droid.Resource.Attribute.switchPadding = global::policy.app.Droid.Resource.Attribute.switchPadding;
+			global::TouchEffect.Droid.Resource.Attribute.switchStyle = global::policy.app.Droid.Resource.Attribute.switchStyle;
+			global::TouchEffect.Droid.Resource.Attribute.switchTextAppearance = global::policy.app.Droid.Resource.Attribute.switchTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.tabBackground = global::policy.app.Droid.Resource.Attribute.tabBackground;
+			global::TouchEffect.Droid.Resource.Attribute.tabContentStart = global::policy.app.Droid.Resource.Attribute.tabContentStart;
+			global::TouchEffect.Droid.Resource.Attribute.tabGravity = global::policy.app.Droid.Resource.Attribute.tabGravity;
+			global::TouchEffect.Droid.Resource.Attribute.tabIndicatorColor = global::policy.app.Droid.Resource.Attribute.tabIndicatorColor;
+			global::TouchEffect.Droid.Resource.Attribute.tabIndicatorHeight = global::policy.app.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::TouchEffect.Droid.Resource.Attribute.tabMaxWidth = global::policy.app.Droid.Resource.Attribute.tabMaxWidth;
+			global::TouchEffect.Droid.Resource.Attribute.tabMinWidth = global::policy.app.Droid.Resource.Attribute.tabMinWidth;
+			global::TouchEffect.Droid.Resource.Attribute.tabMode = global::policy.app.Droid.Resource.Attribute.tabMode;
+			global::TouchEffect.Droid.Resource.Attribute.tabPadding = global::policy.app.Droid.Resource.Attribute.tabPadding;
+			global::TouchEffect.Droid.Resource.Attribute.tabPaddingBottom = global::policy.app.Droid.Resource.Attribute.tabPaddingBottom;
+			global::TouchEffect.Droid.Resource.Attribute.tabPaddingEnd = global::policy.app.Droid.Resource.Attribute.tabPaddingEnd;
+			global::TouchEffect.Droid.Resource.Attribute.tabPaddingStart = global::policy.app.Droid.Resource.Attribute.tabPaddingStart;
+			global::TouchEffect.Droid.Resource.Attribute.tabPaddingTop = global::policy.app.Droid.Resource.Attribute.tabPaddingTop;
+			global::TouchEffect.Droid.Resource.Attribute.tabSelectedTextColor = global::policy.app.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::TouchEffect.Droid.Resource.Attribute.tabTextAppearance = global::policy.app.Droid.Resource.Attribute.tabTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.tabTextColor = global::policy.app.Droid.Resource.Attribute.tabTextColor;
+			global::TouchEffect.Droid.Resource.Attribute.textAllCaps = global::policy.app.Droid.Resource.Attribute.textAllCaps;
+			global::TouchEffect.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::policy.app.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::TouchEffect.Droid.Resource.Attribute.textAppearanceListItem = global::policy.app.Droid.Resource.Attribute.textAppearanceListItem;
+			global::TouchEffect.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::policy.app.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::TouchEffect.Droid.Resource.Attribute.textAppearanceListItemSmall = global::policy.app.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::TouchEffect.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::policy.app.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::TouchEffect.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::policy.app.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::TouchEffect.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::policy.app.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::TouchEffect.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::policy.app.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::TouchEffect.Droid.Resource.Attribute.textColorAlertDialogListItem = global::policy.app.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::TouchEffect.Droid.Resource.Attribute.textColorSearchUrl = global::policy.app.Droid.Resource.Attribute.textColorSearchUrl;
+			global::TouchEffect.Droid.Resource.Attribute.theme = global::policy.app.Droid.Resource.Attribute.theme;
+			global::TouchEffect.Droid.Resource.Attribute.thickness = global::policy.app.Droid.Resource.Attribute.thickness;
+			global::TouchEffect.Droid.Resource.Attribute.thumbTextPadding = global::policy.app.Droid.Resource.Attribute.thumbTextPadding;
+			global::TouchEffect.Droid.Resource.Attribute.thumbTint = global::policy.app.Droid.Resource.Attribute.thumbTint;
+			global::TouchEffect.Droid.Resource.Attribute.thumbTintMode = global::policy.app.Droid.Resource.Attribute.thumbTintMode;
+			global::TouchEffect.Droid.Resource.Attribute.tickMark = global::policy.app.Droid.Resource.Attribute.tickMark;
+			global::TouchEffect.Droid.Resource.Attribute.tickMarkTint = global::policy.app.Droid.Resource.Attribute.tickMarkTint;
+			global::TouchEffect.Droid.Resource.Attribute.tickMarkTintMode = global::policy.app.Droid.Resource.Attribute.tickMarkTintMode;
+			global::TouchEffect.Droid.Resource.Attribute.tint = global::policy.app.Droid.Resource.Attribute.tint;
+			global::TouchEffect.Droid.Resource.Attribute.tintMode = global::policy.app.Droid.Resource.Attribute.tintMode;
+			global::TouchEffect.Droid.Resource.Attribute.title = global::policy.app.Droid.Resource.Attribute.title;
+			global::TouchEffect.Droid.Resource.Attribute.titleEnabled = global::policy.app.Droid.Resource.Attribute.titleEnabled;
+			global::TouchEffect.Droid.Resource.Attribute.titleMargin = global::policy.app.Droid.Resource.Attribute.titleMargin;
+			global::TouchEffect.Droid.Resource.Attribute.titleMarginBottom = global::policy.app.Droid.Resource.Attribute.titleMarginBottom;
+			global::TouchEffect.Droid.Resource.Attribute.titleMarginEnd = global::policy.app.Droid.Resource.Attribute.titleMarginEnd;
+			global::TouchEffect.Droid.Resource.Attribute.titleMarginStart = global::policy.app.Droid.Resource.Attribute.titleMarginStart;
+			global::TouchEffect.Droid.Resource.Attribute.titleMarginTop = global::policy.app.Droid.Resource.Attribute.titleMarginTop;
+			global::TouchEffect.Droid.Resource.Attribute.titleMargins = global::policy.app.Droid.Resource.Attribute.titleMargins;
+			global::TouchEffect.Droid.Resource.Attribute.titleTextAppearance = global::policy.app.Droid.Resource.Attribute.titleTextAppearance;
+			global::TouchEffect.Droid.Resource.Attribute.titleTextColor = global::policy.app.Droid.Resource.Attribute.titleTextColor;
+			global::TouchEffect.Droid.Resource.Attribute.titleTextStyle = global::policy.app.Droid.Resource.Attribute.titleTextStyle;
+			global::TouchEffect.Droid.Resource.Attribute.toolbarId = global::policy.app.Droid.Resource.Attribute.toolbarId;
+			global::TouchEffect.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::policy.app.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::TouchEffect.Droid.Resource.Attribute.toolbarStyle = global::policy.app.Droid.Resource.Attribute.toolbarStyle;
+			global::TouchEffect.Droid.Resource.Attribute.tooltipForegroundColor = global::policy.app.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::TouchEffect.Droid.Resource.Attribute.tooltipFrameBackground = global::policy.app.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::TouchEffect.Droid.Resource.Attribute.tooltipText = global::policy.app.Droid.Resource.Attribute.tooltipText;
+			global::TouchEffect.Droid.Resource.Attribute.track = global::policy.app.Droid.Resource.Attribute.track;
+			global::TouchEffect.Droid.Resource.Attribute.trackTint = global::policy.app.Droid.Resource.Attribute.trackTint;
+			global::TouchEffect.Droid.Resource.Attribute.trackTintMode = global::policy.app.Droid.Resource.Attribute.trackTintMode;
+			global::TouchEffect.Droid.Resource.Attribute.useCompatPadding = global::policy.app.Droid.Resource.Attribute.useCompatPadding;
+			global::TouchEffect.Droid.Resource.Attribute.voiceIcon = global::policy.app.Droid.Resource.Attribute.voiceIcon;
+			global::TouchEffect.Droid.Resource.Attribute.windowActionBar = global::policy.app.Droid.Resource.Attribute.windowActionBar;
+			global::TouchEffect.Droid.Resource.Attribute.windowActionBarOverlay = global::policy.app.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::TouchEffect.Droid.Resource.Attribute.windowActionModeOverlay = global::policy.app.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::TouchEffect.Droid.Resource.Attribute.windowFixedHeightMajor = global::policy.app.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::TouchEffect.Droid.Resource.Attribute.windowFixedHeightMinor = global::policy.app.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::TouchEffect.Droid.Resource.Attribute.windowFixedWidthMajor = global::policy.app.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::TouchEffect.Droid.Resource.Attribute.windowFixedWidthMinor = global::policy.app.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::TouchEffect.Droid.Resource.Attribute.windowMinWidthMajor = global::policy.app.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::TouchEffect.Droid.Resource.Attribute.windowMinWidthMinor = global::policy.app.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::TouchEffect.Droid.Resource.Attribute.windowNoTitle = global::policy.app.Droid.Resource.Attribute.windowNoTitle;
+			global::TouchEffect.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::policy.app.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::TouchEffect.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::policy.app.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::TouchEffect.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::policy.app.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::TouchEffect.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::policy.app.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::TouchEffect.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::policy.app.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::TouchEffect.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::policy.app.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::TouchEffect.Droid.Resource.Color.abc_btn_colored_text_material = global::policy.app.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::TouchEffect.Droid.Resource.Color.abc_color_highlight_material = global::policy.app.Droid.Resource.Color.abc_color_highlight_material;
+			global::TouchEffect.Droid.Resource.Color.abc_hint_foreground_material_dark = global::policy.app.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::TouchEffect.Droid.Resource.Color.abc_hint_foreground_material_light = global::policy.app.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::TouchEffect.Droid.Resource.Color.abc_input_method_navigation_guard = global::policy.app.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::TouchEffect.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::policy.app.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::TouchEffect.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::policy.app.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::TouchEffect.Droid.Resource.Color.abc_primary_text_material_dark = global::policy.app.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::TouchEffect.Droid.Resource.Color.abc_primary_text_material_light = global::policy.app.Droid.Resource.Color.abc_primary_text_material_light;
+			global::TouchEffect.Droid.Resource.Color.abc_search_url_text = global::policy.app.Droid.Resource.Color.abc_search_url_text;
+			global::TouchEffect.Droid.Resource.Color.abc_search_url_text_normal = global::policy.app.Droid.Resource.Color.abc_search_url_text_normal;
+			global::TouchEffect.Droid.Resource.Color.abc_search_url_text_pressed = global::policy.app.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::TouchEffect.Droid.Resource.Color.abc_search_url_text_selected = global::policy.app.Droid.Resource.Color.abc_search_url_text_selected;
+			global::TouchEffect.Droid.Resource.Color.abc_secondary_text_material_dark = global::policy.app.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::TouchEffect.Droid.Resource.Color.abc_secondary_text_material_light = global::policy.app.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::TouchEffect.Droid.Resource.Color.abc_tint_btn_checkable = global::policy.app.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::TouchEffect.Droid.Resource.Color.abc_tint_default = global::policy.app.Droid.Resource.Color.abc_tint_default;
+			global::TouchEffect.Droid.Resource.Color.abc_tint_edittext = global::policy.app.Droid.Resource.Color.abc_tint_edittext;
+			global::TouchEffect.Droid.Resource.Color.abc_tint_seek_thumb = global::policy.app.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::TouchEffect.Droid.Resource.Color.abc_tint_spinner = global::policy.app.Droid.Resource.Color.abc_tint_spinner;
+			global::TouchEffect.Droid.Resource.Color.abc_tint_switch_track = global::policy.app.Droid.Resource.Color.abc_tint_switch_track;
+			global::TouchEffect.Droid.Resource.Color.accent_material_dark = global::policy.app.Droid.Resource.Color.accent_material_dark;
+			global::TouchEffect.Droid.Resource.Color.accent_material_light = global::policy.app.Droid.Resource.Color.accent_material_light;
+			global::TouchEffect.Droid.Resource.Color.background_floating_material_dark = global::policy.app.Droid.Resource.Color.background_floating_material_dark;
+			global::TouchEffect.Droid.Resource.Color.background_floating_material_light = global::policy.app.Droid.Resource.Color.background_floating_material_light;
+			global::TouchEffect.Droid.Resource.Color.background_material_dark = global::policy.app.Droid.Resource.Color.background_material_dark;
+			global::TouchEffect.Droid.Resource.Color.background_material_light = global::policy.app.Droid.Resource.Color.background_material_light;
+			global::TouchEffect.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::policy.app.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::TouchEffect.Droid.Resource.Color.bright_foreground_disabled_material_light = global::policy.app.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::TouchEffect.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::policy.app.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::TouchEffect.Droid.Resource.Color.bright_foreground_inverse_material_light = global::policy.app.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::TouchEffect.Droid.Resource.Color.bright_foreground_material_dark = global::policy.app.Droid.Resource.Color.bright_foreground_material_dark;
+			global::TouchEffect.Droid.Resource.Color.bright_foreground_material_light = global::policy.app.Droid.Resource.Color.bright_foreground_material_light;
+			global::TouchEffect.Droid.Resource.Color.button_material_dark = global::policy.app.Droid.Resource.Color.button_material_dark;
+			global::TouchEffect.Droid.Resource.Color.button_material_light = global::policy.app.Droid.Resource.Color.button_material_light;
+			global::TouchEffect.Droid.Resource.Color.cardview_dark_background = global::policy.app.Droid.Resource.Color.cardview_dark_background;
+			global::TouchEffect.Droid.Resource.Color.cardview_light_background = global::policy.app.Droid.Resource.Color.cardview_light_background;
+			global::TouchEffect.Droid.Resource.Color.cardview_shadow_end_color = global::policy.app.Droid.Resource.Color.cardview_shadow_end_color;
+			global::TouchEffect.Droid.Resource.Color.cardview_shadow_start_color = global::policy.app.Droid.Resource.Color.cardview_shadow_start_color;
+			global::TouchEffect.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::policy.app.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::TouchEffect.Droid.Resource.Color.design_error = global::policy.app.Droid.Resource.Color.design_error;
+			global::TouchEffect.Droid.Resource.Color.design_fab_shadow_end_color = global::policy.app.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::TouchEffect.Droid.Resource.Color.design_fab_shadow_mid_color = global::policy.app.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::TouchEffect.Droid.Resource.Color.design_fab_shadow_start_color = global::policy.app.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::TouchEffect.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::policy.app.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::TouchEffect.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::policy.app.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::TouchEffect.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::policy.app.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::TouchEffect.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::policy.app.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::TouchEffect.Droid.Resource.Color.design_snackbar_background_color = global::policy.app.Droid.Resource.Color.design_snackbar_background_color;
+			global::TouchEffect.Droid.Resource.Color.design_tint_password_toggle = global::policy.app.Droid.Resource.Color.design_tint_password_toggle;
+			global::TouchEffect.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::policy.app.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::TouchEffect.Droid.Resource.Color.dim_foreground_disabled_material_light = global::policy.app.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::TouchEffect.Droid.Resource.Color.dim_foreground_material_dark = global::policy.app.Droid.Resource.Color.dim_foreground_material_dark;
+			global::TouchEffect.Droid.Resource.Color.dim_foreground_material_light = global::policy.app.Droid.Resource.Color.dim_foreground_material_light;
+			global::TouchEffect.Droid.Resource.Color.foreground_material_dark = global::policy.app.Droid.Resource.Color.foreground_material_dark;
+			global::TouchEffect.Droid.Resource.Color.foreground_material_light = global::policy.app.Droid.Resource.Color.foreground_material_light;
+			global::TouchEffect.Droid.Resource.Color.highlighted_text_material_dark = global::policy.app.Droid.Resource.Color.highlighted_text_material_dark;
+			global::TouchEffect.Droid.Resource.Color.highlighted_text_material_light = global::policy.app.Droid.Resource.Color.highlighted_text_material_light;
+			global::TouchEffect.Droid.Resource.Color.material_blue_grey_800 = global::policy.app.Droid.Resource.Color.material_blue_grey_800;
+			global::TouchEffect.Droid.Resource.Color.material_blue_grey_900 = global::policy.app.Droid.Resource.Color.material_blue_grey_900;
+			global::TouchEffect.Droid.Resource.Color.material_blue_grey_950 = global::policy.app.Droid.Resource.Color.material_blue_grey_950;
+			global::TouchEffect.Droid.Resource.Color.material_deep_teal_200 = global::policy.app.Droid.Resource.Color.material_deep_teal_200;
+			global::TouchEffect.Droid.Resource.Color.material_deep_teal_500 = global::policy.app.Droid.Resource.Color.material_deep_teal_500;
+			global::TouchEffect.Droid.Resource.Color.material_grey_100 = global::policy.app.Droid.Resource.Color.material_grey_100;
+			global::TouchEffect.Droid.Resource.Color.material_grey_300 = global::policy.app.Droid.Resource.Color.material_grey_300;
+			global::TouchEffect.Droid.Resource.Color.material_grey_50 = global::policy.app.Droid.Resource.Color.material_grey_50;
+			global::TouchEffect.Droid.Resource.Color.material_grey_600 = global::policy.app.Droid.Resource.Color.material_grey_600;
+			global::TouchEffect.Droid.Resource.Color.material_grey_800 = global::policy.app.Droid.Resource.Color.material_grey_800;
+			global::TouchEffect.Droid.Resource.Color.material_grey_850 = global::policy.app.Droid.Resource.Color.material_grey_850;
+			global::TouchEffect.Droid.Resource.Color.material_grey_900 = global::policy.app.Droid.Resource.Color.material_grey_900;
+			global::TouchEffect.Droid.Resource.Color.notification_action_color_filter = global::policy.app.Droid.Resource.Color.notification_action_color_filter;
+			global::TouchEffect.Droid.Resource.Color.notification_icon_bg_color = global::policy.app.Droid.Resource.Color.notification_icon_bg_color;
+			global::TouchEffect.Droid.Resource.Color.notification_material_background_media_default_color = global::policy.app.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::TouchEffect.Droid.Resource.Color.primary_dark_material_dark = global::policy.app.Droid.Resource.Color.primary_dark_material_dark;
+			global::TouchEffect.Droid.Resource.Color.primary_dark_material_light = global::policy.app.Droid.Resource.Color.primary_dark_material_light;
+			global::TouchEffect.Droid.Resource.Color.primary_material_dark = global::policy.app.Droid.Resource.Color.primary_material_dark;
+			global::TouchEffect.Droid.Resource.Color.primary_material_light = global::policy.app.Droid.Resource.Color.primary_material_light;
+			global::TouchEffect.Droid.Resource.Color.primary_text_default_material_dark = global::policy.app.Droid.Resource.Color.primary_text_default_material_dark;
+			global::TouchEffect.Droid.Resource.Color.primary_text_default_material_light = global::policy.app.Droid.Resource.Color.primary_text_default_material_light;
+			global::TouchEffect.Droid.Resource.Color.primary_text_disabled_material_dark = global::policy.app.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::TouchEffect.Droid.Resource.Color.primary_text_disabled_material_light = global::policy.app.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::TouchEffect.Droid.Resource.Color.ripple_material_dark = global::policy.app.Droid.Resource.Color.ripple_material_dark;
+			global::TouchEffect.Droid.Resource.Color.ripple_material_light = global::policy.app.Droid.Resource.Color.ripple_material_light;
+			global::TouchEffect.Droid.Resource.Color.secondary_text_default_material_dark = global::policy.app.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::TouchEffect.Droid.Resource.Color.secondary_text_default_material_light = global::policy.app.Droid.Resource.Color.secondary_text_default_material_light;
+			global::TouchEffect.Droid.Resource.Color.secondary_text_disabled_material_dark = global::policy.app.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::TouchEffect.Droid.Resource.Color.secondary_text_disabled_material_light = global::policy.app.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::TouchEffect.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::policy.app.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::TouchEffect.Droid.Resource.Color.switch_thumb_disabled_material_light = global::policy.app.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::TouchEffect.Droid.Resource.Color.switch_thumb_material_dark = global::policy.app.Droid.Resource.Color.switch_thumb_material_dark;
+			global::TouchEffect.Droid.Resource.Color.switch_thumb_material_light = global::policy.app.Droid.Resource.Color.switch_thumb_material_light;
+			global::TouchEffect.Droid.Resource.Color.switch_thumb_normal_material_dark = global::policy.app.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::TouchEffect.Droid.Resource.Color.switch_thumb_normal_material_light = global::policy.app.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::TouchEffect.Droid.Resource.Color.tooltip_background_dark = global::policy.app.Droid.Resource.Color.tooltip_background_dark;
+			global::TouchEffect.Droid.Resource.Color.tooltip_background_light = global::policy.app.Droid.Resource.Color.tooltip_background_light;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::policy.app.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::policy.app.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::policy.app.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::policy.app.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_button_min_height_material = global::policy.app.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_button_min_width_material = global::policy.app.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::policy.app.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::policy.app.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::TouchEffect.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::policy.app.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::policy.app.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::policy.app.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::policy.app.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::policy.app.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::TouchEffect.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::policy.app.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::TouchEffect.Droid.Resource.Dimension.abc_control_corner_material = global::policy.app.Droid.Resource.Dimension.abc_control_corner_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_control_inset_material = global::policy.app.Droid.Resource.Dimension.abc_control_inset_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_control_padding_material = global::policy.app.Droid.Resource.Dimension.abc_control_padding_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::policy.app.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::policy.app.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::policy.app.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::policy.app.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::policy.app.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::policy.app.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_min_width_major = global::policy.app.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::policy.app.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_padding_material = global::policy.app.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::policy.app.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::policy.app.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::policy.app.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::TouchEffect.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::policy.app.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::policy.app.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::policy.app.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::TouchEffect.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::policy.app.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::TouchEffect.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::policy.app.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::policy.app.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::policy.app.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_floating_window_z = global::policy.app.Droid.Resource.Dimension.abc_floating_window_z;
+			global::TouchEffect.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::policy.app.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_panel_menu_list_width = global::policy.app.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::TouchEffect.Droid.Resource.Dimension.abc_progress_bar_height_material = global::policy.app.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_search_view_preferred_height = global::policy.app.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::TouchEffect.Droid.Resource.Dimension.abc_search_view_preferred_width = global::policy.app.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::TouchEffect.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::policy.app.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::policy.app.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::policy.app.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_switch_padding = global::policy.app.Droid.Resource.Dimension.abc_switch_padding;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_body_1_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_body_2_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_button_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_caption_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_display_1_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_display_2_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_display_3_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_display_4_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_headline_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_large_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_medium_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_menu_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_small_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_subhead_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::policy.app.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_title_material = global::policy.app.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::TouchEffect.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::policy.app.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::TouchEffect.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::policy.app.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::TouchEffect.Droid.Resource.Dimension.cardview_default_elevation = global::policy.app.Droid.Resource.Dimension.cardview_default_elevation;
+			global::TouchEffect.Droid.Resource.Dimension.cardview_default_radius = global::policy.app.Droid.Resource.Dimension.cardview_default_radius;
+			global::TouchEffect.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::policy.app.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::TouchEffect.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::policy.app.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::TouchEffect.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::policy.app.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::TouchEffect.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::policy.app.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::TouchEffect.Droid.Resource.Dimension.compat_control_corner_material = global::policy.app.Droid.Resource.Dimension.compat_control_corner_material;
+			global::TouchEffect.Droid.Resource.Dimension.design_appbar_elevation = global::policy.app.Droid.Resource.Dimension.design_appbar_elevation;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_height = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_margin = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::policy.app.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::policy.app.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::TouchEffect.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::policy.app.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::TouchEffect.Droid.Resource.Dimension.design_fab_border_width = global::policy.app.Droid.Resource.Dimension.design_fab_border_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_fab_elevation = global::policy.app.Droid.Resource.Dimension.design_fab_elevation;
+			global::TouchEffect.Droid.Resource.Dimension.design_fab_image_size = global::policy.app.Droid.Resource.Dimension.design_fab_image_size;
+			global::TouchEffect.Droid.Resource.Dimension.design_fab_size_mini = global::policy.app.Droid.Resource.Dimension.design_fab_size_mini;
+			global::TouchEffect.Droid.Resource.Dimension.design_fab_size_normal = global::policy.app.Droid.Resource.Dimension.design_fab_size_normal;
+			global::TouchEffect.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::policy.app.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::TouchEffect.Droid.Resource.Dimension.design_navigation_elevation = global::policy.app.Droid.Resource.Dimension.design_navigation_elevation;
+			global::TouchEffect.Droid.Resource.Dimension.design_navigation_icon_padding = global::policy.app.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::TouchEffect.Droid.Resource.Dimension.design_navigation_icon_size = global::policy.app.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::TouchEffect.Droid.Resource.Dimension.design_navigation_max_width = global::policy.app.Droid.Resource.Dimension.design_navigation_max_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_navigation_padding_bottom = global::policy.app.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::TouchEffect.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::policy.app.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::policy.app.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::policy.app.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_elevation = global::policy.app.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::policy.app.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_max_width = global::policy.app.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_min_width = global::policy.app.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::policy.app.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::policy.app.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::policy.app.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::TouchEffect.Droid.Resource.Dimension.design_snackbar_text_size = global::policy.app.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::TouchEffect.Droid.Resource.Dimension.design_tab_max_width = global::policy.app.Droid.Resource.Dimension.design_tab_max_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::policy.app.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::TouchEffect.Droid.Resource.Dimension.design_tab_text_size = global::policy.app.Droid.Resource.Dimension.design_tab_text_size;
+			global::TouchEffect.Droid.Resource.Dimension.design_tab_text_size_2line = global::policy.app.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::TouchEffect.Droid.Resource.Dimension.disabled_alpha_material_dark = global::policy.app.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::TouchEffect.Droid.Resource.Dimension.disabled_alpha_material_light = global::policy.app.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::TouchEffect.Droid.Resource.Dimension.fastscroll_default_thickness = global::policy.app.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::TouchEffect.Droid.Resource.Dimension.fastscroll_margin = global::policy.app.Droid.Resource.Dimension.fastscroll_margin;
+			global::TouchEffect.Droid.Resource.Dimension.fastscroll_minimum_range = global::policy.app.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::TouchEffect.Droid.Resource.Dimension.highlight_alpha_material_colored = global::policy.app.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::TouchEffect.Droid.Resource.Dimension.highlight_alpha_material_dark = global::policy.app.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::TouchEffect.Droid.Resource.Dimension.highlight_alpha_material_light = global::policy.app.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::TouchEffect.Droid.Resource.Dimension.hint_alpha_material_dark = global::policy.app.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::TouchEffect.Droid.Resource.Dimension.hint_alpha_material_light = global::policy.app.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::TouchEffect.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::policy.app.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::TouchEffect.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::policy.app.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::TouchEffect.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::policy.app.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::TouchEffect.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::policy.app.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::TouchEffect.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::policy.app.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::TouchEffect.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::policy.app.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::TouchEffect.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::policy.app.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::TouchEffect.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::policy.app.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::TouchEffect.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::policy.app.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::TouchEffect.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::policy.app.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::TouchEffect.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::policy.app.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::TouchEffect.Droid.Resource.Dimension.notification_action_icon_size = global::policy.app.Droid.Resource.Dimension.notification_action_icon_size;
+			global::TouchEffect.Droid.Resource.Dimension.notification_action_text_size = global::policy.app.Droid.Resource.Dimension.notification_action_text_size;
+			global::TouchEffect.Droid.Resource.Dimension.notification_big_circle_margin = global::policy.app.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::TouchEffect.Droid.Resource.Dimension.notification_content_margin_start = global::policy.app.Droid.Resource.Dimension.notification_content_margin_start;
+			global::TouchEffect.Droid.Resource.Dimension.notification_large_icon_height = global::policy.app.Droid.Resource.Dimension.notification_large_icon_height;
+			global::TouchEffect.Droid.Resource.Dimension.notification_large_icon_width = global::policy.app.Droid.Resource.Dimension.notification_large_icon_width;
+			global::TouchEffect.Droid.Resource.Dimension.notification_main_column_padding_top = global::policy.app.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::TouchEffect.Droid.Resource.Dimension.notification_media_narrow_margin = global::policy.app.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::TouchEffect.Droid.Resource.Dimension.notification_right_icon_size = global::policy.app.Droid.Resource.Dimension.notification_right_icon_size;
+			global::TouchEffect.Droid.Resource.Dimension.notification_right_side_padding_top = global::policy.app.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::TouchEffect.Droid.Resource.Dimension.notification_small_icon_background_padding = global::policy.app.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::TouchEffect.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::policy.app.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::TouchEffect.Droid.Resource.Dimension.notification_subtext_size = global::policy.app.Droid.Resource.Dimension.notification_subtext_size;
+			global::TouchEffect.Droid.Resource.Dimension.notification_top_pad = global::policy.app.Droid.Resource.Dimension.notification_top_pad;
+			global::TouchEffect.Droid.Resource.Dimension.notification_top_pad_large_text = global::policy.app.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::TouchEffect.Droid.Resource.Dimension.tooltip_corner_radius = global::policy.app.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::TouchEffect.Droid.Resource.Dimension.tooltip_horizontal_padding = global::policy.app.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::TouchEffect.Droid.Resource.Dimension.tooltip_margin = global::policy.app.Droid.Resource.Dimension.tooltip_margin;
+			global::TouchEffect.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::policy.app.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::TouchEffect.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::policy.app.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::TouchEffect.Droid.Resource.Dimension.tooltip_vertical_padding = global::policy.app.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::TouchEffect.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::policy.app.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::TouchEffect.Droid.Resource.Dimension.tooltip_y_offset_touch = global::policy.app.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::policy.app.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_borderless_material = global::policy.app.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_check_material = global::policy.app.Droid.Resource.Drawable.abc_btn_check_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::policy.app.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::policy.app.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_colored_material = global::policy.app.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::policy.app.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_radio_material = global::policy.app.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::policy.app.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::policy.app.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::policy.app.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::TouchEffect.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::policy.app.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::TouchEffect.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::policy.app.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::TouchEffect.Droid.Resource.Drawable.abc_cab_background_top_material = global::policy.app.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_control_background_material = global::policy.app.Droid.Resource.Drawable.abc_control_background_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_dialog_material_background = global::policy.app.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::TouchEffect.Droid.Resource.Drawable.abc_edit_text_material = global::policy.app.Droid.Resource.Drawable.abc_edit_text_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_ab_back_material = global::policy.app.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::policy.app.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_clear_material = global::policy.app.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::policy.app.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::policy.app.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::policy.app.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::policy.app.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_search_api_material = global::policy.app.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::policy.app.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::policy.app.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::policy.app.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::policy.app.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::policy.app.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::policy.app.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::policy.app.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_item_background_holo_dark = global::policy.app.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::TouchEffect.Droid.Resource.Drawable.abc_item_background_holo_light = global::policy.app.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_focused_holo = global::policy.app.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_longpressed_holo = global::policy.app.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::policy.app.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::policy.app.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::policy.app.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::policy.app.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::policy.app.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::policy.app.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::policy.app.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::TouchEffect.Droid.Resource.Drawable.abc_list_selector_holo_light = global::policy.app.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::TouchEffect.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::policy.app.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::TouchEffect.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::policy.app.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::policy.app.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ratingbar_material = global::policy.app.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_ratingbar_small_material = global::policy.app.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::policy.app.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::TouchEffect.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::policy.app.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::TouchEffect.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::policy.app.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::policy.app.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_seekbar_track_material = global::policy.app.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::policy.app.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::policy.app.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_switch_thumb_material = global::policy.app.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_tab_indicator_material = global::policy.app.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_text_cursor_material = global::policy.app.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::policy.app.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::TouchEffect.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::policy.app.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::TouchEffect.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::policy.app.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::TouchEffect.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::policy.app.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::TouchEffect.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::policy.app.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::TouchEffect.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::policy.app.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::TouchEffect.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::policy.app.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::TouchEffect.Droid.Resource.Drawable.abc_textfield_search_material = global::policy.app.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::TouchEffect.Droid.Resource.Drawable.abc_vector_test = global::policy.app.Droid.Resource.Drawable.abc_vector_test;
+			global::TouchEffect.Droid.Resource.Drawable.avd_hide_password = global::policy.app.Droid.Resource.Drawable.avd_hide_password;
+			global::TouchEffect.Droid.Resource.Drawable.avd_hide_password_1 = global::policy.app.Droid.Resource.Drawable.avd_hide_password_1;
+			global::TouchEffect.Droid.Resource.Drawable.avd_hide_password_2 = global::policy.app.Droid.Resource.Drawable.avd_hide_password_2;
+			global::TouchEffect.Droid.Resource.Drawable.avd_hide_password_3 = global::policy.app.Droid.Resource.Drawable.avd_hide_password_3;
+			global::TouchEffect.Droid.Resource.Drawable.avd_show_password = global::policy.app.Droid.Resource.Drawable.avd_show_password;
+			global::TouchEffect.Droid.Resource.Drawable.avd_show_password_1 = global::policy.app.Droid.Resource.Drawable.avd_show_password_1;
+			global::TouchEffect.Droid.Resource.Drawable.avd_show_password_2 = global::policy.app.Droid.Resource.Drawable.avd_show_password_2;
+			global::TouchEffect.Droid.Resource.Drawable.avd_show_password_3 = global::policy.app.Droid.Resource.Drawable.avd_show_password_3;
+			global::TouchEffect.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::policy.app.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::TouchEffect.Droid.Resource.Drawable.design_fab_background = global::policy.app.Droid.Resource.Drawable.design_fab_background;
+			global::TouchEffect.Droid.Resource.Drawable.design_ic_visibility = global::policy.app.Droid.Resource.Drawable.design_ic_visibility;
+			global::TouchEffect.Droid.Resource.Drawable.design_ic_visibility_off = global::policy.app.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::TouchEffect.Droid.Resource.Drawable.design_password_eye = global::policy.app.Droid.Resource.Drawable.design_password_eye;
+			global::TouchEffect.Droid.Resource.Drawable.design_snackbar_background = global::policy.app.Droid.Resource.Drawable.design_snackbar_background;
+			global::TouchEffect.Droid.Resource.Drawable.ic_audiotrack_dark = global::policy.app.Droid.Resource.Drawable.ic_audiotrack_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_audiotrack_light = global::policy.app.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_dialog_close_dark = global::policy.app.Droid.Resource.Drawable.ic_dialog_close_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_dialog_close_light = global::policy.app.Droid.Resource.Drawable.ic_dialog_close_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_00 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_00;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_01 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_01;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_02 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_02;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_03 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_03;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_04 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_04;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_05 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_05;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_06 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_06;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_07 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_07;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_08 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_08;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_09 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_09;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_10 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_10;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_11 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_11;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_12 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_12;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_13 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_13;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_14 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_14;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_collapse_15 = global::policy.app.Droid.Resource.Drawable.ic_group_collapse_15;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_00 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_00;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_01 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_01;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_02 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_02;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_03 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_03;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_04 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_04;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_05 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_05;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_06 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_06;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_07 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_07;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_08 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_08;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_09 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_09;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_10 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_10;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_11 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_11;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_12 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_12;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_13 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_13;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_14 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_14;
+			global::TouchEffect.Droid.Resource.Drawable.ic_group_expand_15 = global::policy.app.Droid.Resource.Drawable.ic_group_expand_15;
+			global::TouchEffect.Droid.Resource.Drawable.ic_media_pause_dark = global::policy.app.Droid.Resource.Drawable.ic_media_pause_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_media_pause_light = global::policy.app.Droid.Resource.Drawable.ic_media_pause_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_media_play_dark = global::policy.app.Droid.Resource.Drawable.ic_media_play_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_media_play_light = global::policy.app.Droid.Resource.Drawable.ic_media_play_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_media_stop_dark = global::policy.app.Droid.Resource.Drawable.ic_media_stop_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_media_stop_light = global::policy.app.Droid.Resource.Drawable.ic_media_stop_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_00_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_00_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_01_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_01_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_02_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_02_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_03_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_03_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_04_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_04_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_05_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_05_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_06_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_06_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_07_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_07_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_08_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_08_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_09_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_09_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_10_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_10_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_11_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_11_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_12_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_12_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_13_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_13_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_14_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_14_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_15_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_15_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_16_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_16_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_17_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_17_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_18_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_18_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_19_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_19_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_20_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_20_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_21_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_21_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_22_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_22_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_23_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_23_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_23_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_23_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_24_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_24_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_24_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_24_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_25_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_25_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_25_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_25_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_26_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_26_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_26_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_26_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_27_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_27_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_27_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_27_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_28_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_28_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_28_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_28_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_29_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_29_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_29_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_29_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_30_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_30_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connected_30_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connected_30_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_00_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_01_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_02_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_03_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_04_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_05_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_06_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_07_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_08_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_09_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_10_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_11_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_12_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_13_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_14_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_15_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_16_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_17_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_18_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_19_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_20_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_21_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_22_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_23_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_23_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_24_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_24_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_25_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_25_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_26_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_26_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_27_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_27_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_28_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_28_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_29_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_29_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_connecting_30_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_connecting_30_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_disabled_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_disabled_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_disabled_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_disconnected_dark = global::policy.app.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_disconnected_light = global::policy.app.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_mr_button_grey = global::policy.app.Droid.Resource.Drawable.ic_mr_button_grey;
+			global::TouchEffect.Droid.Resource.Drawable.ic_vol_type_speaker_dark = global::policy.app.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark = global::policy.app.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_vol_type_speaker_group_light = global::policy.app.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_vol_type_speaker_light = global::policy.app.Droid.Resource.Drawable.ic_vol_type_speaker_light;
+			global::TouchEffect.Droid.Resource.Drawable.ic_vol_type_tv_dark = global::policy.app.Droid.Resource.Drawable.ic_vol_type_tv_dark;
+			global::TouchEffect.Droid.Resource.Drawable.ic_vol_type_tv_light = global::policy.app.Droid.Resource.Drawable.ic_vol_type_tv_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_button_connected_dark = global::policy.app.Droid.Resource.Drawable.mr_button_connected_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_button_connected_light = global::policy.app.Droid.Resource.Drawable.mr_button_connected_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_button_connecting_dark = global::policy.app.Droid.Resource.Drawable.mr_button_connecting_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_button_connecting_light = global::policy.app.Droid.Resource.Drawable.mr_button_connecting_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_button_dark = global::policy.app.Droid.Resource.Drawable.mr_button_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_button_light = global::policy.app.Droid.Resource.Drawable.mr_button_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_dialog_close_dark = global::policy.app.Droid.Resource.Drawable.mr_dialog_close_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_dialog_close_light = global::policy.app.Droid.Resource.Drawable.mr_dialog_close_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::policy.app.Droid.Resource.Drawable.mr_dialog_material_background_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_dialog_material_background_light = global::policy.app.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_group_collapse = global::policy.app.Droid.Resource.Drawable.mr_group_collapse;
+			global::TouchEffect.Droid.Resource.Drawable.mr_group_expand = global::policy.app.Droid.Resource.Drawable.mr_group_expand;
+			global::TouchEffect.Droid.Resource.Drawable.mr_media_pause_dark = global::policy.app.Droid.Resource.Drawable.mr_media_pause_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_media_pause_light = global::policy.app.Droid.Resource.Drawable.mr_media_pause_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_media_play_dark = global::policy.app.Droid.Resource.Drawable.mr_media_play_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_media_play_light = global::policy.app.Droid.Resource.Drawable.mr_media_play_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_media_stop_dark = global::policy.app.Droid.Resource.Drawable.mr_media_stop_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_media_stop_light = global::policy.app.Droid.Resource.Drawable.mr_media_stop_light;
+			global::TouchEffect.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark = global::policy.app.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
+			global::TouchEffect.Droid.Resource.Drawable.mr_vol_type_audiotrack_light = global::policy.app.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
+			global::TouchEffect.Droid.Resource.Drawable.navigation_empty_icon = global::policy.app.Droid.Resource.Drawable.navigation_empty_icon;
+			global::TouchEffect.Droid.Resource.Drawable.notification_action_background = global::policy.app.Droid.Resource.Drawable.notification_action_background;
+			global::TouchEffect.Droid.Resource.Drawable.notification_bg = global::policy.app.Droid.Resource.Drawable.notification_bg;
+			global::TouchEffect.Droid.Resource.Drawable.notification_bg_low = global::policy.app.Droid.Resource.Drawable.notification_bg_low;
+			global::TouchEffect.Droid.Resource.Drawable.notification_bg_low_normal = global::policy.app.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::TouchEffect.Droid.Resource.Drawable.notification_bg_low_pressed = global::policy.app.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::TouchEffect.Droid.Resource.Drawable.notification_bg_normal = global::policy.app.Droid.Resource.Drawable.notification_bg_normal;
+			global::TouchEffect.Droid.Resource.Drawable.notification_bg_normal_pressed = global::policy.app.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::TouchEffect.Droid.Resource.Drawable.notification_icon_background = global::policy.app.Droid.Resource.Drawable.notification_icon_background;
+			global::TouchEffect.Droid.Resource.Drawable.notification_template_icon_bg = global::policy.app.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::TouchEffect.Droid.Resource.Drawable.notification_template_icon_low_bg = global::policy.app.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::TouchEffect.Droid.Resource.Drawable.notification_tile_bg = global::policy.app.Droid.Resource.Drawable.notification_tile_bg;
+			global::TouchEffect.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::policy.app.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::TouchEffect.Droid.Resource.Drawable.tooltip_frame_dark = global::policy.app.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::TouchEffect.Droid.Resource.Drawable.tooltip_frame_light = global::policy.app.Droid.Resource.Drawable.tooltip_frame_light;
+			global::TouchEffect.Droid.Resource.Id.ALT = global::policy.app.Droid.Resource.Id.ALT;
+			global::TouchEffect.Droid.Resource.Id.CTRL = global::policy.app.Droid.Resource.Id.CTRL;
+			global::TouchEffect.Droid.Resource.Id.FUNCTION = global::policy.app.Droid.Resource.Id.FUNCTION;
+			global::TouchEffect.Droid.Resource.Id.META = global::policy.app.Droid.Resource.Id.META;
+			global::TouchEffect.Droid.Resource.Id.SHIFT = global::policy.app.Droid.Resource.Id.SHIFT;
+			global::TouchEffect.Droid.Resource.Id.SYM = global::policy.app.Droid.Resource.Id.SYM;
+			global::TouchEffect.Droid.Resource.Id.action0 = global::policy.app.Droid.Resource.Id.action0;
+			global::TouchEffect.Droid.Resource.Id.action_bar = global::policy.app.Droid.Resource.Id.action_bar;
+			global::TouchEffect.Droid.Resource.Id.action_bar_activity_content = global::policy.app.Droid.Resource.Id.action_bar_activity_content;
+			global::TouchEffect.Droid.Resource.Id.action_bar_container = global::policy.app.Droid.Resource.Id.action_bar_container;
+			global::TouchEffect.Droid.Resource.Id.action_bar_root = global::policy.app.Droid.Resource.Id.action_bar_root;
+			global::TouchEffect.Droid.Resource.Id.action_bar_spinner = global::policy.app.Droid.Resource.Id.action_bar_spinner;
+			global::TouchEffect.Droid.Resource.Id.action_bar_subtitle = global::policy.app.Droid.Resource.Id.action_bar_subtitle;
+			global::TouchEffect.Droid.Resource.Id.action_bar_title = global::policy.app.Droid.Resource.Id.action_bar_title;
+			global::TouchEffect.Droid.Resource.Id.action_container = global::policy.app.Droid.Resource.Id.action_container;
+			global::TouchEffect.Droid.Resource.Id.action_context_bar = global::policy.app.Droid.Resource.Id.action_context_bar;
+			global::TouchEffect.Droid.Resource.Id.action_divider = global::policy.app.Droid.Resource.Id.action_divider;
+			global::TouchEffect.Droid.Resource.Id.action_image = global::policy.app.Droid.Resource.Id.action_image;
+			global::TouchEffect.Droid.Resource.Id.action_menu_divider = global::policy.app.Droid.Resource.Id.action_menu_divider;
+			global::TouchEffect.Droid.Resource.Id.action_menu_presenter = global::policy.app.Droid.Resource.Id.action_menu_presenter;
+			global::TouchEffect.Droid.Resource.Id.action_mode_bar = global::policy.app.Droid.Resource.Id.action_mode_bar;
+			global::TouchEffect.Droid.Resource.Id.action_mode_bar_stub = global::policy.app.Droid.Resource.Id.action_mode_bar_stub;
+			global::TouchEffect.Droid.Resource.Id.action_mode_close_button = global::policy.app.Droid.Resource.Id.action_mode_close_button;
+			global::TouchEffect.Droid.Resource.Id.action_text = global::policy.app.Droid.Resource.Id.action_text;
+			global::TouchEffect.Droid.Resource.Id.actions = global::policy.app.Droid.Resource.Id.actions;
+			global::TouchEffect.Droid.Resource.Id.activity_chooser_view_content = global::policy.app.Droid.Resource.Id.activity_chooser_view_content;
+			global::TouchEffect.Droid.Resource.Id.add = global::policy.app.Droid.Resource.Id.add;
+			global::TouchEffect.Droid.Resource.Id.alertTitle = global::policy.app.Droid.Resource.Id.alertTitle;
+			global::TouchEffect.Droid.Resource.Id.all = global::policy.app.Droid.Resource.Id.all;
+			global::TouchEffect.Droid.Resource.Id.always = global::policy.app.Droid.Resource.Id.always;
+			global::TouchEffect.Droid.Resource.Id.async = global::policy.app.Droid.Resource.Id.async;
+			global::TouchEffect.Droid.Resource.Id.auto = global::policy.app.Droid.Resource.Id.auto;
+			global::TouchEffect.Droid.Resource.Id.beginning = global::policy.app.Droid.Resource.Id.beginning;
+			global::TouchEffect.Droid.Resource.Id.blocking = global::policy.app.Droid.Resource.Id.blocking;
+			global::TouchEffect.Droid.Resource.Id.bottom = global::policy.app.Droid.Resource.Id.bottom;
+			global::TouchEffect.Droid.Resource.Id.bottomtab_navarea = global::policy.app.Droid.Resource.Id.bottomtab_navarea;
+			global::TouchEffect.Droid.Resource.Id.bottomtab_tabbar = global::policy.app.Droid.Resource.Id.bottomtab_tabbar;
+			global::TouchEffect.Droid.Resource.Id.buttonPanel = global::policy.app.Droid.Resource.Id.buttonPanel;
+			global::TouchEffect.Droid.Resource.Id.cancel_action = global::policy.app.Droid.Resource.Id.cancel_action;
+			global::TouchEffect.Droid.Resource.Id.center = global::policy.app.Droid.Resource.Id.center;
+			global::TouchEffect.Droid.Resource.Id.center_horizontal = global::policy.app.Droid.Resource.Id.center_horizontal;
+			global::TouchEffect.Droid.Resource.Id.center_vertical = global::policy.app.Droid.Resource.Id.center_vertical;
+			global::TouchEffect.Droid.Resource.Id.checkbox = global::policy.app.Droid.Resource.Id.checkbox;
+			global::TouchEffect.Droid.Resource.Id.chronometer = global::policy.app.Droid.Resource.Id.chronometer;
+			global::TouchEffect.Droid.Resource.Id.clip_horizontal = global::policy.app.Droid.Resource.Id.clip_horizontal;
+			global::TouchEffect.Droid.Resource.Id.clip_vertical = global::policy.app.Droid.Resource.Id.clip_vertical;
+			global::TouchEffect.Droid.Resource.Id.collapseActionView = global::policy.app.Droid.Resource.Id.collapseActionView;
+			global::TouchEffect.Droid.Resource.Id.container = global::policy.app.Droid.Resource.Id.container;
+			global::TouchEffect.Droid.Resource.Id.contentPanel = global::policy.app.Droid.Resource.Id.contentPanel;
+			global::TouchEffect.Droid.Resource.Id.coordinator = global::policy.app.Droid.Resource.Id.coordinator;
+			global::TouchEffect.Droid.Resource.Id.custom = global::policy.app.Droid.Resource.Id.custom;
+			global::TouchEffect.Droid.Resource.Id.customPanel = global::policy.app.Droid.Resource.Id.customPanel;
+			global::TouchEffect.Droid.Resource.Id.decor_content_parent = global::policy.app.Droid.Resource.Id.decor_content_parent;
+			global::TouchEffect.Droid.Resource.Id.default_activity_button = global::policy.app.Droid.Resource.Id.default_activity_button;
+			global::TouchEffect.Droid.Resource.Id.design_bottom_sheet = global::policy.app.Droid.Resource.Id.design_bottom_sheet;
+			global::TouchEffect.Droid.Resource.Id.design_menu_item_action_area = global::policy.app.Droid.Resource.Id.design_menu_item_action_area;
+			global::TouchEffect.Droid.Resource.Id.design_menu_item_action_area_stub = global::policy.app.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::TouchEffect.Droid.Resource.Id.design_menu_item_text = global::policy.app.Droid.Resource.Id.design_menu_item_text;
+			global::TouchEffect.Droid.Resource.Id.design_navigation_view = global::policy.app.Droid.Resource.Id.design_navigation_view;
+			global::TouchEffect.Droid.Resource.Id.disableHome = global::policy.app.Droid.Resource.Id.disableHome;
+			global::TouchEffect.Droid.Resource.Id.edit_query = global::policy.app.Droid.Resource.Id.edit_query;
+			global::TouchEffect.Droid.Resource.Id.end = global::policy.app.Droid.Resource.Id.end;
+			global::TouchEffect.Droid.Resource.Id.end_padder = global::policy.app.Droid.Resource.Id.end_padder;
+			global::TouchEffect.Droid.Resource.Id.enterAlways = global::policy.app.Droid.Resource.Id.enterAlways;
+			global::TouchEffect.Droid.Resource.Id.enterAlwaysCollapsed = global::policy.app.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::TouchEffect.Droid.Resource.Id.exitUntilCollapsed = global::policy.app.Droid.Resource.Id.exitUntilCollapsed;
+			global::TouchEffect.Droid.Resource.Id.expand_activities_button = global::policy.app.Droid.Resource.Id.expand_activities_button;
+			global::TouchEffect.Droid.Resource.Id.expanded_menu = global::policy.app.Droid.Resource.Id.expanded_menu;
+			global::TouchEffect.Droid.Resource.Id.fill = global::policy.app.Droid.Resource.Id.fill;
+			global::TouchEffect.Droid.Resource.Id.fill_horizontal = global::policy.app.Droid.Resource.Id.fill_horizontal;
+			global::TouchEffect.Droid.Resource.Id.fill_vertical = global::policy.app.Droid.Resource.Id.fill_vertical;
+			global::TouchEffect.Droid.Resource.Id.@fixed = global::policy.app.Droid.Resource.Id.@fixed;
+			global::TouchEffect.Droid.Resource.Id.flyoutcontent_appbar = global::policy.app.Droid.Resource.Id.flyoutcontent_appbar;
+			global::TouchEffect.Droid.Resource.Id.flyoutcontent_recycler = global::policy.app.Droid.Resource.Id.flyoutcontent_recycler;
+			global::TouchEffect.Droid.Resource.Id.forever = global::policy.app.Droid.Resource.Id.forever;
+			global::TouchEffect.Droid.Resource.Id.ghost_view = global::policy.app.Droid.Resource.Id.ghost_view;
+			global::TouchEffect.Droid.Resource.Id.home = global::policy.app.Droid.Resource.Id.home;
+			global::TouchEffect.Droid.Resource.Id.homeAsUp = global::policy.app.Droid.Resource.Id.homeAsUp;
+			global::TouchEffect.Droid.Resource.Id.icon = global::policy.app.Droid.Resource.Id.icon;
+			global::TouchEffect.Droid.Resource.Id.icon_group = global::policy.app.Droid.Resource.Id.icon_group;
+			global::TouchEffect.Droid.Resource.Id.ifRoom = global::policy.app.Droid.Resource.Id.ifRoom;
+			global::TouchEffect.Droid.Resource.Id.image = global::policy.app.Droid.Resource.Id.image;
+			global::TouchEffect.Droid.Resource.Id.info = global::policy.app.Droid.Resource.Id.info;
+			global::TouchEffect.Droid.Resource.Id.italic = global::policy.app.Droid.Resource.Id.italic;
+			global::TouchEffect.Droid.Resource.Id.item_touch_helper_previous_elevation = global::policy.app.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::TouchEffect.Droid.Resource.Id.largeLabel = global::policy.app.Droid.Resource.Id.largeLabel;
+			global::TouchEffect.Droid.Resource.Id.left = global::policy.app.Droid.Resource.Id.left;
+			global::TouchEffect.Droid.Resource.Id.line1 = global::policy.app.Droid.Resource.Id.line1;
+			global::TouchEffect.Droid.Resource.Id.line3 = global::policy.app.Droid.Resource.Id.line3;
+			global::TouchEffect.Droid.Resource.Id.listMode = global::policy.app.Droid.Resource.Id.listMode;
+			global::TouchEffect.Droid.Resource.Id.list_item = global::policy.app.Droid.Resource.Id.list_item;
+			global::TouchEffect.Droid.Resource.Id.main_appbar = global::policy.app.Droid.Resource.Id.main_appbar;
+			global::TouchEffect.Droid.Resource.Id.main_tablayout = global::policy.app.Droid.Resource.Id.main_tablayout;
+			global::TouchEffect.Droid.Resource.Id.main_toolbar = global::policy.app.Droid.Resource.Id.main_toolbar;
+			global::TouchEffect.Droid.Resource.Id.masked = global::policy.app.Droid.Resource.Id.masked;
+			global::TouchEffect.Droid.Resource.Id.media_actions = global::policy.app.Droid.Resource.Id.media_actions;
+			global::TouchEffect.Droid.Resource.Id.message = global::policy.app.Droid.Resource.Id.message;
+			global::TouchEffect.Droid.Resource.Id.middle = global::policy.app.Droid.Resource.Id.middle;
+			global::TouchEffect.Droid.Resource.Id.mini = global::policy.app.Droid.Resource.Id.mini;
+			global::TouchEffect.Droid.Resource.Id.mr_art = global::policy.app.Droid.Resource.Id.mr_art;
+			global::TouchEffect.Droid.Resource.Id.mr_chooser_list = global::policy.app.Droid.Resource.Id.mr_chooser_list;
+			global::TouchEffect.Droid.Resource.Id.mr_chooser_route_desc = global::policy.app.Droid.Resource.Id.mr_chooser_route_desc;
+			global::TouchEffect.Droid.Resource.Id.mr_chooser_route_icon = global::policy.app.Droid.Resource.Id.mr_chooser_route_icon;
+			global::TouchEffect.Droid.Resource.Id.mr_chooser_route_name = global::policy.app.Droid.Resource.Id.mr_chooser_route_name;
+			global::TouchEffect.Droid.Resource.Id.mr_chooser_title = global::policy.app.Droid.Resource.Id.mr_chooser_title;
+			global::TouchEffect.Droid.Resource.Id.mr_close = global::policy.app.Droid.Resource.Id.mr_close;
+			global::TouchEffect.Droid.Resource.Id.mr_control_divider = global::policy.app.Droid.Resource.Id.mr_control_divider;
+			global::TouchEffect.Droid.Resource.Id.mr_control_playback_ctrl = global::policy.app.Droid.Resource.Id.mr_control_playback_ctrl;
+			global::TouchEffect.Droid.Resource.Id.mr_control_subtitle = global::policy.app.Droid.Resource.Id.mr_control_subtitle;
+			global::TouchEffect.Droid.Resource.Id.mr_control_title = global::policy.app.Droid.Resource.Id.mr_control_title;
+			global::TouchEffect.Droid.Resource.Id.mr_control_title_container = global::policy.app.Droid.Resource.Id.mr_control_title_container;
+			global::TouchEffect.Droid.Resource.Id.mr_custom_control = global::policy.app.Droid.Resource.Id.mr_custom_control;
+			global::TouchEffect.Droid.Resource.Id.mr_default_control = global::policy.app.Droid.Resource.Id.mr_default_control;
+			global::TouchEffect.Droid.Resource.Id.mr_dialog_area = global::policy.app.Droid.Resource.Id.mr_dialog_area;
+			global::TouchEffect.Droid.Resource.Id.mr_expandable_area = global::policy.app.Droid.Resource.Id.mr_expandable_area;
+			global::TouchEffect.Droid.Resource.Id.mr_group_expand_collapse = global::policy.app.Droid.Resource.Id.mr_group_expand_collapse;
+			global::TouchEffect.Droid.Resource.Id.mr_media_main_control = global::policy.app.Droid.Resource.Id.mr_media_main_control;
+			global::TouchEffect.Droid.Resource.Id.mr_name = global::policy.app.Droid.Resource.Id.mr_name;
+			global::TouchEffect.Droid.Resource.Id.mr_playback_control = global::policy.app.Droid.Resource.Id.mr_playback_control;
+			global::TouchEffect.Droid.Resource.Id.mr_title_bar = global::policy.app.Droid.Resource.Id.mr_title_bar;
+			global::TouchEffect.Droid.Resource.Id.mr_volume_control = global::policy.app.Droid.Resource.Id.mr_volume_control;
+			global::TouchEffect.Droid.Resource.Id.mr_volume_group_list = global::policy.app.Droid.Resource.Id.mr_volume_group_list;
+			global::TouchEffect.Droid.Resource.Id.mr_volume_item_icon = global::policy.app.Droid.Resource.Id.mr_volume_item_icon;
+			global::TouchEffect.Droid.Resource.Id.mr_volume_slider = global::policy.app.Droid.Resource.Id.mr_volume_slider;
+			global::TouchEffect.Droid.Resource.Id.multiply = global::policy.app.Droid.Resource.Id.multiply;
+			global::TouchEffect.Droid.Resource.Id.navigation_header_container = global::policy.app.Droid.Resource.Id.navigation_header_container;
+			global::TouchEffect.Droid.Resource.Id.never = global::policy.app.Droid.Resource.Id.never;
+			global::TouchEffect.Droid.Resource.Id.none = global::policy.app.Droid.Resource.Id.none;
+			global::TouchEffect.Droid.Resource.Id.normal = global::policy.app.Droid.Resource.Id.normal;
+			global::TouchEffect.Droid.Resource.Id.notification_background = global::policy.app.Droid.Resource.Id.notification_background;
+			global::TouchEffect.Droid.Resource.Id.notification_main_column = global::policy.app.Droid.Resource.Id.notification_main_column;
+			global::TouchEffect.Droid.Resource.Id.notification_main_column_container = global::policy.app.Droid.Resource.Id.notification_main_column_container;
+			global::TouchEffect.Droid.Resource.Id.parallax = global::policy.app.Droid.Resource.Id.parallax;
+			global::TouchEffect.Droid.Resource.Id.parentPanel = global::policy.app.Droid.Resource.Id.parentPanel;
+			global::TouchEffect.Droid.Resource.Id.parent_matrix = global::policy.app.Droid.Resource.Id.parent_matrix;
+			global::TouchEffect.Droid.Resource.Id.pin = global::policy.app.Droid.Resource.Id.pin;
+			global::TouchEffect.Droid.Resource.Id.progress_circular = global::policy.app.Droid.Resource.Id.progress_circular;
+			global::TouchEffect.Droid.Resource.Id.progress_horizontal = global::policy.app.Droid.Resource.Id.progress_horizontal;
+			global::TouchEffect.Droid.Resource.Id.radio = global::policy.app.Droid.Resource.Id.radio;
+			global::TouchEffect.Droid.Resource.Id.right = global::policy.app.Droid.Resource.Id.right;
+			global::TouchEffect.Droid.Resource.Id.right_icon = global::policy.app.Droid.Resource.Id.right_icon;
+			global::TouchEffect.Droid.Resource.Id.right_side = global::policy.app.Droid.Resource.Id.right_side;
+			global::TouchEffect.Droid.Resource.Id.save_image_matrix = global::policy.app.Droid.Resource.Id.save_image_matrix;
+			global::TouchEffect.Droid.Resource.Id.save_non_transition_alpha = global::policy.app.Droid.Resource.Id.save_non_transition_alpha;
+			global::TouchEffect.Droid.Resource.Id.save_scale_type = global::policy.app.Droid.Resource.Id.save_scale_type;
+			global::TouchEffect.Droid.Resource.Id.screen = global::policy.app.Droid.Resource.Id.screen;
+			global::TouchEffect.Droid.Resource.Id.scroll = global::policy.app.Droid.Resource.Id.scroll;
+			global::TouchEffect.Droid.Resource.Id.scrollIndicatorDown = global::policy.app.Droid.Resource.Id.scrollIndicatorDown;
+			global::TouchEffect.Droid.Resource.Id.scrollIndicatorUp = global::policy.app.Droid.Resource.Id.scrollIndicatorUp;
+			global::TouchEffect.Droid.Resource.Id.scrollView = global::policy.app.Droid.Resource.Id.scrollView;
+			global::TouchEffect.Droid.Resource.Id.scrollable = global::policy.app.Droid.Resource.Id.scrollable;
+			global::TouchEffect.Droid.Resource.Id.search_badge = global::policy.app.Droid.Resource.Id.search_badge;
+			global::TouchEffect.Droid.Resource.Id.search_bar = global::policy.app.Droid.Resource.Id.search_bar;
+			global::TouchEffect.Droid.Resource.Id.search_button = global::policy.app.Droid.Resource.Id.search_button;
+			global::TouchEffect.Droid.Resource.Id.search_close_btn = global::policy.app.Droid.Resource.Id.search_close_btn;
+			global::TouchEffect.Droid.Resource.Id.search_edit_frame = global::policy.app.Droid.Resource.Id.search_edit_frame;
+			global::TouchEffect.Droid.Resource.Id.search_go_btn = global::policy.app.Droid.Resource.Id.search_go_btn;
+			global::TouchEffect.Droid.Resource.Id.search_mag_icon = global::policy.app.Droid.Resource.Id.search_mag_icon;
+			global::TouchEffect.Droid.Resource.Id.search_plate = global::policy.app.Droid.Resource.Id.search_plate;
+			global::TouchEffect.Droid.Resource.Id.search_src_text = global::policy.app.Droid.Resource.Id.search_src_text;
+			global::TouchEffect.Droid.Resource.Id.search_voice_btn = global::policy.app.Droid.Resource.Id.search_voice_btn;
+			global::TouchEffect.Droid.Resource.Id.select_dialog_listview = global::policy.app.Droid.Resource.Id.select_dialog_listview;
+			global::TouchEffect.Droid.Resource.Id.shellcontent_appbar = global::policy.app.Droid.Resource.Id.shellcontent_appbar;
+			global::TouchEffect.Droid.Resource.Id.shellcontent_toolbar = global::policy.app.Droid.Resource.Id.shellcontent_toolbar;
+			global::TouchEffect.Droid.Resource.Id.shortcut = global::policy.app.Droid.Resource.Id.shortcut;
+			global::TouchEffect.Droid.Resource.Id.showCustom = global::policy.app.Droid.Resource.Id.showCustom;
+			global::TouchEffect.Droid.Resource.Id.showHome = global::policy.app.Droid.Resource.Id.showHome;
+			global::TouchEffect.Droid.Resource.Id.showTitle = global::policy.app.Droid.Resource.Id.showTitle;
+			global::TouchEffect.Droid.Resource.Id.smallLabel = global::policy.app.Droid.Resource.Id.smallLabel;
+			global::TouchEffect.Droid.Resource.Id.snackbar_action = global::policy.app.Droid.Resource.Id.snackbar_action;
+			global::TouchEffect.Droid.Resource.Id.snackbar_text = global::policy.app.Droid.Resource.Id.snackbar_text;
+			global::TouchEffect.Droid.Resource.Id.snap = global::policy.app.Droid.Resource.Id.snap;
+			global::TouchEffect.Droid.Resource.Id.spacer = global::policy.app.Droid.Resource.Id.spacer;
+			global::TouchEffect.Droid.Resource.Id.split_action_bar = global::policy.app.Droid.Resource.Id.split_action_bar;
+			global::TouchEffect.Droid.Resource.Id.src_atop = global::policy.app.Droid.Resource.Id.src_atop;
+			global::TouchEffect.Droid.Resource.Id.src_in = global::policy.app.Droid.Resource.Id.src_in;
+			global::TouchEffect.Droid.Resource.Id.src_over = global::policy.app.Droid.Resource.Id.src_over;
+			global::TouchEffect.Droid.Resource.Id.start = global::policy.app.Droid.Resource.Id.start;
+			global::TouchEffect.Droid.Resource.Id.status_bar_latest_event_content = global::policy.app.Droid.Resource.Id.status_bar_latest_event_content;
+			global::TouchEffect.Droid.Resource.Id.submenuarrow = global::policy.app.Droid.Resource.Id.submenuarrow;
+			global::TouchEffect.Droid.Resource.Id.submit_area = global::policy.app.Droid.Resource.Id.submit_area;
+			global::TouchEffect.Droid.Resource.Id.tabMode = global::policy.app.Droid.Resource.Id.tabMode;
+			global::TouchEffect.Droid.Resource.Id.tag_transition_group = global::policy.app.Droid.Resource.Id.tag_transition_group;
+			global::TouchEffect.Droid.Resource.Id.text = global::policy.app.Droid.Resource.Id.text;
+			global::TouchEffect.Droid.Resource.Id.text2 = global::policy.app.Droid.Resource.Id.text2;
+			global::TouchEffect.Droid.Resource.Id.textSpacerNoButtons = global::policy.app.Droid.Resource.Id.textSpacerNoButtons;
+			global::TouchEffect.Droid.Resource.Id.textSpacerNoTitle = global::policy.app.Droid.Resource.Id.textSpacerNoTitle;
+			global::TouchEffect.Droid.Resource.Id.text_input_password_toggle = global::policy.app.Droid.Resource.Id.text_input_password_toggle;
+			global::TouchEffect.Droid.Resource.Id.textinput_counter = global::policy.app.Droid.Resource.Id.textinput_counter;
+			global::TouchEffect.Droid.Resource.Id.textinput_error = global::policy.app.Droid.Resource.Id.textinput_error;
+			global::TouchEffect.Droid.Resource.Id.time = global::policy.app.Droid.Resource.Id.time;
+			global::TouchEffect.Droid.Resource.Id.title = global::policy.app.Droid.Resource.Id.title;
+			global::TouchEffect.Droid.Resource.Id.titleDividerNoCustom = global::policy.app.Droid.Resource.Id.titleDividerNoCustom;
+			global::TouchEffect.Droid.Resource.Id.title_template = global::policy.app.Droid.Resource.Id.title_template;
+			global::TouchEffect.Droid.Resource.Id.top = global::policy.app.Droid.Resource.Id.top;
+			global::TouchEffect.Droid.Resource.Id.topPanel = global::policy.app.Droid.Resource.Id.topPanel;
+			global::TouchEffect.Droid.Resource.Id.touch_outside = global::policy.app.Droid.Resource.Id.touch_outside;
+			global::TouchEffect.Droid.Resource.Id.transition_current_scene = global::policy.app.Droid.Resource.Id.transition_current_scene;
+			global::TouchEffect.Droid.Resource.Id.transition_layout_save = global::policy.app.Droid.Resource.Id.transition_layout_save;
+			global::TouchEffect.Droid.Resource.Id.transition_position = global::policy.app.Droid.Resource.Id.transition_position;
+			global::TouchEffect.Droid.Resource.Id.transition_scene_layoutid_cache = global::policy.app.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::TouchEffect.Droid.Resource.Id.transition_transform = global::policy.app.Droid.Resource.Id.transition_transform;
+			global::TouchEffect.Droid.Resource.Id.uniform = global::policy.app.Droid.Resource.Id.uniform;
+			global::TouchEffect.Droid.Resource.Id.up = global::policy.app.Droid.Resource.Id.up;
+			global::TouchEffect.Droid.Resource.Id.useLogo = global::policy.app.Droid.Resource.Id.useLogo;
+			global::TouchEffect.Droid.Resource.Id.view_offset_helper = global::policy.app.Droid.Resource.Id.view_offset_helper;
+			global::TouchEffect.Droid.Resource.Id.visible = global::policy.app.Droid.Resource.Id.visible;
+			global::TouchEffect.Droid.Resource.Id.volume_item_container = global::policy.app.Droid.Resource.Id.volume_item_container;
+			global::TouchEffect.Droid.Resource.Id.withText = global::policy.app.Droid.Resource.Id.withText;
+			global::TouchEffect.Droid.Resource.Id.wrap_content = global::policy.app.Droid.Resource.Id.wrap_content;
+			global::TouchEffect.Droid.Resource.Integer.abc_config_activityDefaultDur = global::policy.app.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::TouchEffect.Droid.Resource.Integer.abc_config_activityShortDur = global::policy.app.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::TouchEffect.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::policy.app.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::TouchEffect.Droid.Resource.Integer.bottom_sheet_slide_duration = global::policy.app.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::TouchEffect.Droid.Resource.Integer.cancel_button_image_alpha = global::policy.app.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::TouchEffect.Droid.Resource.Integer.config_tooltipAnimTime = global::policy.app.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::TouchEffect.Droid.Resource.Integer.design_snackbar_text_max_lines = global::policy.app.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::TouchEffect.Droid.Resource.Integer.hide_password_duration = global::policy.app.Droid.Resource.Integer.hide_password_duration;
+			global::TouchEffect.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::policy.app.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::TouchEffect.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::policy.app.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::TouchEffect.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::policy.app.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::TouchEffect.Droid.Resource.Integer.show_password_duration = global::policy.app.Droid.Resource.Integer.show_password_duration;
+			global::TouchEffect.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::policy.app.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::TouchEffect.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::policy.app.Droid.Resource.Interpolator.mr_fast_out_slow_in;
+			global::TouchEffect.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::policy.app.Droid.Resource.Interpolator.mr_linear_out_slow_in;
+			global::TouchEffect.Droid.Resource.Layout.abc_action_bar_title_item = global::policy.app.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::TouchEffect.Droid.Resource.Layout.abc_action_bar_up_container = global::policy.app.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::TouchEffect.Droid.Resource.Layout.abc_action_menu_item_layout = global::policy.app.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::TouchEffect.Droid.Resource.Layout.abc_action_menu_layout = global::policy.app.Droid.Resource.Layout.abc_action_menu_layout;
+			global::TouchEffect.Droid.Resource.Layout.abc_action_mode_bar = global::policy.app.Droid.Resource.Layout.abc_action_mode_bar;
+			global::TouchEffect.Droid.Resource.Layout.abc_action_mode_close_item_material = global::policy.app.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::TouchEffect.Droid.Resource.Layout.abc_activity_chooser_view = global::policy.app.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::TouchEffect.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::policy.app.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::TouchEffect.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::policy.app.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::TouchEffect.Droid.Resource.Layout.abc_alert_dialog_material = global::policy.app.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::TouchEffect.Droid.Resource.Layout.abc_alert_dialog_title_material = global::policy.app.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::TouchEffect.Droid.Resource.Layout.abc_dialog_title_material = global::policy.app.Droid.Resource.Layout.abc_dialog_title_material;
+			global::TouchEffect.Droid.Resource.Layout.abc_expanded_menu_layout = global::policy.app.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::TouchEffect.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::policy.app.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::TouchEffect.Droid.Resource.Layout.abc_list_menu_item_icon = global::policy.app.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::TouchEffect.Droid.Resource.Layout.abc_list_menu_item_layout = global::policy.app.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::TouchEffect.Droid.Resource.Layout.abc_list_menu_item_radio = global::policy.app.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::TouchEffect.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::policy.app.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::TouchEffect.Droid.Resource.Layout.abc_popup_menu_item_layout = global::policy.app.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::TouchEffect.Droid.Resource.Layout.abc_screen_content_include = global::policy.app.Droid.Resource.Layout.abc_screen_content_include;
+			global::TouchEffect.Droid.Resource.Layout.abc_screen_simple = global::policy.app.Droid.Resource.Layout.abc_screen_simple;
+			global::TouchEffect.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::policy.app.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::TouchEffect.Droid.Resource.Layout.abc_screen_toolbar = global::policy.app.Droid.Resource.Layout.abc_screen_toolbar;
+			global::TouchEffect.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::policy.app.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::TouchEffect.Droid.Resource.Layout.abc_search_view = global::policy.app.Droid.Resource.Layout.abc_search_view;
+			global::TouchEffect.Droid.Resource.Layout.abc_select_dialog_material = global::policy.app.Droid.Resource.Layout.abc_select_dialog_material;
+			global::TouchEffect.Droid.Resource.Layout.BottomTabLayout = global::policy.app.Droid.Resource.Layout.BottomTabLayout;
+			global::TouchEffect.Droid.Resource.Layout.design_bottom_navigation_item = global::policy.app.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::TouchEffect.Droid.Resource.Layout.design_bottom_sheet_dialog = global::policy.app.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::TouchEffect.Droid.Resource.Layout.design_layout_snackbar = global::policy.app.Droid.Resource.Layout.design_layout_snackbar;
+			global::TouchEffect.Droid.Resource.Layout.design_layout_snackbar_include = global::policy.app.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::TouchEffect.Droid.Resource.Layout.design_layout_tab_icon = global::policy.app.Droid.Resource.Layout.design_layout_tab_icon;
+			global::TouchEffect.Droid.Resource.Layout.design_layout_tab_text = global::policy.app.Droid.Resource.Layout.design_layout_tab_text;
+			global::TouchEffect.Droid.Resource.Layout.design_menu_item_action_area = global::policy.app.Droid.Resource.Layout.design_menu_item_action_area;
+			global::TouchEffect.Droid.Resource.Layout.design_navigation_item = global::policy.app.Droid.Resource.Layout.design_navigation_item;
+			global::TouchEffect.Droid.Resource.Layout.design_navigation_item_header = global::policy.app.Droid.Resource.Layout.design_navigation_item_header;
+			global::TouchEffect.Droid.Resource.Layout.design_navigation_item_separator = global::policy.app.Droid.Resource.Layout.design_navigation_item_separator;
+			global::TouchEffect.Droid.Resource.Layout.design_navigation_item_subheader = global::policy.app.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::TouchEffect.Droid.Resource.Layout.design_navigation_menu = global::policy.app.Droid.Resource.Layout.design_navigation_menu;
+			global::TouchEffect.Droid.Resource.Layout.design_navigation_menu_item = global::policy.app.Droid.Resource.Layout.design_navigation_menu_item;
+			global::TouchEffect.Droid.Resource.Layout.design_text_input_password_icon = global::policy.app.Droid.Resource.Layout.design_text_input_password_icon;
+			global::TouchEffect.Droid.Resource.Layout.FlyoutContent = global::policy.app.Droid.Resource.Layout.FlyoutContent;
+			global::TouchEffect.Droid.Resource.Layout.mr_chooser_dialog = global::policy.app.Droid.Resource.Layout.mr_chooser_dialog;
+			global::TouchEffect.Droid.Resource.Layout.mr_chooser_list_item = global::policy.app.Droid.Resource.Layout.mr_chooser_list_item;
+			global::TouchEffect.Droid.Resource.Layout.mr_controller_material_dialog_b = global::policy.app.Droid.Resource.Layout.mr_controller_material_dialog_b;
+			global::TouchEffect.Droid.Resource.Layout.mr_controller_volume_item = global::policy.app.Droid.Resource.Layout.mr_controller_volume_item;
+			global::TouchEffect.Droid.Resource.Layout.mr_playback_control = global::policy.app.Droid.Resource.Layout.mr_playback_control;
+			global::TouchEffect.Droid.Resource.Layout.mr_volume_control = global::policy.app.Droid.Resource.Layout.mr_volume_control;
+			global::TouchEffect.Droid.Resource.Layout.notification_action = global::policy.app.Droid.Resource.Layout.notification_action;
+			global::TouchEffect.Droid.Resource.Layout.notification_action_tombstone = global::policy.app.Droid.Resource.Layout.notification_action_tombstone;
+			global::TouchEffect.Droid.Resource.Layout.notification_media_action = global::policy.app.Droid.Resource.Layout.notification_media_action;
+			global::TouchEffect.Droid.Resource.Layout.notification_media_cancel_action = global::policy.app.Droid.Resource.Layout.notification_media_cancel_action;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_big_media = global::policy.app.Droid.Resource.Layout.notification_template_big_media;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_big_media_custom = global::policy.app.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_big_media_narrow = global::policy.app.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::policy.app.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_custom_big = global::policy.app.Droid.Resource.Layout.notification_template_custom_big;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_icon_group = global::policy.app.Droid.Resource.Layout.notification_template_icon_group;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_lines_media = global::policy.app.Droid.Resource.Layout.notification_template_lines_media;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_media = global::policy.app.Droid.Resource.Layout.notification_template_media;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_media_custom = global::policy.app.Droid.Resource.Layout.notification_template_media_custom;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_part_chronometer = global::policy.app.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::TouchEffect.Droid.Resource.Layout.notification_template_part_time = global::policy.app.Droid.Resource.Layout.notification_template_part_time;
+			global::TouchEffect.Droid.Resource.Layout.RootLayout = global::policy.app.Droid.Resource.Layout.RootLayout;
+			global::TouchEffect.Droid.Resource.Layout.select_dialog_item_material = global::policy.app.Droid.Resource.Layout.select_dialog_item_material;
+			global::TouchEffect.Droid.Resource.Layout.select_dialog_multichoice_material = global::policy.app.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::TouchEffect.Droid.Resource.Layout.select_dialog_singlechoice_material = global::policy.app.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::TouchEffect.Droid.Resource.Layout.ShellContent = global::policy.app.Droid.Resource.Layout.ShellContent;
+			global::TouchEffect.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::policy.app.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::TouchEffect.Droid.Resource.String.abc_action_bar_home_description = global::policy.app.Droid.Resource.String.abc_action_bar_home_description;
+			global::TouchEffect.Droid.Resource.String.abc_action_bar_up_description = global::policy.app.Droid.Resource.String.abc_action_bar_up_description;
+			global::TouchEffect.Droid.Resource.String.abc_action_menu_overflow_description = global::policy.app.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::TouchEffect.Droid.Resource.String.abc_action_mode_done = global::policy.app.Droid.Resource.String.abc_action_mode_done;
+			global::TouchEffect.Droid.Resource.String.abc_activity_chooser_view_see_all = global::policy.app.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::TouchEffect.Droid.Resource.String.abc_activitychooserview_choose_application = global::policy.app.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::TouchEffect.Droid.Resource.String.abc_capital_off = global::policy.app.Droid.Resource.String.abc_capital_off;
+			global::TouchEffect.Droid.Resource.String.abc_capital_on = global::policy.app.Droid.Resource.String.abc_capital_on;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_body_1_material = global::policy.app.Droid.Resource.String.abc_font_family_body_1_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_body_2_material = global::policy.app.Droid.Resource.String.abc_font_family_body_2_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_button_material = global::policy.app.Droid.Resource.String.abc_font_family_button_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_caption_material = global::policy.app.Droid.Resource.String.abc_font_family_caption_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_display_1_material = global::policy.app.Droid.Resource.String.abc_font_family_display_1_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_display_2_material = global::policy.app.Droid.Resource.String.abc_font_family_display_2_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_display_3_material = global::policy.app.Droid.Resource.String.abc_font_family_display_3_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_display_4_material = global::policy.app.Droid.Resource.String.abc_font_family_display_4_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_headline_material = global::policy.app.Droid.Resource.String.abc_font_family_headline_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_menu_material = global::policy.app.Droid.Resource.String.abc_font_family_menu_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_subhead_material = global::policy.app.Droid.Resource.String.abc_font_family_subhead_material;
+			global::TouchEffect.Droid.Resource.String.abc_font_family_title_material = global::policy.app.Droid.Resource.String.abc_font_family_title_material;
+			global::TouchEffect.Droid.Resource.String.abc_search_hint = global::policy.app.Droid.Resource.String.abc_search_hint;
+			global::TouchEffect.Droid.Resource.String.abc_searchview_description_clear = global::policy.app.Droid.Resource.String.abc_searchview_description_clear;
+			global::TouchEffect.Droid.Resource.String.abc_searchview_description_query = global::policy.app.Droid.Resource.String.abc_searchview_description_query;
+			global::TouchEffect.Droid.Resource.String.abc_searchview_description_search = global::policy.app.Droid.Resource.String.abc_searchview_description_search;
+			global::TouchEffect.Droid.Resource.String.abc_searchview_description_submit = global::policy.app.Droid.Resource.String.abc_searchview_description_submit;
+			global::TouchEffect.Droid.Resource.String.abc_searchview_description_voice = global::policy.app.Droid.Resource.String.abc_searchview_description_voice;
+			global::TouchEffect.Droid.Resource.String.abc_shareactionprovider_share_with = global::policy.app.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::TouchEffect.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::policy.app.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::TouchEffect.Droid.Resource.String.abc_toolbar_collapse_description = global::policy.app.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::TouchEffect.Droid.Resource.String.appbar_scrolling_view_behavior = global::policy.app.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::TouchEffect.Droid.Resource.String.bottom_sheet_behavior = global::policy.app.Droid.Resource.String.bottom_sheet_behavior;
+			global::TouchEffect.Droid.Resource.String.character_counter_pattern = global::policy.app.Droid.Resource.String.character_counter_pattern;
+			global::TouchEffect.Droid.Resource.String.library_name = global::policy.app.Droid.Resource.String.library_name;
+			global::TouchEffect.Droid.Resource.String.mr_button_content_description = global::policy.app.Droid.Resource.String.mr_button_content_description;
+			global::TouchEffect.Droid.Resource.String.mr_cast_button_connected = global::policy.app.Droid.Resource.String.mr_cast_button_connected;
+			global::TouchEffect.Droid.Resource.String.mr_cast_button_connecting = global::policy.app.Droid.Resource.String.mr_cast_button_connecting;
+			global::TouchEffect.Droid.Resource.String.mr_cast_button_disconnected = global::policy.app.Droid.Resource.String.mr_cast_button_disconnected;
+			global::TouchEffect.Droid.Resource.String.mr_chooser_searching = global::policy.app.Droid.Resource.String.mr_chooser_searching;
+			global::TouchEffect.Droid.Resource.String.mr_chooser_title = global::policy.app.Droid.Resource.String.mr_chooser_title;
+			global::TouchEffect.Droid.Resource.String.mr_controller_album_art = global::policy.app.Droid.Resource.String.mr_controller_album_art;
+			global::TouchEffect.Droid.Resource.String.mr_controller_casting_screen = global::policy.app.Droid.Resource.String.mr_controller_casting_screen;
+			global::TouchEffect.Droid.Resource.String.mr_controller_close_description = global::policy.app.Droid.Resource.String.mr_controller_close_description;
+			global::TouchEffect.Droid.Resource.String.mr_controller_collapse_group = global::policy.app.Droid.Resource.String.mr_controller_collapse_group;
+			global::TouchEffect.Droid.Resource.String.mr_controller_disconnect = global::policy.app.Droid.Resource.String.mr_controller_disconnect;
+			global::TouchEffect.Droid.Resource.String.mr_controller_expand_group = global::policy.app.Droid.Resource.String.mr_controller_expand_group;
+			global::TouchEffect.Droid.Resource.String.mr_controller_no_info_available = global::policy.app.Droid.Resource.String.mr_controller_no_info_available;
+			global::TouchEffect.Droid.Resource.String.mr_controller_no_media_selected = global::policy.app.Droid.Resource.String.mr_controller_no_media_selected;
+			global::TouchEffect.Droid.Resource.String.mr_controller_pause = global::policy.app.Droid.Resource.String.mr_controller_pause;
+			global::TouchEffect.Droid.Resource.String.mr_controller_play = global::policy.app.Droid.Resource.String.mr_controller_play;
+			global::TouchEffect.Droid.Resource.String.mr_controller_stop = global::policy.app.Droid.Resource.String.mr_controller_stop;
+			global::TouchEffect.Droid.Resource.String.mr_controller_stop_casting = global::policy.app.Droid.Resource.String.mr_controller_stop_casting;
+			global::TouchEffect.Droid.Resource.String.mr_controller_volume_slider = global::policy.app.Droid.Resource.String.mr_controller_volume_slider;
+			global::TouchEffect.Droid.Resource.String.mr_system_route_name = global::policy.app.Droid.Resource.String.mr_system_route_name;
+			global::TouchEffect.Droid.Resource.String.mr_user_route_category_name = global::policy.app.Droid.Resource.String.mr_user_route_category_name;
+			global::TouchEffect.Droid.Resource.String.password_toggle_content_description = global::policy.app.Droid.Resource.String.password_toggle_content_description;
+			global::TouchEffect.Droid.Resource.String.path_password_eye = global::policy.app.Droid.Resource.String.path_password_eye;
+			global::TouchEffect.Droid.Resource.String.path_password_eye_mask_strike_through = global::policy.app.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::TouchEffect.Droid.Resource.String.path_password_eye_mask_visible = global::policy.app.Droid.Resource.String.path_password_eye_mask_visible;
+			global::TouchEffect.Droid.Resource.String.path_password_strike_through = global::policy.app.Droid.Resource.String.path_password_strike_through;
+			global::TouchEffect.Droid.Resource.String.search_menu_title = global::policy.app.Droid.Resource.String.search_menu_title;
+			global::TouchEffect.Droid.Resource.String.status_bar_notification_info_overflow = global::policy.app.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::TouchEffect.Droid.Resource.Style.AlertDialog_AppCompat = global::policy.app.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::policy.app.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Animation_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::policy.app.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::TouchEffect.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::policy.app.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::TouchEffect.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::policy.app.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::TouchEffect.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::policy.app.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::policy.app.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::policy.app.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::TouchEffect.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::policy.app.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::TouchEffect.Droid.Resource.Style.Base_CardView = global::policy.app.Droid.Resource.Style.Base_CardView;
+			global::TouchEffect.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::policy.app.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::policy.app.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::policy.app.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::policy.app.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::policy.app.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::policy.app.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::TouchEffect.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::policy.app.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::TouchEffect.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::policy.app.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::policy.app.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::policy.app.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::TouchEffect.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::policy.app.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::policy.app.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::TouchEffect.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::policy.app.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::policy.app.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::policy.app.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::policy.app.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::policy.app.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::policy.app.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::policy.app.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::policy.app.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::policy.app.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::policy.app.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::policy.app.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::TouchEffect.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::policy.app.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::policy.app.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::policy.app.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::policy.app.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::TouchEffect.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::policy.app.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::TouchEffect.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::policy.app.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::policy.app.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::TouchEffect.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::policy.app.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::TouchEffect.Droid.Resource.Style.CardView = global::policy.app.Droid.Resource.Style.CardView;
+			global::TouchEffect.Droid.Resource.Style.CardView_Dark = global::policy.app.Droid.Resource.Style.CardView_Dark;
+			global::TouchEffect.Droid.Resource.Style.CardView_Light = global::policy.app.Droid.Resource.Style.CardView_Light;
+			global::TouchEffect.Droid.Resource.Style.Platform_AppCompat = global::policy.app.Droid.Resource.Style.Platform_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Platform_AppCompat_Light = global::policy.app.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::policy.app.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::policy.app.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::TouchEffect.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::policy.app.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Platform_V21_AppCompat = global::policy.app.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::policy.app.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Platform_V25_AppCompat = global::policy.app.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::policy.app.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::policy.app.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::policy.app.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::TouchEffect.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::policy.app.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::TouchEffect.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::policy.app.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::TouchEffect.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::policy.app.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::policy.app.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::policy.app.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::policy.app.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Design_Counter = global::policy.app.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::policy.app.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Design_Error = global::policy.app.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Design_Hint = global::policy.app.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::policy.app.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Design_Tab = global::policy.app.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::policy.app.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::policy.app.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_MediaRouter_Title = global::policy.app.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::policy.app.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::policy.app.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::TouchEffect.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::policy.app.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat = global::policy.app.Droid.Resource.Style.Theme_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::policy.app.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_DayNight = global::policy.app.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::policy.app.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::policy.app.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::policy.app.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::policy.app.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::policy.app.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::policy.app.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::policy.app.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Light = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::policy.app.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::TouchEffect.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::policy.app.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::TouchEffect.Droid.Resource.Style.Theme_Design = global::policy.app.Droid.Resource.Style.Theme_Design;
+			global::TouchEffect.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::policy.app.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::TouchEffect.Droid.Resource.Style.Theme_Design_Light = global::policy.app.Droid.Resource.Style.Theme_Design_Light;
+			global::TouchEffect.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::policy.app.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::TouchEffect.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::policy.app.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::TouchEffect.Droid.Resource.Style.Theme_Design_NoActionBar = global::policy.app.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::TouchEffect.Droid.Resource.Style.Theme_MediaRouter = global::policy.app.Droid.Resource.Style.Theme_MediaRouter;
+			global::TouchEffect.Droid.Resource.Style.Theme_MediaRouter_Light = global::policy.app.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::TouchEffect.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::policy.app.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::TouchEffect.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::policy.app.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_AppCompat = global::policy.app.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::policy.app.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::policy.app.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::policy.app.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::policy.app.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::policy.app.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::policy.app.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::policy.app.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::TouchEffect.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light = global::policy.app.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Button = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::policy.app.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::policy.app.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::policy.app.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::policy.app.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::policy.app.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_EditText = global::policy.app.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ListView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::policy.app.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::policy.app.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::policy.app.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::policy.app.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::policy.app.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::policy.app.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_SearchView = global::policy.app.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::policy.app.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Spinner = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::policy.app.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::TouchEffect.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::policy.app.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::TouchEffect.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::policy.app.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::TouchEffect.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::policy.app.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_AppBarLayout = global::policy.app.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::policy.app.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::policy.app.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::policy.app.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::policy.app.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_NavigationView = global::policy.app.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::policy.app.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_Snackbar = global::policy.app.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_TabLayout = global::policy.app.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::TouchEffect.Droid.Resource.Style.Widget_Design_TextInputLayout = global::policy.app.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::TouchEffect.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::policy.app.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::TouchEffect.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::policy.app.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar = global::policy.app.Droid.Resource.Styleable.ActionBar;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_background = global::policy.app.Droid.Resource.Styleable.ActionBar_background;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::policy.app.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::policy.app.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::policy.app.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::policy.app.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::policy.app.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::policy.app.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::policy.app.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::policy.app.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::policy.app.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_displayOptions = global::policy.app.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_divider = global::policy.app.Droid.Resource.Styleable.ActionBar_divider;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_elevation = global::policy.app.Droid.Resource.Styleable.ActionBar_elevation;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_height = global::policy.app.Droid.Resource.Styleable.ActionBar_height;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::policy.app.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::policy.app.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_homeLayout = global::policy.app.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_icon = global::policy.app.Droid.Resource.Styleable.ActionBar_icon;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::policy.app.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_itemPadding = global::policy.app.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_logo = global::policy.app.Droid.Resource.Styleable.ActionBar_logo;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_navigationMode = global::policy.app.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_popupTheme = global::policy.app.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::policy.app.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::policy.app.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_subtitle = global::policy.app.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::policy.app.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_title = global::policy.app.Droid.Resource.Styleable.ActionBar_title;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::policy.app.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBarLayout = global::policy.app.Droid.Resource.Styleable.ActionBarLayout;
+			global::TouchEffect.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::policy.app.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMenuItemView = global::policy.app.Droid.Resource.Styleable.ActionMenuItemView;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::policy.app.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMenuView = global::policy.app.Droid.Resource.Styleable.ActionMenuView;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMode = global::policy.app.Droid.Resource.Styleable.ActionMode;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMode_background = global::policy.app.Droid.Resource.Styleable.ActionMode_background;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::policy.app.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::policy.app.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMode_height = global::policy.app.Droid.Resource.Styleable.ActionMode_height;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::policy.app.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::TouchEffect.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::policy.app.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::TouchEffect.Droid.Resource.Styleable.ActivityChooserView = global::policy.app.Droid.Resource.Styleable.ActivityChooserView;
+			global::TouchEffect.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::policy.app.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::policy.app.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::TouchEffect.Droid.Resource.Styleable.AlertDialog = global::policy.app.Droid.Resource.Styleable.AlertDialog;
+			global::TouchEffect.Droid.Resource.Styleable.AlertDialog_android_layout = global::policy.app.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::TouchEffect.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::policy.app.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::TouchEffect.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::policy.app.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::TouchEffect.Droid.Resource.Styleable.AlertDialog_listLayout = global::policy.app.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::TouchEffect.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::policy.app.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::TouchEffect.Droid.Resource.Styleable.AlertDialog_showTitle = global::policy.app.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::TouchEffect.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::policy.app.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout = global::policy.app.Droid.Resource.Styleable.AppBarLayout;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout_android_background = global::policy.app.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::policy.app.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::policy.app.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout_elevation = global::policy.app.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout_expanded = global::policy.app.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayoutStates = global::policy.app.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::policy.app.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::policy.app.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout_Layout = global::policy.app.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::policy.app.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::TouchEffect.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::policy.app.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatImageView = global::policy.app.Droid.Resource.Styleable.AppCompatImageView;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatImageView_android_src = global::policy.app.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::policy.app.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatImageView_tint = global::policy.app.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::policy.app.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatSeekBar = global::policy.app.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::policy.app.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::policy.app.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::policy.app.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::policy.app.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextHelper = global::policy.app.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::policy.app.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::policy.app.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::policy.app.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::policy.app.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::policy.app.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::policy.app.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::policy.app.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView = global::policy.app.Droid.Resource.Styleable.AppCompatTextView;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::policy.app.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::policy.app.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::policy.app.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::policy.app.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::policy.app.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::policy.app.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::policy.app.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::policy.app.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme = global::policy.app.Droid.Resource.Styleable.AppCompatTheme;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorError = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::TouchEffect.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::policy.app.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::TouchEffect.Droid.Resource.Styleable.BottomNavigationView = global::policy.app.Droid.Resource.Styleable.BottomNavigationView;
+			global::TouchEffect.Droid.Resource.Styleable.BottomNavigationView_elevation = global::policy.app.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::TouchEffect.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::policy.app.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::TouchEffect.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::policy.app.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::TouchEffect.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::policy.app.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::TouchEffect.Droid.Resource.Styleable.BottomNavigationView_menu = global::policy.app.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::TouchEffect.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::policy.app.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::TouchEffect.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::policy.app.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::TouchEffect.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::policy.app.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::TouchEffect.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::policy.app.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::TouchEffect.Droid.Resource.Styleable.ButtonBarLayout = global::policy.app.Droid.Resource.Styleable.ButtonBarLayout;
+			global::TouchEffect.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::policy.app.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::TouchEffect.Droid.Resource.Styleable.CardView = global::policy.app.Droid.Resource.Styleable.CardView;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_android_minHeight = global::policy.app.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_android_minWidth = global::policy.app.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::policy.app.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_cardCornerRadius = global::policy.app.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_cardElevation = global::policy.app.Droid.Resource.Styleable.CardView_cardElevation;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_cardMaxElevation = global::policy.app.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::policy.app.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::policy.app.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_contentPadding = global::policy.app.Droid.Resource.Styleable.CardView_contentPadding;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::policy.app.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::policy.app.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_contentPaddingRight = global::policy.app.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::TouchEffect.Droid.Resource.Styleable.CardView_contentPaddingTop = global::policy.app.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::TouchEffect.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::policy.app.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::TouchEffect.Droid.Resource.Styleable.ColorStateListItem = global::policy.app.Droid.Resource.Styleable.ColorStateListItem;
+			global::TouchEffect.Droid.Resource.Styleable.ColorStateListItem_alpha = global::policy.app.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::TouchEffect.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::policy.app.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::TouchEffect.Droid.Resource.Styleable.ColorStateListItem_android_color = global::policy.app.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::TouchEffect.Droid.Resource.Styleable.CompoundButton = global::policy.app.Droid.Resource.Styleable.CompoundButton;
+			global::TouchEffect.Droid.Resource.Styleable.CompoundButton_android_button = global::policy.app.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::TouchEffect.Droid.Resource.Styleable.CompoundButton_buttonTint = global::policy.app.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::TouchEffect.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::policy.app.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::TouchEffect.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::policy.app.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::TouchEffect.Droid.Resource.Styleable.DesignTheme = global::policy.app.Droid.Resource.Styleable.DesignTheme;
+			global::TouchEffect.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::policy.app.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::TouchEffect.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::policy.app.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle_color = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::TouchEffect.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::policy.app.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton = global::policy.app.Droid.Resource.Styleable.FloatingActionButton;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_elevation = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::TouchEffect.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::policy.app.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamily = global::policy.app.Droid.Resource.Styleable.FontFamily;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::policy.app.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::policy.app.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::policy.app.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::policy.app.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::policy.app.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::policy.app.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamilyFont = global::policy.app.Droid.Resource.Styleable.FontFamilyFont;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamilyFont_android_font = global::policy.app.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::policy.app.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::policy.app.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamilyFont_font = global::policy.app.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::policy.app.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::TouchEffect.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::policy.app.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::TouchEffect.Droid.Resource.Styleable.ForegroundLinearLayout = global::policy.app.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::TouchEffect.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::policy.app.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::TouchEffect.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::policy.app.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::TouchEffect.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::policy.app.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::TouchEffect.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::policy.app.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::TouchEffect.Droid.Resource.Styleable.ListPopupWindow = global::policy.app.Droid.Resource.Styleable.ListPopupWindow;
+			global::TouchEffect.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::policy.app.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::TouchEffect.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::policy.app.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::TouchEffect.Droid.Resource.Styleable.MediaRouteButton = global::policy.app.Droid.Resource.Styleable.MediaRouteButton;
+			global::TouchEffect.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::policy.app.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::TouchEffect.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::policy.app.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::TouchEffect.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::policy.app.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::policy.app.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
+			global::TouchEffect.Droid.Resource.Styleable.MenuGroup = global::policy.app.Droid.Resource.Styleable.MenuGroup;
+			global::TouchEffect.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::policy.app.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::TouchEffect.Droid.Resource.Styleable.MenuGroup_android_enabled = global::policy.app.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::TouchEffect.Droid.Resource.Styleable.MenuGroup_android_id = global::policy.app.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::TouchEffect.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::policy.app.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::TouchEffect.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::policy.app.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::TouchEffect.Droid.Resource.Styleable.MenuGroup_android_visible = global::policy.app.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem = global::policy.app.Droid.Resource.Styleable.MenuItem;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_actionLayout = global::policy.app.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::policy.app.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_actionViewClass = global::policy.app.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::policy.app.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::policy.app.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_checkable = global::policy.app.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_checked = global::policy.app.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_enabled = global::policy.app.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_icon = global::policy.app.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_id = global::policy.app.Droid.Resource.Styleable.MenuItem_android_id;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::policy.app.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::policy.app.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_onClick = global::policy.app.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::policy.app.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_title = global::policy.app.Droid.Resource.Styleable.MenuItem_android_title;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::policy.app.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_android_visible = global::policy.app.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_contentDescription = global::policy.app.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_iconTint = global::policy.app.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_iconTintMode = global::policy.app.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_numericModifiers = global::policy.app.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_showAsAction = global::policy.app.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::TouchEffect.Droid.Resource.Styleable.MenuItem_tooltipText = global::policy.app.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView = global::policy.app.Droid.Resource.Styleable.MenuView;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_android_headerBackground = global::policy.app.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::policy.app.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_android_itemBackground = global::policy.app.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::policy.app.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::policy.app.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::policy.app.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::policy.app.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::policy.app.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::TouchEffect.Droid.Resource.Styleable.MenuView_subMenuArrow = global::policy.app.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView = global::policy.app.Droid.Resource.Styleable.NavigationView;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_android_background = global::policy.app.Droid.Resource.Styleable.NavigationView_android_background;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::policy.app.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::policy.app.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_elevation = global::policy.app.Droid.Resource.Styleable.NavigationView_elevation;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_headerLayout = global::policy.app.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_itemBackground = global::policy.app.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_itemIconTint = global::policy.app.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::policy.app.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_itemTextColor = global::policy.app.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::TouchEffect.Droid.Resource.Styleable.NavigationView_menu = global::policy.app.Droid.Resource.Styleable.NavigationView_menu;
+			global::TouchEffect.Droid.Resource.Styleable.PopupWindow = global::policy.app.Droid.Resource.Styleable.PopupWindow;
+			global::TouchEffect.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::policy.app.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::TouchEffect.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::policy.app.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::TouchEffect.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::policy.app.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::TouchEffect.Droid.Resource.Styleable.PopupWindowBackgroundState = global::policy.app.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::TouchEffect.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::policy.app.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::TouchEffect.Droid.Resource.Styleable.RecycleListView = global::policy.app.Droid.Resource.Styleable.RecycleListView;
+			global::TouchEffect.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::policy.app.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::TouchEffect.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::policy.app.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView = global::policy.app.Droid.Resource.Styleable.RecyclerView;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::policy.app.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_android_orientation = global::policy.app.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled = global::policy.app.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::policy.app.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::policy.app.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::policy.app.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::policy.app.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_layoutManager = global::policy.app.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::policy.app.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_spanCount = global::policy.app.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::TouchEffect.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::policy.app.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::TouchEffect.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::policy.app.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::TouchEffect.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::policy.app.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::TouchEffect.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::policy.app.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::TouchEffect.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::policy.app.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView = global::policy.app.Droid.Resource.Styleable.SearchView;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_android_focusable = global::policy.app.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_android_imeOptions = global::policy.app.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_android_inputType = global::policy.app.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_android_maxWidth = global::policy.app.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_closeIcon = global::policy.app.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_commitIcon = global::policy.app.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::policy.app.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_goIcon = global::policy.app.Droid.Resource.Styleable.SearchView_goIcon;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::policy.app.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_layout = global::policy.app.Droid.Resource.Styleable.SearchView_layout;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_queryBackground = global::policy.app.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_queryHint = global::policy.app.Droid.Resource.Styleable.SearchView_queryHint;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_searchHintIcon = global::policy.app.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_searchIcon = global::policy.app.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_submitBackground = global::policy.app.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::policy.app.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::TouchEffect.Droid.Resource.Styleable.SearchView_voiceIcon = global::policy.app.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::TouchEffect.Droid.Resource.Styleable.SnackbarLayout = global::policy.app.Droid.Resource.Styleable.SnackbarLayout;
+			global::TouchEffect.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::policy.app.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::TouchEffect.Droid.Resource.Styleable.SnackbarLayout_elevation = global::policy.app.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::TouchEffect.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::policy.app.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::TouchEffect.Droid.Resource.Styleable.Spinner = global::policy.app.Droid.Resource.Styleable.Spinner;
+			global::TouchEffect.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::policy.app.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::TouchEffect.Droid.Resource.Styleable.Spinner_android_entries = global::policy.app.Droid.Resource.Styleable.Spinner_android_entries;
+			global::TouchEffect.Droid.Resource.Styleable.Spinner_android_popupBackground = global::policy.app.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::TouchEffect.Droid.Resource.Styleable.Spinner_android_prompt = global::policy.app.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::TouchEffect.Droid.Resource.Styleable.Spinner_popupTheme = global::policy.app.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat = global::policy.app.Droid.Resource.Styleable.SwitchCompat;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::policy.app.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::policy.app.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::policy.app.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_showText = global::policy.app.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::policy.app.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::policy.app.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::policy.app.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::policy.app.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::policy.app.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::policy.app.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::policy.app.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_track = global::policy.app.Droid.Resource.Styleable.SwitchCompat_track;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_trackTint = global::policy.app.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::TouchEffect.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::policy.app.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::TouchEffect.Droid.Resource.Styleable.TabItem = global::policy.app.Droid.Resource.Styleable.TabItem;
+			global::TouchEffect.Droid.Resource.Styleable.TabItem_android_icon = global::policy.app.Droid.Resource.Styleable.TabItem_android_icon;
+			global::TouchEffect.Droid.Resource.Styleable.TabItem_android_layout = global::policy.app.Droid.Resource.Styleable.TabItem_android_layout;
+			global::TouchEffect.Droid.Resource.Styleable.TabItem_android_text = global::policy.app.Droid.Resource.Styleable.TabItem_android_text;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout = global::policy.app.Droid.Resource.Styleable.TabLayout;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabBackground = global::policy.app.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabContentStart = global::policy.app.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabGravity = global::policy.app.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::policy.app.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::policy.app.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::policy.app.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::policy.app.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabMode = global::policy.app.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabPadding = global::policy.app.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::policy.app.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::policy.app.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::policy.app.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::policy.app.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::policy.app.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::policy.app.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.TabLayout_tabTextColor = global::policy.app.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance = global::policy.app.Droid.Resource.Styleable.TextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_textColor = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_textSize = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_android_typeface = global::policy.app.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_fontFamily = global::policy.app.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::TouchEffect.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::policy.app.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout = global::policy.app.Droid.Resource.Styleable.TextInputLayout;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_android_hint = global::policy.app.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::policy.app.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::policy.app.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::policy.app.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::policy.app.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::policy.app.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::policy.app.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::policy.app.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::policy.app.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::policy.app.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::policy.app.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::policy.app.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::policy.app.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::policy.app.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::policy.app.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::TouchEffect.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::policy.app.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar = global::policy.app.Droid.Resource.Styleable.Toolbar;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_android_gravity = global::policy.app.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_android_minHeight = global::policy.app.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_buttonGravity = global::policy.app.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::policy.app.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_collapseIcon = global::policy.app.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::policy.app.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::policy.app.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::policy.app.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::policy.app.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::policy.app.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::policy.app.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_logo = global::policy.app.Droid.Resource.Styleable.Toolbar_logo;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_logoDescription = global::policy.app.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::policy.app.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::policy.app.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_navigationIcon = global::policy.app.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_popupTheme = global::policy.app.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_subtitle = global::policy.app.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::policy.app.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::policy.app.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_title = global::policy.app.Droid.Resource.Styleable.Toolbar_title;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_titleMargin = global::policy.app.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::policy.app.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::policy.app.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::policy.app.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::policy.app.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_titleMargins = global::policy.app.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::policy.app.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::TouchEffect.Droid.Resource.Styleable.Toolbar_titleTextColor = global::policy.app.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::TouchEffect.Droid.Resource.Styleable.View = global::policy.app.Droid.Resource.Styleable.View;
+			global::TouchEffect.Droid.Resource.Styleable.View_android_focusable = global::policy.app.Droid.Resource.Styleable.View_android_focusable;
+			global::TouchEffect.Droid.Resource.Styleable.View_android_theme = global::policy.app.Droid.Resource.Styleable.View_android_theme;
+			global::TouchEffect.Droid.Resource.Styleable.View_paddingEnd = global::policy.app.Droid.Resource.Styleable.View_paddingEnd;
+			global::TouchEffect.Droid.Resource.Styleable.View_paddingStart = global::policy.app.Droid.Resource.Styleable.View_paddingStart;
+			global::TouchEffect.Droid.Resource.Styleable.View_theme = global::policy.app.Droid.Resource.Styleable.View_theme;
+			global::TouchEffect.Droid.Resource.Styleable.ViewBackgroundHelper = global::policy.app.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::TouchEffect.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::policy.app.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::TouchEffect.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::policy.app.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::TouchEffect.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::policy.app.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::TouchEffect.Droid.Resource.Styleable.ViewStubCompat = global::policy.app.Droid.Resource.Styleable.ViewStubCompat;
+			global::TouchEffect.Droid.Resource.Styleable.ViewStubCompat_android_id = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::TouchEffect.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::TouchEffect.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::policy.app.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::policy.app.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::policy.app.Droid.Resource.Attribute.font;
@@ -8981,26 +11240,26 @@ namespace policy.app.Droid
 			// aapt resource value: 0x7f020056
 			public const int avd_hide_password = 2130837590;
 			
-			// aapt resource value: 0x7f02014f
-			public const int avd_hide_password_1 = 2130837839;
-			
 			// aapt resource value: 0x7f020150
-			public const int avd_hide_password_2 = 2130837840;
+			public const int avd_hide_password_1 = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int avd_hide_password_3 = 2130837841;
+			public const int avd_hide_password_2 = 2130837841;
+			
+			// aapt resource value: 0x7f020152
+			public const int avd_hide_password_3 = 2130837842;
 			
 			// aapt resource value: 0x7f020057
 			public const int avd_show_password = 2130837591;
 			
-			// aapt resource value: 0x7f020152
-			public const int avd_show_password_1 = 2130837842;
-			
 			// aapt resource value: 0x7f020153
-			public const int avd_show_password_2 = 2130837843;
+			public const int avd_show_password_1 = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int avd_show_password_3 = 2130837844;
+			public const int avd_show_password_2 = 2130837844;
+			
+			// aapt resource value: 0x7f020155
+			public const int avd_show_password_3 = 2130837845;
 			
 			// aapt resource value: 0x7f020058
 			public const int baseline_grade_white_18dp = 2130837592;
@@ -9030,718 +11289,721 @@ namespace policy.app.Droid
 			public const int design_snackbar_background = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int fon = 2130837601;
+			public const int DisableColor = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_action_arrow_back = 2130837602;
+			public const int fon = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_action_dehaze = 2130837603;
+			public const int ic_action_arrow_back = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ic_action_home = 2130837604;
+			public const int ic_action_dehaze = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int ic_action_search = 2130837605;
+			public const int ic_action_home = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int ic_audiotrack_dark = 2130837606;
+			public const int ic_action_search = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int ic_audiotrack_light = 2130837607;
+			public const int ic_audiotrack_dark = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_dialog_close_dark = 2130837608;
+			public const int ic_audiotrack_light = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_dialog_close_light = 2130837609;
+			public const int ic_dialog_close_dark = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_group_collapse_00 = 2130837610;
+			public const int ic_dialog_close_light = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_group_collapse_01 = 2130837611;
+			public const int ic_group_collapse_00 = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_group_collapse_02 = 2130837612;
+			public const int ic_group_collapse_01 = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_group_collapse_03 = 2130837613;
+			public const int ic_group_collapse_02 = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_group_collapse_04 = 2130837614;
+			public const int ic_group_collapse_03 = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_group_collapse_05 = 2130837615;
+			public const int ic_group_collapse_04 = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_group_collapse_06 = 2130837616;
+			public const int ic_group_collapse_05 = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_group_collapse_07 = 2130837617;
+			public const int ic_group_collapse_06 = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_group_collapse_08 = 2130837618;
+			public const int ic_group_collapse_07 = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_group_collapse_09 = 2130837619;
+			public const int ic_group_collapse_08 = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_group_collapse_10 = 2130837620;
+			public const int ic_group_collapse_09 = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_group_collapse_11 = 2130837621;
+			public const int ic_group_collapse_10 = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_group_collapse_12 = 2130837622;
+			public const int ic_group_collapse_11 = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_group_collapse_13 = 2130837623;
+			public const int ic_group_collapse_12 = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ic_group_collapse_14 = 2130837624;
+			public const int ic_group_collapse_13 = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int ic_group_collapse_15 = 2130837625;
+			public const int ic_group_collapse_14 = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int ic_group_expand_00 = 2130837626;
+			public const int ic_group_collapse_15 = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_group_expand_01 = 2130837627;
+			public const int ic_group_expand_00 = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_group_expand_02 = 2130837628;
+			public const int ic_group_expand_01 = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_group_expand_03 = 2130837629;
+			public const int ic_group_expand_02 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_group_expand_04 = 2130837630;
+			public const int ic_group_expand_03 = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_group_expand_05 = 2130837631;
+			public const int ic_group_expand_04 = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_group_expand_06 = 2130837632;
+			public const int ic_group_expand_05 = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_group_expand_07 = 2130837633;
+			public const int ic_group_expand_06 = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_group_expand_08 = 2130837634;
+			public const int ic_group_expand_07 = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_group_expand_09 = 2130837635;
+			public const int ic_group_expand_08 = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_group_expand_10 = 2130837636;
+			public const int ic_group_expand_09 = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_group_expand_11 = 2130837637;
+			public const int ic_group_expand_10 = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_group_expand_12 = 2130837638;
+			public const int ic_group_expand_11 = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int ic_group_expand_13 = 2130837639;
+			public const int ic_group_expand_12 = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_group_expand_14 = 2130837640;
+			public const int ic_group_expand_13 = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_group_expand_15 = 2130837641;
+			public const int ic_group_expand_14 = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_media_pause_dark = 2130837642;
+			public const int ic_group_expand_15 = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_media_pause_light = 2130837643;
+			public const int ic_media_pause_dark = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_media_play_dark = 2130837644;
+			public const int ic_media_pause_light = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_media_play_light = 2130837645;
+			public const int ic_media_play_dark = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_media_stop_dark = 2130837646;
+			public const int ic_media_play_light = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_media_stop_light = 2130837647;
+			public const int ic_media_stop_dark = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_mr_button_connected_00_dark = 2130837648;
+			public const int ic_media_stop_light = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_mr_button_connected_00_light = 2130837649;
+			public const int ic_mr_button_connected_00_dark = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int ic_mr_button_connected_01_dark = 2130837650;
+			public const int ic_mr_button_connected_00_light = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int ic_mr_button_connected_01_light = 2130837651;
+			public const int ic_mr_button_connected_01_dark = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int ic_mr_button_connected_02_dark = 2130837652;
+			public const int ic_mr_button_connected_01_light = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int ic_mr_button_connected_02_light = 2130837653;
+			public const int ic_mr_button_connected_02_dark = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int ic_mr_button_connected_03_dark = 2130837654;
+			public const int ic_mr_button_connected_02_light = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int ic_mr_button_connected_03_light = 2130837655;
+			public const int ic_mr_button_connected_03_dark = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int ic_mr_button_connected_04_dark = 2130837656;
+			public const int ic_mr_button_connected_03_light = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int ic_mr_button_connected_04_light = 2130837657;
+			public const int ic_mr_button_connected_04_dark = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ic_mr_button_connected_05_dark = 2130837658;
+			public const int ic_mr_button_connected_04_light = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ic_mr_button_connected_05_light = 2130837659;
+			public const int ic_mr_button_connected_05_dark = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ic_mr_button_connected_06_dark = 2130837660;
+			public const int ic_mr_button_connected_05_light = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ic_mr_button_connected_06_light = 2130837661;
+			public const int ic_mr_button_connected_06_dark = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ic_mr_button_connected_07_dark = 2130837662;
+			public const int ic_mr_button_connected_06_light = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_mr_button_connected_07_light = 2130837663;
+			public const int ic_mr_button_connected_07_dark = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_mr_button_connected_08_dark = 2130837664;
+			public const int ic_mr_button_connected_07_light = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_mr_button_connected_08_light = 2130837665;
+			public const int ic_mr_button_connected_08_dark = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_mr_button_connected_09_dark = 2130837666;
+			public const int ic_mr_button_connected_08_light = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_mr_button_connected_09_light = 2130837667;
+			public const int ic_mr_button_connected_09_dark = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_mr_button_connected_10_dark = 2130837668;
+			public const int ic_mr_button_connected_09_light = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_mr_button_connected_10_light = 2130837669;
+			public const int ic_mr_button_connected_10_dark = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_mr_button_connected_11_dark = 2130837670;
+			public const int ic_mr_button_connected_10_light = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_mr_button_connected_11_light = 2130837671;
+			public const int ic_mr_button_connected_11_dark = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_mr_button_connected_12_dark = 2130837672;
+			public const int ic_mr_button_connected_11_light = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_mr_button_connected_12_light = 2130837673;
+			public const int ic_mr_button_connected_12_dark = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_mr_button_connected_13_dark = 2130837674;
+			public const int ic_mr_button_connected_12_light = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_mr_button_connected_13_light = 2130837675;
+			public const int ic_mr_button_connected_13_dark = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_mr_button_connected_14_dark = 2130837676;
+			public const int ic_mr_button_connected_13_light = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_mr_button_connected_14_light = 2130837677;
+			public const int ic_mr_button_connected_14_dark = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_mr_button_connected_15_dark = 2130837678;
+			public const int ic_mr_button_connected_14_light = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_mr_button_connected_15_light = 2130837679;
+			public const int ic_mr_button_connected_15_dark = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_mr_button_connected_16_dark = 2130837680;
+			public const int ic_mr_button_connected_15_light = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_mr_button_connected_16_light = 2130837681;
+			public const int ic_mr_button_connected_16_dark = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_mr_button_connected_17_dark = 2130837682;
+			public const int ic_mr_button_connected_16_light = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_mr_button_connected_17_light = 2130837683;
+			public const int ic_mr_button_connected_17_dark = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_mr_button_connected_18_dark = 2130837684;
+			public const int ic_mr_button_connected_17_light = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_mr_button_connected_18_light = 2130837685;
+			public const int ic_mr_button_connected_18_dark = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_mr_button_connected_19_dark = 2130837686;
+			public const int ic_mr_button_connected_18_light = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_mr_button_connected_19_light = 2130837687;
+			public const int ic_mr_button_connected_19_dark = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_mr_button_connected_20_dark = 2130837688;
+			public const int ic_mr_button_connected_19_light = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_mr_button_connected_20_light = 2130837689;
+			public const int ic_mr_button_connected_20_dark = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_mr_button_connected_21_dark = 2130837690;
+			public const int ic_mr_button_connected_20_light = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_mr_button_connected_21_light = 2130837691;
+			public const int ic_mr_button_connected_21_dark = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_mr_button_connected_22_dark = 2130837692;
+			public const int ic_mr_button_connected_21_light = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_mr_button_connected_22_light = 2130837693;
+			public const int ic_mr_button_connected_22_dark = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_mr_button_connected_23_dark = 2130837694;
+			public const int ic_mr_button_connected_22_light = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_mr_button_connected_23_light = 2130837695;
+			public const int ic_mr_button_connected_23_dark = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_mr_button_connected_24_dark = 2130837696;
+			public const int ic_mr_button_connected_23_light = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_mr_button_connected_24_light = 2130837697;
+			public const int ic_mr_button_connected_24_dark = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ic_mr_button_connected_25_dark = 2130837698;
+			public const int ic_mr_button_connected_24_light = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ic_mr_button_connected_25_light = 2130837699;
+			public const int ic_mr_button_connected_25_dark = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ic_mr_button_connected_26_dark = 2130837700;
+			public const int ic_mr_button_connected_25_light = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ic_mr_button_connected_26_light = 2130837701;
+			public const int ic_mr_button_connected_26_dark = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ic_mr_button_connected_27_dark = 2130837702;
+			public const int ic_mr_button_connected_26_light = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ic_mr_button_connected_27_light = 2130837703;
+			public const int ic_mr_button_connected_27_dark = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ic_mr_button_connected_28_dark = 2130837704;
+			public const int ic_mr_button_connected_27_light = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ic_mr_button_connected_28_light = 2130837705;
+			public const int ic_mr_button_connected_28_dark = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ic_mr_button_connected_29_dark = 2130837706;
+			public const int ic_mr_button_connected_28_light = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int ic_mr_button_connected_29_light = 2130837707;
+			public const int ic_mr_button_connected_29_dark = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ic_mr_button_connected_30_dark = 2130837708;
+			public const int ic_mr_button_connected_29_light = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ic_mr_button_connected_30_light = 2130837709;
+			public const int ic_mr_button_connected_30_dark = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int ic_mr_button_connecting_00_dark = 2130837710;
+			public const int ic_mr_button_connected_30_light = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int ic_mr_button_connecting_00_light = 2130837711;
+			public const int ic_mr_button_connecting_00_dark = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int ic_mr_button_connecting_01_dark = 2130837712;
+			public const int ic_mr_button_connecting_00_light = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int ic_mr_button_connecting_01_light = 2130837713;
+			public const int ic_mr_button_connecting_01_dark = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int ic_mr_button_connecting_02_dark = 2130837714;
+			public const int ic_mr_button_connecting_01_light = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int ic_mr_button_connecting_02_light = 2130837715;
+			public const int ic_mr_button_connecting_02_dark = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int ic_mr_button_connecting_03_dark = 2130837716;
+			public const int ic_mr_button_connecting_02_light = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int ic_mr_button_connecting_03_light = 2130837717;
+			public const int ic_mr_button_connecting_03_dark = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int ic_mr_button_connecting_04_dark = 2130837718;
+			public const int ic_mr_button_connecting_03_light = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int ic_mr_button_connecting_04_light = 2130837719;
+			public const int ic_mr_button_connecting_04_dark = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int ic_mr_button_connecting_05_dark = 2130837720;
+			public const int ic_mr_button_connecting_04_light = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int ic_mr_button_connecting_05_light = 2130837721;
+			public const int ic_mr_button_connecting_05_dark = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int ic_mr_button_connecting_06_dark = 2130837722;
+			public const int ic_mr_button_connecting_05_light = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int ic_mr_button_connecting_06_light = 2130837723;
+			public const int ic_mr_button_connecting_06_dark = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int ic_mr_button_connecting_07_dark = 2130837724;
+			public const int ic_mr_button_connecting_06_light = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int ic_mr_button_connecting_07_light = 2130837725;
+			public const int ic_mr_button_connecting_07_dark = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int ic_mr_button_connecting_08_dark = 2130837726;
+			public const int ic_mr_button_connecting_07_light = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int ic_mr_button_connecting_08_light = 2130837727;
+			public const int ic_mr_button_connecting_08_dark = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int ic_mr_button_connecting_09_dark = 2130837728;
+			public const int ic_mr_button_connecting_08_light = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int ic_mr_button_connecting_09_light = 2130837729;
+			public const int ic_mr_button_connecting_09_dark = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int ic_mr_button_connecting_10_dark = 2130837730;
+			public const int ic_mr_button_connecting_09_light = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int ic_mr_button_connecting_10_light = 2130837731;
+			public const int ic_mr_button_connecting_10_dark = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int ic_mr_button_connecting_11_dark = 2130837732;
+			public const int ic_mr_button_connecting_10_light = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int ic_mr_button_connecting_11_light = 2130837733;
+			public const int ic_mr_button_connecting_11_dark = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int ic_mr_button_connecting_12_dark = 2130837734;
+			public const int ic_mr_button_connecting_11_light = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int ic_mr_button_connecting_12_light = 2130837735;
+			public const int ic_mr_button_connecting_12_dark = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int ic_mr_button_connecting_13_dark = 2130837736;
+			public const int ic_mr_button_connecting_12_light = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int ic_mr_button_connecting_13_light = 2130837737;
+			public const int ic_mr_button_connecting_13_dark = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int ic_mr_button_connecting_14_dark = 2130837738;
+			public const int ic_mr_button_connecting_13_light = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int ic_mr_button_connecting_14_light = 2130837739;
+			public const int ic_mr_button_connecting_14_dark = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int ic_mr_button_connecting_15_dark = 2130837740;
+			public const int ic_mr_button_connecting_14_light = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int ic_mr_button_connecting_15_light = 2130837741;
+			public const int ic_mr_button_connecting_15_dark = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int ic_mr_button_connecting_16_dark = 2130837742;
+			public const int ic_mr_button_connecting_15_light = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int ic_mr_button_connecting_16_light = 2130837743;
+			public const int ic_mr_button_connecting_16_dark = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int ic_mr_button_connecting_17_dark = 2130837744;
+			public const int ic_mr_button_connecting_16_light = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int ic_mr_button_connecting_17_light = 2130837745;
+			public const int ic_mr_button_connecting_17_dark = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int ic_mr_button_connecting_18_dark = 2130837746;
+			public const int ic_mr_button_connecting_17_light = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int ic_mr_button_connecting_18_light = 2130837747;
+			public const int ic_mr_button_connecting_18_dark = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int ic_mr_button_connecting_19_dark = 2130837748;
+			public const int ic_mr_button_connecting_18_light = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int ic_mr_button_connecting_19_light = 2130837749;
+			public const int ic_mr_button_connecting_19_dark = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int ic_mr_button_connecting_20_dark = 2130837750;
+			public const int ic_mr_button_connecting_19_light = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int ic_mr_button_connecting_20_light = 2130837751;
+			public const int ic_mr_button_connecting_20_dark = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int ic_mr_button_connecting_21_dark = 2130837752;
+			public const int ic_mr_button_connecting_20_light = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int ic_mr_button_connecting_21_light = 2130837753;
+			public const int ic_mr_button_connecting_21_dark = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int ic_mr_button_connecting_22_dark = 2130837754;
+			public const int ic_mr_button_connecting_21_light = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int ic_mr_button_connecting_22_light = 2130837755;
+			public const int ic_mr_button_connecting_22_dark = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int ic_mr_button_connecting_23_dark = 2130837756;
+			public const int ic_mr_button_connecting_22_light = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int ic_mr_button_connecting_23_light = 2130837757;
+			public const int ic_mr_button_connecting_23_dark = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int ic_mr_button_connecting_24_dark = 2130837758;
+			public const int ic_mr_button_connecting_23_light = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int ic_mr_button_connecting_24_light = 2130837759;
+			public const int ic_mr_button_connecting_24_dark = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int ic_mr_button_connecting_25_dark = 2130837760;
+			public const int ic_mr_button_connecting_24_light = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int ic_mr_button_connecting_25_light = 2130837761;
+			public const int ic_mr_button_connecting_25_dark = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int ic_mr_button_connecting_26_dark = 2130837762;
+			public const int ic_mr_button_connecting_25_light = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int ic_mr_button_connecting_26_light = 2130837763;
+			public const int ic_mr_button_connecting_26_dark = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int ic_mr_button_connecting_27_dark = 2130837764;
+			public const int ic_mr_button_connecting_26_light = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int ic_mr_button_connecting_27_light = 2130837765;
+			public const int ic_mr_button_connecting_27_dark = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int ic_mr_button_connecting_28_dark = 2130837766;
+			public const int ic_mr_button_connecting_27_light = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int ic_mr_button_connecting_28_light = 2130837767;
+			public const int ic_mr_button_connecting_28_dark = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int ic_mr_button_connecting_29_dark = 2130837768;
+			public const int ic_mr_button_connecting_28_light = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int ic_mr_button_connecting_29_light = 2130837769;
+			public const int ic_mr_button_connecting_29_dark = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int ic_mr_button_connecting_30_dark = 2130837770;
+			public const int ic_mr_button_connecting_29_light = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int ic_mr_button_connecting_30_light = 2130837771;
+			public const int ic_mr_button_connecting_30_dark = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int ic_mr_button_disabled_dark = 2130837772;
+			public const int ic_mr_button_connecting_30_light = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int ic_mr_button_disabled_light = 2130837773;
+			public const int ic_mr_button_disabled_dark = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int ic_mr_button_disconnected_dark = 2130837774;
+			public const int ic_mr_button_disabled_light = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int ic_mr_button_disconnected_light = 2130837775;
+			public const int ic_mr_button_disconnected_dark = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int ic_mr_button_grey = 2130837776;
+			public const int ic_mr_button_disconnected_light = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int ic_mtrl_chip_checked_black = 2130837777;
+			public const int ic_mr_button_grey = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int ic_mtrl_chip_checked_circle = 2130837778;
+			public const int ic_mtrl_chip_checked_black = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int ic_mtrl_chip_close_circle = 2130837779;
+			public const int ic_mtrl_chip_checked_circle = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int ic_vol_type_speaker_dark = 2130837780;
+			public const int ic_mtrl_chip_close_circle = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int ic_vol_type_speaker_group_dark = 2130837781;
+			public const int ic_vol_type_speaker_dark = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int ic_vol_type_speaker_group_light = 2130837782;
+			public const int ic_vol_type_speaker_group_dark = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int ic_vol_type_speaker_light = 2130837783;
+			public const int ic_vol_type_speaker_group_light = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int ic_vol_type_tv_dark = 2130837784;
+			public const int ic_vol_type_speaker_light = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int ic_vol_type_tv_light = 2130837785;
+			public const int ic_vol_type_tv_dark = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int icon = 2130837786;
+			public const int ic_vol_type_tv_light = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int icon_slider = 2130837787;
+			public const int icon = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int img_131540 = 2130837788;
+			public const int icon_slider = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int img_1315401 = 2130837789;
+			public const int img_131540 = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int meh = 2130837790;
+			public const int img_1315401 = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int menu_1_def = 2130837791;
+			public const int meh = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int menu_2_def = 2130837792;
+			public const int menu_1_def = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int menu_3_def = 2130837793;
+			public const int menu_2_def = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int menu_4_def = 2130837794;
+			public const int menu_3_def = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int menu_5_def = 2130837795;
+			public const int menu_4_def = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int mr_button_connected_dark = 2130837796;
+			public const int menu_5_def = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int mr_button_connected_light = 2130837797;
+			public const int mr_button_connected_dark = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int mr_button_connecting_dark = 2130837798;
+			public const int mr_button_connected_light = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int mr_button_connecting_light = 2130837799;
+			public const int mr_button_connecting_dark = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int mr_button_dark = 2130837800;
+			public const int mr_button_connecting_light = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int mr_button_light = 2130837801;
+			public const int mr_button_dark = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int mr_dialog_close_dark = 2130837802;
+			public const int mr_button_light = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int mr_dialog_close_light = 2130837803;
+			public const int mr_dialog_close_dark = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int mr_dialog_material_background_dark = 2130837804;
+			public const int mr_dialog_close_light = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int mr_dialog_material_background_light = 2130837805;
+			public const int mr_dialog_material_background_dark = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int mr_group_collapse = 2130837806;
+			public const int mr_dialog_material_background_light = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int mr_group_expand = 2130837807;
+			public const int mr_group_collapse = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int mr_media_pause_dark = 2130837808;
+			public const int mr_group_expand = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int mr_media_pause_light = 2130837809;
+			public const int mr_media_pause_dark = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int mr_media_play_dark = 2130837810;
+			public const int mr_media_pause_light = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int mr_media_play_light = 2130837811;
+			public const int mr_media_play_dark = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int mr_media_stop_dark = 2130837812;
+			public const int mr_media_play_light = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int mr_media_stop_light = 2130837813;
+			public const int mr_media_stop_dark = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int mr_vol_type_audiotrack_dark = 2130837814;
+			public const int mr_media_stop_light = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int mr_vol_type_audiotrack_light = 2130837815;
+			public const int mr_vol_type_audiotrack_dark = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int mtrl_snackbar_background = 2130837816;
+			public const int mr_vol_type_audiotrack_light = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int mtrl_tabs_default_indicator = 2130837817;
+			public const int mtrl_snackbar_background = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int navigation_empty_icon = 2130837818;
+			public const int mtrl_tabs_default_indicator = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int notification_action_background = 2130837819;
+			public const int navigation_empty_icon = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int notification_bg = 2130837820;
+			public const int notification_action_background = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int notification_bg_low = 2130837821;
+			public const int notification_bg = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int notification_bg_low_normal = 2130837822;
+			public const int notification_bg_low = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int notification_bg_low_pressed = 2130837823;
+			public const int notification_bg_low_normal = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int notification_bg_normal = 2130837824;
+			public const int notification_bg_low_pressed = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int notification_bg_normal_pressed = 2130837825;
+			public const int notification_bg_normal = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int notification_icon_background = 2130837826;
-			
-			// aapt resource value: 0x7f02014d
-			public const int notification_template_icon_bg = 2130837837;
-			
-			// aapt resource value: 0x7f02014e
-			public const int notification_template_icon_low_bg = 2130837838;
+			public const int notification_bg_normal_pressed = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int notification_tile_bg = 2130837827;
+			public const int notification_icon_background = 2130837827;
+			
+			// aapt resource value: 0x7f02014e
+			public const int notification_template_icon_bg = 2130837838;
+			
+			// aapt resource value: 0x7f02014f
+			public const int notification_template_icon_low_bg = 2130837839;
 			
 			// aapt resource value: 0x7f020144
-			public const int notify_panel_notification_icon_bg = 2130837828;
+			public const int notification_tile_bg = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int OurPoll = 2130837829;
+			public const int notify_panel_notification_icon_bg = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int star_2 = 2130837830;
+			public const int OurPoll = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int Star_def = 2130837831;
+			public const int star_2 = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int tooltip_frame_dark = 2130837832;
+			public const int Star_def = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int tooltip_frame_light = 2130837833;
+			public const int tooltip_frame_dark = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int user_blue = 2130837834;
+			public const int tooltip_frame_light = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int User_def = 2130837835;
+			public const int user_blue = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int ViewCellBackground = 2130837836;
+			public const int User_def = 2130837836;
+			
+			// aapt resource value: 0x7f02014d
+			public const int ViewCellBackground = 2130837837;
 			
 			static Drawable()
 			{
@@ -11081,8 +13343,8 @@ namespace policy.app.Droid
 			// aapt resource value: 0x7f0c0032
 			public const int abc_toolbar_collapse_description = 2131492914;
 			
-			// aapt resource value: 0x7f0c004e
-			public const int app_name = 2131492942;
+			// aapt resource value: 0x7f0c004f
+			public const int app_name = 2131492943;
 			
 			// aapt resource value: 0x7f0c0040
 			public const int appbar_scrolling_view_behavior = 2131492928;
@@ -11105,8 +13367,8 @@ namespace policy.app.Droid
 			// aapt resource value: 0x7f0c0046
 			public const int hide_bottom_view_on_scroll_behavior = 2131492934;
 			
-			// aapt resource value: 0x7f0c004f
-			public const int library_name = 2131492943;
+			// aapt resource value: 0x7f0c004e
+			public const int library_name = 2131492942;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int mr_button_content_description = 2131492864;

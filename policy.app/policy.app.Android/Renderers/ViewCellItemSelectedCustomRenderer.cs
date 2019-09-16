@@ -6,7 +6,7 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(CategoryViewCell), typeof(ViewCellItemSelectedCustomRenderer))]
+[assembly: ExportRenderer(typeof(DisableCategory), typeof(ViewCellItemSelectedCustomRenderer))]
 
 namespace policy.app.Droid.Renderers
 {
@@ -16,7 +16,7 @@ namespace policy.app.Droid.Renderers
         {
             var cell = base.GetCellCore(item, convertView, parent, context);
 
-            cell.SetBackgroundResource(Resource.Drawable.ViewCellBackground);
+            cell.SetBackgroundResource(Resource.Drawable.DisableColor);
 
             return cell;
         }

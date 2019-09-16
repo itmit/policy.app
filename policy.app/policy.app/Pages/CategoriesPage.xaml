@@ -6,6 +6,7 @@
              xmlns:viewCell="clr-namespace:policy.app.Views.ViewCell"
              xmlns:properties="clr-namespace:policy.app.Properties"
              xmlns:ex="clr-namespace:policy.app.Controls"
+             xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
              mc:Ignorable="d"
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
@@ -14,19 +15,20 @@
                 <StackLayout Padding="20">
                     <ListView x:Name="NativeList"
                               HeightRequest="400"
-                              SelectionMode="Single"
                               WidthRequest="230" 
                               HorizontalOptions="Center"
                               ItemsSource="{Binding Categories}" 
                               ItemSelected="ListView_OnItemSelected"
                               SelectedItem="{Binding SelectedCategory}" 
-                              HasUnevenRows="True">
+                              BackgroundColor="Transparent"
+                              HasUnevenRows="True"
+                              >
+                        <ListView.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding OnSelectedCategory}" CommandParameter="{Binding SelectedCategory}"/>
+                        </ListView.GestureRecognizers>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <ViewCell.Effects>
-                                        <ex:NativeListViewCategory/>
-                                    </ViewCell.Effects>
                                     <ViewCell.View>
                                         <StackLayout Margin="15">
                                             <Frame BackgroundColor="#19365f" Padding="15" CornerRadius="10" HorizontalOptions="Fill">

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Services;
@@ -73,10 +74,24 @@ namespace policy.app.PageModels
 			}
 		}
 
-		/// <summary>
-		/// Загружает категории при помощи сервиса.
+        /// <summary>
+		/// Возвращает команду для кнопки регистрации.
 		/// </summary>
-		private async void LoadCategories()
+		public ICommand OnSelectedCategory
+        {
+            get
+            {
+                return new FreshAwaitCommand((param, tcs) =>
+                {
+                    CoreMethods.PushPageModel<UsersListPageModel>(SelectedCategory);
+                });
+            }
+        }
+
+        /// <summary>
+        /// Загружает категории при помощи сервиса.
+        /// </summary>
+        private async void LoadCategories()
 		{
 			if (_service != null)
 			{

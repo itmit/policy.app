@@ -18,9 +18,14 @@ namespace policy.app.Pages
             NativeList.SeparatorVisibility = SeparatorVisibility.None;
         }
 
-		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
             ((ListView)sender).SelectedItem = null;
 		}
-	}
+
+        private void TouchEff_Completed(VisualElement sender, TouchEffect.EventArgs.TouchCompletedEventArgs args)
+        {
+            
+        }
+    }
 }
