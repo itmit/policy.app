@@ -96,16 +96,11 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="NoShiftEffect.cs" />
-    <Compile Include="Renderers\DisableColorRenderer.cs" />
     <Compile Include="Renderers\EntryLogPageRenderer.cs" />
-    <Compile Include="Renderers\AndroidLongPressedEffect.cs" />
-    <Compile Include="Renderers\ListViewEffect.cs" />
-    <Compile Include="Renderers\ListViewNativeRenderer.cs" />
+    <Compile Include="Renderers\NotSelectorListView.cs" />
     <Compile Include="Renderers\PickerRatingRenderer.cs" />
     <Compile Include="Renderers\SearchEntryRenderer.cs" />
     <Compile Include="Renderers\SIiderRenderer.cs" />
-    <Compile Include="Renderers\TableViewHomePageRenderer.cs" />
-    <Compile Include="Renderers\ViewCellItemSelectedCustomRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -222,6 +217,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\DisableColor.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\no_selector.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

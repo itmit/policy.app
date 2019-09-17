@@ -28,11 +28,11 @@ namespace policy.app.PageModels
 		private App _app;
 		private Category _selectedCategory;
 
-		/// <summary>
-		/// Вызывается при загрузке модели представления, загружает список категорий.
-		/// </summary>
-		/// <param name="initData"></param>
-		public override void Init(object initData)
+        /// <summary>
+        /// Вызывается при загрузке модели представления, загружает список категорий.
+        /// </summary>
+        /// <param name="initData"></param>
+        public override void Init(object initData)
 		{
 			base.Init(initData);
 
@@ -73,20 +73,6 @@ namespace policy.app.PageModels
 				}
 			}
 		}
-
-        /// <summary>
-		/// Возвращает команду для кнопки регистрации.
-		/// </summary>
-		public ICommand OnSelectedCategory
-        {
-            get
-            {
-                return new FreshAwaitCommand((param, tcs) =>
-                {
-                    CoreMethods.PushPageModel<UsersListPageModel>(SelectedCategory);
-                });
-            }
-        }
 
         /// <summary>
         /// Загружает категории при помощи сервиса.

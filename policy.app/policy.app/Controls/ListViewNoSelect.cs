@@ -2,7 +2,7 @@
 
 namespace policy.app.Controls
 {
-    public class DisableCategory : ViewCell
+    public class ListViewNoSelect : ListView
     {
     }
 }

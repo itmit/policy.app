@@ -3,17 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewCell="clr-namespace:policy.app.Views.ViewCell"
              xmlns:properties="clr-namespace:policy.app.Properties"
              xmlns:ex="clr-namespace:policy.app.Controls"
-             xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
              mc:Ignorable="d"
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
         <StackLayout>
             <ScrollView VerticalOptions="Fill">
                 <StackLayout Padding="20">
-                    <ListView x:Name="NativeList"
+                    <ex:ListViewNoSelect x:Name="NativeList"
                               HeightRequest="400"
                               WidthRequest="230" 
                               HorizontalOptions="Center"
@@ -23,14 +21,12 @@
                               BackgroundColor="Transparent"
                               HasUnevenRows="True"
                               >
-                        <ListView.GestureRecognizers>
-                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding OnSelectedCategory}" CommandParameter="{Binding SelectedCategory}"/>
-                        </ListView.GestureRecognizers>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <ViewCell.View>
                                         <StackLayout Margin="15">
+                                            <!-- #19365f -->
                                             <Frame BackgroundColor="#19365f" Padding="15" CornerRadius="10" HorizontalOptions="Fill">
                                                 <Label Text="{Binding Title}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
                                             </Frame>
@@ -39,7 +35,7 @@
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-                    </ListView>
+                    </ex:ListViewNoSelect>
                 </StackLayout>
             </ScrollView>
             <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
