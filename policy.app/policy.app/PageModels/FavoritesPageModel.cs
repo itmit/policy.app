@@ -1,28 +1,29 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Input;
+using System.Threading.Tasks;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Services;
 using PropertyChanged;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using MenuItem = policy.app.Models.MenuItem;
 
 namespace policy.app.PageModels
 {
 	/// <summary>
-	/// Представляет модель представления для страницы списка опросов. 
+	/// Представляет модель представления для страницы списка избранных сусликов. 
 	/// </summary>
-    [AddINotifyPropertyChangedInterface]
-    public class AllQuestionsPageModel : FreshBasePageModel
+	[AddINotifyPropertyChangedInterface]
+    public class FavoritesPageModel : FreshBasePageModel
 	{
 		/// <summary>
 		/// Текущее приложение.
 		/// </summary>
 		private readonly App _app = Application.Current as App;
-		private IPollService _service;
-		private Poll _selectedPoll;
+		private IGopher _selectedGopher;
+		private IGopherService _service;
+		private User _user;
+		private string _userGuid;
 
 		/// <summary>
 		/// Инициализирует модель представления.
@@ -39,48 +40,40 @@ namespace policy.app.PageModels
 
 			using (var realm = _app.Realm)
 			{
-				var user = realm.All<User>()?.SingleOrDefault();
-
-				if (user != null)
+				_user = realm.All<User>()?.SingleOrDefault();
+				if (_user != null)
 				{
-					_service = new PollService(new UserToken
+					_userGuid = (string)_user.Guid.Clone();
+					_service = new GopherService(new UserToken
 					{
-						Token = (string)user.Token.Token.Clone(),
-						TokenType = (string)user.Token.TokenType.Clone()
+						Token = (string)_user.Token.Token.Clone(),
+						TokenType = (string)_user.Token.TokenType.Clone()
 					});
-					LoadPolls();
+
+					Task.Run(async () =>
+					{
+						await Task.Delay(1000);
+						LoadGophers();
+					});
+
 				}
 			}
 		}
 
-		/// <summary>
-		/// Возвращает команду для открытия опроса.
-		/// </summary>
-		public ICommand OpenSurveyPage =>
-			new FreshAwaitCommand((param, tcs) =>
-			{
-				CoreMethods.PushPageModel<SurveyPageModel>();
-				tcs.SetResult(true);
-			});
-
-		/// <summary>
-		/// Возвращает или устанавливает список опросов.
-		/// </summary>
-		public ObservableCollection<Poll> Polls
+		public ObservableCollection<IGopher> Gophers
 		{
 			get;
 			set;
 		}
-
 		/// <summary>
 		/// Возвращает или устанавливает выбранный опрос.
 		/// </summary>
-		public Poll SelectedPoll
+		public IGopher SelectedGopher
 		{
-			get => _selectedPoll;
+			get => _selectedGopher;
 			set
 			{
-				_selectedPoll = value;
+				_selectedGopher = value;
 
 				if (value != null)
 				{
@@ -92,25 +85,26 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Возвращает или устанавливает команду при выборе опроса.
 		/// </summary>
-		public Command<Poll> EventSelected =>
-			new Command<Poll>(obj => {
-				if (obj is Poll poll)
-				{
-					CoreMethods.PushPageModel<SurveyPageModel>(poll);
-				}
+		public Command<IGopher> EventSelected =>
+			new Command<IGopher>(obj => {
+				CoreMethods.PushPageModel<UserPageModel>(obj);
 			});
 
 		/// <summary>
 		/// Загружает опросы.
 		/// </summary>
-		private async void LoadPolls()
+		private async void LoadGophers()
 		{
 			if (Connectivity.NetworkAccess != NetworkAccess.Internet || _service == null)
 			{
 				return;
 			}
 
-			Polls = new ObservableCollection<Poll>(await _service.GetPolls());
+			Gophers = new ObservableCollection<IGopher>(await _service.GetFavorites(new User
+			{
+				Guid = _userGuid
+			}));
 		}
+
 	}
 }

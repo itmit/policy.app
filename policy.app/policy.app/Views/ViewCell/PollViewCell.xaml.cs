@@ -7,19 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace policy.app.Pages
+namespace policy.app.Views.ViewCell
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AllQuestionsPage : ContentPage
+	public partial class PollViewCell : Xamarin.Forms.ViewCell
 	{
-		public AllQuestionsPage()
+		public PollViewCell()
 		{
 			InitializeComponent();
-		}
-
-		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-		{
-			((ListView)sender).SelectedItem = null;
 		}
 	}
 }

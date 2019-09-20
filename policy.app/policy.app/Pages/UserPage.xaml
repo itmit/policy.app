@@ -43,6 +43,9 @@
                         <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.Position}" Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
                     <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding AddToFavoritesCommand}"/>
+                        </StackLayout.GestureRecognizers>
                         <Image Source="Star_def.png" WidthRequest="25" HeightRequest="25"/>
                         <Label Text="Добавить в избранное" Margin="10,0,0,0" FontSize="Medium" TextColor="#f07d14" FontAttributes="Bold"/>
                     </StackLayout>

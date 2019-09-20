@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace policy.app.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AllQuestionsPage : ContentPage
+	public partial class FavoritesPage : ContentPage
 	{
-		public AllQuestionsPage()
+		public FavoritesPage()
 		{
 			InitializeComponent();
 		}

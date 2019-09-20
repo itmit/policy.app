@@ -57,7 +57,7 @@ namespace policy.app
 			var tabbedNavigation = new MainTabbedPage(NavigationContainerNames.MainContainer);
 
             tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<CategoriesPageModel>(null, "ic_action_home.png");
-            tabbedNavigation.AddTab<FavouritesPageModel>(null, "star_2.png");
+            tabbedNavigation.AddTab<FavoritesPageModel>(null, "star_2.png");
             tabbedNavigation.AddTab<RatingPageModel>(null, "ic_action_search.png");
             tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
 

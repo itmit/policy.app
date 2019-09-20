@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewCell="clr-namespace:policy.app.Views.ViewCell"
-             x:Class="policy.app.Pages.AllQuestionsPage">
+             x:Class="policy.app.Pages.FavoritesPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <ListView ItemsSource="{Binding Polls}" HasUnevenRows="True" SelectedItem="{Binding SelectedPoll}" ItemSelected="ListView_OnItemSelected">
+            <StackLayout Margin="0,5,0,0">
+
+                <ListView ItemsSource="{Binding Gophers}" HasUnevenRows="True" SelectedItem="{Binding SelectedGopher}" ItemSelected="ListView_OnItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <viewCell:PollViewCell/>
+                            <viewCell:FavoriteUserViewCell/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

@@ -30,6 +30,27 @@ namespace policy.app.Services
 		/// <returns>Суслик.</returns>
 		Task<Gopher> GetGopher(Guid guid);
 
+		/// <summary>
+		/// Оценивает суслика.
+		/// </summary>
+		/// <param name="gopher">Суслик.</param>
+		/// <param name="rateType">Тип оценки.</param>
+		/// <returns>Был ли оценен суслик.</returns>
 		Task<bool> Rate(IGopher gopher, RateType rateType);
+
+		/// <summary>
+		/// Добавить суслика в избранное.
+		/// </summary>
+		/// <param name="addedGopher">Добавляемый пользователь.</param>
+		/// <param name="addingGopher">Добавляющий пользователь.</param>
+		/// <returns>Был ли добавлен пользователь в избранное.</returns>
+		Task<bool> AddToFavorites(IGopher addedGopher, IGopher addingGopher);
+
+		/// <summary>
+		/// Возвращает сусликов добавленных в избранное.
+		/// </summary>
+		/// <param name="gopher">Пользователь добавивший сусликов в избранное.</param>
+		/// <returns>Список сусликов.</returns>
+		Task<IEnumerable<IGopher>> GetFavorites(IGopher gopher);
 	}
 }
