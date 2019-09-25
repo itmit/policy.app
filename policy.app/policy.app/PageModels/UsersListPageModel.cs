@@ -2,6 +2,7 @@
 using System.Linq;
 using FreshMvvm;
 using policy.app.Models;
+using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
 using Xamarin.Forms;
@@ -29,7 +30,8 @@ namespace policy.app.PageModels
 				_app = Application.Current as App;
 				if (_app != null && _app.IsUserLoggedIn)
 				{
-					var user = _app.Realm.All<User>().Single();
+					var repository = new UserRepository(_app.RealmConfiguration);
+					var user = repository.All().Single();
 					var token = new UserToken
 					{
 						Token = (string) user.Token.Token.Clone(),

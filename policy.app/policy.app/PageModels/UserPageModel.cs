@@ -2,6 +2,7 @@
 using System.Linq;
 using FreshMvvm;
 using policy.app.Models;
+using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
 using Xamarin.Forms;
@@ -15,6 +16,16 @@ namespace policy.app.PageModels
 	public class UserPageModel : FreshBasePageModel
 	{
 		/// <summary>
+		/// Возвращает заголовок для кнопки добавления или удаления из избранного. 
+		/// </summary>
+		public string FavoriteButtonLabel => IsFavorite ? "Убрать из избранного" : "Добавить в избранное";
+
+		/// <summary>
+		/// Возвращает цвет кнопки для добавления или удаления из избранного. 
+		/// </summary>
+		public Color FavoriteButtonColor => IsFavorite ? Color.LightSlateGray : Color.FromHex("#f07d14");
+
+		/// <summary>
 		/// Приложение.
 		/// </summary>
 		private App _app;
@@ -22,7 +33,8 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Сервис для работы с api сусликов.
 		/// </summary>
-		private GopherService _service;
+		private IGopherService _service;
+		private User _user;
 
 		/// <summary>
 		/// Инициализирует модель представления.
@@ -39,15 +51,18 @@ namespace policy.app.PageModels
 				_app = Application.Current as App;
 				if (_app != null && _app.IsUserLoggedIn)
 				{
-					var token = _app.Realm.All<User>()
+					var repository = new UserRepository(_app.RealmConfiguration);
+					_user = repository.All()
 									.Single();
 					_service = new GopherService(new UserToken
 					{
-						Token = (string)token.Token.Token.Clone(),
-						TokenType = (string)token.Token.TokenType.Clone()
+						Token = _user.Token.Token,
+						TokenType = _user.Token.TokenType
 					});
 
-					LoadGopher(Guid.Parse(gopher.Guid));
+					IsFavorite = _user.FavoriteGophers.Any(favoriteGopher => favoriteGopher.Guid.Equals(gopher.Guid));
+
+					LoadGopher(gopher.Guid);
 				}
 			}
 		}
@@ -61,12 +76,20 @@ namespace policy.app.PageModels
 			if (_app != null && guid != Guid.Empty)
 			{
 				var gopher = await _service.GetGopher(guid);
-				gopher.Category = Gopher.Category;
 				Likes = gopher.Likes;
 				Neutrals = gopher.Neutrals;
 				Dislikes = gopher.Dislikes;
 				Gopher = gopher;
 			}
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает является ли суслик избранным.
+		/// </summary>
+		public bool IsFavorite
+		{
+			get;
+			set;
 		}
 
 		/// <summary>
@@ -105,25 +128,37 @@ namespace policy.app.PageModels
 			set;
 		}
 
-		public FreshAwaitCommand AddToFavoritesCommand => new FreshAwaitCommand(async (obj, tcs) =>
+		/// <summary>
+		/// Возвращает команду для добавление или удаления из избранного.
+		/// </summary>
+		public FreshAwaitCommand AddOrRemoveFavoritesCommand => new FreshAwaitCommand(async (obj, tcs) =>
 		{
-			if (_app == null)
+			if (_app == null || _user == null)
 			{
 				return;
 			}
 
-			using (var realm = _app.Realm)
-			{
-				var user = realm.All<User>()?.SingleOrDefault();
+			var repository = new UserRepository(_app.RealmConfiguration);
 
-				if (user != null)
+			if (IsFavorite)
+			{
+				if (await _service.RemoveFromFavorites(Gopher, _user))
 				{
-					if (await _service.AddToFavorites(Gopher, user))
-					{
-						await _app.MainPage.DisplayAlert("Внимание", "Пользователь добавлен в избранное.", "ок");
-					}
+					await _app.MainPage.DisplayAlert("Внимание", "Пользователь удален из избранного.", "ок");
+					_user.FavoriteGophers.Add((Gopher)Gopher);
+					repository.Update(_user);
 				}
 			}
+			else
+			{
+				if (await _service.AddToFavorites(Gopher, _user))
+				{
+					await _app.MainPage.DisplayAlert("Внимание", "Пользователь добавлен в избранное.", "ок");
+					_user.FavoriteGophers.Add((Gopher)Gopher);
+					repository.Update(_user);
+				}
+			}
+
 			tcs.SetResult(true);
 		});
 

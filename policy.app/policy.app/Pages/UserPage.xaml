@@ -44,10 +44,10 @@
                     </Grid>
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding AddToFavoritesCommand}"/>
+                            <TapGestureRecognizer Command="{Binding AddOrRemoveFavoritesCommand}"/>
                         </StackLayout.GestureRecognizers>
                         <Image Source="Star_def.png" WidthRequest="25" HeightRequest="25"/>
-                        <Label Text="Добавить в избранное" Margin="10,0,0,0" FontSize="Medium" TextColor="#f07d14" FontAttributes="Bold"/>
+                        <Label Text="{Binding FavoriteButtonLabel}" Margin="10,0,0,0" FontSize="Medium" TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold"/>
                     </StackLayout>
                     <StackLayout>
                         <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro" Clicked="Button_Clicked" HorizontalOptions="Start" />

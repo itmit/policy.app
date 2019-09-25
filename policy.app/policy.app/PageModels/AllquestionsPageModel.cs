@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
+using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
 using Xamarin.Essentials;
@@ -37,19 +38,17 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			using (var realm = _app.Realm)
-			{
-				var user = realm.All<User>()?.SingleOrDefault();
+			var repository = new UserRepository(_app.RealmConfiguration);
+			var user = repository.All().SingleOrDefault();
 
-				if (user != null)
+			if (user != null)
+			{
+				_service = new PollService(new UserToken
 				{
-					_service = new PollService(new UserToken
-					{
-						Token = (string)user.Token.Token.Clone(),
-						TokenType = (string)user.Token.TokenType.Clone()
-					});
-					LoadPolls();
-				}
+					Token = (string)user.Token.Token.Clone(),
+					TokenType = (string)user.Token.TokenType.Clone()
+				});
+				LoadPolls();
 			}
 		}
 

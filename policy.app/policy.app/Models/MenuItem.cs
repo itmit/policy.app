@@ -1,5 +1,4 @@
 ﻿using System;
-using Xamarin.Forms;
 using static System.String;
 
 namespace policy.app.Models
@@ -9,8 +8,9 @@ namespace policy.app.Models
 	/// </summary>
 	public class MenuItem
 	{
+		#region .ctor
 		/// <summary>
-		/// Инициализирует новый экземпляр <see cref="MenuItem"/>.
+		/// Инициализирует новый экземпляр <see cref="MenuItem" />.
 		/// </summary>
 		/// <param name="title">Заголовок пункта меню.</param>
 		/// <param name="pageModelType">Тип модели представления, который будет открыт при нажатии.</param>
@@ -26,7 +26,7 @@ namespace policy.app.Models
 		}
 
 		/// <summary>
-		/// Инициализирует новый экземпляр <see cref="MenuItem"/>.
+		/// Инициализирует новый экземпляр <see cref="MenuItem" />.
 		/// </summary>
 		/// <param name="parameters"></param>
 		/// <param name="title">Заголовок пункта меню.</param>
@@ -43,7 +43,26 @@ namespace policy.app.Models
 			Title = title;
 			PageModelType = pageModelType;
 		}
-		
+		#endregion
+
+		#region Properties
+		/// <summary>
+		/// Возвращает или устанавливает путь изображения меню.
+		/// </summary>
+		public string ImageSource
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает тип модели страницы для перехода.
+		/// </summary>
+		public Type PageModelType
+		{
+			get;
+		}
+
 		/// <summary>
 		/// Возвращает или устанавливает параметры, которые необходимы для модели представления.
 		/// </summary>
@@ -59,23 +78,6 @@ namespace policy.app.Models
 		{
 			get;
 		}
-
-		/// <summary>
-		/// Возвращает или устанавливает тип модели страницы для перехода.
-		/// </summary>
-		public Type PageModelType
-		{
-			get;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает путь изображения меню.
-		/// </summary>
-		public string ImageSource
-        {
-            get;
-            set;
-        }
-
-    }
+		#endregion
+	}
 }

@@ -5,6 +5,7 @@ using System.Security.Authentication;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
+using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
 using Xamarin.Forms;
@@ -31,22 +32,24 @@ namespace policy.app.PageModels
 			base.Init(initData);
 
 			_app = Application.Current as App;
-			if (_app != null && !_app.IsUserLoggedIn)
+
+			if (_app != null)
 			{
-				throw new AuthenticationException("Пользователь не авторизован.");
+				var repository = new UserRepository(_app.RealmConfiguration);
+
+				User user = repository.All().SingleOrDefault();
+				if (user == null)
+				{
+					return;
+				}
+
+				Name = user.Name;
+				City = user.City;
+				FieldOfActivity = user.FieldOfActivity;
+				Organization = user.Organization;
+				Position = user.Position;
 			}
 
-			User user = _app?.Realm.All<User>()?.SingleOrDefault();
-			if (user == null)
-			{
-				return;
-			}
-
-			Name = user.Name;
-			City = user.City;
-			FieldOfActivity = user.FieldOfActivity;
-			Organization = user.Organization;
-			Position = user.Position;
 		}
 
 		/// <summary>
@@ -115,19 +118,17 @@ namespace policy.app.PageModels
 		{
 			if (_app.IsUserLoggedIn)
 			{
-				var realm = _app.Realm;
+				var repository = new UserRepository(_app.RealmConfiguration);
 
-				User user = realm.All<User>()?.SingleOrDefault();
+				User user = repository.All().SingleOrDefault();
 				if (user != null)
 				{
-					realm.Write(() =>
-					{
-						user.Name = Name;
-						user.City = City;
-						user.FieldOfActivity = FieldOfActivity;
-						user.Organization = Organization;
-						user.Position = Position;
-					});
+					user.Name = Name;
+					user.City = City;
+					user.FieldOfActivity = FieldOfActivity;
+					user.Organization = Organization;
+					user.Position = Position;
+					repository.Update(user);
 
 					IUserService service = new UserService();
 

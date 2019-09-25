@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
+using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
 using Xamarin.Forms;
@@ -42,7 +43,8 @@ namespace policy.app.PageModels
 
 				if (app.IsUserLoggedIn)
 				{
-					var token = _app.Realm.All<User>().Single().Token;
+					var repository = new UserRepository(_app.RealmConfiguration);
+					var token = repository.All().SingleOrDefault()?.Token;
 
 					if (token != null && !IsNullOrEmpty(token.Token))
 					{

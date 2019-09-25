@@ -1,84 +1,91 @@
-﻿using System;
+﻿using policy.app.Models;
+using Realms;
 
-namespace policy.app.Models
+namespace policy.app.RealmObjects
 {
-	/// <summary>
-	/// Представляет интерфейс для сусликов.
-	/// </summary>
-	public interface IGopher
+	public class GopherRealmObject : RealmObject
 	{
-		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает категорию.
 		/// </summary>
-		Category Category
+		public CategoryRealmObject Category
 		{
 			get;
+			set;
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает количество отрицательных оценок.
 		/// </summary>
-		int Dislikes
+		public int Dislikes
 		{
 			get;
+			set;
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает ид пользователя.
 		/// </summary>
-		Guid Guid
+		[PrimaryKey]
+		public string Guid
 		{
 			get;
-		}
+			set;
+		} = System.Guid.NewGuid()
+				  .ToString();
 
 		/// <summary>
 		/// Возвращает или устанавливает количество положительных оценок.
 		/// </summary>
-		int Likes
+		public int Likes
 		{
 			get;
+			set;
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает имя пользователя.
 		/// </summary>
-		string Name
+		public string Name
 		{
 			get;
+			set;
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает количество нейтральных оценок.
 		/// </summary>
-		int Neutrals
+		public int Neutrals
 		{
 			get;
+			set;
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает источник фотографии.
 		/// </summary>
-		string PhotoSource
+		public string PhotoSource
 		{
 			get;
+			set;
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает имя пользователя.
 		/// </summary>
-		string PlaceOfWork
+		public string PlaceOfWork
 		{
 			get;
+			set;
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает должность пользователя.
 		/// </summary>
-		string Position
+		public string Position
 		{
 			get;
+			set;
 		}
-		#endregion
 	}
 }

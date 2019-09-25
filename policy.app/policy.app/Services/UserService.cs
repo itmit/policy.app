@@ -48,7 +48,7 @@ namespace policy.app.Services
 							   {
 								   {
 									   "uid",
-									   user.Guid
+									   user.Guid.ToString()
 								   },
 								   {
 									   "name",

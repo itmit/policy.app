@@ -22,6 +22,9 @@ namespace policy.app.Services
 		/// </summary>
 		private const string AddToFavoritesUri = "http://policy.itmit-studio.ru/api/suslik/addToFav";
 
+		/// <summary>
+		/// Адрес для получения избранных сусликов.
+		/// </summary>
 		private const string FavoritesGophersUri = "http://policy.itmit-studio.ru/api/suslik/getFavsList";
 
 		/// <summary>
@@ -43,6 +46,11 @@ namespace policy.app.Services
 		/// Адрес для получения суслика по ид.
 		/// </summary>
 		private const string GopherUri = "http://policy.itmit-studio.ru/api/suslik/getSuslikByID";
+
+		/// <summary>
+		/// Адрес для удаления из избранного.
+		/// </summary>
+		private const string RemoveFromFavoritesUri = "http://policy.itmit-studio.ru/api/suslik/removeFromFav";
 		#endregion
 
 		#region Fields
@@ -137,6 +145,12 @@ namespace policy.app.Services
 			}
 		}
 
+		/// <summary>
+		/// Ec
+		/// </summary>
+		/// <param name="gopher"></param>
+		/// <param name="rateType"></param>
+		/// <returns></returns>
 		public async Task<bool> Rate(IGopher gopher, RateType rateType)
 		{
 			using (var client = new HttpClient())
@@ -148,7 +162,7 @@ namespace policy.app.Services
 													  new FormUrlEncodedContent(new Dictionary<string, string>
 													  {
 														  {
-															  "suslik_uuid", gopher.Guid
+															  "suslik_uuid", gopher.Guid.ToString()
 														  },
 														  {
 															  "type", rateType.ToString()
@@ -179,10 +193,42 @@ namespace policy.app.Services
 													  new FormUrlEncodedContent(new Dictionary<string, string>
 													  {
 														  {
-															  "suslik_uuid", addedGopher.Guid
+															  "suslik_uuid", addedGopher.Guid.ToString()
 														  },
 														  {
-															  "user_uuid", addingGopher.Guid
+															  "user_uuid", addingGopher.Guid.ToString()
+														  }
+													  }));
+
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				return await Task.FromResult(response.IsSuccessStatusCode);
+			}
+		}
+
+		/// <summary>
+		/// Удалить суслика из избранное.
+		/// </summary>
+		/// <param name="addedGopher">Удаляемый пользователь.</param>
+		/// <param name="addingGopher">Удаляющий пользователь.</param>
+		/// <returns>Был ли удален пользователь в избранное.</returns>
+		public async Task<bool> RemoveFromFavorites(IGopher addedGopher, IGopher addingGopher)
+		{
+
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var response = await client.PostAsync(RemoveFromFavoritesUri,
+													  new FormUrlEncodedContent(new Dictionary<string, string>
+													  {
+														  {
+															  "suslik_uuid", addedGopher.Guid.ToString()
+														  },
+														  {
+															  "user_uuid", addingGopher.Guid.ToString()
 														  }
 													  }));
 
@@ -209,7 +255,7 @@ namespace policy.app.Services
 													  new FormUrlEncodedContent(new Dictionary<string, string>
 													  {
 														  {
-															  "user_uuid", gopher.Guid
+															  "user_uuid", gopher.Guid.ToString()
 														  }
 													  }));
 
@@ -217,11 +263,7 @@ namespace policy.app.Services
 				Debug.WriteLine(jsonString);
 
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
-				foreach (var gopher1 in jsonData.Data)
-				{
-					gopher1.Name = "Смелов Сергей Константинович";
-					gopher1.Guid = "31dfde9c-af9e-468b-add6-dffff78419e8";
-				}
+				
 				return await Task.FromResult(jsonData.Data);
 			}
 		}
@@ -231,7 +273,7 @@ namespace policy.app.Services
 		/// </summary>
 		/// <param name="category">Категория, отбираемых сусликов.</param>
 		/// <returns>Список сусликов по категории.</returns>
-		public async Task<IEnumerable<Gopher>> GetGophers(Category category)
+		public async Task<IEnumerable<IGopher>> GetGophers(Category category)
 		{
 			using (var client = new HttpClient())
 			{

@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
 using Realms;
 
-namespace policy.app.Models
+namespace policy.app.RealmObjects
 {
-	/// <summary>
-	/// Представляет модель категории пользователей.
-	/// </summary>
-	public class Category
+	public class CategoryRealmObject : RealmObject
 	{
 		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает название категории пользователей.
 		/// </summary>
-		[JsonProperty("name")]
 		public string Title
 		{
 			get;

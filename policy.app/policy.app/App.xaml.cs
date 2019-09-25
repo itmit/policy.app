@@ -2,10 +2,14 @@
 using System.Globalization;
 using System.Linq;
 using System.Threading;
+using AutoMapper;
+using AutoMapper.EquivalencyExpression;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.PageModels;
 using policy.app.Pages;
+using policy.app.RealmObjects;
+using policy.app.Repositories;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using policy.app.Services;
@@ -21,17 +25,40 @@ namespace policy.app
 {
 	public partial class App : Application
 	{
+		private readonly MapperConfiguration _configuration;
+
+		public new static App Current => Application.Current as App;
 
 		public App()
 		{
+			_configuration = new MapperConfiguration(cfg =>
+			{
+				cfg.AddCollectionMappers();
+
+				cfg.CreateMap<User, UserRealmObject>()
+				   .ForMember(q => q.FavoriteGophers, opt => opt.MapFrom(q => q.FavoriteGophers));
+
+				cfg.CreateMap<Gopher, GopherRealmObject>();
+				cfg.CreateMap<UserToken, TokenRealmObject>();
+				cfg.CreateMap<Category, CategoryRealmObject>();
+
+				cfg.CreateMap<UserRealmObject, User>()
+				   .ForMember(q => q.FavoriteGophers, opt => opt.MapFrom(q => q.FavoriteGophers));
+
+
+				cfg.CreateMap<GopherRealmObject, Gopher>();
+				cfg.CreateMap<TokenRealmObject, UserToken>();
+				cfg.CreateMap<CategoryRealmObject, Category>();
+			});
+
 			InitializeComponent();
 
 			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
 			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
 
-			User user = Realm.All<User>()?.SingleOrDefault();
-
-			if (IsUserLoggedIn | user != null)
+			var repository = new UserRepository(RealmConfiguration);
+			var user = repository.All();
+			if (IsUserLoggedIn | user.Any())
 			{
 				IsUserLoggedIn = true;
 				MainPage = InitMainTabbedPage();
@@ -42,13 +69,15 @@ namespace policy.app
 			MainPage = loginContainer;
 		}
 
-		public Realm Realm
+		public MapperConfiguration Configuration => _configuration;
+
+		public RealmConfiguration RealmConfiguration
 		{
 			get
 			{
 				var configuration = RealmConfiguration.DefaultConfiguration;
-				configuration.SchemaVersion = 4;
-				return Realm.GetInstance(configuration);
+				configuration.SchemaVersion = 6;
+				return (RealmConfiguration)configuration;
 			}
 		}
 

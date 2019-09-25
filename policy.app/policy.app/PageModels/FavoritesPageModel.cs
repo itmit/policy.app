@@ -1,10 +1,13 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using FreshMvvm;
 using policy.app.Models;
+using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
+using Realms;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -20,10 +23,16 @@ namespace policy.app.PageModels
 		/// Текущее приложение.
 		/// </summary>
 		private readonly App _app = Application.Current as App;
+
+		/// <summary>
+		/// Выбранный суслик.
+		/// </summary>
 		private IGopher _selectedGopher;
+
+		/// <summary>
+		/// Сервис для загрузки сусликов.
+		/// </summary>
 		private IGopherService _service;
-		private User _user;
-		private string _userGuid;
 
 		/// <summary>
 		/// Инициализирует модель представления.
@@ -38,33 +47,31 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			using (var realm = _app.Realm)
+			var repository = new UserRepository(_app.RealmConfiguration);
+			var user = repository.All().SingleOrDefault();
+			if (user != null)
 			{
-				_user = realm.All<User>()?.SingleOrDefault();
-				if (_user != null)
+				_service = new GopherService(new UserToken
 				{
-					_userGuid = (string)_user.Guid.Clone();
-					_service = new GopherService(new UserToken
-					{
-						Token = (string)_user.Token.Token.Clone(),
-						TokenType = (string)_user.Token.TokenType.Clone()
-					});
+					Token = (string)user.Token.Token.Clone(),
+					TokenType = (string)user.Token.TokenType.Clone()
+				});
 
-					Task.Run(async () =>
-					{
-						await Task.Delay(1000);
-						LoadGophers();
-					});
-
-				}
+				Task.Run(async () =>
+				{
+					await Task.Delay(1000);
+					LoadGophers();
+				});
 			}
 		}
+
 
 		public ObservableCollection<IGopher> Gophers
 		{
 			get;
 			set;
 		}
+
 		/// <summary>
 		/// Возвращает или устанавливает выбранный опрос.
 		/// </summary>
@@ -100,11 +107,15 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			Gophers = new ObservableCollection<IGopher>(await _service.GetFavorites(new User
+			var repository = new UserRepository(_app.RealmConfiguration);
+			var user = repository.All()
+								.Single();
+			Gophers = new ObservableCollection<IGopher>(await _service.GetFavorites(user));
+			foreach (IGopher gopher in Gophers)
 			{
-				Guid = _userGuid
-			}));
+				user.FavoriteGophers.Add((Gopher)gopher);
+			}
+			repository.Update(user);
 		}
-
 	}
 }

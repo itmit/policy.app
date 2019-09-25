@@ -1,21 +1,47 @@
-﻿using Newtonsoft.Json;
-using Realms;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace policy.app.Models
 {
 	public class Gopher : IGopher
 	{
+		#region IGopher members
 		/// <summary>
-		/// Возвращает или устанавливает ид пользователя.
+		/// Возвращает или устанавливает категорию.
 		/// </summary>
-		[PrimaryKey]
-		[JsonProperty("uuid")]
-		public string Guid
+		public Category Category
 		{
 			get;
 			set;
-		} = System.Guid.NewGuid()
-				  .ToString();
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает количество отрицательных оценок.
+		/// </summary>
+		public int Dislikes
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает ид пользователя.
+		/// </summary>
+		[JsonProperty("uuid")]
+		public Guid Guid
+		{
+			get;
+			set;
+		} = Guid.NewGuid();
+
+		/// <summary>
+		/// Возвращает или устанавливает количество положительных оценок.
+		/// </summary>
+		public int Likes
+		{
+			get;
+			set;
+		}
 
 		/// <summary>
 		/// Возвращает или устанавливает имя пользователя.
@@ -26,7 +52,20 @@ namespace policy.app.Models
 			set;
 		}
 
-		public Category Category
+		/// <summary>
+		/// Возвращает или устанавливает количество нейтральных оценок.
+		/// </summary>
+		public int Neutrals
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает источник фотографии.
+		/// </summary>
+		[JsonProperty("photo")]
+		public string PhotoSource
 		{
 			get;
 			set;
@@ -50,33 +89,6 @@ namespace policy.app.Models
 			get;
 			set;
 		}
-
-		/// <summary>
-		/// Возвращает или устанавливает источник фотографии.
-		/// </summary>
-		[JsonProperty("photo")]
-		public string PhotoSource
-		{
-			get;
-			set;
-		}
-
-		public int Likes
-		{
-			get;
-			set;
-		}
-
-		public int Neutrals
-		{
-			get;
-			set;
-		}
-
-		public int Dislikes
-		{
-			get;
-			set;
-		}
+		#endregion
 	}
 }

@@ -149,7 +149,7 @@ namespace policy.app.Services
 						"birthday", date
 					},
 					{
-						"uid", user.Guid
+						"uid", user.Guid.ToString()
 					}
 				});
 

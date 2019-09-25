@@ -1,18 +1,14 @@
-﻿using Newtonsoft.Json;
-using Realms;
+﻿using Realms;
 
-namespace policy.app.Models
+namespace policy.app.RealmObjects
 {
-	/// <summary>
-	/// Представляет тип для хранения данных токене авторизации пользователя.
-	/// </summary>
-	public class UserToken
+	public class TokenRealmObject : RealmObject
 	{
+
 		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает токен для авторизации.
 		/// </summary>
-		[JsonProperty("access_token")]
 		public string Token
 		{
 			get;
@@ -22,7 +18,6 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или устанавливает строковое представление даты, до которой действует токен.
 		/// </summary>
-		[JsonProperty("expires_at")]
 		public string TokenExpiresAt
 		{
 			get;
@@ -32,7 +27,6 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или устанавливает тип токена.
 		/// </summary>
-		[JsonProperty("token_type")]
 		public string TokenType
 		{
 			get;

@@ -8,8 +8,29 @@ namespace policy.app.Models
 	/// </summary>
 	public class Poll
 	{
+		#region Properties
 		/// <summary>
-		/// Возвращает или устанавливает ид опроса. 
+		/// Возвращает или устанавливает дату создания опроса.
+		/// </summary>
+		[JsonProperty("created_at")]
+		public DateTime? CreatedAt
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает дату конца опроса.
+		/// </summary>
+		[JsonProperty("end_at")]
+		public DateTime EndAt
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает ид опроса.
 		/// </summary>
 		[JsonProperty("uuid")]
 		public Guid Guid
@@ -38,26 +59,6 @@ namespace policy.app.Models
 		}
 
 		/// <summary>
-		/// Возвращает или устанавливает дату конца опроса.
-		/// </summary>
-		[JsonProperty("end_at")]
-		public DateTime EndAt
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает дату создания опроса.
-		/// </summary>
-		[JsonProperty("created_at")]
-		public DateTime? CreatedAt
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
 		/// Возвращает или устанавливает дату обновления опроса.
 		/// </summary>
 		[JsonProperty("updated_at")]
@@ -66,5 +67,6 @@ namespace policy.app.Models
 			get;
 			set;
 		}
+		#endregion
 	}
 }

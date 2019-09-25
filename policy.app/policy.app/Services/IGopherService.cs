@@ -21,7 +21,7 @@ namespace policy.app.Services
 		/// </summary>
 		/// <param name="category">Категория, отбираемых сусликов.</param>
 		/// <returns>Список сусликов по категории.</returns>
-		Task<IEnumerable<Gopher>> GetGophers(Category category);
+		Task<IEnumerable<IGopher>> GetGophers(Category category);
 
 		/// <summary>
 		/// Возвращает суслики по ид.
@@ -45,6 +45,14 @@ namespace policy.app.Services
 		/// <param name="addingGopher">Добавляющий пользователь.</param>
 		/// <returns>Был ли добавлен пользователь в избранное.</returns>
 		Task<bool> AddToFavorites(IGopher addedGopher, IGopher addingGopher);
+
+		/// <summary>
+		/// Удалить суслика из избранное.
+		/// </summary>
+		/// <param name="addedGopher">Удаляемый пользователь.</param>
+		/// <param name="addingGopher">Удаляющий пользователь.</param>
+		/// <returns>Был ли удален пользователь в избранное.</returns>
+		Task<bool> RemoveFromFavorites(IGopher addedGopher, IGopher addingGopher);
 
 		/// <summary>
 		/// Возвращает сусликов добавленных в избранное.

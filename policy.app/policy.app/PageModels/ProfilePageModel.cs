@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
+using policy.app.Repositories;
 using PropertyChanged;
 using Realms;
 using Xamarin.Forms;
@@ -23,9 +24,10 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			var users = app.Realm
-							 .All<User>();
-			var user = users?.SingleOrDefault();
+			var repository = new UserRepository(app.RealmConfiguration);
+			var users = repository
+							 .All();
+			var user = users.SingleOrDefault();
 
 			if (user != null)
 			{

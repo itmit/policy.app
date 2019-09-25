@@ -3,6 +3,7 @@ using System.Security.Authentication;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
+using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
 using Realms;
@@ -103,11 +104,9 @@ namespace policy.app.PageModels
 			}
 
 			app.IsUserLoggedIn = true;
-			var realm = app.Realm;
-			realm.Write(() =>
-			{
-				realm.Add(user, true);
-			});
+			var repository = new UserRepository(app.RealmConfiguration);
+
+			repository.Add(user);
 
 			app.MainPage = app.InitMainTabbedPage();
 			
