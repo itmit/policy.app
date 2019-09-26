@@ -74,15 +74,11 @@ namespace policy.app.PageModels
 		/// Возвращает команду для кнопки регистрации.
 		/// </summary>
 		public ICommand OnRegisterButtonClicked
-		{
-			get
-			{
-				return new FreshAwaitCommand((param, tcs) =>
+		 => new FreshAwaitCommand((param, tcs) =>
 				{
 					RegisterAsync();
+					tcs.SetResult(true);
 				});
-			}
-		}
 		#endregion
 
 		#region Private
@@ -118,8 +114,8 @@ namespace policy.app.PageModels
 			var repository = new UserRepository(app.RealmConfiguration);
 
 			repository.Add(user);
-
-			CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.MainContainer);
+			app.IsUserLoggedIn = true;
+			app.MainPage = app.InitMainTabbedPage();
 		}
 		#endregion
 	}

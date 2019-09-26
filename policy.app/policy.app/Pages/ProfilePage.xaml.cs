@@ -22,5 +22,5 @@ namespace policy.app.Pages
         {
             Navigation.PushAsync(new EditPage());
         }
-    }
+	}
 }

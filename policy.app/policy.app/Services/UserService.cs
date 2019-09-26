@@ -18,6 +18,8 @@ namespace policy.app.Services
 	{
 		private const string EditUri = "http://policy.itmit-studio.ru/api/user/edit";
 
+		private const string UploadAvatarUri = "http://policy.itmit-studio.ru/api/user/changePhoto";
+
 		/// <summary>
 		/// Возвращает всех пользователей.
 		/// </summary>
@@ -93,10 +95,28 @@ namespace policy.app.Services
 		/// Устанавливает фотографию для аватара, пользователя.
 		/// </summary>
 		/// <param name="user">Пользователь, которому необходимо установить аватар.</param>
-		/// <param name="file"><see cref="Uri"/> файла, которое нужно установить в качестве аватара пользователя.</param>
-		public void ChangeUserAvatarPhoto(User user, Uri file)
+		/// <param name="image">файл, которое нужно установить в качестве аватара пользователя.</param>
+		public async void ChangeUserAvatarPhoto(User user, byte[] image)
 		{
-			throw new NotImplementedException();
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{user.Token.TokenType} {user.Token.Token}");
+
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var byteArrayContent = new ByteArrayContent(image);
+				byteArrayContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/jpeg");
+				var content = new MultipartFormDataContent
+				{
+					{
+						byteArrayContent, "\"contents\"", "\"feedback.jpeg\""
+					}
+				};
+				var response = await client.PostAsync($"{UploadAvatarUri}?uid={user.Guid.ToString()}", content);
+
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+			}
 		}
 
 		/// <summary>

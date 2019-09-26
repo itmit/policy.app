@@ -1,8 +1,15 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;
+using policy.app.Services;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 using PropertyChanged;
 using Realms;
 using Xamarin.Forms;
@@ -12,31 +19,44 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class ProfilePageModel : FreshBasePageModel
 	{
+		private App _app;
+
 		#region .ctor
 		/// <summary>
 		/// Инициализирует модель представления для домашней страницы.
 		/// </summary>
-		public ProfilePageModel()
+		/// <param name="initData"></param>
+		public override void Init(object initData)
 		{
-			var app = Application.Current as App;
-			if (app == null)
+			base.Init(initData);
+
+			CheckPermissionStorage();
+
+			_app = Application.Current as App;
+			if (_app == null)
 			{
 				return;
 			}
 
-			var repository = new UserRepository(app.RealmConfiguration);
+			var repository = new UserRepository(_app.RealmConfiguration);
 			var users = repository
-							 .All();
-			var user = users.SingleOrDefault();
-
-			if (user != null)
+				.All();
+			User = users.SingleOrDefault();
+			if (User != null && string.IsNullOrEmpty(User.PhotoSource))
 			{
-				Name = user.Name;
-				City = user.City;
-				Activity = user.FieldOfActivity;
-				Organization = user.Organization;
-				Position = user.Position;
+				User.PhotoSource = "def_profile";
 			}
+		}
+
+		private async void CheckPermissionStorage()
+		{
+			await CheckPermission(Permission.Storage, "Для загрузки аватара необходимо разрешение на использование хранилища.");
+		}
+
+		public User User
+		{
+			get;
+			set;
 		}
 
 		/// <summary>
@@ -50,14 +70,69 @@ namespace policy.app.PageModels
 		#endregion
 
 		#region Properties
+
 		/// <summary>
-		/// Возвращает или устанавливает сферу деятельности текущего пользователя.
+		/// Проверяет разрешения.
 		/// </summary>
-		public string Activity
+		/// <param name="permission">Разрешение.</param>
+		/// <param name="message">Сообщение показываемое пользователю при отклонении.</param>
+		/// <returns>Было ли получено разрешение.</returns>
+		private async Task<bool> CheckPermission(Permission permission, string message)
 		{
-			get;
-			set;
+			var status = await CrossPermissions.Current.CheckPermissionStatusAsync(permission);
+			if (status != PermissionStatus.Granted)
+			{
+				if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(permission))
+				{
+					await Application.Current.MainPage.DisplayAlert("Внимание", message, "OK");
+				}
+
+				await CrossPermissions.Current.RequestPermissionsAsync(permission);
+
+				status = await CrossPermissions.Current.CheckPermissionStatusAsync(permission);
+			}
+
+			return await Task.FromResult(status == PermissionStatus.Granted);
 		}
+
+		/// <summary>
+		/// Возвращает команду для установки аватара.
+		/// </summary>
+		public FreshAwaitCommand SetAvatarCommand => new FreshAwaitCommand(async (obj, tcs) =>
+		{
+			if (await CheckPermission(Permission.Storage, "Для загрузки аватара необходимо разрешение на использование хранилища."))
+			{
+				if (!CrossMedia.Current.IsPickPhotoSupported)
+				{
+					return;
+				}
+
+				var image = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+				{
+					PhotoSize = PhotoSize.Medium
+				});
+
+				if (image == null)
+				{
+					return;
+				}
+
+				User.PhotoSource = image.Path;
+
+				var repo = new UserRepository(_app.RealmConfiguration);
+				repo.Update(User);
+
+				using (var memoryStream = new MemoryStream())
+				{
+					image.GetStream()
+						 .CopyTo(memoryStream);
+					image.Dispose();
+					IUserService service = new UserService();
+					service.ChangeUserAvatarPhoto(User, memoryStream.ToArray());
+				}
+			}
+			tcs.SetResult(true);
+		});
 
 		/// <summary>
 		/// Возвращает команду для открытия страницы редактирования данных пользователя.
@@ -71,32 +146,6 @@ namespace policy.app.PageModels
 			});
 		}
 
-		/// <summary>
-		/// Возвращает или устанавливает город текущего пользователя.
-		/// </summary>
-		public string City
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает имя текущего пользователя.
-		/// </summary>
-		public string Name
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает организацию текущего пользователя.
-		/// </summary>
-		public string Organization
-		{
-			get;
-			set;
-		}
 		#endregion
 	}
 }

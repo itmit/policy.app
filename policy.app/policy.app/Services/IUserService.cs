@@ -32,8 +32,8 @@ namespace policy.app.Services
 		/// Устанавливает фотографию для аватара, пользователя.
 		/// </summary>
 		/// <param name="user">Пользователь, которому необходимо установить аватар.</param>
-		/// <param name="file"><see cref="Uri"/> файла, которое нужно установить в качестве аватара пользователя.</param>
-		void ChangeUserAvatarPhoto(User user, Uri file);
+		/// <param name="image">Файл, которое нужно установить в качестве аватара пользователя.</param>
+		void ChangeUserAvatarPhoto(User user, byte[] image);
 
 		/// <summary>
 		/// Отправляет форму обратной связи.

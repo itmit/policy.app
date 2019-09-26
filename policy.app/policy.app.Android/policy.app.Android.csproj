@@ -221,5 +221,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\no_selector.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\def_profile.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

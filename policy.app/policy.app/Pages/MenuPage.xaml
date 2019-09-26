@@ -8,8 +8,8 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" Margin="35,20,0,20">
-                <ex:CircleImage Source="avatar.png" Margin="0,0,15,0" Aspect="AspectFill" WidthRequest="65" HeightRequest="65"/>
-                <Label Text="Пестель Яна" TextColor="#19365f" VerticalOptions="Center" FontAttributes="Bold" FontSize="30"/>
+                <ex:CircleImage Source="{Binding UserPicture}" Margin="0,0,15,0" Aspect="AspectFill" WidthRequest="65" HeightRequest="65"/>
+                <Label Text="{Binding UserName}" TextColor="#19365f" VerticalOptions="Center" FontAttributes="Bold" FontSize="30"/>
             </StackLayout>
             <ListView x:Name="ll" SelectionMode="Single" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" ItemsSource="{Binding MenuCollection}" HasUnevenRows="True" SeparatorColor="#19365f" ItemSelected="Ll_ItemSelected">
                 <ListView.ItemTemplate>

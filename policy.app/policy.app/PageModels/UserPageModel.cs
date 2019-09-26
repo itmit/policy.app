@@ -1,9 +1,15 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;
 using policy.app.Services;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 using PropertyChanged;
 using Xamarin.Forms;
 
@@ -34,6 +40,10 @@ namespace policy.app.PageModels
 		/// Сервис для работы с api сусликов.
 		/// </summary>
 		private IGopherService _service;
+
+		/// <summary>
+		/// Пользователь приложения.
+		/// </summary>
 		private User _user;
 
 		/// <summary>
@@ -145,8 +155,9 @@ namespace policy.app.PageModels
 				if (await _service.RemoveFromFavorites(Gopher, _user))
 				{
 					await _app.MainPage.DisplayAlert("Внимание", "Пользователь удален из избранного.", "ок");
-					_user.FavoriteGophers.Add((Gopher)Gopher);
+					_user.FavoriteGophers.Remove((Gopher)Gopher);
 					repository.Update(_user);
+					IsFavorite = false;
 				}
 			}
 			else
@@ -156,6 +167,7 @@ namespace policy.app.PageModels
 					await _app.MainPage.DisplayAlert("Внимание", "Пользователь добавлен в избранное.", "ок");
 					_user.FavoriteGophers.Add((Gopher)Gopher);
 					repository.Update(_user);
+					IsFavorite = true;
 				}
 			}
 

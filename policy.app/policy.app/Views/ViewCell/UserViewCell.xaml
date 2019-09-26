@@ -17,7 +17,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <abstractions:CircleImage Grid.Column="1" Grid.Row="0" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
+                <abstractions:CircleImage Grid.Column="1" Grid.Row="0" Source="User_def" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65" HeightRequest="65"/>
                 <Label Grid.Column="1" Grid.Row="1" Text="{Binding Name}" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"  />
                 <Label Grid.Column="1" Grid.Row="3" Text="{Binding Category.Title}" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium"  />
                 <Label Grid.Column="1" Grid.Row="4" Text="{Binding PlaceOfWork}" TextColor="#19365f" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium"  />

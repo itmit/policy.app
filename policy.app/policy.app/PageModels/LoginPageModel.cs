@@ -64,15 +64,13 @@ namespace policy.app.PageModels
 		/// Возвращает команду для кнопки регистрации.
 		/// </summary>
 		public ICommand OnRegisterButtonClicked
-		{
-			get
-			{
-				return new FreshAwaitCommand((param, tcs) =>
+		=> new FreshAwaitCommand((param, tcs) =>
 				{
 					CoreMethods.PushPageModel<RegisterPageModel>();
+					tcs.SetResult(true);
 				});
-			}
-		}
+			
+		
 
 		#endregion
 

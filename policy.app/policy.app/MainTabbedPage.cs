@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FreshMvvm;
 using Xamarin.Forms;
 using System.Collections.Generic;
+using policy.app.PageModels;
 using policy.app.Pages;
 
 namespace policy.app
@@ -23,7 +24,10 @@ namespace policy.app
 		/// Инициализирует новый экземпляр <see cref="MainTabbedPage"/>.
 		/// </summary>
 		public MainTabbedPage()
-		{ }
+		{
+			CurrentPageChanged += OnCurrentPageChanged;
+
+		}
 
 		/// <summary>
 		/// Инициализирует новый экземпляр <see cref="MainTabbedPage"/>, регистрируя сервис навигации.
@@ -32,6 +36,25 @@ namespace policy.app
 		{
 			NavigationServiceName = navigationServiceName;
 			RegisterNavigation();
+			CurrentPageChanged += OnCurrentPageChanged;
+		}
+
+		private void OnCurrentPageChanged(object sender, EventArgs e)
+		{
+			if (sender is TabbedPage tabbedPage)
+			{
+				if (tabbedPage.CurrentPage is NavigationPage currentNavigationPage)
+				{
+					if (currentNavigationPage.CurrentPage is FavoritesPage)
+					{
+						FavoritesPageModel.Instance.RefreshCommand.Execute(null);
+					}
+					else if (currentNavigationPage.CurrentPage is MenuPage)
+					{
+						MenuPageModel.Instance.UpdateUserData();
+					}
+				}
+			}
 		}
 
 		/// <summary>

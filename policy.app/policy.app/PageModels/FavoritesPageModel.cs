@@ -41,7 +41,7 @@ namespace policy.app.PageModels
 		public override void Init(object initData)
 		{
 			base.Init(initData);
-
+			Instance = this;
 			if (_app == null || !_app.IsUserLoggedIn)
 			{
 				return;
@@ -65,7 +65,33 @@ namespace policy.app.PageModels
 			}
 		}
 
+		public static FavoritesPageModel Instance
+		{
+			get;
+			private set;
+		}
 
+		public FreshAwaitCommand RefreshCommand
+			=> new FreshAwaitCommand((obj, tcs) =>
+			{
+				IsRefreshing = true;
+				LoadGophers();
+				IsRefreshing = false;
+				tcs.SetResult(true);
+			});
+
+		/// <summary>
+		/// Возвращает или устанавливает перезагружается ли список избранных сусликов.
+		/// </summary>
+		public bool IsRefreshing
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает сусликов в избранном.
+		/// </summary>
 		public ObservableCollection<IGopher> Gophers
 		{
 			get;
@@ -111,6 +137,7 @@ namespace policy.app.PageModels
 			var user = repository.All()
 								.Single();
 			Gophers = new ObservableCollection<IGopher>(await _service.GetFavorites(user));
+			user.FavoriteGophers.Clear();
 			foreach (IGopher gopher in Gophers)
 			{
 				user.FavoriteGophers.Add((Gopher)gopher);

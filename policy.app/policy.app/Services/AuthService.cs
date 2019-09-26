@@ -32,6 +32,8 @@ namespace policy.app.Services
 		/// </summary>
 		private const string RegisterUri = "http://policy.itmit-studio.ru/api/register";
 
+		private const string StorageUri = "http://policy.itmit-studio.ru/storage";
+
 		/// <summary>
 		/// Задает ключ к api для авторизации.
 		/// </summary>
@@ -69,6 +71,15 @@ namespace policy.app.Services
 					{
 						var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<User>>(jsonString);
 						jsonData.Data.Token = token;
+						if (string.IsNullOrEmpty(jsonData.Data.PhotoSource))
+						{
+							jsonData.Data.PhotoSource = string.Empty;
+						}
+						else
+						{
+							jsonData.Data.PhotoSource = jsonData.Data.PhotoSource.Replace("public", "");
+							jsonData.Data.PhotoSource = StorageUri + jsonData.Data.PhotoSource;
+						}
 						return await Task.FromResult(jsonData.Data);
 					}
 				}

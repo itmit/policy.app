@@ -8,7 +8,10 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">
-                <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="avatar.png" Aspect="AspectFill"/>
+                <Image HorizontalOptions="FillAndExpand" 
+                       VerticalOptions="FillAndExpand" 
+                       Source="avatar.png"
+                       Aspect="AspectFill"/>
                 <StackLayout Margin="15">
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
@@ -16,7 +19,9 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Label Text="Имя" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.Name}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" 
+                               Text="{Binding Gopher.Name}" 
+                               Style="{StaticResource EndLabelProfilePage}"/>
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
