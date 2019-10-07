@@ -63,11 +63,20 @@ namespace policy.app.ViewModel
 					{
 						foreach (var answerViewModel in Answers)
 						{
+							if (answerViewModel.Answer.IsOther)
+							{
+								answerViewModel.IsVisibleOtherText = false;
+							}
+
 							answerViewModel.IsSelected = false;
 							answerViewModel.Answer.IsSelected = false;
 						}
 					}
 
+					if (answer.Answer.IsOther)
+					{
+						answer.IsVisibleOtherText = !answer.IsVisibleOtherText;
+					}
 					answer.IsSelected = !answer.IsSelected;
 					answer.Answer.IsSelected = answer.IsSelected;
 				}

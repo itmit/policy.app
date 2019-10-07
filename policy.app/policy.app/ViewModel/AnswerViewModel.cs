@@ -7,6 +7,7 @@ namespace policy.app.ViewModel
 	public class AnswerViewModel : FreshBasePageModel
 	{
 		private QuestionViewModel _question;
+		private string _otherText;
 
 		public AnswerViewModel(QuestionViewModel question) => _question = question;
 
@@ -17,6 +18,12 @@ namespace policy.app.ViewModel
 		}
 
 		public bool IsSelected
+		{
+			get;
+			set;
+		}
+
+		public bool IsVisibleOtherText
 		{
 			get;
 			set;

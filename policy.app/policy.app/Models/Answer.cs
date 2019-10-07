@@ -29,6 +29,26 @@ namespace policy.app.Models
 		}
 
 		/// <summary>
+		/// Возвращает или устанавливает является ли ответ "другим".
+		/// </summary>
+		[JsonProperty("type")]
+		public bool IsOther
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает текст "другого" ответа, введенный пользователем.
+		/// </summary>
+		[JsonProperty("other")]
+		public string OtherText
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
 		/// Возвращает или устанавливает выбранный ли ответ.
 		/// </summary>
 		public bool IsSelected

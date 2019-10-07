@@ -3,14 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="policy.app.Views.ViewCells.AnswerViewCell">
     <ViewCell.View>
-        <StackLayout Orientation="Horizontal">
-            <StackLayout.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding SelectCommand}"/>
-            </StackLayout.GestureRecognizers>
-            <CheckBox Color="#228bcc" IsChecked="{Binding IsSelected}" />
-            <Label Text="{Binding Answer.AnswersText}" TextColor="#228bcc" FontSize="Large" 
-                   FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" 
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SelectCommand}"/>
+                </StackLayout.GestureRecognizers>
+                <CheckBox Color="#228bcc" IsChecked="{Binding IsSelected}" IsEnabled="False"/>
+                <Label Text="{Binding Answer.AnswersText}" TextColor="#228bcc" FontSize="Large" 
+                   FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"
                    VerticalOptions="Center"/>
+            </StackLayout>
+            <Entry IsVisible="{Binding IsVisibleOtherText}" Text="{Binding Answer.OtherText, Mode=OneWayToSource}"/>
         </StackLayout>
     </ViewCell.View>
 </ViewCell>
