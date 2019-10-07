@@ -103,19 +103,25 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Translate.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ViewCell\CategoryViewCell.xaml">
+    <EmbeddedResource Update="Views\ViewCells\AnswerViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ViewCell\FavoriteUserViewCell.xaml">
+    <EmbeddedResource Update="Views\ViewCells\CategoryViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ViewCell\MenuViewCell.xaml">
+    <EmbeddedResource Update="Views\ViewCells\FavoriteUserViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ViewCell\PollViewCell.xaml">
+    <EmbeddedResource Update="Views\ViewCells\MenuViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ViewCell\UserViewCell.xaml">
+    <EmbeddedResource Update="Views\ViewCells\PollViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ViewCells\QuestionViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ViewCells\UserViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

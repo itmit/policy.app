@@ -8,6 +8,8 @@ namespace policy.app.Models
 	/// </summary>
 	public class MenuItem
 	{
+		private Action _execute;
+
 		#region .ctor
 		/// <summary>
 		/// Инициализирует новый экземпляр <see cref="MenuItem" />.
@@ -22,7 +24,28 @@ namespace policy.app.Models
 			}
 
 			Title = title;
-			PageModelType = pageModelType;
+			PageModelType = pageModelType ?? throw new ArgumentNullException(nameof(pageModelType));
+		}
+
+		public void Execute()
+		{
+			_execute.Invoke();
+		}
+
+		/// <summary>
+		/// Инициализирует новый экземпляр <see cref="MenuItem" />.
+		/// </summary>
+		/// <param name="title">Заголовок пункта меню.</param>
+		/// <param name="execute">Действие которое должно выполнятся при нажатии на <see cref="MenuItem"/>.</param>
+		public MenuItem(string title, Action execute)
+		{
+			if (IsNullOrEmpty(title))
+			{
+				throw new ArgumentNullException(title);
+			}
+
+			Title = title;
+			_execute = execute;
 		}
 
 		/// <summary>

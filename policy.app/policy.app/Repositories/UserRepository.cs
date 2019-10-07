@@ -52,15 +52,18 @@ namespace policy.app.Repositories
 
 		public void Update(User user)
 		{
+			Remove(user);
+			Add(user);
+		}
+
+		public void Remove(User user)
+		{
 			using (var realm = Realm.GetInstance(_config))
 			{
 				using (var transaction = realm.BeginWrite())
 				{
 					var userRealm = realm.Find<UserRealmObject>(user.Guid.ToString());
 					realm.Remove(userRealm);
-					var temp = _mapper.Map<UserRealmObject>(user);
-					realm.Add(temp, true);
-
 					transaction.Commit();
 				}
 			}

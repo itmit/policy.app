@@ -55,7 +55,14 @@ namespace policy.app.PageModels
 				{
 					ImageSource = "menu_4_def.png"
 				},
-				new MenuItem("Выход", typeof(AboutPageModel))
+				new MenuItem("Выход",
+							 () =>
+							 {
+
+								 var rep = new UserRepository(_app.RealmConfiguration);
+								 rep.Remove(rep.All().Single());
+								 CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.AuthenticationContainer);
+							 })
 				{
 					ImageSource = "menu_5_def.png"
 				}
@@ -118,10 +125,15 @@ namespace policy.app.PageModels
 			}
         }
 
-        public Xamarin.Forms.Command<MenuItem> EventSelected =>
-			new Xamarin.Forms.Command<MenuItem>( obj => {
+        public Command<MenuItem> EventSelected =>
+			new Command<MenuItem>( obj => {
 				if(obj is MenuItem menuItem)
 				{
+					if (menuItem.PageModelType == null)
+					{
+						menuItem.Execute();
+						return;
+					}
 					CoreMethods.PushPageModel(menuItem.PageModelType, false);
 				}
 			});

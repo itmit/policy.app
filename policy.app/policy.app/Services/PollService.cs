@@ -70,7 +70,11 @@ namespace policy.app.Services
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-				var response = await client.PostAsync(GetPullQuestionsUri, null);
+				var response = await client.PostAsync(GetPullQuestionsUri, 
+													  new FormUrlEncodedContent(new Dictionary<string, string>
+													  {
+														  {"poll_uuid", guid.ToString()}
+													  }));
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 

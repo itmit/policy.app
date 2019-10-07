@@ -22,7 +22,7 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Текущее приложение.
 		/// </summary>
-		private readonly App _app = Application.Current as App;
+		private readonly App _app = App.Current;
 
 		/// <summary>
 		/// Выбранный суслик.

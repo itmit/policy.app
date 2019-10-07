@@ -3,49 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
+             xmlns:controls="clr-namespace:policy.app.Controls"
              mc:Ignorable="d"
              x:Class="policy.app.Pages.SurveyPage">
     <ContentPage.Content>
-        <ScrollView VerticalOptions="Fill">
+        <ScrollView>
             <StackLayout Margin="20,10" VerticalOptions="Fill">
-                <StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="1."  TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
-                        <Label Text="Вопрос"  TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <CheckBox Color="#228bcc"/>
-                        <Label Text="Вариант 1" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <CheckBox Color="#228bcc"/>
-                        <Label Text="Вариант 2" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <CheckBox Color="#228bcc"/>
-                        <Label Text="Вариант 3" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
-                    </StackLayout>
-                    <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
-                </StackLayout>
-                <StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="2."  TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
-                        <Label Text="Вопрос"  TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <CheckBox Color="#228bcc"/>
-                        <Label Text="Вариант 1" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <CheckBox Color="#228bcc"/>
-                        <Label Text="Вариант 2" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <CheckBox Color="#228bcc"/>
-                        <Label Text="Вариант 3" TextColor="#228bcc" FontSize="Large" FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" VerticalOptions="Center"/>
-                    </StackLayout>
-                    <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
-                </StackLayout>
+                <controls:RepeaterView
+                    ItemsSource="{Binding Questions}">
+                    <controls:RepeaterView.ItemTemplate>
+                        <DataTemplate>
+                            <viewCells:QuestionViewCell/>
+                        </DataTemplate>
+                    </controls:RepeaterView.ItemTemplate>
+                </controls:RepeaterView>
                 <Button Text="Закончить опрос" TextColor="White" Padding="15,10" Margin="0,0,0,20" BackgroundColor="#228bcc" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Clicked="Button_Clicked"/>
             </StackLayout>
         </ScrollView>

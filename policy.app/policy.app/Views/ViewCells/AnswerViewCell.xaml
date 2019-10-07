@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="policy.app.Views.ViewCells.AnswerViewCell">
+    <ViewCell.View>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding SelectCommand}"/>
+            </StackLayout.GestureRecognizers>
+            <CheckBox Color="#228bcc" IsChecked="{Binding IsSelected}" />
+            <Label Text="{Binding Answer.AnswersText}" TextColor="#228bcc" FontSize="Large" 
+                   FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular" 
+                   VerticalOptions="Center"/>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

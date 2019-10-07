@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using FreshMvvm;
@@ -21,7 +22,7 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Текущее приложение.
 		/// </summary>
-		private readonly App _app = Application.Current as App;
+		private readonly App _app = App.Current;
 		private IPollService _service;
 		private Poll _selectedPoll;
 
@@ -45,8 +46,8 @@ namespace policy.app.PageModels
 			{
 				_service = new PollService(new UserToken
 				{
-					Token = (string)user.Token.Token.Clone(),
-					TokenType = (string)user.Token.TokenType.Clone()
+					Token = user.Token.Token,
+					TokenType = user.Token.TokenType
 				});
 				LoadPolls();
 			}
@@ -109,7 +110,14 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			Polls = new ObservableCollection<Poll>(await _service.GetPolls());
+			ObservableCollection<Poll> polls = new ObservableCollection<Poll>(await _service.GetPolls());
+			for (var i = 0; i < polls.Count; i++)
+			{
+				polls[i]
+					.PollListNumber = i + 1;
+			}
+
+			Polls = polls;
 		}
 	}
 }
