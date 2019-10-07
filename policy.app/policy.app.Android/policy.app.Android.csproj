@@ -97,7 +97,6 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="NoShiftEffect.cs" />
     <Compile Include="Renderers\EntryLogPageRenderer.cs" />
-    <Compile Include="Renderers\NoScrollListViewRenderer.cs" />
     <Compile Include="Renderers\NotSelectorListView.cs" />
     <Compile Include="Renderers\PickerRatingRenderer.cs" />
     <Compile Include="Renderers\SearchEntryRenderer.cs" />

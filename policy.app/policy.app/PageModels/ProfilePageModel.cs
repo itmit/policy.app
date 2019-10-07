@@ -20,7 +20,7 @@ namespace policy.app.PageModels
 	{
 		#region Data
 		#region Fields
-		private App _app;
+		private readonly App _app = App.Current;
 		#endregion
 		#endregion
 
@@ -102,8 +102,6 @@ namespace policy.app.PageModels
 			base.Init(initData);
 
 			CheckPermissionStorage();
-
-			_app = Application.Current as App;
 			if (_app == null)
 			{
 				return;

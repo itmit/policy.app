@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace policy.app.Models
@@ -52,6 +53,15 @@ namespace policy.app.Models
 		/// Возвращает или устанавливает номер опроса в списке опросов.
 		/// </summary>
 		public int PollListNumber
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает список вопросов.
+		/// </summary>
+		public List<Question> Questions
 		{
 			get;
 			set;

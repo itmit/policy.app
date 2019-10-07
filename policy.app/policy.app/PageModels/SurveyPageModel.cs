@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
+using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;
@@ -11,6 +12,9 @@ using Xamarin.Forms;
 
 namespace policy.app.PageModels
 {
+	/// <summary>
+	/// Представляет модель представления для страницы опроса. 
+	/// </summary>
 	[AddINotifyPropertyChangedInterface]
 	public class SurveyPageModel : FreshBasePageModel
 	{
@@ -19,7 +23,7 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Текущее приложение.
 		/// </summary>
-		private readonly App _app = Application.Current as App;
+		private readonly App _app = App.Current;
 
 		/// <summary>
 		/// Опрос.
@@ -42,6 +46,19 @@ namespace policy.app.PageModels
 			get;
 			set;
 		}
+
+		public ICommand PassPollCommand =>
+			new FreshAwaitCommand(async (obj, tcs) =>
+			{
+				var repository = new UserRepository(_app.RealmConfiguration);
+				var users = repository.All();
+				var user = users.SingleOrDefault();
+
+				await _app.MainPage.DisplayAlert("Уведомление", "Опрос пройден.", "ОK");
+				await CoreMethods.PopPageModel();
+
+				tcs.SetResult(false);
+			});
 		#endregion
 
 		#region Public
@@ -50,16 +67,15 @@ namespace policy.app.PageModels
 		/// </summary>
 		public async void LoadQuestions()
 		{
-			var questions = new ObservableCollection<Question>(await _service.GetQuestions(_poll.Guid));
+			_poll.Questions = (await _service.GetQuestions(_poll.Guid)).ToList();
 			var questionsViewModels = new ObservableCollection<QuestionViewModel>();
-			for (var i = 0; i < questions.Count; i++)
+			for (var i = 0; i < _poll.Questions.Count; i++)
 			{
-				questionsViewModels.Add(new QuestionViewModel(questions[i])
+				questionsViewModels.Add(new QuestionViewModel(_poll.Questions[i])
 				{
 					ListNumber = i + 1
 				});
 			}
-
 			Questions = questionsViewModels;
 		}
 		#endregion

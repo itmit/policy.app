@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using policy.app.Models;
@@ -27,6 +28,9 @@ namespace policy.app.Services
 		#endregion
 
 		#region Fields
+		/// <summary>
+		/// Клиент для отправки запросов.
+		/// </summary>
 		private readonly HttpClient _httpClient;
 
 		/// <summary>
@@ -114,7 +118,28 @@ namespace policy.app.Services
 		/// <param name="poll">Проходимый опрос.</param>
 		/// <param name="user">Пользователь, который проходит опрос.</param>
 		/// <returns>Возвращает был ли удачно пройден опрос.</returns>
-		public Task<bool> PassPull(Poll poll, User user) => throw new NotImplementedException();
+		public async Task<bool> PassPull(Poll poll, User user)
+		{
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				var fields = new Dictionary<string, string>();
+				foreach (var question in poll.Questions)
+				{
+					foreach (var answer in question.Answers)
+					{
+						fields.Add($"user_answer[{question.Guid}][{answer.Guid}]", answer.OtherText);
+					}
+				}
+
+				var response = await client.PostAsync(GetPullQuestionsUri,
+														   new FormUrlEncodedContent(fields));
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				return await Task.FromResult(response.IsSuccessStatusCode);
+			}
+		}
 		#endregion
 	}
 }
