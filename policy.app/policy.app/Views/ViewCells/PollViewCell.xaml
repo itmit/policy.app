@@ -1,21 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="policy.app.Views.ViewCells.PollViewCell">
-  <ViewCell.View>
-      <StackLayout>
-          <StackLayout Margin="20,0">
-              <Grid ColumnSpacing="0" Margin="0,20">
+
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="policy.app.Views.ViewCells.PollViewCell">
+    <ViewCell.View>
+        <StackLayout>
+            <StackLayout Margin="20,0">
+                <Grid ColumnSpacing="0" Margin="0,20">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="{Binding PollListNumber}" TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
-                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="#19365f" FontAttributes="Bold" VerticalOptions="Center" FontSize="Large"/>
+                    <Label Grid.Column="0" Text="{Binding PollListNumber}" TextColor="#19365f" FontAttributes="Bold"
+                           VerticalOptions="Center" FontSize="Large" />
+                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="#19365f" FontAttributes="Bold"
+                           VerticalOptions="Center" FontSize="Large" />
                 </Grid>
-              <BoxView HeightRequest="1" BackgroundColor="#dee4ea"/>
-          </StackLayout>
+                <BoxView HeightRequest="1" BackgroundColor="#dee4ea" />
+            </StackLayout>
         </StackLayout>
-  </ViewCell.View>
+    </ViewCell.View>
 </ViewCell>

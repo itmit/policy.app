@@ -1,10 +1,10 @@
-﻿using policy.app.Models;
-using Realms;
+﻿using Realms;
 
 namespace policy.app.RealmObjects
 {
 	public class GopherRealmObject : RealmObject
 	{
+		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает категорию.
 		/// </summary>
@@ -87,5 +87,6 @@ namespace policy.app.RealmObjects
 			get;
 			set;
 		}
+		#endregion
 	}
 }

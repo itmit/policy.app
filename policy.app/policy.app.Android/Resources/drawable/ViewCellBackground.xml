@@ -1,6 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:state_pressed="true" >
+  <item android:state_pressed="true">
     <shape android:shape="rectangle">
       <!--Change the selected color by modifying this hex value-->
       <solid android:color="#228bcc" />

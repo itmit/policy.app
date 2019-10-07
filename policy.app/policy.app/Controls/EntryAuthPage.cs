@@ -2,7 +2,7 @@
 
 namespace policy.app.Controls
 {
-    public class EntryAuthPage:Entry
-    {
-    }
+	public class EntryAuthPage : Entry
+	{
+	}
 }

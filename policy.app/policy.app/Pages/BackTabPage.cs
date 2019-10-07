@@ -4,14 +4,18 @@ namespace policy.app.Pages
 {
 	public class BackTabPage : ContentPage
 	{
-		public BackTabPage()
-		{
+		#region .ctor
+		public BackTabPage() =>
 			Content = new StackLayout
 			{
-				Children = {
-					new Label { Text = "Welcome to Xamarin.Forms!" }
+				Children =
+				{
+					new Label
+					{
+						Text = "Welcome to Xamarin.Forms!"
+					}
 				}
 			};
-		}
+		#endregion
 	}
 }

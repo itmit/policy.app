@@ -7,10 +7,12 @@ using Xamarin.Forms.Platform.Android;
 
 [assembly: ResolutionGroupName("itmit")]
 [assembly: ExportEffect(typeof(NoShiftEffect), "NoShiftEffect")]
+
 namespace policy.app.Droid
 {
 	public class NoShiftEffect : PlatformEffect
 	{
+		#region Overrided
 		protected override void OnAttached()
 		{
 			if (!(Container.GetChildAt(0) is ViewGroup layout))
@@ -30,5 +32,6 @@ namespace policy.app.Droid
 		protected override void OnDetached()
 		{
 		}
+		#endregion
 	}
 }

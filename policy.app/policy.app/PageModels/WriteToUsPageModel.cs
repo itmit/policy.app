@@ -3,8 +3,8 @@ using PropertyChanged;
 
 namespace policy.app.PageModels
 {
-    [AddINotifyPropertyChangedInterface]
-    public class WriteToUsPageModel : FreshBasePageModel
-    {
-    }
+	[AddINotifyPropertyChangedInterface]
+	public class WriteToUsPageModel : FreshBasePageModel
+	{
+	}
 }

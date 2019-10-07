@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using AutoMapper;
 using policy.app.Models;
 using policy.app.RealmObjects;
@@ -9,9 +8,14 @@ namespace policy.app.Repositories
 {
 	public class UserRepository
 	{
-		private IMapper _mapper;
-		private RealmConfiguration _config;
+		#region Data
+		#region Fields
+		private readonly RealmConfiguration _config;
+		private readonly IMapper _mapper;
+		#endregion
+		#endregion
 
+		#region .ctor
 		public UserRepository(RealmConfiguration config)
 		{
 			_config = config;
@@ -19,16 +23,18 @@ namespace policy.app.Repositories
 			var mapperConfiguration = app.Configuration;
 			_mapper = mapperConfiguration.CreateMapper();
 		}
+		#endregion
 
+		#region Public
 		public void Add(User user)
 		{
-			UserRealmObject userRealm = _mapper.Map<UserRealmObject>(user);
+			var userRealm = _mapper.Map<UserRealmObject>(user);
 
 			using (var realm = Realm.GetInstance(_config))
 			{
 				using (var transaction = realm.BeginWrite())
 				{
-					realm.Add(userRealm, true);
+					realm.Add((RealmObject) userRealm, true);
 					transaction.Commit();
 				}
 			}
@@ -36,11 +42,10 @@ namespace policy.app.Repositories
 
 		public IEnumerable<User> All()
 		{
-
 			using (var realm = Realm.GetInstance(_config))
 			{
 				var users = realm.All<UserRealmObject>();
-				List<User> userList = new List<User>();
+				var userList = new List<User>();
 				foreach (var user in users)
 				{
 					userList.Add(_mapper.Map<User>(user));
@@ -48,12 +53,6 @@ namespace policy.app.Repositories
 
 				return userList;
 			}
-		}
-
-		public void Update(User user)
-		{
-			Remove(user);
-			Add(user);
 		}
 
 		public void Remove(User user)
@@ -68,5 +67,12 @@ namespace policy.app.Repositories
 				}
 			}
 		}
+
+		public void Update(User user)
+		{
+			Remove(user);
+			Add(user);
+		}
+		#endregion
 	}
 }

@@ -11,7 +11,6 @@ using Plugin.Media.Abstractions;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using PropertyChanged;
-using Realms;
 using Xamarin.Forms;
 
 namespace policy.app.PageModels
@@ -19,9 +18,81 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class ProfilePageModel : FreshBasePageModel
 	{
+		#region Data
+		#region Fields
 		private App _app;
+		#endregion
+		#endregion
 
-		#region .ctor
+		#region Properties
+		/// <summary>
+		/// Возвращает или устанавливает должность пользователя.
+		/// </summary>
+		public string Position
+		{
+			get;
+			set;
+		}
+
+		public User User
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает команду для открытия страницы редактирования данных пользователя.
+		/// </summary>
+		public ICommand OpenEditPage =>
+			new FreshAwaitCommand((param, tcs) =>
+			{
+				CoreMethods.PushPageModel<EditPageModel>();
+				tcs.SetResult(true);
+			});
+
+		/// <summary>
+		/// Возвращает команду для установки аватара.
+		/// </summary>
+		public FreshAwaitCommand SetAvatarCommand =>
+			new FreshAwaitCommand(async (obj, tcs) =>
+			{
+				if (await CheckPermission(Permission.Storage, "Для загрузки аватара необходимо разрешение на использование хранилища."))
+				{
+					if (!CrossMedia.Current.IsPickPhotoSupported)
+					{
+						return;
+					}
+
+					var image = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+					{
+						PhotoSize = PhotoSize.Medium
+					});
+
+					if (image == null)
+					{
+						return;
+					}
+
+					User.PhotoSource = image.Path;
+
+					var repo = new UserRepository(_app.RealmConfiguration);
+					repo.Update(User);
+
+					using (var memoryStream = new MemoryStream())
+					{
+						image.GetStream()
+							 .CopyTo(memoryStream);
+						image.Dispose();
+						IUserService service = new UserService();
+						service.ChangeUserAvatarPhoto(User, memoryStream.ToArray());
+					}
+				}
+
+				tcs.SetResult(true);
+			});
+		#endregion
+
+		#region Overrided
 		/// <summary>
 		/// Инициализирует модель представления для домашней страницы.
 		/// </summary>
@@ -39,38 +110,16 @@ namespace policy.app.PageModels
 			}
 
 			var repository = new UserRepository(_app.RealmConfiguration);
-			var users = repository
-				.All();
+			var users = repository.All();
 			User = users.SingleOrDefault();
 			if (User != null && string.IsNullOrEmpty(User.PhotoSource))
 			{
 				User.PhotoSource = "def_profile";
 			}
 		}
-
-		private async void CheckPermissionStorage()
-		{
-			await CheckPermission(Permission.Storage, "Для загрузки аватара необходимо разрешение на использование хранилища.");
-		}
-
-		public User User
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает должность пользователя.
-		/// </summary>
-		public string Position
-		{
-			get;
-			set;
-		}
 		#endregion
 
-		#region Properties
-
+		#region Private
 		/// <summary>
 		/// Проверяет разрешения.
 		/// </summary>
@@ -95,57 +144,10 @@ namespace policy.app.PageModels
 			return await Task.FromResult(status == PermissionStatus.Granted);
 		}
 
-		/// <summary>
-		/// Возвращает команду для установки аватара.
-		/// </summary>
-		public FreshAwaitCommand SetAvatarCommand => new FreshAwaitCommand(async (obj, tcs) =>
+		private async void CheckPermissionStorage()
 		{
-			if (await CheckPermission(Permission.Storage, "Для загрузки аватара необходимо разрешение на использование хранилища."))
-			{
-				if (!CrossMedia.Current.IsPickPhotoSupported)
-				{
-					return;
-				}
-
-				var image = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
-				{
-					PhotoSize = PhotoSize.Medium
-				});
-
-				if (image == null)
-				{
-					return;
-				}
-
-				User.PhotoSource = image.Path;
-
-				var repo = new UserRepository(_app.RealmConfiguration);
-				repo.Update(User);
-
-				using (var memoryStream = new MemoryStream())
-				{
-					image.GetStream()
-						 .CopyTo(memoryStream);
-					image.Dispose();
-					IUserService service = new UserService();
-					service.ChangeUserAvatarPhoto(User, memoryStream.ToArray());
-				}
-			}
-			tcs.SetResult(true);
-		});
-
-		/// <summary>
-		/// Возвращает команду для открытия страницы редактирования данных пользователя.
-		/// </summary>
-		public ICommand OpenEditPage
-		{
-			get => new FreshAwaitCommand((param, tcs) =>
-			{
-				CoreMethods.PushPageModel<EditPageModel>();
-				tcs.SetResult(true);
-			});
+			await CheckPermission(Permission.Storage, "Для загрузки аватара необходимо разрешение на использование хранилища.");
 		}
-
 		#endregion
 	}
 }

@@ -1,25 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace policy.app.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ListCategoriesPage : ContentPage
-    {
-        public ListCategoriesPage()
-        {
-            InitializeComponent();
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class ListCategoriesPage : ContentPage
+	{
+		#region .ctor
+		public ListCategoriesPage()
+		{
+			InitializeComponent();
+		}
+		#endregion
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new UserPage());
-        }
-    }
+		#region Private
+		private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new UserPage());
+		}
+		#endregion
+	}
 }

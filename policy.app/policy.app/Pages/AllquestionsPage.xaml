@@ -1,17 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
              x:Class="policy.app.Pages.AllQuestionsPage">
     <ContentPage.Content>
-            <StackLayout>
-                <ListView ItemsSource="{Binding Polls}" HasUnevenRows="True" SelectedItem="{Binding SelectedPoll}" ItemSelected="ListView_OnItemSelected">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <viewCells:PollViewCell/>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Polls}" HasUnevenRows="True" SelectedItem="{Binding SelectedPoll}"
+                      ItemSelected="ListView_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <viewCells:PollViewCell />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -4,6 +4,5 @@ namespace policy.app.Controls
 {
 	public class NoScrollListView : ListView
 	{
-		
 	}
 }

@@ -4,7 +4,6 @@ namespace policy.app.RealmObjects
 {
 	public class TokenRealmObject : RealmObject
 	{
-
 		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает токен для авторизации.

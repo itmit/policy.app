@@ -10,6 +10,7 @@ namespace policy.app.Services
 	/// </summary>
 	public interface IPollService
 	{
+		#region Overridable
 		/// <summary>
 		/// Возвращает список опросов.
 		/// </summary>
@@ -22,5 +23,14 @@ namespace policy.app.Services
 		/// <param name="guid">Ид опроса.</param>
 		/// <returns>Список вопросов.</returns>
 		Task<IEnumerable<Question>> GetQuestions(Guid guid);
+
+		/// <summary>
+		/// Отправляет запрос на прохождение опроса.
+		/// </summary>
+		/// <param name="poll">Проходимый опрос.</param>
+		/// <param name="user">Пользователь, который проходит опрос.</param>
+		/// <returns>Возвращает был ли удачно пройден опрос.</returns>
+		Task<bool> PassPull(Poll poll, User user);
+		#endregion
 	}
 }

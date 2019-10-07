@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -8,96 +9,104 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">
-                <Image HorizontalOptions="FillAndExpand" 
-                       VerticalOptions="FillAndExpand" 
+                <Image HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
                        Source="avatar.png"
-                       Aspect="AspectFill"/>
+                       Aspect="AspectFill" />
                 <StackLayout Margin="15">
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="Имя" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" 
-                               Text="{Binding Gopher.Name}" 
-                               Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="Имя" Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End"
+                               Text="{Binding Gopher.Name}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="Сфера деятельности" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.Category.Title}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="Сфера деятельности" Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.Category.Title}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="Организация" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.PlaceOfWork}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="Организация" Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.PlaceOfWork}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="Должность" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.Position}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="Должность" Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.Position}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding AddOrRemoveFavoritesCommand}"/>
+                            <TapGestureRecognizer Command="{Binding AddOrRemoveFavoritesCommand}" />
                         </StackLayout.GestureRecognizers>
-                        <Image Source="Star_def.png" WidthRequest="25" HeightRequest="25"/>
-                        <Label Text="{Binding FavoriteButtonLabel}" Margin="10,0,0,0" FontSize="Medium" TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold"/>
+                        <Image Source="Star_def.png" WidthRequest="25" HeightRequest="25" />
+                        <Label Text="{Binding FavoriteButtonLabel}" Margin="10,0,0,0" FontSize="Medium"
+                               TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold" />
                     </StackLayout>
                     <StackLayout>
-                        <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro" Clicked="Button_Clicked" HorizontalOptions="Start" />
+                        <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc"
+                                FontSize="Micro" Clicked="Button_Clicked" HorizontalOptions="Start" />
                     </StackLayout>
                     <ScrollView Orientation="Horizontal">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="0" HorizontalOptions="Center">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Likes}" FontSize="45" TextColor="#228bcc"/>
-                                <ImageButton Source="img_131540" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" 
-                                             Command="{Binding SetLike}"/>
+                                <Label Text="{Binding Likes}" FontSize="45" TextColor="#228bcc" />
+                                <ImageButton Source="img_131540" WidthRequest="28" Grid.Column="1"
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding SetLike}" />
                             </Grid>
                             <Grid Grid.Column="1" HorizontalOptions="Center">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Neutrals}" FontSize="45" TextColor="#101821"/>
-                                <ImageButton Source="meh" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent"
-                                             Command="{Binding SetNeutral}"/>
+                                <Label Text="{Binding Neutrals}" FontSize="45" TextColor="#101821" />
+                                <ImageButton Source="meh" WidthRequest="28" Grid.Column="1"
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding SetNeutral}" />
                             </Grid>
                             <Grid Grid.Column="2" HorizontalOptions="Center">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="Dislike" Text="{Binding Dislikes}" FontSize="45" TextColor="#f07d14"/>
-                                <ImageButton Source="img_1315401" WidthRequest="28" Grid.Column="1" BackgroundColor="Transparent" 
-                                             Command="{Binding SetDislike}"/>
+                                <Label x:Name="Dislike" Text="{Binding Dislikes}" FontSize="45" TextColor="#f07d14" />
+                                <ImageButton Source="img_1315401" WidthRequest="28" Grid.Column="1"
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding SetDislike}" />
                             </Grid>
                         </Grid>
                     </ScrollView>
                     <Frame Padding="0" Margin="0,20" HasShadow="True">
-                        <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
-                            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
+                        <StackLayout HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
+                            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
                                 <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
-                                <Label FontSize="30" Text="Статистика" VerticalOptions="Center" TextColor="#19365f"/>
+                                <Label FontSize="30" Text="Статистика" VerticalOptions="Center" TextColor="#19365f" />
                             </StackLayout>
                         </StackLayout>
                     </Frame>

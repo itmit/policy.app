@@ -10,15 +10,6 @@ namespace policy.app.Models
 	{
 		#region Properties
 		/// <summary>
-		/// Возвращает или устанавливает номер опроса в списке опросов.
-		/// </summary>
-		public int PollListNumber
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
 		/// Возвращает или устанавливает дату создания опроса.
 		/// </summary>
 		[JsonProperty("created_at")]
@@ -52,6 +43,15 @@ namespace policy.app.Models
 		/// Возвращает или устанавливает название опроса.
 		/// </summary>
 		public string Name
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает номер опроса в списке опросов.
+		/// </summary>
+		public int PollListNumber
 		{
 			get;
 			set;

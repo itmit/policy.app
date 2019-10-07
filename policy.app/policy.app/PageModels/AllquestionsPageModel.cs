@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
@@ -9,49 +9,47 @@ using policy.app.Services;
 using PropertyChanged;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using MenuItem = policy.app.Models.MenuItem;
 
 namespace policy.app.PageModels
 {
 	/// <summary>
-	/// Представляет модель представления для страницы списка опросов. 
+	/// Представляет модель представления для страницы списка опросов.
 	/// </summary>
-    [AddINotifyPropertyChangedInterface]
-    public class AllQuestionsPageModel : FreshBasePageModel
+	[AddINotifyPropertyChangedInterface]
+	public class AllQuestionsPageModel : FreshBasePageModel
 	{
+		#region Data
+		#region Fields
 		/// <summary>
 		/// Текущее приложение.
 		/// </summary>
 		private readonly App _app = App.Current;
-		private IPollService _service;
 		private Poll _selectedPoll;
+		private IPollService _service;
+		#endregion
+		#endregion
+
+		#region Properties
+		/// <summary>
+		/// Возвращает или устанавливает список опросов.
+		/// </summary>
+		public ObservableCollection<Poll> Polls
+		{
+			get;
+			set;
+		}
 
 		/// <summary>
-		/// Инициализирует модель представления.
+		/// Возвращает или устанавливает команду при выборе опроса.
 		/// </summary>
-		/// <param name="initData">Параметры модели представления.</param>
-		public override void Init(object initData)
-		{
-			base.Init(initData);
-
-			if (_app == null || !_app.IsUserLoggedIn)
+		public Command<Poll> EventSelected =>
+			new Command<Poll>(obj =>
 			{
-				return;
-			}
-
-			var repository = new UserRepository(_app.RealmConfiguration);
-			var user = repository.All().SingleOrDefault();
-
-			if (user != null)
-			{
-				_service = new PollService(new UserToken
+				if (obj is Poll poll)
 				{
-					Token = user.Token.Token,
-					TokenType = user.Token.TokenType
-				});
-				LoadPolls();
-			}
-		}
+					CoreMethods.PushPageModel<SurveyPageModel>(poll);
+				}
+			});
 
 		/// <summary>
 		/// Возвращает команду для открытия опроса.
@@ -62,15 +60,6 @@ namespace policy.app.PageModels
 				CoreMethods.PushPageModel<SurveyPageModel>();
 				tcs.SetResult(true);
 			});
-
-		/// <summary>
-		/// Возвращает или устанавливает список опросов.
-		/// </summary>
-		public ObservableCollection<Poll> Polls
-		{
-			get;
-			set;
-		}
 
 		/// <summary>
 		/// Возвращает или устанавливает выбранный опрос.
@@ -88,18 +77,40 @@ namespace policy.app.PageModels
 				}
 			}
 		}
+		#endregion
 
+		#region Overrided
 		/// <summary>
-		/// Возвращает или устанавливает команду при выборе опроса.
+		/// Инициализирует модель представления.
 		/// </summary>
-		public Command<Poll> EventSelected =>
-			new Command<Poll>(obj => {
-				if (obj is Poll poll)
-				{
-					CoreMethods.PushPageModel<SurveyPageModel>(poll);
-				}
-			});
+		/// <param name="initData">Параметры модели представления.</param>
+		public override void Init(object initData)
+		{
+			base.Init(initData);
 
+			if (_app == null || !_app.IsUserLoggedIn)
+			{
+				return;
+			}
+
+			var repository = new UserRepository(_app.RealmConfiguration);
+			var user = repository.All()
+								 .SingleOrDefault();
+
+			if (user != null)
+			{
+				_service = new PollService(new UserToken
+										   {
+											   Token = user.Token.Token,
+											   TokenType = user.Token.TokenType
+										   },
+										   new HttpClient());
+				LoadPolls();
+			}
+		}
+		#endregion
+
+		#region Private
 		/// <summary>
 		/// Загружает опросы.
 		/// </summary>
@@ -110,7 +121,7 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			ObservableCollection<Poll> polls = new ObservableCollection<Poll>(await _service.GetPolls());
+			var polls = new ObservableCollection<Poll>(await _service.GetPolls());
 			for (var i = 0; i < polls.Count; i++)
 			{
 				polls[i]
@@ -119,5 +130,6 @@ namespace policy.app.PageModels
 
 			Polls = polls;
 		}
+		#endregion
 	}
 }

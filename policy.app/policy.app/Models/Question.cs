@@ -9,6 +9,26 @@ namespace policy.app.Models
 	/// </summary>
 	public class Question
 	{
+		#region Properties
+		/// <summary>
+		/// Возвращает или устанавливает список ответов.
+		/// </summary>
+		public List<Answer> Answers
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает время создания вопроса.
+		/// </summary>
+		[JsonProperty("created_at")]
+		public DateTime CreatedAt
+		{
+			get;
+			set;
+		}
+
 		/// <summary>
 		/// Возвращает или устанавливает ид вопроса.
 		/// </summary>
@@ -29,10 +49,10 @@ namespace policy.app.Models
 		}
 
 		/// <summary>
-		/// Возвращает или устанавливает время создания вопроса.
+		/// Возвращает или устанавливает текст вопроса.
 		/// </summary>
-		[JsonProperty("created_at")]
-		public DateTime CreatedAt
+		[JsonProperty("question")]
+		public string QuestionText
 		{
 			get;
 			set;
@@ -47,24 +67,6 @@ namespace policy.app.Models
 			get;
 			set;
 		}
-
-		/// <summary>
-		/// Возвращает или устанавливает текст вопроса.
-		/// </summary>
-		[JsonProperty("question")]
-		public string QuestionText
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает список ответов.
-		/// </summary>
-		public List<Answer> Answers
-		{
-			get;
-			set;
-		}
+		#endregion
 	}
 }

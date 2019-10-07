@@ -7,13 +7,17 @@ namespace policy.app.Repositories
 {
 	public class GopherRepository
 	{
-		private Realm _realm;
+		#region Data
+		#region Fields
+		private readonly Realm _realm;
+		#endregion
+		#endregion
 
-		public GopherRepository(RealmConfiguration config)
-		{
-			_realm = Realm.GetInstance(config);
-		}
+		#region .ctor
+		public GopherRepository(RealmConfiguration config) => _realm = Realm.GetInstance(config);
+		#endregion
 
+		#region Public
 		public void Add(Gopher gopher)
 		{
 			var app = App.Current;
@@ -21,7 +25,7 @@ namespace policy.app.Repositories
 
 			var mapper = config.CreateMapper();
 
-			GopherRealmObject gopherRealm = mapper.Map<Gopher, GopherRealmObject>(gopher);
+			var gopherRealm = mapper.Map<Gopher, GopherRealmObject>(gopher);
 
 			using (_realm)
 			{
@@ -43,7 +47,7 @@ namespace policy.app.Repositories
 			using (_realm)
 			{
 				var gophers = _realm.All<GopherRealmObject>();
-				List<Gopher> gopherList = new List<Gopher>();
+				var gopherList = new List<Gopher>();
 				foreach (var gopher in gophers)
 				{
 					gopherList.Add(mapper.Map<Gopher>(gopher));
@@ -52,5 +56,6 @@ namespace policy.app.Repositories
 				return gopherList;
 			}
 		}
+		#endregion
 	}
 }

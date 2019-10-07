@@ -1,5 +1,4 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Linq;
 using System.Threading;
 using AutoMapper;
@@ -7,31 +6,31 @@ using AutoMapper.EquivalencyExpression;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.PageModels;
-using policy.app.Pages;
 using policy.app.RealmObjects;
 using policy.app.Repositories;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using policy.app.Services;
-using policy.app.Views;
 using Realms;
-using TabBar = Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Application = Xamarin.Forms.Application;
 using TabbedPage = Xamarin.Forms.TabbedPage;
+using TabBar = Xamarin.Forms.PlatformConfiguration;
 
-[assembly: Xamarin.Forms.Dependency(typeof(AuthService))]
+[assembly: Dependency(typeof(AuthService))]
+
 namespace policy.app
 {
 	public partial class App : Application
 	{
-		private readonly MapperConfiguration _configuration;
+		#region Data
+		#region Fields
+		#endregion
+		#endregion
 
-		public new static App Current => Application.Current as App;
-
+		#region .ctor
 		public App()
 		{
-			_configuration = new MapperConfiguration(cfg =>
+			Configuration = new MapperConfiguration(cfg =>
 			{
 				cfg.AddCollectionMappers();
 
@@ -45,7 +44,6 @@ namespace policy.app
 				cfg.CreateMap<UserRealmObject, User>()
 				   .ForMember(q => q.FavoriteGophers, opt => opt.MapFrom(q => q.FavoriteGophers));
 
-
 				cfg.CreateMap<GopherRealmObject, Gopher>();
 				cfg.CreateMap<TokenRealmObject, UserToken>();
 				cfg.CreateMap<CategoryRealmObject, Category>();
@@ -53,7 +51,7 @@ namespace policy.app
 
 			InitializeComponent();
 
-			Page loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
+			var loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
 			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
 
 			var repository = new UserRepository(RealmConfiguration);
@@ -63,13 +61,26 @@ namespace policy.app
 				IsUserLoggedIn = true;
 				MainPage = InitMainTabbedPage();
 
-                return;
+				return;
 			}
 
 			MainPage = loginContainer;
 		}
+		#endregion
 
-		public MapperConfiguration Configuration => _configuration;
+		#region Properties
+		public bool IsUserLoggedIn
+		{
+			get;
+			set;
+		}
+
+		public MapperConfiguration Configuration
+		{
+			get;
+		}
+
+		public new static App Current => Application.Current as App;
 
 		public RealmConfiguration RealmConfiguration
 		{
@@ -77,35 +88,43 @@ namespace policy.app
 			{
 				var configuration = RealmConfiguration.DefaultConfiguration;
 				configuration.SchemaVersion = 6;
-				return (RealmConfiguration)configuration;
+				return (RealmConfiguration) configuration;
 			}
 		}
+		#endregion
 
+		#region Public
 		public TabbedPage InitMainTabbedPage()
 		{
 			var tabbedNavigation = new MainTabbedPage(NavigationContainerNames.MainContainer);
 
-            tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<CategoriesPageModel>(null, "ic_action_home.png");
-            tabbedNavigation.AddTab<FavoritesPageModel>(null, "star_2.png");
-            tabbedNavigation.AddTab<RatingPageModel>(null, "ic_action_search.png");
-            tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
+			tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<CategoriesPageModel>(null, "ic_action_home.png");
+			tabbedNavigation.AddTab<FavoritesPageModel>(null, "star_2.png");
+			tabbedNavigation.AddTab<RatingPageModel>(null, "ic_action_search.png");
+			tabbedNavigation.AddTab<MenuPageModel>(null, "ic_action_dehaze.png");
 
 			tabbedNavigation.Effects.Add(new NoShiftEffect());
 			tabbedNavigation.On<TabBar.Android>()
-				.SetToolbarPlacement(ToolbarPlacement.Bottom);
+							.SetToolbarPlacement(ToolbarPlacement.Bottom);
 			tabbedNavigation.On<TabBar.Android>()
 							.SetIsSwipePagingEnabled(false);
 			tabbedNavigation.BarBackgroundColor = Color.FromHex("#228bcc");
 			tabbedNavigation.SelectedTabColor = Color.Black;
 			tabbedNavigation.UnselectedTabColor = Color.White;
 
-            return tabbedNavigation;
-        }
+			return tabbedNavigation;
+		}
+		#endregion
 
-		public bool IsUserLoggedIn
+		#region Overrided
+		protected override void OnResume()
 		{
-			get;
-			set;
+			// Handle when your app resumes
+		}
+
+		protected override void OnSleep()
+		{
+			// Handle when your app sleeps
 		}
 
 		protected override void OnStart()
@@ -115,15 +134,6 @@ namespace policy.app
 			Thread.CurrentThread.CurrentCulture = culture;
 			Thread.CurrentThread.CurrentUICulture = culture;
 		}
-
-		protected override void OnSleep()
-		{
-			// Handle when your app sleeps
-		}
-
-		protected override void OnResume()
-		{
-			// Handle when your app resumes
-		}
+		#endregion
 	}
 }

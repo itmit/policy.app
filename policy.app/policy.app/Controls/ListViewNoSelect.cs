@@ -2,7 +2,7 @@
 
 namespace policy.app.Controls
 {
-    public class ListViewNoSelect : ListView
-    {
-    }
+	public class ListViewNoSelect : ListView
+	{
+	}
 }

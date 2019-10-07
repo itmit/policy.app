@@ -1,15 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
              x:Class="policy.app.Pages.HomePage">
     <ContentPage.Content>
-            <ListView SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding MenuCollection}" HasUnevenRows="True">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <viewCells:MenuViewCell/>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <ListView SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding MenuCollection}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <viewCells:MenuViewCell />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

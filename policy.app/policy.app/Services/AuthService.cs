@@ -32,20 +32,17 @@ namespace policy.app.Services
 		/// </summary>
 		private const string RegisterUri = "http://policy.itmit-studio.ru/api/register";
 
-		private const string StorageUri = "http://policy.itmit-studio.ru/storage";
-
 		/// <summary>
 		/// Задает ключ к api для авторизации.
 		/// </summary>
 		private const string SecretKey = "jENrJI1gVHx16kyly2BMQRONNYctwCDd98FWgn38";
+
+		private const string StorageUri = "http://policy.itmit-studio.ru/storage";
 		#endregion
 		#endregion
 
-		/// <summary>
-		/// Инициализирует новый экземпляр <see cref="AuthService"/>.
-		/// </summary>
-		public AuthService()
-		{ }
+		#region .ctor
+		#endregion
 
 		#region Public
 		/// <summary>
@@ -60,7 +57,6 @@ namespace policy.app.Services
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{token.TokenType} {token.Token}");
 
 				var response = await client.PostAsync(new Uri(DetailsUri), null);
-			
 
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
@@ -80,6 +76,7 @@ namespace policy.app.Services
 							jsonData.Data.PhotoSource = jsonData.Data.PhotoSource.Replace("public", "");
 							jsonData.Data.PhotoSource = StorageUri + jsonData.Data.PhotoSource;
 						}
+
 						return await Task.FromResult(jsonData.Data);
 					}
 				}
@@ -112,7 +109,7 @@ namespace policy.app.Services
 				});
 
 				var response = await client.PostAsync(new Uri(AuthUri), encodedContent);
-			
+
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 

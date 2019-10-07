@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ex="clr-namespace:policy.app.Controls"
@@ -9,11 +10,14 @@
         <ScrollView Orientation="Vertical">
             <StackLayout>
                 <StackLayout Margin="40">
-                    <Label TextColor="#228bcc" FontSize="35" Text="Поиск пользователей" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Label TextColor="#228bcc" FontSize="35" Text="Поиск пользователей" HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" />
                 </StackLayout>
                 <StackLayout Margin="15">
-                    <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand" Margin="0,0,0,10">
-                        <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
+                    <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand"
+                                 Margin="0,0,0,10">
+                        <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6"
+                                         HorizontalOptions="FillAndExpand">
                             <Picker.Items>
                                 <x:String>Политика</x:String>
                                 <x:String>Музыка</x:String>
@@ -23,7 +27,8 @@
                         </ex:PickerRating>
                     </StackLayout>
                     <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand">
-                        <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6" HorizontalOptions="FillAndExpand">
+                        <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6"
+                                         HorizontalOptions="FillAndExpand">
                             <Picker.Items>
                                 <x:String>От лучшего к худшему</x:String>
                                 <x:String>От худшего к лучшему</x:String>
@@ -31,60 +36,76 @@
                         </ex:PickerRating>
                     </StackLayout>
                 </StackLayout>
-                <SearchBar Placeholder="Поиск" Margin="15,0,15,10"/>
-                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
+                <SearchBar Placeholder="Поиск" Margin="15,0,15,10" />
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="180"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="180" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
-                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Пестель Яна" VerticalOptions="Center" FontSize="Medium" />
-                    <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f"  HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
-                        <Label TextColor="White" Text="политика" WidthRequest="120" HorizontalTextAlignment="Center"/>
+                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill"
+                                     VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50"
+                                     HeightRequest="50" />
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Пестель Яна" VerticalOptions="Center"
+                           FontSize="Medium" />
+                    <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f"
+                           HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                        <Label TextColor="White" Text="политика" WidthRequest="120" HorizontalTextAlignment="Center" />
                     </Frame>
                 </Grid>
-                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="180"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="180" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
-                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Ковалев Денис Викторович" VerticalOptions="Center" FontSize="Medium" />
-                    <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
-                        <Label TextColor="White" Text="музыка" WidthRequest="120" HorizontalTextAlignment="Center"/>
+                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill"
+                                     VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50"
+                                     HeightRequest="50" />
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Ковалев Денис Викторович" VerticalOptions="Center"
+                           FontSize="Medium" />
+                    <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f"
+                           HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                        <Label TextColor="White" Text="музыка" WidthRequest="120" HorizontalTextAlignment="Center" />
                     </Frame>
                 </Grid>
-                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="180"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="180" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
-                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Кирченко Ирина Игоревна" VerticalOptions="Center" FontSize="Medium" />
-                    <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
-                        <Label TextColor="White" Text="кино" WidthRequest="120" HorizontalTextAlignment="Center"/>
+                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill"
+                                     VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50"
+                                     HeightRequest="50" />
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Кирченко Ирина Игоревна" VerticalOptions="Center"
+                           FontSize="Medium" />
+                    <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f"
+                           HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                        <Label TextColor="White" Text="кино" WidthRequest="120" HorizontalTextAlignment="Center" />
                     </Frame>
                 </Grid>
-                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
                 <Grid Margin="10,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="180"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="180" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50" HeightRequest="50"/>
-                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center" FontSize="Medium" />
-                    <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
-                        <Label TextColor="White" Text="телевидение" WidthRequest="120" HorizontalTextAlignment="Center"/>
+                    <ex1:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill"
+                                     VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50"
+                                     HeightRequest="50" />
+                    <Label Grid.Column="1" Margin="5,0,5,0" Text="Сеничев Данил Дмитриевич" VerticalOptions="Center"
+                           FontSize="Medium" />
+                    <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f"
+                           HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
+                        <Label TextColor="White" Text="телевидение" WidthRequest="120" HorizontalTextAlignment="Center" />
                     </Frame>
                 </Grid>
-                <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
+                <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

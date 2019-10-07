@@ -1,25 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace policy.app.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PollPage : ContentPage
-    {
-        public PollPage()
-        {
-            InitializeComponent();
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class PollPage : ContentPage
+	{
+		#region .ctor
+		public PollPage()
+		{
+			InitializeComponent();
+		}
+		#endregion
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new AllQuestionsPage());
-        }
-    }
+		#region Private
+		private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new AllQuestionsPage());
+		}
+		#endregion
+	}
 }

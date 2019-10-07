@@ -5,11 +5,12 @@ using PropertyChanged;
 namespace policy.app.PageModels
 {
 	/// <summary>
-	/// Представляет модель представления для страницы списка категорий опросов. 
+	/// Представляет модель представления для страницы списка категорий опросов.
 	/// </summary>
 	[AddINotifyPropertyChangedInterface]
-    public class PollPageModel : FreshBasePageModel
-    {
+	public class PollPageModel : FreshBasePageModel
+	{
+		#region Properties
 		/// <summary>
 		/// Возвращает команду для открытия списка всех опросов.
 		/// </summary>
@@ -20,7 +21,6 @@ namespace policy.app.PageModels
 				tcs.SetResult(true);
 			});
 
-
 		/// <summary>
 		/// Возвращает команду для открытия списка всех опросов.
 		/// </summary>
@@ -30,5 +30,6 @@ namespace policy.app.PageModels
 				CoreMethods.PushPageModel<AllQuestionsPageModel>();
 				tcs.SetResult(true);
 			});
+		#endregion
 	}
 }

@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:properties="clr-namespace:policy.app.Properties"
@@ -11,61 +12,74 @@
                        Source="{Binding User.PhotoSource}"
                        Aspect="AspectFill">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding SetAvatarCommand}"/>
+                        <TapGestureRecognizer Command="{Binding SetAvatarCommand}" />
                     </Image.GestureRecognizers>
                 </Image>
                 <StackLayout Margin="15">
                     <StackLayout>
-                        <ImageButton Source="user_blue.png" WidthRequest="30" BackgroundColor="Transparent" HorizontalOptions="End" Command="{Binding OpenEditPage}"/>
+                        <ImageButton Source="user_blue.png" WidthRequest="30" BackgroundColor="Transparent"
+                                     HorizontalOptions="End" Command="{Binding OpenEditPage}" />
                     </StackLayout>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.Name}" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Name}" Style="{StaticResource EndLabelProfilePage}" />
+                        <Label Text="{x:Static properties:Translate.Name}"
+                               Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Name}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.City}" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.City}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.City}"
+                               Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.City}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.FieldOfActivity}" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Activity}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.FieldOfActivity}"
+                               Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Activity}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.Organization}" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Organization}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.Organization}"
+                               Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Organization}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <Grid Margin="0,0,0,8">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.Position}" Style="{StaticResource StartLabelProfilePage}"/>
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Position}" Style="{StaticResource EndLabelProfilePage}"/>
+                        <Label Text="{x:Static properties:Translate.Position}"
+                               Style="{StaticResource StartLabelProfilePage}" />
+                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Position}"
+                               Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
                     <StackLayout>
-                        <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc" FontSize="Micro"  Clicked="Button_Clicked" HorizontalOptions="Start" />
+                        <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc"
+                                FontSize="Micro" Clicked="Button_Clicked" HorizontalOptions="Start" />
                     </StackLayout>
                     <Frame Padding="0" Margin="0,20" HasShadow="True">
-                        <StackLayout  HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
-                            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" >
+                        <StackLayout HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
+                            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
                                 <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
-                                <Label FontSize="30" Text="{x:Static properties:Translate.Statistics}" VerticalOptions="Center" TextColor="#19365f"/>
+                                <Label FontSize="30" Text="{x:Static properties:Translate.Statistics}"
+                                       VerticalOptions="Center" TextColor="#19365f" />
                             </StackLayout>
                         </StackLayout>
                     </Frame>

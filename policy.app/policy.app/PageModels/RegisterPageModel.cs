@@ -7,7 +7,6 @@ using policy.app.Models;
 using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
-using Realms;
 using Xamarin.Forms;
 
 namespace policy.app.PageModels
@@ -73,12 +72,12 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Возвращает команду для кнопки регистрации.
 		/// </summary>
-		public ICommand OnRegisterButtonClicked
-		 => new FreshAwaitCommand((param, tcs) =>
-				{
-					RegisterAsync();
-					tcs.SetResult(true);
-				});
+		public ICommand OnRegisterButtonClicked =>
+			new FreshAwaitCommand((param, tcs) =>
+			{
+				RegisterAsync();
+				tcs.SetResult(true);
+			});
 		#endregion
 
 		#region Private
@@ -111,6 +110,7 @@ namespace policy.app.PageModels
 			{
 				return;
 			}
+
 			var repository = new UserRepository(app.RealmConfiguration);
 
 			repository.Add(user);

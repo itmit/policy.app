@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               x:Class="policy.app.Pages.FirstPage">
@@ -20,7 +21,8 @@
     <ContentPage>
         <StackLayout Margin="20">
             <Label Text="POLICY.APP" FontSize="Title" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-            <Button Text="Хорошо" Command="{Binding OpenAppCommand}" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" BackgroundColor="#19365f"/>
+            <Button Text="Хорошо" Command="{Binding OpenAppCommand}" VerticalOptions="Center"
+                    HorizontalOptions="Center" TextColor="White" BackgroundColor="#19365f" />
         </StackLayout>
     </ContentPage>
 </CarouselPage>

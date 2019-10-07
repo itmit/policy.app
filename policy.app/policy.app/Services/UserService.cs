@@ -5,8 +5,6 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using policy.app.Models;
 
 namespace policy.app.Services
@@ -16,81 +14,15 @@ namespace policy.app.Services
 	/// </summary>
 	public class UserService : IUserService
 	{
+		#region Data
+		#region Consts
 		private const string EditUri = "http://policy.itmit-studio.ru/api/user/edit";
 
 		private const string UploadAvatarUri = "http://policy.itmit-studio.ru/api/user/changePhoto";
+		#endregion
+		#endregion
 
-		/// <summary>
-		/// Возвращает всех пользователей.
-		/// </summary>
-		/// <returns>Список пользователей.</returns>
-		public IEnumerable<User> GetAllAsync() => throw new NotImplementedException();
-
-		/// <summary>
-		/// Возвращает пользователя по <see cref="Guid"/>.
-		/// </summary>
-		/// <param name="guid">Ид по которому производится поиск.</param>
-		/// <returns>Пользователь, с ид указанным в параметре.</returns>
-		public User GetUserByGuid(Guid guid) => throw new NotImplementedException();
-
-		/// <summary>
-		/// Сохраняет измененные данные пользователя.
-		/// </summary>
-		/// <param name="user">Пользователь, чьи измененные данные необходимо сохранить.</param>
-		public async void Edit(User user)
-		{
-			HttpResponseMessage response;
-			using (var client = new HttpClient())
-			{
-				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{user.Token.TokenType} {user.Token.Token}");
-
-				response = await client.PostAsync(
-							   new Uri(EditUri),
-							   new FormUrlEncodedContent(new Dictionary<string, string>
-							   {
-								   {
-									   "uid",
-									   user.Guid.ToString()
-								   },
-								   {
-									   "name",
-									   user.Name
-								   },
-								   {
-									   "city",
-									   user.City
-								   },
-								   {
-									   "field_of_activity",
-									   user.FieldOfActivity
-								   },
-								   {
-									   "organization",
-									   user.Organization
-								   },
-								   {
-									   "position",
-									   user.Position
-								   }
-							   }));
-			}
-
-			var jsonString = await response.Content.ReadAsStringAsync();
-			Debug.WriteLine(jsonString);
-
-			if (response.IsSuccessStatusCode)
-			{
-				if (jsonString != null)
-				{
-					return;
-				}
-
-				throw new NoNullAllowedException("Нет ответа от сервера.");
-			}
-
-			throw new AuthenticationException($"Пользователь с таким токеном, не найден. Токен: {user.Token.Token}");
-		}
-
+		#region IUserService members
 		/// <summary>
 		/// Устанавливает фотографию для аватара, пользователя.
 		/// </summary>
@@ -120,6 +52,70 @@ namespace policy.app.Services
 		}
 
 		/// <summary>
+		/// Сохраняет измененные данные пользователя.
+		/// </summary>
+		/// <param name="user">Пользователь, чьи измененные данные необходимо сохранить.</param>
+		public async void Edit(User user)
+		{
+			HttpResponseMessage response;
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{user.Token.TokenType} {user.Token.Token}");
+
+				response = await client.PostAsync(new Uri(EditUri),
+												  new FormUrlEncodedContent(new Dictionary<string, string>
+												  {
+													  {
+														  "uid", user.Guid.ToString()
+													  },
+													  {
+														  "name", user.Name
+													  },
+													  {
+														  "city", user.City
+													  },
+													  {
+														  "field_of_activity", user.FieldOfActivity
+													  },
+													  {
+														  "organization", user.Organization
+													  },
+													  {
+														  "position", user.Position
+													  }
+												  }));
+			}
+
+			var jsonString = await response.Content.ReadAsStringAsync();
+			Debug.WriteLine(jsonString);
+
+			if (response.IsSuccessStatusCode)
+			{
+				if (jsonString != null)
+				{
+					return;
+				}
+
+				throw new NoNullAllowedException("Нет ответа от сервера.");
+			}
+
+			throw new AuthenticationException($"Пользователь с таким токеном, не найден. Токен: {user.Token.Token}");
+		}
+
+		/// <summary>
+		/// Возвращает всех пользователей.
+		/// </summary>
+		/// <returns>Список пользователей.</returns>
+		public IEnumerable<User> GetAllAsync() => throw new NotImplementedException();
+
+		/// <summary>
+		/// Возвращает пользователя по <see cref="Guid" />.
+		/// </summary>
+		/// <param name="guid">Ид по которому производится поиск.</param>
+		/// <returns>Пользователь, с ид указанным в параметре.</returns>
+		public User GetUserByGuid(Guid guid) => throw new NotImplementedException();
+
+		/// <summary>
 		/// Отправляет форму обратной связи.
 		/// </summary>
 		/// <param name="user">Пользователь, от имени которого отправляется форма.</param>
@@ -128,5 +124,6 @@ namespace policy.app.Services
 		{
 			throw new NotImplementedException();
 		}
+		#endregion
 	}
 }

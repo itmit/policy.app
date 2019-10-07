@@ -1,20 +1,23 @@
-﻿
-
-using Android.Content;
+﻿using Android.Content;
 using policy.app.Controls;
 using policy.app.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(NoScrollListView), typeof(NoScrollListViewRenderer))]
+
 namespace policy.app.Droid.Renderers
 {
 	public class NoScrollListViewRenderer : ListViewRenderer
 	{
+		#region .ctor
 		public NoScrollListViewRenderer(Context context)
 			: base(context)
-		{}
+		{
+		}
+		#endregion
 
+		#region Overrided
 		protected override void OnElementChanged(ElementChangedEventArgs<ListView> e)
 		{
 			base.OnElementChanged(e);
@@ -35,5 +38,6 @@ namespace policy.app.Droid.Renderers
 			HorizontalScrollBarEnabled = false;
 			VerticalScrollBarEnabled = false;
 		}
+		#endregion
 	}
 }

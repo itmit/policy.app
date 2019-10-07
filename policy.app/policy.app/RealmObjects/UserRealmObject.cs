@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using policy.app.Models;
 using Realms;
 
 namespace policy.app.RealmObjects

@@ -8,16 +8,7 @@ namespace policy.app.Models
 	/// </summary>
 	public class Answer
 	{
-		/// <summary>
-		/// Возвращает или устанавливает ид ответа.
-		/// </summary>
-		[JsonProperty("answer_uuid")]
-		public Guid Guid
-		{
-			get;
-			set;
-		} = Guid.NewGuid();
-
+		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает текст вопроса.
 		/// </summary>
@@ -29,10 +20,29 @@ namespace policy.app.Models
 		}
 
 		/// <summary>
+		/// Возвращает или устанавливает ид ответа.
+		/// </summary>
+		[JsonProperty("answer_uuid")]
+		public Guid Guid
+		{
+			get;
+			set;
+		} = Guid.NewGuid();
+
+		/// <summary>
 		/// Возвращает или устанавливает является ли ответ "другим".
 		/// </summary>
 		[JsonProperty("type")]
 		public bool IsOther
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает выбранный ли ответ.
+		/// </summary>
+		public bool IsSelected
 		{
 			get;
 			set;
@@ -47,14 +57,6 @@ namespace policy.app.Models
 			get;
 			set;
 		}
-
-		/// <summary>
-		/// Возвращает или устанавливает выбранный ли ответ.
-		/// </summary>
-		public bool IsSelected
-		{
-			get;
-			set;
-		}
+		#endregion
 	}
 }

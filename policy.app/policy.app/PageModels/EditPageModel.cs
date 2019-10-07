@@ -4,7 +4,6 @@ using System.Linq;
 using System.Security.Authentication;
 using System.Windows.Input;
 using FreshMvvm;
-using policy.app.Models;
 using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
@@ -18,49 +17,16 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class EditPageModel : FreshBasePageModel
 	{
+		#region Data
+		#region Fields
 		/// <summary>
-		/// Возвращает текущий <see cref="Application"/>.
+		/// Возвращает текущий <see cref="Application" />.
 		/// </summary>
 		private App _app;
+		#endregion
+		#endregion
 
-		/// <summary>
-		/// Вызывается при загрузке модели представления.
-		/// </summary>
-		/// <param name="initData">Данные, которые были отправлены из модели представления ранее.</param>
-		public override void Init(object initData)
-		{
-			base.Init(initData);
-
-			_app = Application.Current as App;
-
-			if (_app != null)
-			{
-				var repository = new UserRepository(_app.RealmConfiguration);
-
-				User user = repository.All().SingleOrDefault();
-				if (user == null)
-				{
-					return;
-				}
-
-				Name = user.Name;
-				City = user.City;
-				FieldOfActivity = user.FieldOfActivity;
-				Organization = user.Organization;
-				Position = user.Position;
-			}
-
-		}
-
-		/// <summary>
-		/// Возвращает или устанавливает ФИО вводимый пользователем.
-		/// </summary>
-		public string Name
-		{
-			get;
-			set;
-		} = string.Empty;
-
+		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает город выводимое пользователю.
 		/// </summary>
@@ -74,6 +40,15 @@ namespace policy.app.PageModels
 		/// Возвращает или устанавливает сфера деятельности вводимое пользователем.
 		/// </summary>
 		public string FieldOfActivity
+		{
+			get;
+			set;
+		} = string.Empty;
+
+		/// <summary>
+		/// Возвращает или устанавливает ФИО вводимый пользователем.
+		/// </summary>
+		public string Name
 		{
 			get;
 			set;
@@ -110,7 +85,40 @@ namespace policy.app.PageModels
 				});
 			}
 		}
+		#endregion
 
+		#region Overrided
+		/// <summary>
+		/// Вызывается при загрузке модели представления.
+		/// </summary>
+		/// <param name="initData">Данные, которые были отправлены из модели представления ранее.</param>
+		public override void Init(object initData)
+		{
+			base.Init(initData);
+
+			_app = Application.Current as App;
+
+			if (_app != null)
+			{
+				var repository = new UserRepository(_app.RealmConfiguration);
+
+				var user = repository.All()
+									 .SingleOrDefault();
+				if (user == null)
+				{
+					return;
+				}
+
+				Name = user.Name;
+				City = user.City;
+				FieldOfActivity = user.FieldOfActivity;
+				Organization = user.Organization;
+				Position = user.Position;
+			}
+		}
+		#endregion
+
+		#region Private
 		/// <summary>
 		/// Сохраняет введенные пользователем данные.
 		/// </summary>
@@ -120,7 +128,8 @@ namespace policy.app.PageModels
 			{
 				var repository = new UserRepository(_app.RealmConfiguration);
 
-				User user = repository.All().SingleOrDefault();
+				var user = repository.All()
+									 .SingleOrDefault();
 				if (user != null)
 				{
 					user.Name = Name;
@@ -149,5 +158,6 @@ namespace policy.app.PageModels
 				}
 			}
 		}
+		#endregion
 	}
 }

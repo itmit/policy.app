@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace policy.app.Pages
@@ -12,9 +6,11 @@ namespace policy.app.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class FirstPage : CarouselPage
 	{
+		#region .ctor
 		public FirstPage()
 		{
 			InitializeComponent();
 		}
+		#endregion
 	}
 }

@@ -23,19 +23,14 @@ namespace policy.app.Services
 		private const string AddToFavoritesUri = "http://policy.itmit-studio.ru/api/suslik/addToFav";
 
 		/// <summary>
-		/// Адрес для получения избранных сусликов.
-		/// </summary>
-		private const string FavoritesGophersUri = "http://policy.itmit-studio.ru/api/suslik/getFavsList";
-
-		/// <summary>
 		/// Адрес для получения категорий.
 		/// </summary>
 		private const string CategoriesUri = "http://policy.itmit-studio.ru/api/suslik/getCategoryList";
 
 		/// <summary>
-		/// Адрес для установки оценок.
+		/// Адрес для получения избранных сусликов.
 		/// </summary>
-		private const string RateUri = "http://policy.itmit-studio.ru/api/suslik/rateSuslik";
+		private const string FavoritesGophersUri = "http://policy.itmit-studio.ru/api/suslik/getFavsList";
 
 		/// <summary>
 		/// Адрес для получения сусликов по категории.
@@ -46,6 +41,11 @@ namespace policy.app.Services
 		/// Адрес для получения суслика по ид.
 		/// </summary>
 		private const string GopherUri = "http://policy.itmit-studio.ru/api/suslik/getSuslikByID";
+
+		/// <summary>
+		/// Адрес для установки оценок.
+		/// </summary>
+		private const string RateUri = "http://policy.itmit-studio.ru/api/suslik/rateSuslik";
 
 		/// <summary>
 		/// Адрес для удаления из избранного.
@@ -86,6 +86,37 @@ namespace policy.app.Services
 
 		#region IGopherService members
 		/// <summary>
+		/// Добавить суслика в избранное.
+		/// </summary>
+		/// <param name="addedGopher">Добавляемый пользователь.</param>
+		/// <param name="addingGopher">Добавляющий пользователь.</param>
+		/// <returns>Был ли добавлен пользователь в избранное.</returns>
+		public async Task<bool> AddToFavorites(IGopher addedGopher, IGopher addingGopher)
+		{
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var response = await client.PostAsync(AddToFavoritesUri,
+													  new FormUrlEncodedContent(new Dictionary<string, string>
+													  {
+														  {
+															  "suslik_uuid", addedGopher.Guid.ToString()
+														  },
+														  {
+															  "user_uuid", addingGopher.Guid.ToString()
+														  }
+													  }));
+
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				return await Task.FromResult(response.IsSuccessStatusCode);
+			}
+		}
+
+		/// <summary>
 		/// Возвращает все категории сусликов.
 		/// </summary>
 		/// <returns>Список категорий.</returns>
@@ -108,6 +139,35 @@ namespace policy.app.Services
 				}
 
 				return await Task.FromResult(new List<Category>());
+			}
+		}
+
+		/// <summary>
+		/// Возвращает сусликов добавленных в избранное.
+		/// </summary>
+		/// <param name="gopher">Пользователь добавивший сусликов в избранное.</param>
+		/// <returns>Список сусликов.</returns>
+		public async Task<IEnumerable<IGopher>> GetFavorites(IGopher gopher)
+		{
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var response = await client.PostAsync(FavoritesGophersUri,
+													  new FormUrlEncodedContent(new Dictionary<string, string>
+													  {
+														  {
+															  "user_uuid", gopher.Guid.ToString()
+														  }
+													  }));
+
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
+
+				return await Task.FromResult(jsonData.Data);
 			}
 		}
 
@@ -137,11 +197,43 @@ namespace policy.app.Services
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<Gopher>>(jsonString);
 				if (jsonData.Data != null)
 				{
-
 					return await Task.FromResult(jsonData.Data);
 				}
 
 				return await Task.FromResult(new Gopher());
+			}
+		}
+
+		/// <summary>
+		/// Возвращает всех сусликов категории.
+		/// </summary>
+		/// <param name="category">Категория, отбираемых сусликов.</param>
+		/// <returns>Список сусликов по категории.</returns>
+		public async Task<IEnumerable<IGopher>> GetGophers(Category category)
+		{
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var response = await client.PostAsync(GophersUri,
+													  new FormUrlEncodedContent(new Dictionary<string, string>
+													  {
+														  {
+															  "category_uuid", category.Uuid
+														  }
+													  }));
+
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
+				foreach (var gopher in jsonData.Data)
+				{
+					gopher.Category = category;
+				}
+
+				return await Task.FromResult(jsonData.Data);
 			}
 		}
 
@@ -177,37 +269,6 @@ namespace policy.app.Services
 		}
 
 		/// <summary>
-		/// Добавить суслика в избранное.
-		/// </summary>
-		/// <param name="addedGopher">Добавляемый пользователь.</param>
-		/// <param name="addingGopher">Добавляющий пользователь.</param>
-		/// <returns>Был ли добавлен пользователь в избранное.</returns>
-		public async Task<bool> AddToFavorites(IGopher addedGopher, IGopher addingGopher)
-		{
-			using (var client = new HttpClient())
-			{
-				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
-				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-				var response = await client.PostAsync(AddToFavoritesUri,
-													  new FormUrlEncodedContent(new Dictionary<string, string>
-													  {
-														  {
-															  "suslik_uuid", addedGopher.Guid.ToString()
-														  },
-														  {
-															  "user_uuid", addingGopher.Guid.ToString()
-														  }
-													  }));
-
-				var jsonString = await response.Content.ReadAsStringAsync();
-				Debug.WriteLine(jsonString);
-
-				return await Task.FromResult(response.IsSuccessStatusCode);
-			}
-		}
-
-		/// <summary>
 		/// Удалить суслика из избранное.
 		/// </summary>
 		/// <param name="addedGopher">Удаляемый пользователь.</param>
@@ -215,7 +276,6 @@ namespace policy.app.Services
 		/// <returns>Был ли удален пользователь в избранное.</returns>
 		public async Task<bool> RemoveFromFavorites(IGopher addedGopher, IGopher addingGopher)
 		{
-
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
@@ -236,67 +296,6 @@ namespace policy.app.Services
 				Debug.WriteLine(jsonString);
 
 				return await Task.FromResult(response.IsSuccessStatusCode);
-			}
-		}
-
-		/// <summary>
-		/// Возвращает сусликов добавленных в избранное.
-		/// </summary>
-		/// <param name="gopher">Пользователь добавивший сусликов в избранное.</param>
-		/// <returns>Список сусликов.</returns>
-		public async Task<IEnumerable<IGopher>> GetFavorites(IGopher gopher)
-		{
-			using (var client = new HttpClient())
-			{
-				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
-				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-				var response = await client.PostAsync(FavoritesGophersUri,
-													  new FormUrlEncodedContent(new Dictionary<string, string>
-													  {
-														  {
-															  "user_uuid", gopher.Guid.ToString()
-														  }
-													  }));
-
-				var jsonString = await response.Content.ReadAsStringAsync();
-				Debug.WriteLine(jsonString);
-
-				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
-				
-				return await Task.FromResult(jsonData.Data);
-			}
-		}
-
-		/// <summary>
-		/// Возвращает всех сусликов категории.
-		/// </summary>
-		/// <param name="category">Категория, отбираемых сусликов.</param>
-		/// <returns>Список сусликов по категории.</returns>
-		public async Task<IEnumerable<IGopher>> GetGophers(Category category)
-		{
-			using (var client = new HttpClient())
-			{
-				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
-				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-				var response = await client.PostAsync(GophersUri,
-													  new FormUrlEncodedContent(new Dictionary<string, string>
-													  {
-														  {
-															  "category_uuid", category.Uuid
-														  }
-													  }));
-
-				var jsonString = await response.Content.ReadAsStringAsync();
-				Debug.WriteLine(jsonString);
-
-				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
-				foreach (var gopher in jsonData.Data)
-				{
-					gopher.Category = category;
-				}
-				return await Task.FromResult(jsonData.Data);
 			}
 		}
 		#endregion

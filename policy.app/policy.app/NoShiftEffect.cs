@@ -4,8 +4,11 @@ namespace policy.app
 {
 	public class NoShiftEffect : RoutingEffect
 	{
-		public NoShiftEffect() : base("itmit.NoShiftEffect")
+		#region .ctor
+		public NoShiftEffect()
+			: base("itmit.NoShiftEffect")
 		{
 		}
+		#endregion
 	}
 }

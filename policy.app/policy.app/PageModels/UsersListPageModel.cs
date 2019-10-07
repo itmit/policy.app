@@ -15,44 +15,27 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class UsersListPageModel : FreshBasePageModel
 	{
-		private Category _category;
+		#region Data
+		#region Fields
 		private App _app;
-		private IGopherService _service;
+		private Category _category;
 		private IGopher _selectedGopher;
+		private IGopherService _service;
+		#endregion
+		#endregion
 
-		public override void Init(object initData)
-		{
-			base.Init(initData);
-
-			if (initData is Category category)
-			{
-				_category = category;
-				_app = Application.Current as App;
-				if (_app != null && _app.IsUserLoggedIn)
-				{
-					var repository = new UserRepository(_app.RealmConfiguration);
-					var user = repository.All().Single();
-					var token = new UserToken
-					{
-						Token = (string) user.Token.Token.Clone(),
-						TokenType = (string) user.Token.TokenType.Clone()
-					};
-					_service = new GopherService(token);
-					LoadGophers();
-				}
-			}
-		}
-
-		private async void LoadGophers()
-		{
-			Users = new ObservableCollection<IGopher>(await _service.GetGophers(_category));
-		}
-
+		#region Properties
 		public ObservableCollection<IGopher> Users
 		{
 			get;
 			set;
 		}
+
+		public Command<IGopher> EventSelected =>
+			new Command<IGopher>(obj =>
+			{
+				CoreMethods.PushPageModel<UserPageModel>(obj);
+			});
 
 		public IGopher SelectedGopher
 		{
@@ -67,10 +50,39 @@ namespace policy.app.PageModels
 				}
 			}
 		}
+		#endregion
 
-		public Command<IGopher> EventSelected =>
-			new Command<IGopher>(obj => {
-				CoreMethods.PushPageModel<UserPageModel>(obj);
-			});
+		#region Overrided
+		public override void Init(object initData)
+		{
+			base.Init(initData);
+
+			if (initData is Category category)
+			{
+				_category = category;
+				_app = Application.Current as App;
+				if (_app != null && _app.IsUserLoggedIn)
+				{
+					var repository = new UserRepository(_app.RealmConfiguration);
+					var user = repository.All()
+										 .Single();
+					var token = new UserToken
+					{
+						Token = (string) user.Token.Token.Clone(),
+						TokenType = (string) user.Token.TokenType.Clone()
+					};
+					_service = new GopherService(token);
+					LoadGophers();
+				}
+			}
+		}
+		#endregion
+
+		#region Private
+		private async void LoadGophers()
+		{
+			Users = new ObservableCollection<IGopher>(await _service.GetGophers(_category));
+		}
+		#endregion
 	}
 }

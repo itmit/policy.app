@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -12,23 +13,24 @@
             <ScrollView VerticalOptions="Fill">
                 <StackLayout Padding="20">
                     <ex:ListViewNoSelect x:Name="NativeList"
-                              HeightRequest="400"
-                              WidthRequest="230" 
-                              HorizontalOptions="Center"
-                              ItemsSource="{Binding Categories}" 
-                              ItemSelected="ListView_OnItemSelected"
-                              SelectedItem="{Binding SelectedCategory}" 
-                              BackgroundColor="Transparent"
-                              HasUnevenRows="True"
-                              >
+                                         HeightRequest="400"
+                                         WidthRequest="230"
+                                         HorizontalOptions="Center"
+                                         ItemsSource="{Binding Categories}"
+                                         ItemSelected="ListView_OnItemSelected"
+                                         SelectedItem="{Binding SelectedCategory}"
+                                         BackgroundColor="Transparent"
+                                         HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <ViewCell.View>
                                         <StackLayout Margin="15">
                                             <!-- #19365f -->
-                                            <Frame BackgroundColor="#19365f" Padding="15" CornerRadius="10" HorizontalOptions="Fill">
-                                                <Label Text="{Binding Title}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Frame BackgroundColor="#19365f" Padding="15" CornerRadius="10"
+                                                   HorizontalOptions="Fill">
+                                                <Label Text="{Binding Title}" FontSize="Medium" TextColor="White"
+                                                       HorizontalOptions="Center" VerticalOptions="Center" />
                                             </Frame>
                                         </StackLayout>
                                     </ViewCell.View>
@@ -38,9 +40,10 @@
                     </ex:ListViewNoSelect>
                 </StackLayout>
             </ScrollView>
-            <BoxView HeightRequest="2" BackgroundColor="#dee4ea"/>
+            <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,15">
-                <Button Style="{StaticResource ButtonCategories}" Text="{x:Static properties:Translate.Votes}" BackgroundColor="#19365f" Command="{Binding OpenVotes}"/>
+                <Button Style="{StaticResource ButtonCategories}" Text="{x:Static properties:Translate.Votes}"
+                        BackgroundColor="#19365f" Command="{Binding OpenVotes}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

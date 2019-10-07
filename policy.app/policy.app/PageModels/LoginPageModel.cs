@@ -6,7 +6,6 @@ using policy.app.Models;
 using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
-using Realms;
 using Xamarin.Forms;
 
 namespace policy.app.PageModels
@@ -63,15 +62,12 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Возвращает команду для кнопки регистрации.
 		/// </summary>
-		public ICommand OnRegisterButtonClicked
-		=> new FreshAwaitCommand((param, tcs) =>
-				{
-					CoreMethods.PushPageModel<RegisterPageModel>();
-					tcs.SetResult(true);
-				});
-			
-		
-
+		public ICommand OnRegisterButtonClicked =>
+			new FreshAwaitCommand((param, tcs) =>
+			{
+				CoreMethods.PushPageModel<RegisterPageModel>();
+				tcs.SetResult(true);
+			});
 		#endregion
 
 		#region Private
@@ -107,7 +103,6 @@ namespace policy.app.PageModels
 			repository.Add(user);
 
 			app.MainPage = app.InitMainTabbedPage();
-			
 		}
 		#endregion
 	}

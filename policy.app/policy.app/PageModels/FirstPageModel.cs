@@ -11,8 +11,13 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class FirstPageModel : FreshBasePageModel
 	{
+		#region Data
+		#region Fields
 		private App _app;
+		#endregion
+		#endregion
 
+		#region Properties
 		/// <summary>
 		/// Возвращает команду для авторизации.
 		/// </summary>
@@ -32,5 +37,6 @@ namespace policy.app.PageModels
 				});
 			}
 		}
+		#endregion
 	}
 }

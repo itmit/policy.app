@@ -2,7 +2,7 @@
 
 namespace policy.app.Controls
 {
-    public class SearchEntry : Entry
-    {
-    }
+	public class SearchEntry : Entry
+	{
+	}
 }

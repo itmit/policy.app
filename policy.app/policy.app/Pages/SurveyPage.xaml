@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -14,11 +15,13 @@
                     ItemsSource="{Binding Questions}">
                     <controls:RepeaterView.ItemTemplate>
                         <DataTemplate>
-                            <viewCells:QuestionViewCell/>
+                            <viewCells:QuestionViewCell />
                         </DataTemplate>
                     </controls:RepeaterView.ItemTemplate>
                 </controls:RepeaterView>
-                <Button Text="Закончить опрос" TextColor="White" Padding="15,10" Margin="0,0,0,20" BackgroundColor="#228bcc" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Clicked="Button_Clicked"/>
+                <Button Text="Закончить опрос" TextColor="White" Padding="15,10" Margin="0,0,0,20"
+                        BackgroundColor="#228bcc" VerticalOptions="EndAndExpand" HorizontalOptions="Center"
+                        Clicked="Button_Clicked" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

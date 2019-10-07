@@ -17,17 +17,90 @@ namespace policy.app.PageModels
 		#region Data
 		#region Fields
 		/// <summary>
+		/// Текущее приложение.
+		/// </summary>
+		private readonly App _app = Application.Current as App;
+		/// <summary>
 		/// Определяет выбранный пункт в <see cref="Xamarin.Forms.ListView" />.
 		/// </summary>
 		private MenuItem _selectedItem;
 		#endregion
 		#endregion
 
-		/// <summary>
-		/// Текущее приложение.
-		/// </summary>
-		private readonly App _app = Application.Current as App;
+		#region Properties
+		public static MenuPageModel Instance
+		{
+			get;
+			private set;
+		}
 
+		/// <summary>
+		/// Возвращает список пунктов меню для домашней страницы.
+		/// </summary>
+		public ObservableCollection<MenuItem> MenuCollection
+		{
+			get;
+			set;
+		}
+
+		public string UserName
+		{
+			get;
+			set;
+		}
+
+		public string UserPicture
+		{
+			get;
+			set;
+		}
+
+		public Command<MenuItem> EventSelected =>
+			new Command<MenuItem>(obj =>
+			{
+				if (obj is MenuItem menuItem)
+				{
+					if (menuItem.PageModelType == null)
+					{
+						menuItem.Execute();
+						return;
+					}
+
+					CoreMethods.PushPageModel(menuItem.PageModelType, false);
+				}
+			});
+
+		/// <summary>
+		/// Возвращает или устанавливает выбранный пункт меню.
+		/// </summary>
+		public MenuItem SelectedItem
+		{
+			get => _selectedItem;
+			set
+			{
+				_selectedItem = value;
+
+				if (value != null)
+				{
+					EventSelected.Execute(value);
+				}
+			}
+		}
+		#endregion
+
+		#region Public
+		public void UpdateUserData()
+		{
+			var repository = new UserRepository(_app.RealmConfiguration);
+			var user = repository.All()
+								 .Single();
+
+			UserName = string.IsNullOrEmpty(user.Name) ? "Гость" : user.Name;
+			UserPicture = string.IsNullOrEmpty(user.PhotoSource) ? "User_def" : user.PhotoSource;
+		}
+		#endregion
+
+		#region Overrided
 		/// <summary>
 		/// Инициализирует модель представления.
 		/// </summary>
@@ -58,9 +131,9 @@ namespace policy.app.PageModels
 				new MenuItem("Выход",
 							 () =>
 							 {
-
 								 var rep = new UserRepository(_app.RealmConfiguration);
-								 rep.Remove(rep.All().Single());
+								 rep.Remove(rep.All()
+											   .Single());
 								 CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.AuthenticationContainer);
 							 })
 				{
@@ -69,73 +142,6 @@ namespace policy.app.PageModels
 			};
 			UpdateUserData();
 		}
-
-		public void UpdateUserData()
-		{
-			var repository = new UserRepository(_app.RealmConfiguration);
-			var user = repository.All().Single();
-
-			UserName = string.IsNullOrEmpty(user.Name) ? "Гость" : user.Name;
-			UserPicture = string.IsNullOrEmpty(user.PhotoSource) ? "User_def" : user.PhotoSource;
-		}
-
-		public static MenuPageModel Instance
-		{
-			get;
-			private set;
-		}
-
-		#region Properties
-		public string UserPicture
-		{
-			get;
-			set;
-		}
-
-		public string UserName
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Возвращает список пунктов меню для домашней страницы.
-		/// </summary>
-		public ObservableCollection<MenuItem> MenuCollection
-		{
-			get;
-			set;
-		}
 		#endregion
-
-		/// <summary>
-		/// Возвращает или устанавливает выбранный пункт меню.
-		/// </summary> 
-		public MenuItem SelectedItem
-        {
-            get =>_selectedItem;
-            set
-            {
-                _selectedItem = value;
-
-                if (value != null)
-				{
-					EventSelected.Execute(value);
-				}
-			}
-        }
-
-        public Command<MenuItem> EventSelected =>
-			new Command<MenuItem>( obj => {
-				if(obj is MenuItem menuItem)
-				{
-					if (menuItem.PageModelType == null)
-					{
-						menuItem.Execute();
-						return;
-					}
-					CoreMethods.PushPageModel(menuItem.PageModelType, false);
-				}
-			});
 	}
 }

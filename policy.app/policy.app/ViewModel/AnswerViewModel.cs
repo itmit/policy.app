@@ -6,11 +6,18 @@ namespace policy.app.ViewModel
 {
 	public class AnswerViewModel : FreshBasePageModel
 	{
-		private QuestionViewModel _question;
+		#region Data
+		#region Fields
 		private string _otherText;
+		private readonly QuestionViewModel _question;
+		#endregion
+		#endregion
 
+		#region .ctor
 		public AnswerViewModel(QuestionViewModel question) => _question = question;
+		#endregion
 
+		#region Properties
 		public Answer Answer
 		{
 			get;
@@ -35,5 +42,6 @@ namespace policy.app.ViewModel
 				_question.EventSelectedAnswer.Execute(this);
 				tcs.SetResult(true);
 			});
+		#endregion
 	}
 }

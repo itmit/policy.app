@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
           x:Class="policy.app.Views.ViewCells.MenuViewCell">
     <ViewCell.View>
         <StackLayout Orientation="Horizontal" Margin="35,10,0,10">
-            <Image Source="{Binding ImageSource}" WidthRequest="20" HeightRequest="20"/>
-            <Label FontSize="Large" Text="{Binding Title}" TextColor="#19365f" VerticalOptions="Center"/>
+            <Image Source="{Binding ImageSource}" WidthRequest="20" HeightRequest="20" />
+            <Label FontSize="Large" Text="{Binding Title}" TextColor="#19365f" VerticalOptions="Center" />
         </StackLayout>
     </ViewCell.View>
 </ViewCell>
