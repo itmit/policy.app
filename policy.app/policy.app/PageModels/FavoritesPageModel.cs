@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;
@@ -46,10 +47,33 @@ namespace policy.app.PageModels
 			set;
 		}
 
-		public static FavoritesPageModel Instance
+		/// <summary>
+		/// Представляет метод обновления списка избранных.
+		/// </summary>
+		public delegate void UpdateFavoritesEventHandler();
+
+		/// <summary>
+		/// Происходит после обновлений списка избранных.
+		/// </summary>
+		public static event UpdateFavoritesEventHandler UpdateFavorites;
+
+		/// <summary>
+		/// Провоцирует событие <see cref="UpdateFavorites"/>.
+		/// </summary>
+		public static void InvokeUpdateFavorites()
 		{
-			get;
-			private set;
+			UpdateFavorites?.Invoke();
+		}
+
+		/// <summary>
+		/// Обновляет список избранных.
+		/// </summary>
+		protected virtual void OnUpdateFavorites()
+		{
+			if (!IsRefreshing)
+			{
+				RefreshCommand.Execute(null);
+			}
 		}
 
 		/// <summary>
@@ -70,7 +94,10 @@ namespace policy.app.PageModels
 				CoreMethods.PushPageModel<UserPageModel>(obj);
 			});
 
-		public FreshAwaitCommand RefreshCommand =>
+		/// <summary>
+		/// Возвращает команду для обновления списка избранных. 
+		/// </summary>
+		public ICommand RefreshCommand =>
 			new FreshAwaitCommand((obj, tcs) =>
 			{
 				IsRefreshing = true;
@@ -105,7 +132,9 @@ namespace policy.app.PageModels
 		public override void Init(object initData)
 		{
 			base.Init(initData);
-			Instance = this;
+
+			UpdateFavorites += OnUpdateFavorites;
+
 			if (_app == null || !_app.IsUserLoggedIn)
 			{
 				return;

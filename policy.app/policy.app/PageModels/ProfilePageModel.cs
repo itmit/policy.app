@@ -26,6 +26,35 @@ namespace policy.app.PageModels
 
 		#region Properties
 		/// <summary>
+		/// Представляет метод обновления профиля.
+		/// </summary>
+		public delegate void UpdateUserEventHandler();
+
+		/// <summary>
+		/// Происходит после обновлений данных у пользователя.
+		/// </summary>
+		public static event UpdateUserEventHandler UpdateUser;
+
+		/// <summary>
+		/// Провоцирует событие <see cref="UpdateUser"/>.
+		/// </summary>
+		public static void InvokeUpdateUser()
+		{
+			UpdateUser?.Invoke();
+		}
+
+		/// <summary>
+		/// Обновляет данные пользователя в профиле.
+		/// </summary>
+		protected virtual void OnUpdateUser()
+		{
+			if (!IsRefreshing)
+			{
+				RefreshCommand.Execute(null);
+			}
+		}
+
+		/// <summary>
 		/// Возвращает или устанавливает должность пользователя.
 		/// </summary>
 		public string Position
@@ -34,6 +63,9 @@ namespace policy.app.PageModels
 			set;
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает пользователя.
+		/// </summary>
 		public User User
 		{
 			get;
@@ -47,6 +79,35 @@ namespace policy.app.PageModels
 			new FreshAwaitCommand((param, tcs) =>
 			{
 				CoreMethods.PushPageModel<EditPageModel>();
+				tcs.SetResult(true);
+			});
+
+
+		/// <summary>
+		/// Возвращает или устанавливает перезагружается ли список избранных сусликов.
+		/// </summary>
+		public bool IsRefreshing
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает команду для обновления списка избранных. 
+		/// </summary>
+		public ICommand RefreshCommand =>
+			new FreshAwaitCommand((obj, tcs) =>
+			{
+				IsRefreshing = true;
+
+				var repository = new UserRepository(_app.RealmConfiguration);
+				var users = repository.All();
+				User = users.SingleOrDefault();
+				if (User != null && string.IsNullOrEmpty(User.PhotoSource))
+				{
+					User.PhotoSource = "def_profile";
+				}
+				IsRefreshing = false;
 				tcs.SetResult(true);
 			});
 
@@ -87,7 +148,8 @@ namespace policy.app.PageModels
 						service.ChangeUserAvatarPhoto(User, memoryStream.ToArray());
 					}
 				}
-
+				RefreshCommand.Execute(null);
+				MenuPageModel.InvokeUpdateUser();
 				tcs.SetResult(true);
 			});
 		#endregion
@@ -102,18 +164,10 @@ namespace policy.app.PageModels
 			base.Init(initData);
 
 			CheckPermissionStorage();
-			if (_app == null)
-			{
-				return;
-			}
 
-			var repository = new UserRepository(_app.RealmConfiguration);
-			var users = repository.All();
-			User = users.SingleOrDefault();
-			if (User != null && string.IsNullOrEmpty(User.PhotoSource))
-			{
-				User.PhotoSource = "def_profile";
-			}
+			UpdateUser += OnUpdateUser;
+
+			RefreshCommand.Execute(null);
 		}
 		#endregion
 

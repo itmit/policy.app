@@ -76,15 +76,12 @@ namespace policy.app.PageModels
 		/// Возвращает команду для кнопки регистрации.
 		/// </summary>
 		public ICommand OnSaveButtonClicked
-		{
-			get
-			{
-				return new FreshAwaitCommand((param, tcs) =>
+		 =>  new FreshAwaitCommand((param, tcs) =>
 				{
 					SaveChangesAsync();
+					ProfilePageModel.InvokeUpdateUser();
+					MenuPageModel.InvokeUpdateUser();
 				});
-			}
-		}
 		#endregion
 
 		#region Overrided

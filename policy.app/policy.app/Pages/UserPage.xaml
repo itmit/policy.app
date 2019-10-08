@@ -4,10 +4,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
              mc:Ignorable="d"
              x:Class="policy.app.Pages.UserPage">
     <ContentPage.Content>
-        <ScrollView>
+        <pullToRefresh:PullToRefreshLayout
+            IsPullToRefreshEnabled="True"
+            RefreshCommand="{Binding RefreshCommand}"
+            IsRefreshing="{Binding IsRefreshing}">
             <StackLayout Orientation="Vertical">
                 <Image HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
@@ -112,6 +116,6 @@
                     </Frame>
                 </StackLayout>
             </StackLayout>
-        </ScrollView>
+        </pullToRefresh:PullToRefreshLayout>
     </ContentPage.Content>
 </ContentPage>

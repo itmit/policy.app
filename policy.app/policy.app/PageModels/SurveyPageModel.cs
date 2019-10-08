@@ -54,6 +54,8 @@ namespace policy.app.PageModels
 				var users = repository.All();
 				var user = users.SingleOrDefault();
 
+				await _service.PassPull(_poll, user);
+
 				await _app.MainPage.DisplayAlert("Уведомление", "Опрос пройден.", "ОK");
 				await CoreMethods.PopPageModel();
 

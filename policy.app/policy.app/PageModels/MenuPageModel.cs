@@ -28,10 +28,30 @@ namespace policy.app.PageModels
 		#endregion
 
 		#region Properties
-		public static MenuPageModel Instance
+		/// <summary>
+		/// Представляет метод обновления профиля.
+		/// </summary>
+		public delegate void UpdateUserEventHandler();
+
+		/// <summary>
+		/// Происходит после обновлений данных у пользователя.
+		/// </summary>
+		public static event UpdateUserEventHandler UpdateUser;
+
+		/// <summary>
+		/// Провоцирует событие <see cref="UpdateUser"/>.
+		/// </summary>
+		public static void InvokeUpdateUser()
 		{
-			get;
-			private set;
+			UpdateUser?.Invoke();
+		}
+
+		/// <summary>
+		/// Обновляет данные пользователя в профиле.
+		/// </summary>
+		protected virtual void OnUpdateUser()
+		{
+			UpdateUserData();
 		}
 
 		/// <summary>
@@ -108,7 +128,9 @@ namespace policy.app.PageModels
 		public override void Init(object initData)
 		{
 			base.Init(initData);
-			Instance = this;
+
+			UpdateUser += OnUpdateUser;
+
 			if (_app == null || !_app.IsUserLoggedIn)
 			{
 				return;

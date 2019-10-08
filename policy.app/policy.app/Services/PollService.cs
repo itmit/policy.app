@@ -21,10 +21,16 @@ namespace policy.app.Services
 		/// Адрес для получения вопросов.
 		/// </summary>
 		private const string GetPullQuestionsUri = "http://policy.itmit-studio.ru/api/poll/getPollQuestionList";
+
 		/// <summary>
 		/// Адрес для получения опросов.
 		/// </summary>
 		private const string GetPullUri = "http://policy.itmit-studio.ru/api/poll/getPollList";
+
+		/// <summary>
+		/// Адрес для прохождения опроса.
+		/// </summary>
+		private const string PassPullUri = "http://policy.itmit-studio.ru/api/poll/passPoll";
 		#endregion
 
 		#region Fields
@@ -123,16 +129,23 @@ namespace policy.app.Services
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				_httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
 				var fields = new Dictionary<string, string>();
 				foreach (var question in poll.Questions)
 				{
 					foreach (var answer in question.Answers)
 					{
+						if (!answer.IsSelected)
+						{
+							continue;
+						}
+
 						fields.Add($"user_answer[{question.Guid}][{answer.Guid}]", answer.OtherText);
 					}
 				}
 
-				var response = await client.PostAsync(GetPullQuestionsUri,
+				var response = await client.PostAsync(PassPullUri,
 														   new FormUrlEncodedContent(fields));
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;
@@ -20,7 +21,7 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Приложение.
 		/// </summary>
-		private App _app;
+		private readonly App _app = App.Current;
 
 		/// <summary>
 		/// Сервис для работы с api сусликов.
@@ -35,6 +36,35 @@ namespace policy.app.PageModels
 		#endregion
 
 		#region Properties
+		/// <summary>
+		/// Представляет метод обновления профиля.
+		/// </summary>
+		public delegate void UpdateUserEventHandler();
+
+		/// <summary>
+		/// Происходит после обновлений данных у пользователя.
+		/// </summary>
+		public static event UpdateUserEventHandler UpdateUser;
+
+		/// <summary>
+		/// Провоцирует событие <see cref="UpdateUser"/>.
+		/// </summary>
+		public static void InvokeUpdateUser()
+		{
+			UpdateUser?.Invoke();
+		}
+
+		/// <summary>
+		/// Обновляет данные пользователя в профиле.
+		/// </summary>
+		protected virtual void OnUpdateUser()
+		{
+			if (!IsRefreshing)
+			{
+				RefreshCommand.Execute(null);
+			}
+		}
+
 		/// <summary>
 		/// Возвращает или устанавливает количество отрицательных оценок сусликов.
 		/// </summary>
@@ -114,7 +144,29 @@ namespace policy.app.PageModels
 					}
 				}
 
+				FavoritesPageModel.InvokeUpdateFavorites();
 				tcs.SetResult(true);
+			});
+
+
+		/// <summary>
+		/// Возвращает или устанавливает перезагружается ли список избранных сусликов.
+		/// </summary>
+		public bool IsRefreshing
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает команду для обновления списка избранных. 
+		/// </summary>
+		public ICommand RefreshCommand =>
+			new FreshAwaitCommand((obj, tcs) =>
+			{
+				IsRefreshing = true;
+				LoadGopher(Gopher.Guid);
+				IsRefreshing = false;
 			});
 
 		/// <summary>
@@ -131,10 +183,18 @@ namespace policy.app.PageModels
 		/// Возвращает команду для установки нейтральных оценок.
 		/// </summary>
 		public FreshAwaitCommand SetDislike =>
-			new FreshAwaitCommand((obj, tcs) =>
+			new FreshAwaitCommand(async (obj, tcs) =>
 			{
 				Dislikes++;
-				Rate(RateType.Dislikes);
+				var res = await _service.Rate(Gopher, RateType.Dislikes);
+				if (res)
+				{
+					UpdateUser?.Invoke();
+				}
+				else
+				{
+					Dislikes--;
+				}
 				tcs.SetResult(true);
 			});
 
@@ -142,10 +202,18 @@ namespace policy.app.PageModels
 		/// Возвращает команду для установки положительных оценок.
 		/// </summary>
 		public FreshAwaitCommand SetLike =>
-			new FreshAwaitCommand((obj, tcs) =>
+			new FreshAwaitCommand(async (obj, tcs) =>
 			{
 				Likes++;
-				Rate(RateType.Likes);
+				var res = await _service.Rate(Gopher, RateType.Likes);
+				if (res)
+				{
+					UpdateUser?.Invoke();
+				}
+				else
+				{
+					Likes--;
+				}
 				tcs.SetResult(true);
 			});
 
@@ -153,11 +221,19 @@ namespace policy.app.PageModels
 		/// Возвращает команду для установки нейтральных оценок.
 		/// </summary>
 		public FreshAwaitCommand SetNeutral =>
-			new FreshAwaitCommand((obj, tcs) =>
+			new FreshAwaitCommand(async (obj, tcs) =>
 			{
 				Neutrals++;
-				Rate(RateType.Neutrals);
-				tcs.SetResult(true);
+				var res = await _service.Rate(Gopher, RateType.Neutrals);
+				if (res)
+				{
+					UpdateUser?.Invoke();
+				}
+				else
+				{
+					Neutrals--;
+				}
+				tcs.SetResult(res);
 			});
 		#endregion
 
@@ -169,12 +245,12 @@ namespace policy.app.PageModels
 		public override void Init(object initData)
 		{
 			base.Init(initData);
+			UpdateUser += OnUpdateUser;
 
 			if (initData is IGopher gopher)
 			{
 				Gopher = gopher;
 
-				_app = Application.Current as App;
 				if (_app != null && _app.IsUserLoggedIn)
 				{
 					var repository = new UserRepository(_app.RealmConfiguration);
@@ -185,8 +261,6 @@ namespace policy.app.PageModels
 						Token = _user.Token.Token,
 						TokenType = _user.Token.TokenType
 					});
-
-					IsFavorite = _user.FavoriteGophers.Any(favoriteGopher => favoriteGopher.Guid.Equals(gopher.Guid));
 
 					LoadGopher(gopher.Guid);
 				}
@@ -201,26 +275,12 @@ namespace policy.app.PageModels
 		/// <param name="guid">Ид суслика.</param>
 		private async void LoadGopher(Guid guid)
 		{
-			if (_app != null && guid != Guid.Empty)
-			{
-				var gopher = await _service.GetGopher(guid);
-				Likes = gopher.Likes;
-				Neutrals = gopher.Neutrals;
-				Dislikes = gopher.Dislikes;
-				Gopher = gopher;
-			}
-		}
-
-		/// <summary>
-		/// Устанавливает оценку.
-		/// </summary>
-		/// <param name="rateType">Тип оценки.</param>
-		private async void Rate(RateType rateType)
-		{
-			if (_service != null)
-			{
-				await _service.Rate(Gopher, rateType);
-			}
+			IsFavorite = _user.FavoriteGophers.Any(favoriteGopher => favoriteGopher.Guid.Equals(guid));
+			var gopher = await _service.GetGopher(guid);
+			Likes = gopher.Likes;
+			Neutrals = gopher.Neutrals;
+			Dislikes = gopher.Dislikes;
+			Gopher = gopher;
 		}
 		#endregion
 	}

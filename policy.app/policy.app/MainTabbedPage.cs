@@ -25,18 +25,12 @@ namespace policy.app
 
 		#region .ctor
 		/// <summary>
-		/// Инициализирует новый экземпляр <see cref="MainTabbedPage" />.
-		/// </summary>
-		public MainTabbedPage() => CurrentPageChanged += OnCurrentPageChanged;
-
-		/// <summary>
 		/// Инициализирует новый экземпляр <see cref="MainTabbedPage" />, регистрируя сервис навигации.
 		/// </summary>
 		public MainTabbedPage(string navigationServiceName)
 		{
 			NavigationServiceName = navigationServiceName;
 			RegisterNavigation();
-			CurrentPageChanged += OnCurrentPageChanged;
 		}
 		#endregion
 
@@ -75,11 +69,17 @@ namespace policy.app
 		#endregion
 
 		#region IFreshNavigationService members
+		/// <summary>
+		/// Возвращает название сервиса навигации.
+		/// </summary>
 		public string NavigationServiceName
 		{
 			get;
 		}
 
+		/// <summary>
+		/// Уведомляет потомков об остановке. 
+		/// </summary>
 		public void NotifyChildrenPageWasPopped()
 		{
 			foreach (var page in Children)
@@ -91,6 +91,12 @@ namespace policy.app
 			}
 		}
 
+		/// <summary>
+		/// Покидает текущую страницу.
+		/// </summary>
+		/// <param name="modal">Покинуть ли страницу модально?</param>
+		/// <param name="animate">Покинуть ли страницу с анимацией?</param>
+		/// <returns>Возвращает операцию.</returns>
 		public Task PopPage(bool modal = false, bool animate = true)
 		{
 			if (modal)
@@ -101,8 +107,21 @@ namespace policy.app
 			return CurrentPage.Navigation.PopAsync(animate);
 		}
 
+		/// <summary>
+		/// Возвращает к корневой странице.
+		/// </summary>
+		/// <param name="animate">Вернуть ли с анимацией?</param>
+		/// <returns>Возвращает операцию.</returns>
 		public Task PopToRoot(bool animate = true) => CurrentPage.Navigation.PopToRootAsync(animate);
 
+		/// <summary>
+		/// Открывает страницу.
+		/// </summary>
+		/// <param name="page">Открываемая страница.</param>
+		/// <param name="model">Контекст привязки страницы.</param>
+		/// <param name="modal">Открыть ли страницу модально?</param>
+		/// <param name="animate">Открыть ли страницу с анимацией?</param>
+		/// <returns>Возвращает операцию.</returns>
 		public Task PushPage(Page page, FreshBasePageModel model, bool modal = false, bool animate = true)
 		{
 			if (modal)
@@ -113,6 +132,11 @@ namespace policy.app
 			return CurrentPage.Navigation.PushAsync(page);
 		}
 
+		/// <summary>
+		/// Переключает выбранную корневую модель страницы.
+		/// </summary>
+		/// <typeparam name="T">Тип модели представления страницы</typeparam>
+		/// <returns>Возвращает операцию.</returns>
 		public Task<FreshBasePageModel> SwitchSelectedRootPageModel<T>() where T : FreshBasePageModel
 		{
 			var page = _tabs.FindIndex(o => o.GetModel()
@@ -148,24 +172,6 @@ namespace policy.app
 			}
 
 			return CreateContainerPage(page);
-		}
-
-		private void OnCurrentPageChanged(object sender, EventArgs e)
-		{
-			if (sender is TabbedPage tabbedPage)
-			{
-				if (tabbedPage.CurrentPage is NavigationPage currentNavigationPage)
-				{
-					if (currentNavigationPage.CurrentPage is FavoritesPage)
-					{
-						FavoritesPageModel.Instance.RefreshCommand.Execute(null);
-					}
-					else if (currentNavigationPage.CurrentPage is MenuPage)
-					{
-						MenuPageModel.Instance.UpdateUserData();
-					}
-				}
-			}
 		}
 
 		/// <summary>
