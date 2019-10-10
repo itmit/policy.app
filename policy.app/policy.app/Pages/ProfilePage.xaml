@@ -6,89 +6,70 @@
              xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
              x:Class="policy.app.Pages.ProfilePage">
     <ContentPage.Content>
-        <pullToRefresh:PullToRefreshLayout
+        <ScrollView>
+            <pullToRefresh:PullToRefreshLayout
             IsPullToRefreshEnabled="True"
             RefreshCommand="{Binding RefreshCommand}"
             IsRefreshing="{Binding IsRefreshing}">
-            <StackLayout Orientation="Vertical">
-                <Image HorizontalOptions="FillAndExpand"
+                <StackLayout Orientation="Vertical">
+                    <Image HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
                        Source="{Binding User.PhotoSource}"
                        Aspect="AspectFill">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding SetAvatarCommand}" />
-                    </Image.GestureRecognizers>
-                </Image>
-                <StackLayout Margin="15">
-                    <StackLayout>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SetAvatarCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <StackLayout Margin="15">
                         <ImageButton Source="user_blue.png" WidthRequest="30" BackgroundColor="Transparent"
                                      HorizontalOptions="End" Command="{Binding OpenEditPage}" />
-                    </StackLayout>
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.Name}"
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Text="{x:Static properties:Translate.Name}"
                                Style="{StaticResource StartLabelProfilePage}" />
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Name}"
+                            <Label Grid.Row="0" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" Text="{Binding User.Name}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                    </Grid>
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.City}"
+                            <Label Grid.Row="1" Text="{x:Static properties:Translate.City}"
                                Style="{StaticResource StartLabelProfilePage}" />
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.City}"
+                            <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.City}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                    </Grid>
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.FieldOfActivity}"
+                            <Label Grid.Row="2" Text="{x:Static properties:Translate.FieldOfActivity}"
                                Style="{StaticResource StartLabelProfilePage}" />
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Activity}"
+                            <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Activity}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                    </Grid>
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.Organization}"
+                            <Label Grid.Row="3" Text="{x:Static properties:Translate.Organization}"
                                Style="{StaticResource StartLabelProfilePage}" />
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Organization}"
+                            <Label Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Organization}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                    </Grid>
-                    <Grid Margin="0,0,0,8">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{x:Static properties:Translate.Position}"
+                            <Label Grid.Row="4" Text="{x:Static properties:Translate.Position}"
                                Style="{StaticResource StartLabelProfilePage}" />
-                        <Label Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Position}"
+                            <Label Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Position}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                    </Grid>
-                    <StackLayout>
+                        </Grid>
                         <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc"
                                 FontSize="Micro" Clicked="Button_Clicked" HorizontalOptions="Start" />
-                    </StackLayout>
-                    <Frame Padding="0" Margin="0,20" HasShadow="True">
-                        <StackLayout HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
-                            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                                <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
-                                <Label FontSize="30" Text="{x:Static properties:Translate.Statistics}"
+                        <Frame Padding="0" Margin="0,20" HasShadow="True">
+                            <StackLayout HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
+                                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                                    <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
+                                    <Label FontSize="30" Text="{x:Static properties:Translate.Statistics}"
                                        VerticalOptions="Center" TextColor="#19365f" />
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </Frame>
+                        </Frame>
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
-        </pullToRefresh:PullToRefreshLayout>
+            </pullToRefresh:PullToRefreshLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
