@@ -14,12 +14,8 @@
                 <abstractions:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill"
                                  VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50"
                                  HeightRequest="50" />
-                <Label Grid.Column="1" Margin="5,0,5,0" Text="Пестель Яна" VerticalOptions="Center"
+                <Label Grid.Column="1" Margin="5,0,5,0" Text="{Binding Name}" VerticalOptions="Center"
                        FontSize="Medium" />
-                <Frame Grid.Column="2" WidthRequest="120" Padding="7" CornerRadius="10" BackgroundColor="#19365f"
-                       HorizontalOptions="End" VerticalOptions="Center" HasShadow="False">
-                    <Label TextColor="White" Text="политика" WidthRequest="120" HorizontalTextAlignment="Center" />
-                </Frame>
             </Grid>
             <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
         </StackLayout>

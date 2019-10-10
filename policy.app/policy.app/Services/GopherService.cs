@@ -194,15 +194,11 @@ namespace policy.app.Services
 				var dictionary = new Dictionary<string, string>
 				{
 					{"ratingOrderBy", ratingSortDirect},
-					{"suslik_name", query}
+					{"name", query},
+					{"category", category?.Uuid.ToString() }
 				};
-				if (category != null && category.Uuid != Guid.Empty)
-				{
-					dictionary.Add("category_uuid", category.Uuid.ToString());
-				}
 
-				var response = await client.PostAsync(SearchUri,
-													  new FormUrlEncodedContent(dictionary));
+				var response = await client.PostAsync(SearchUri, new FormUrlEncodedContent(dictionary));
 
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);

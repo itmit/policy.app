@@ -23,6 +23,10 @@ namespace policy.app.PageModels
 		private readonly App _app = App.Current;
 		private IGopherService _service;
 		private IGopher _selectedGopher;
+		private Category _selectedCategory;
+		private string _query;
+		private string _selectedSort;
+		private string _sort = "desc";
 		#endregion
 		#endregion
 
@@ -55,23 +59,43 @@ namespace policy.app.PageModels
 			get;
 			set;
 		}
-		
+
 		public Category SelectedCategory
 		{
-			get;
-			set;
+			get => _selectedCategory;
+			set
+			{
+				_selectedCategory = value;
+
+				if (value != null)
+				{
+					LoadGophers();
+				}
+			}
 		}
 
 		public string SelectedSort
 		{
-			get;
-			set;
+			get => _selectedSort;
+			set
+			{
+				_selectedSort = value;
+				if (value == "От лучшего к худшему")
+				{
+					_sort = "desc";
+				}
+				else if (value == "От худшего к лучшему")
+				{
+					_sort = "asc";
+				}
+				LoadGophers();
+			}
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает команду при выборе опроса.
 		/// </summary>
-		public Command<IGopher> EventSelected =>
+		public Command<IGopher> EventSelectedGopher =>
 			new Command<IGopher>(obj =>
 			{
 				CoreMethods.PushPageModel<UserPageModel>(obj);
@@ -89,7 +113,7 @@ namespace policy.app.PageModels
 
 				if (value != null)
 				{
-					EventSelected.Execute(value);
+					EventSelectedGopher.Execute(value);
 				}
 			}
 		}
@@ -116,7 +140,7 @@ namespace policy.app.PageModels
 			var repository = new UserRepository(_app.RealmConfiguration);
 			var user = repository.All()
 								 .Single();
-			Gophers = new ObservableCollection<IGopher>(await _service.Search("asc", Query, SelectCategory));
+			Gophers = new ObservableCollection<IGopher>(await _service.Search(_sort, _query, _selectedCategory));
 			
 			repository.Update(user);
 		}
@@ -152,8 +176,15 @@ namespace policy.app.PageModels
 
 		public string Query
 		{
-			get;
-			set;
+			get => _query;
+			set
+			{
+				_query = value;
+				if (value != null)
+				{
+					LoadGophers();
+				}
+			}
 		}
 
 		/// <summary>
