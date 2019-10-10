@@ -22,12 +22,11 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или устанавливает ид категории.
 		/// </summary>
-		public string Uuid
+		public Guid Uuid
 		{
 			get;
 			set;
-		} = Guid.NewGuid()
-				.ToString();
+		} = Guid.NewGuid();
 		#endregion
 	}
 }

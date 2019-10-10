@@ -158,7 +158,7 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Инициализирует модель представления для домашней страницы.
 		/// </summary>
-		/// <param name="initData"></param>
+		/// <param name="initData">Параметр модели представления.</param>
 		public override void Init(object initData)
 		{
 			base.Init(initData);

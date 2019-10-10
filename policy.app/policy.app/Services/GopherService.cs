@@ -43,6 +43,11 @@ namespace policy.app.Services
 		private const string GopherUri = "http://policy.itmit-studio.ru/api/suslik/getSuslikByID";
 
 		/// <summary>
+		/// Адрес для поиска сусликов.
+		/// </summary>
+		private const string SearchUri = "http://policy.itmit-studio.ru/api/suslik/search";
+
+		/// <summary>
 		/// Адрес для установки оценок.
 		/// </summary>
 		private const string RateUri = "http://policy.itmit-studio.ru/api/suslik/rateSuslik";
@@ -98,7 +103,7 @@ namespace policy.app.Services
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-				var response = await client.PostAsync(AddToFavoritesUri,
+				var response = await client.PostAsync(SearchUri,
 													  new FormUrlEncodedContent(new Dictionary<string, string>
 													  {
 														  {
@@ -172,6 +177,43 @@ namespace policy.app.Services
 		}
 
 		/// <summary>
+		/// Возвращает найденных сусликов.
+		/// </summary>
+		/// <param name="ratingSortDirect">Направления сортировки по рейтингу (asc либо desc).</param>
+		/// <param name="query">Строка запроса, для поиска.</param>
+		/// <param name="category">Искать в категории.</param>
+		/// <returns>Список сусликов.</returns>
+		public async Task<IEnumerable<IGopher>> Search(string ratingSortDirect, string query = null, Category category = null)
+		{
+
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var dictionary = new Dictionary<string, string>
+				{
+					{"ratingOrderBy", ratingSortDirect},
+					{"suslik_name", query}
+				};
+				if (category != null && category.Uuid != Guid.Empty)
+				{
+					dictionary.Add("category_uuid", category.Uuid.ToString());
+				}
+
+				var response = await client.PostAsync(SearchUri,
+													  new FormUrlEncodedContent(dictionary));
+
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
+
+				return await Task.FromResult(jsonData.Data);
+			}
+		}
+
+		/// <summary>
 		/// Возвращает суслики по ид.
 		/// </summary>
 		/// <param name="guid">ид суслика.</param>
@@ -220,7 +262,7 @@ namespace policy.app.Services
 													  new FormUrlEncodedContent(new Dictionary<string, string>
 													  {
 														  {
-															  "category_uuid", category.Uuid
+															  "category_uuid", category.Uuid.ToString()
 														  }
 													  }));
 

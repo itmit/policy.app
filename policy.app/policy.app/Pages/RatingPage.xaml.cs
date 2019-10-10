@@ -12,5 +12,13 @@ namespace policy.app.Pages
 			InitializeComponent();
 		}
 		#endregion
+
+		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+		{
+			if (sender is ListView listView)
+			{
+				listView.SelectedItem = null;
+			}
+		}
 	}
 }

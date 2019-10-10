@@ -121,6 +121,9 @@
     <EmbeddedResource Update="Views\ViewCells\QuestionViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\ViewCells\SearchUserViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\ViewCells\UserViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

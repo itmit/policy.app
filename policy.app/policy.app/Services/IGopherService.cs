@@ -33,6 +33,15 @@ namespace policy.app.Services
 		Task<IEnumerable<IGopher>> GetFavorites(IGopher gopher);
 
 		/// <summary>
+		/// Возвращает найденных сусликов.
+		/// </summary>
+		/// <param name="ratingSortDirect">Направления сортировки по рейтингу.</param>
+		/// <param name="query">Строка запроса, для поиска.</param>
+		/// <param name="category">Искать в категории.</param>
+		/// <returns>Список сусликов.</returns>
+		Task<IEnumerable<IGopher>> Search(string ratingSortDirect, string query = null, Category category = null);
+
+		/// <summary>
 		/// Возвращает суслики по ид.
 		/// </summary>
 		/// <param name="guid">ид суслика.</param>
