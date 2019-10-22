@@ -10,10 +10,8 @@
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
         <StackLayout>
-            <ScrollView VerticalOptions="Fill">
-                <StackLayout Padding="20">
-                    <ex:ListViewNoSelect x:Name="NativeList"
-                                         HeightRequest="400"
+            <StackLayout Padding="20">
+                <ex:ListViewNoSelect x:Name="NativeList"
                                          WidthRequest="230"
                                          HorizontalOptions="Center"
                                          ItemsSource="{Binding Categories}"
@@ -21,25 +19,24 @@
                                          SelectedItem="{Binding SelectedCategory}"
                                          BackgroundColor="Transparent"
                                          HasUnevenRows="True">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <ViewCell.View>
-                                        <StackLayout Margin="15">
-                                            <!-- #19365f -->
-                                            <Frame BackgroundColor="#19365f" Padding="15" CornerRadius="10"
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Margin="15">
+                                        <!-- #19365f -->
+                                        <Frame BackgroundColor="#19365f" Padding="15" CornerRadius="10"
                                                    HorizontalOptions="Fill">
-                                                <Label Text="{Binding Title}" FontSize="Medium" TextColor="White"
+                                            <Label Text="{Binding Title}" FontSize="18" TextColor="White"
                                                        HorizontalOptions="Center" VerticalOptions="Center" />
-                                            </Frame>
-                                        </StackLayout>
-                                    </ViewCell.View>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ex:ListViewNoSelect>
-                </StackLayout>
-            </ScrollView>
+                                        </Frame>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ex:ListViewNoSelect>
+            </StackLayout>
             <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,15">
                 <Button Style="{StaticResource ButtonCategories}" Text="{x:Static properties:Translate.Votes}"

@@ -7,15 +7,15 @@
     <ContentPage.Content>
         <StackLayout Margin="25">
             <Label Text="{Binding MessageLabel}" />
-            <controls:EntryAuthPage Placeholder="ФИО" Text="{Binding Name}" FontSize="Large" PlaceholderColor="#19365f"
+            <controls:EntryAuthPage Placeholder="ФИО" Text="{Binding Name}" FontSize="16" PlaceholderColor="#19365f"
                                     TextColor="#19365f" Margin="0,0,0,10" />
-            <controls:EntryAuthPage Placeholder="Город" Text="{Binding City}" FontSize="Large"
+            <controls:EntryAuthPage Placeholder="Город" Text="{Binding City}" FontSize="16"
                                     PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
             <controls:EntryAuthPage Placeholder="Область деятельности" Text="{Binding FieldOfActivity}"
-                                    FontSize="Large" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
-            <controls:EntryAuthPage Placeholder="Организация" Text="{Binding Organization}" FontSize="Large"
+                                    FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
+            <controls:EntryAuthPage Placeholder="Организация" Text="{Binding Organization}" FontSize="16"
                                     PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
-            <controls:EntryAuthPage Placeholder="Должность" Text="{Binding Position}" FontSize="Large"
+            <controls:EntryAuthPage Placeholder="Должность" Text="{Binding Position}" FontSize="16"
                                     PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
             <Button x:Name="RegisterButton"
                     Text="Сохранить"
@@ -24,11 +24,11 @@
                     BorderWidth="1"
                     BackgroundColor="Transparent"
                     HorizontalOptions="Center"
-                    WidthRequest="250"
+                    WidthRequest="300"
                     HeightRequest="60"
                     TextColor="#228bcc"
                     CornerRadius="30"
-                    FontSize="Medium" />
+                    FontSize="16" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -7,12 +7,20 @@
              x:Class="policy.app.Pages.MenuPage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" Margin="35,20,0,20">
-                <ex:CircleImage Source="{Binding UserPicture}" Margin="0,0,15,0" Aspect="AspectFill" WidthRequest="65"
+            <Grid Margin="35,20,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ex:CircleImage Grid.Row="0" Grid.Column="0" Source="{Binding UserPicture}" Margin="0,0,15,0" Aspect="AspectFill" WidthRequest="65"
                                 HeightRequest="65" />
-                <Label Text="{Binding UserName}" TextColor="#19365f" VerticalOptions="Center" FontAttributes="Bold"
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding UserName}" TextColor="#19365f" VerticalOptions="Center" FontAttributes="Bold"
                        FontSize="30" />
-            </StackLayout>
+            </Grid>
             <ListView x:Name="ll" SelectionMode="Single" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                       ItemsSource="{Binding MenuCollection}" HasUnevenRows="True" SeparatorColor="#19365f"
                       ItemSelected="Ll_ItemSelected">
