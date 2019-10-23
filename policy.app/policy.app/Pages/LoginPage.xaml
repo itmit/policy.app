@@ -12,32 +12,34 @@
                 <StackLayout Margin="0,60,0,0">
                     <Label Text="ПРОСТАЯ"
                            HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
                            TextColor="#228bcc"
-                           FontSize="45"
+                           FontSize="35"
                            Margin="0,0,0,20"
                            FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" />
                     <Label Text="СТАТИСТИКА"
                            HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
                            TextColor="#228bcc"
-                           FontSize="45"
+                           FontSize="35"
                            FontFamily="CormorantGaramondSemibold.ttf#CormorantGaramondSemibold" />
                 </StackLayout>
                 <StackLayout Margin="0,0,0,35">
                     <Label Text="{Binding MessageLabel}" />
-                    <ex:EntryAuthPage Placeholder="E-mail или номер мобильного" Text="{Binding Email}" FontSize="Large"
+                    <ex:EntryAuthPage Placeholder="E-mail или номер мобильного" Text="{Binding Email}" FontSize="16"
                                       PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
-                    <ex:EntryAuthPage Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="Large"
+                    <ex:EntryAuthPage Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
                                       PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,25" />
                 </StackLayout>
                 <StackLayout>
                     <Button Text="ВОЙТИ" Command="{Binding OnLoginButtonClicked}" BorderColor="#228bcc" BorderWidth="1"
-                            BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="250"
+                            BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="300"
                             HeightRequest="60" TextColor="#228bcc" CornerRadius="30" FontSize="Medium" />
                     <Button Text="Забыли пароль ?" Margin="0" Padding="0" TextColor="#228bcc" BorderColor="Transparent"
                             BackgroundColor="Transparent" FontSize="Small" HeightRequest="30" />
                     <Button Text="ЗАРЕГИСТРИРОВАТЬСЯ" Command="{Binding OnRegisterButtonClicked}"
-                            BackgroundColor="#19365f" HorizontalOptions="Center" WidthRequest="250" HeightRequest="60"
-                            TextColor="White" CornerRadius="30" FontSize="Medium" />
+                            BackgroundColor="#19365f" HorizontalOptions="Center" WidthRequest="300" HeightRequest="60"
+                            TextColor="White" CornerRadius="30" FontSize="16" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>

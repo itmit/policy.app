@@ -19,7 +19,7 @@
                                               VerticalOptions="Start" HorizontalOptions="CenterAndExpand"
                                               WidthRequest="65" HeightRequest="65" />
                     <Label Grid.Column="2" Text="{Binding Name}" TextColor="#19365f" VerticalOptions="Center"
-                           FontSize="Large" />
+                           FontSize="18" />
                 </Grid>
                 <BoxView HeightRequest="1" BackgroundColor="#dee4ea" />
             </StackLayout>

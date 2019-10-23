@@ -9,27 +9,28 @@
              x:Class="policy.app.Pages.RatingPage"
              BackgroundColor="#f4f5f6">
     <ContentPage.Content>
-        <pullToRefresh:PullToRefreshLayout
+        <ScrollView>
+            <pullToRefresh:PullToRefreshLayout
             IsPullToRefreshEnabled="True"
             RefreshCommand="{Binding RefreshCommand}"
             IsRefreshing="{Binding IsRefreshing}"
             RefreshColor="Blue">
-            <ScrollView>
                 <StackLayout>
                     <StackLayout Margin="40">
                         <Label TextColor="#228bcc" FontSize="35" Text="Поиск пользователей" HorizontalOptions="Center"
-                           HorizontalTextAlignment="Center" />
+                       HorizontalTextAlignment="Center" />
                     </StackLayout>
                     <StackLayout Margin="15">
                         <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand"
-                                 Margin="0,0,0,10">
+                             Margin="0,0,0,10">
                             <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6"
-                                         HorizontalOptions="FillAndExpand" ItemsSource="{Binding Categories}" ItemDisplayBinding="{Binding Title}" SelectedItem="{Binding SelectedCategory}"/>
+                                     HorizontalOptions="FillAndExpand" ItemsSource="{Binding Categories}" ItemDisplayBinding="{Binding Title}" SelectedItem="{Binding SelectedCategory}"/>
                         </StackLayout>
                         <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand">
                             <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6"
-                                         HorizontalOptions="FillAndExpand"
-                                         SelectedItem="{Binding SelectedSort}">
+                                     HorizontalOptions="FillAndExpand"
+                                     FontSize="16"
+                                     SelectedItem="{Binding SelectedSort}">
                                 <Picker.Items>
                                     <x:String>От лучшего к худшему</x:String>
                                     <x:String>От худшего к лучшему</x:String>
@@ -39,18 +40,20 @@
                     </StackLayout>
                     <SearchBar Placeholder="Поиск" Margin="15,0,15,10" Text="{Binding Query}"/>
                     <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
-
-                    <ex:RepeaterView ItemsSource="{Binding Gophers}"
-                              VerticalOptions="FillAndExpand"
-                              HorizontalOptions="FillAndExpand">
-                        <ex:RepeaterView.ItemTemplate>
+                    <ListView ItemsSource="{Binding Gophers}"
+                          HasUnevenRows="True"
+                          VerticalOptions="FillAndExpand"
+                          HorizontalOptions="FillAndExpand"
+                          SelectedItem="{Binding SelectedGopher}"
+                          ItemSelected="ListView_OnItemSelected">
+                        <ListView.ItemTemplate>
                             <DataTemplate>
                                 <viewCells:SearchUserViewCell />
                             </DataTemplate>
-                        </ex:RepeaterView.ItemTemplate>
-                    </ex:RepeaterView>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </StackLayout>
-                </ScrollView>
-        </pullToRefresh:PullToRefreshLayout>
+            </pullToRefresh:PullToRefreshLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

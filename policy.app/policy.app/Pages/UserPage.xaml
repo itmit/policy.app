@@ -49,12 +49,12 @@
                                 <TapGestureRecognizer Command="{Binding AddOrRemoveFavoritesCommand}" />
                             </StackLayout.GestureRecognizers>
                             <Image Source="Star_def.png" WidthRequest="25" HeightRequest="25" />
-                            <Label Text="{Binding FavoriteButtonLabel}" Margin="10,0,0,0" FontSize="Medium"
+                            <Label Text="{Binding FavoriteButtonLabel}" Margin="10,0,0,0" FontSize="14"
                                TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold" />
                         </StackLayout>
                         <StackLayout>
                             <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc"
-                                FontSize="Micro" Clicked="Button_Clicked" HorizontalOptions="Start" />
+                                FontSize="16" Clicked="Button_Clicked" HorizontalOptions="Start" />
                         </StackLayout>
                         <ScrollView Orientation="Horizontal">
                             <Grid>
@@ -68,8 +68,8 @@
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding Likes}" FontSize="45" TextColor="#228bcc" />
-                                    <ImageButton Source="img_131540" WidthRequest="28" Grid.Column="1"
+                                    <Label Text="{Binding Likes}" FontSize="30" TextColor="#228bcc" />
+                                    <ImageButton Source="img_131540" WidthRequest="25" Grid.Column="1"
                                              BackgroundColor="Transparent"
                                              Command="{Binding SetLike}" />
                                 </Grid>
@@ -78,8 +78,8 @@
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding Neutrals}" FontSize="45" TextColor="#101821" />
-                                    <ImageButton Source="meh" WidthRequest="28" Grid.Column="1"
+                                    <Label Text="{Binding Neutrals}" FontSize="30" TextColor="#101821" />
+                                    <ImageButton Source="meh" WidthRequest="25" Grid.Column="1"
                                              BackgroundColor="Transparent"
                                              Command="{Binding SetNeutral}" />
                                 </Grid>
@@ -88,8 +88,8 @@
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label x:Name="Dislike" Text="{Binding Dislikes}" FontSize="45" TextColor="#f07d14" />
-                                    <ImageButton Source="img_1315401" WidthRequest="28" Grid.Column="1"
+                                    <Label x:Name="Dislike" Text="{Binding Dislikes}" FontSize="30" TextColor="#f07d14" />
+                                    <ImageButton Source="img_1315401" WidthRequest="25" Grid.Column="1"
                                              BackgroundColor="Transparent"
                                              Command="{Binding SetDislike}" />
                                 </Grid>

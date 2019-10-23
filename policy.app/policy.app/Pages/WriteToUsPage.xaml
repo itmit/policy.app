@@ -11,12 +11,12 @@
         <ScrollView>
             <StackLayout VerticalOptions="FillAndExpand" Margin="20">
                 <StackLayout HeightRequest="100" HorizontalOptions="Fill">
-                    <Label Text="Напишите нам" Margin="0, 20" FontSize="40" TextColor="#228bcc"
+                    <Label Text="Напишите нам" Margin="0, 20" FontSize="35" TextColor="#228bcc"
                            VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"
                            HorizontalTextAlignment="Center" />
                 </StackLayout>
                 <StackLayout>
-                    <Label Margin="0,15" FontSize="Large" HorizontalOptions="CenterAndExpand"
+                    <Label Margin="0,15" FontSize="16" HorizontalOptions="CenterAndExpand"
                            HorizontalTextAlignment="Center"
                            Text="
 Наш проект является социальным и
@@ -37,8 +37,9 @@
 " />
                 </StackLayout>
                 <BoxView HeightRequest="2" BackgroundColor="#19365f" />
-                <Entry Placeholder="Тема" FontSize="Large" />
+                <Entry Placeholder="Тема" FontSize="16" />
                 <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6"
+                                 FontSize="16"
                                  HorizontalOptions="FillAndExpand">
                     <Picker.Items>
                         <x:String>Политика</x:String>
@@ -47,14 +48,14 @@
                         <x:String>Телевидение</x:String>
                     </Picker.Items>
                 </ex:PickerRating>
-                <Label Text="Сообщения" FontSize="Large" />
+                <Label Text="Сообщения" FontSize="16" />
                 <Frame BorderColor="Gray" Padding="0">
-                    <Editor HeightRequest="120" Placeholder="Введите текст..." />
+                    <Editor HeightRequest="120" FontSize="16" Placeholder="Введите текст..." />
                 </Frame>
                 <Frame Padding="0" Margin="0,20" HasShadow="True">
                     <StackLayout HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                            <Label FontSize="30" Text="Сохранить" VerticalOptions="Center" HorizontalOptions="Center"
+                            <Label FontSize="25" Text="Сохранить" VerticalOptions="Center" HorizontalOptions="Center"
                                    TextColor="#19365f" />
                         </StackLayout>
                     </StackLayout>

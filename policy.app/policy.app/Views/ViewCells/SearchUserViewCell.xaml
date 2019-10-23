@@ -11,14 +11,14 @@
             <Grid Margin="10,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="180" />
+                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <abstractions:CircleImage Grid.Column="0" Margin="5" Source="User_def.png" Aspect="AspectFill"
                                  VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50"
                                  HeightRequest="50" />
                 <Label Grid.Column="1" Margin="5,0,5,0" Text="{Binding Gopher.Name}" VerticalOptions="Center"
-                       FontSize="Medium" />
+                       FontSize="16" />
             </Grid>
             <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
         </StackLayout>

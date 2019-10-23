@@ -28,7 +28,7 @@ namespace policy.app.Droid.Renderers
 			if (e.OldElement != null || e.NewElement != null)
 			{
 				var customPicker = e.NewElement as PickerRating;
-				Control.TextSize = 25;
+				Control.TextSize = 16;
 				Control.SetHintTextColor(Color.ParseColor(customPicker.PlaceholderColor));
 			}
 		}

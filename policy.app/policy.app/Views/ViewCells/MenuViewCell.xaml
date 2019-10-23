@@ -6,7 +6,7 @@
     <ViewCell.View>
         <StackLayout Orientation="Horizontal" Margin="35,10,0,10">
             <Image Source="{Binding ImageSource}" WidthRequest="20" HeightRequest="20" />
-            <Label FontSize="Large" Text="{Binding Title}" TextColor="#19365f" VerticalOptions="Center" />
+            <Label FontSize="18" Text="{Binding Title}" TextColor="#19365f" VerticalOptions="Center" />
         </StackLayout>
     </ViewCell.View>
 </ViewCell>
