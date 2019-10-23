@@ -91,7 +91,7 @@ namespace policy.app.PageModels
 		{
 			base.Init(initData);
 
-			if (_app == null || !_app.IsUserLoggedIn)
+			if (_app == null)
 			{
 				return;
 			}

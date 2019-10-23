@@ -1,11 +1,13 @@
 ﻿using System;
 using Newtonsoft.Json;
+using PropertyChanged;
 
 namespace policy.app.Models
 {
 	/// <summary>
 	/// Представляет модель для ответов.
 	/// </summary>
+	[AddINotifyPropertyChangedInterface]
 	public class Answer
 	{
 		#region Properties

@@ -7,6 +7,7 @@ using policy.app.Models;
 using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
+using Realms;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -16,7 +17,7 @@ namespace policy.app.PageModels
 	/// Представляет модель представления для страницы списка избранных сусликов.
 	/// </summary>
 	[AddINotifyPropertyChangedInterface]
-	public class FavoritesPageModel : FreshBasePageModel
+	public class FavoritesPageModel : BaseMainPageModel
 	{
 		#region Data
 		#region Fields
@@ -24,6 +25,8 @@ namespace policy.app.PageModels
 		/// Текущее приложение.
 		/// </summary>
 		private readonly App _app = App.Current;
+
+		private UserRepository _repository;
 
 		/// <summary>
 		/// Выбранный суслик.
@@ -134,28 +137,13 @@ namespace policy.app.PageModels
 			base.Init(initData);
 
 			UpdateFavorites += OnUpdateFavorites;
-
-			if (_app == null || !_app.IsUserLoggedIn)
-			{
-				return;
-			}
-
-			var repository = new UserRepository(_app.RealmConfiguration);
-			var user = repository.All()
+			_repository = new UserRepository(_app.RealmConfiguration);
+			
+			var user = _repository.All()
 								 .SingleOrDefault();
 			if (user != null)
 			{
-				_service = new GopherService(new UserToken
-				{
-					Token = (string) user.Token.Token.Clone(),
-					TokenType = (string) user.Token.TokenType.Clone()
-				});
-
-				Task.Run(async () =>
-				{
-					await Task.Delay(1000);
-					LoadGophers();
-				});
+				_service = new GopherService(user.Token);
 			}
 		}
 		#endregion
@@ -171,8 +159,7 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			var repository = new UserRepository(_app.RealmConfiguration);
-			var user = repository.All()
+			var user = _repository.All()
 								 .Single();
 			Gophers = new ObservableCollection<IGopher>(await _service.GetFavorites(user));
 			user.FavoriteGophers.Clear();
@@ -181,8 +168,14 @@ namespace policy.app.PageModels
 				user.FavoriteGophers.Add((Gopher) gopher);
 			}
 
-			repository.Update(user);
+			_repository.Update(user);
 		}
 		#endregion
+
+		public override void LoadData()
+		{
+			RefreshCommand.Execute(null);
+			IsLoaded = true;
+		}
 	}
 }

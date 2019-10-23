@@ -114,7 +114,6 @@ namespace policy.app.PageModels
 			var repository = new UserRepository(app.RealmConfiguration);
 
 			repository.Add(user);
-			app.IsUserLoggedIn = true;
 			app.MainPage = app.InitMainTabbedPage();
 		}
 		#endregion

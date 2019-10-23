@@ -29,6 +29,7 @@ namespace policy.app
 		/// </summary>
 		public MainTabbedPage(string navigationServiceName)
 		{
+			CurrentPageChanged += CurrentPageHasChanged;
 			NavigationServiceName = navigationServiceName;
 			RegisterNavigation();
 		}
@@ -157,6 +158,21 @@ namespace policy.app
 			return null;
 		}
 		#endregion
+
+		private void CurrentPageHasChanged(object sender, EventArgs e)
+		{
+			if ((sender as TabbedPage)?.CurrentPage is NavigationPage navigationPage)
+			{
+				if (navigationPage.CurrentPage.BindingContext is BaseMainPageModel pageModel)
+				{
+					if (pageModel.IsLoaded)
+					{
+						return;
+					}
+					pageModel.LoadData();
+				}
+			}
+		}
 
 		#region Private
 		/// <summary>

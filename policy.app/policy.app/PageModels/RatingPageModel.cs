@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;
 using policy.app.Services;
+using policy.app.ViewModel;
 using PropertyChanged;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -16,17 +18,17 @@ namespace policy.app.PageModels
 	/// Представляет модель представления для страницы рейтинга.
 	/// </summary>
 	[AddINotifyPropertyChangedInterface]
-	public class RatingPageModel : FreshBasePageModel
+	public class RatingPageModel : BaseMainPageModel
 	{
 		#region Data
 		#region Fields
 		private readonly App _app = App.Current;
 		private IGopherService _service;
-		private IGopher _selectedGopher;
 		private Category _selectedCategory;
 		private string _query;
 		private string _selectedSort;
 		private string _sort = "desc";
+		private UserRepository _repository;
 		#endregion
 		#endregion
 
@@ -38,19 +40,13 @@ namespace policy.app.PageModels
 		{
 			base.Init(initData);
 
-			if (!_app.IsUserLoggedIn)
-			{
-				return;
-			}
 
-			var repository = new UserRepository(_app.RealmConfiguration);
-			var token = repository.All()
-								  .SingleOrDefault()
-								  ?.Token;
+			_repository = new UserRepository(_app.RealmConfiguration);
+			var token = _repository.All()
+								  .SingleOrDefault();
 			if (token != null)
 			{
-				_service = new GopherService(token);
-				RefreshCommand.Execute(null);
+				_service = new GopherService(token.Token);
 			}
 		}
 
@@ -74,6 +70,15 @@ namespace policy.app.PageModels
 			}
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает команду при выборе суслика.
+		/// </summary>
+		public Command<IGopher> EventSelectedGopher =>
+			new Command<IGopher>(obj =>
+			{
+				CoreMethods.PushPageModel<UserPageModel>(obj);
+			});
+
 		public string SelectedSort
 		{
 			get => _selectedSort;
@@ -93,35 +98,9 @@ namespace policy.app.PageModels
 		}
 
 		/// <summary>
-		/// Возвращает или устанавливает команду при выборе опроса.
-		/// </summary>
-		public Command<IGopher> EventSelectedGopher =>
-			new Command<IGopher>(obj =>
-			{
-				CoreMethods.PushPageModel<UserPageModel>(obj);
-			});
-
-		/// <summary>
-		/// Возвращает или устанавливает выбранный опрос.
-		/// </summary>
-		public IGopher SelectedGopher
-		{
-			get => _selectedGopher;
-			set
-			{
-				_selectedGopher = value;
-
-				if (value != null)
-				{
-					EventSelectedGopher.Execute(value);
-				}
-			}
-		}
-
-		/// <summary>
 		/// Возвращает или устанавливает сусликов в избранном.
 		/// </summary>
-		public ObservableCollection<IGopher> Gophers
+		public ObservableCollection<SearchGopherViewModel> Gophers
 		{
 			get;
 			set;
@@ -140,8 +119,14 @@ namespace policy.app.PageModels
 			var repository = new UserRepository(_app.RealmConfiguration);
 			var user = repository.All()
 								 .Single();
-			Gophers = new ObservableCollection<IGopher>(await _service.Search(_sort, _query, _selectedCategory));
-			
+			var gophers = new ObservableCollection<IGopher>(await _service.Search(_sort, _query, _selectedCategory));
+			var vmGophers = new ObservableCollection<SearchGopherViewModel>();
+			foreach (var gopher in gophers)
+			{
+				vmGophers.Add(new SearchGopherViewModel(gopher, this));
+			}
+
+			Gophers = vmGophers;
 			repository.Update(user);
 		}
 
@@ -194,6 +179,12 @@ namespace policy.app.PageModels
 		{
 			get;
 			set;
+		}
+
+		public override async void LoadData()
+		{
+			LoadGophers();
+			Categories = new ObservableCollection<Category>(await _service.GetCategories());
 		}
 	}
 }

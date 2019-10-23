@@ -16,7 +16,7 @@
                 <StackLayout Orientation="Vertical">
                     <Image HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
-                       Source="avatar.png"
+                       Source="{Binding Gopher.PhotoSource}"
                        Aspect="AspectFill" />
                     <StackLayout Margin="15">
                         <Grid RowSpacing="4">

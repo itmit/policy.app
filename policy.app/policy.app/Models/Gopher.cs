@@ -1,8 +1,10 @@
 ﻿using System;
 using Newtonsoft.Json;
+using PropertyChanged;
 
 namespace policy.app.Models
 {
+	[AddINotifyPropertyChangedInterface]
 	public class Gopher : IGopher
 	{
 		#region IGopher members

@@ -251,16 +251,12 @@ namespace policy.app.PageModels
 			{
 				Gopher = gopher;
 
-				if (_app != null && _app.IsUserLoggedIn)
+				if (_app != null)
 				{
 					var repository = new UserRepository(_app.RealmConfiguration);
 					_user = repository.All()
 									  .Single();
-					_service = new GopherService(new UserToken
-					{
-						Token = _user.Token.Token,
-						TokenType = _user.Token.TokenType
-					});
+					_service = new GopherService(_user.Token);
 
 					LoadGopher(gopher.Guid);
 				}
@@ -277,6 +273,10 @@ namespace policy.app.PageModels
 		{
 			IsFavorite = _user.FavoriteGophers.Any(favoriteGopher => favoriteGopher.Guid.Equals(guid));
 			var gopher = await _service.GetGopher(guid);
+			if (string.IsNullOrEmpty(gopher.PhotoSource))
+			{
+				gopher.PhotoSource = "def_profile";
+			}
 			Likes = gopher.Likes;
 			Neutrals = gopher.Neutrals;
 			Dislikes = gopher.Dislikes;

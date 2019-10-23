@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using PropertyChanged;
 
 namespace policy.app.Models
 {
 	/// <summary>
 	/// Представляет модель для сущности пользователя.
 	/// </summary>
+	[AddINotifyPropertyChangedInterface]
 	public class User : IGopher
 	{
 		#region Properties

@@ -1,10 +1,12 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using static System.String;
 
@@ -14,14 +16,14 @@ namespace policy.app.PageModels
 	/// Представляет модель представления для страницы "Категории".
 	/// </summary>
 	[AddINotifyPropertyChangedInterface]
-	public class CategoriesPageModel : FreshBasePageModel
+	public class CategoriesPageModel : BaseMainPageModel
 	{
 		#region Data
 		#region Fields
 		/// <summary>
 		/// Текущий <see cref="Application" />.
 		/// </summary>
-		private App _app;
+		private App _app = App.Current;
 		private Category _selectedCategory;
 		/// <summary>
 		/// Сервис для загрузки категорий.
@@ -79,29 +81,16 @@ namespace policy.app.PageModels
 		{
 			base.Init(initData);
 
-			if (Application.Current is App app)
+			var repository = new UserRepository(_app.RealmConfiguration);
+			var token = repository.All()
+								  .SingleOrDefault();
+
+			if (token == null || IsNullOrEmpty(token.Token.Token))
 			{
-				_app = app;
-
-				if (app.IsUserLoggedIn)
-				{
-					var repository = new UserRepository(_app.RealmConfiguration);
-					var token = repository.All()
-										  .SingleOrDefault()
-										  ?.Token;
-
-					if (token != null && !IsNullOrEmpty(token.Token))
-					{
-						_service = new GopherService(new UserToken
-						{
-							Token = (string) token.Token.Clone(),
-							TokenType = (string) token.TokenType.Clone()
-						});
-
-						LoadCategories();
-					}
-				}
+				return;
 			}
+
+			_service = new GopherService(token.Token);
 		}
 		#endregion
 
@@ -111,11 +100,19 @@ namespace policy.app.PageModels
 		/// </summary>
 		private async void LoadCategories()
 		{
-			if (_service != null)
+			if (_service == null || Connectivity.NetworkAccess != NetworkAccess.Internet)
 			{
-				Categories = new ObservableCollection<Category>(await _service.GetCategories());
+				return;
 			}
+
+			Categories = new ObservableCollection<Category>(await _service.GetCategories());
 		}
 		#endregion
+
+		public override void LoadData()
+		{
+			LoadCategories();
+			IsLoaded = true;
+		}
 	}
 }

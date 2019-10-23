@@ -14,44 +14,43 @@
             RefreshCommand="{Binding RefreshCommand}"
             IsRefreshing="{Binding IsRefreshing}"
             RefreshColor="Blue">
-            <StackLayout>
-                <StackLayout Margin="40">
-                    <Label TextColor="#228bcc" FontSize="35" Text="Поиск пользователей" HorizontalOptions="Center"
-                       HorizontalTextAlignment="Center" />
-                </StackLayout>
-                <StackLayout Margin="15">
-                    <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand"
-                             Margin="0,0,0,10">
-                        <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6"
-                                     HorizontalOptions="FillAndExpand" ItemsSource="{Binding Categories}" ItemDisplayBinding="{Binding Title}" SelectedItem="{Binding SelectedCategory}"/>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Margin="40">
+                        <Label TextColor="#228bcc" FontSize="35" Text="Поиск пользователей" HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" />
                     </StackLayout>
-                    <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand">
-                        <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6"
-                                     HorizontalOptions="FillAndExpand"
-                                     SelectedItem="{Binding SelectedSort}">
-                            <Picker.Items>
-                                <x:String>От лучшего к худшему</x:String>
-                                <x:String>От худшего к лучшему</x:String>
-                            </Picker.Items>
-                        </ex:PickerRating>
+                    <StackLayout Margin="15">
+                        <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand"
+                                 Margin="0,0,0,10">
+                            <ex:PickerRating Title="Категории" x:Name="Cat" BackgroundColor="#f4f5f6"
+                                         HorizontalOptions="FillAndExpand" ItemsSource="{Binding Categories}" ItemDisplayBinding="{Binding Title}" SelectedItem="{Binding SelectedCategory}"/>
+                        </StackLayout>
+                        <StackLayout Padding="1" BackgroundColor="#19365f" HorizontalOptions="FillAndExpand">
+                            <ex:PickerRating Title="От лучшего к худшему" BackgroundColor="#f4f5f6"
+                                         HorizontalOptions="FillAndExpand"
+                                         SelectedItem="{Binding SelectedSort}">
+                                <Picker.Items>
+                                    <x:String>От лучшего к худшему</x:String>
+                                    <x:String>От худшего к лучшему</x:String>
+                                </Picker.Items>
+                            </ex:PickerRating>
+                        </StackLayout>
                     </StackLayout>
-                </StackLayout>
-                <SearchBar Placeholder="Поиск" Margin="15,0,15,10" Text="{Binding Query}"/>
-                <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
+                    <SearchBar Placeholder="Поиск" Margin="15,0,15,10" Text="{Binding Query}"/>
+                    <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
 
-                <ListView ItemsSource="{Binding Gophers}"
-                          HasUnevenRows="True"
-                          VerticalOptions="FillAndExpand"
-                          HorizontalOptions="FillAndExpand"
-                          SelectedItem="{Binding SelectedGopher}"
-                          ItemSelected="ListView_OnItemSelected">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <viewCells:SearchUserViewCell />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
+                    <ex:RepeaterView ItemsSource="{Binding Gophers}"
+                              VerticalOptions="FillAndExpand"
+                              HorizontalOptions="FillAndExpand">
+                        <ex:RepeaterView.ItemTemplate>
+                            <DataTemplate>
+                                <viewCells:SearchUserViewCell />
+                            </DataTemplate>
+                        </ex:RepeaterView.ItemTemplate>
+                    </ex:RepeaterView>
+                </StackLayout>
+                </ScrollView>
         </pullToRefresh:PullToRefreshLayout>
     </ContentPage.Content>
 </ContentPage>

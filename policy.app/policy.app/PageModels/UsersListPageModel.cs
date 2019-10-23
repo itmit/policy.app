@@ -61,7 +61,7 @@ namespace policy.app.PageModels
 			{
 				_category = category;
 				_app = Application.Current as App;
-				if (_app != null && _app.IsUserLoggedIn)
+				if (_app != null)
 				{
 					var repository = new UserRepository(_app.RealmConfiguration);
 					var user = repository.All()

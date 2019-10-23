@@ -121,9 +121,12 @@ namespace policy.app.PageModels
 		/// </summary>
 		private void SaveChangesAsync()
 		{
-			if (_app.IsUserLoggedIn)
+			if (_app == null)
 			{
-				var repository = new UserRepository(_app.RealmConfiguration);
+				return;
+			}
+
+			var repository = new UserRepository(_app.RealmConfiguration);
 
 				var user = repository.All()
 									 .SingleOrDefault();
@@ -153,7 +156,7 @@ namespace policy.app.PageModels
 						Debug.WriteLine(e);
 					}
 				}
-			}
+			
 		}
 		#endregion
 	}

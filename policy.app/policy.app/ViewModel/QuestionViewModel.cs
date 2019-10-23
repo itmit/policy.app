@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using FreshMvvm;
 using policy.app.Models;
+using PropertyChanged;
 using Xamarin.Forms;
 
 namespace policy.app.ViewModel
@@ -8,7 +9,8 @@ namespace policy.app.ViewModel
 	/// <summary>
 	/// Представляет модель представления для вопроса.
 	/// </summary>
-	public class QuestionViewModel : FreshBasePageModel
+	[AddINotifyPropertyChangedInterface]
+	public class QuestionViewModel
 	{
 		#region .ctor
 		public QuestionViewModel(Question question)
@@ -51,38 +53,6 @@ namespace policy.app.ViewModel
 			get;
 			set;
 		}
-
-		/// <summary>
-		/// Возвращает или устанавливает команду при выборе ответа.
-		/// </summary>
-		public Command<AnswerViewModel> EventSelectedAnswer =>
-			new Command<AnswerViewModel>(obj =>
-			{
-				if (obj is AnswerViewModel answer)
-				{
-					if (!Question.Multiple && !answer.IsSelected)
-					{
-						foreach (var answerViewModel in Answers)
-						{
-							if (answerViewModel.Answer.IsOther)
-							{
-								answerViewModel.IsVisibleOtherText = false;
-							}
-
-							answerViewModel.IsSelected = false;
-							answerViewModel.Answer.IsSelected = false;
-						}
-					}
-
-					if (answer.Answer.IsOther)
-					{
-						answer.IsVisibleOtherText = !answer.IsVisibleOtherText;
-					}
-
-					answer.IsSelected = !answer.IsSelected;
-					answer.Answer.IsSelected = answer.IsSelected;
-				}
-			});
 		#endregion
 	}
 }

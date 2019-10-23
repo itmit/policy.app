@@ -12,7 +12,7 @@ namespace policy.app.PageModels
 	/// Представляет модель представления для страницы меню.
 	/// </summary>
 	[AddINotifyPropertyChangedInterface]
-	public class MenuPageModel : FreshBasePageModel
+	public class MenuPageModel : BaseMainPageModel
 	{
 		#region Data
 		#region Fields
@@ -131,7 +131,7 @@ namespace policy.app.PageModels
 
 			UpdateUser += OnUpdateUser;
 
-			if (_app == null || !_app.IsUserLoggedIn)
+			if (_app == null)
 			{
 				return;
 			}
@@ -162,8 +162,12 @@ namespace policy.app.PageModels
 					ImageSource = "menu_5_def.png"
 				}
 			};
-			UpdateUserData();
 		}
 		#endregion
+
+		public override void LoadData()
+		{
+			UpdateUserData();
+		}
 	}
 }

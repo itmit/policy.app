@@ -97,7 +97,6 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			app.IsUserLoggedIn = true;
 			var repository = new UserRepository(app.RealmConfiguration);
 
 			repository.Add(user);

@@ -103,7 +103,7 @@ namespace policy.app.Services
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-				var response = await client.PostAsync(SearchUri,
+				var response = await client.PostAsync(AddToFavoritesUri,
 													  new FormUrlEncodedContent(new Dictionary<string, string>
 													  {
 														  {
@@ -235,7 +235,14 @@ namespace policy.app.Services
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<Gopher>>(jsonString);
 				if (jsonData.Data != null)
 				{
-					return await Task.FromResult(jsonData.Data);
+					var gopher = await Task.FromResult(jsonData.Data);
+					if (IsNullOrEmpty(gopher.PhotoSource))
+					{
+						return gopher;
+					}
+
+					gopher.PhotoSource = "http://policy.itmit-studio.ru/storage/susliks/" + gopher.PhotoSource;
+					return gopher;
 				}
 
 				return await Task.FromResult(new Gopher());

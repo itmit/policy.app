@@ -22,14 +22,12 @@ namespace policy.app
 {
 	public partial class App : Application
 	{
-		#region Data
-		#region Fields
-		#endregion
-		#endregion
 
 		#region .ctor
 		public App()
 		{
+			Application.Current = this;
+
 			Configuration = new MapperConfiguration(cfg =>
 			{
 				cfg.AddCollectionMappers();
@@ -56,9 +54,9 @@ namespace policy.app
 
 			var repository = new UserRepository(RealmConfiguration);
 			var user = repository.All();
-			if (IsUserLoggedIn | user.Any())
+
+			if (user.Any())
 			{
-				IsUserLoggedIn = true;
 				MainPage = InitMainTabbedPage();
 
 				return;
@@ -69,12 +67,6 @@ namespace policy.app
 		#endregion
 
 		#region Properties
-		public bool IsUserLoggedIn
-		{
-			get;
-			set;
-		}
-
 		public MapperConfiguration Configuration
 		{
 			get;
@@ -133,6 +125,11 @@ namespace policy.app
 			var culture = CultureInfo.GetCultureInfo("ru-RU");
 			Thread.CurrentThread.CurrentCulture = culture;
 			Thread.CurrentThread.CurrentUICulture = culture;
+
+			if (MainPage is TabbedPage tabbedPage)
+			{
+				(tabbedPage.CurrentPage.BindingContext as BaseMainPageModel)?.LoadData();
+			}
 		}
 		#endregion
 	}
