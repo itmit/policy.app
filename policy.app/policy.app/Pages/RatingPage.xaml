@@ -40,18 +40,15 @@
                     </StackLayout>
                     <SearchBar Placeholder="Поиск" Margin="15,0,15,10" Text="{Binding Query}"/>
                     <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
-                    <ListView ItemsSource="{Binding Gophers}"
-                          HasUnevenRows="True"
+                    <ex:RepeaterView ItemsSource="{Binding Gophers}"
                           VerticalOptions="FillAndExpand"
-                          HorizontalOptions="FillAndExpand"
-                          SelectedItem="{Binding SelectedGopher}"
-                          ItemSelected="ListView_OnItemSelected">
-                        <ListView.ItemTemplate>
+                          HorizontalOptions="FillAndExpand">
+                        <ex:RepeaterView.ItemTemplate>
                             <DataTemplate>
                                 <viewCells:SearchUserViewCell />
                             </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                        </ex:RepeaterView.ItemTemplate>
+                    </ex:RepeaterView>
                 </StackLayout>
             </pullToRefresh:PullToRefreshLayout>
         </ScrollView>
