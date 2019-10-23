@@ -2,6 +2,7 @@
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using FFImageLoading.Forms.Platform;
 using ImageCircle.Forms.Plugin.Droid;
 using policy.app.Services;
 using Plugin.CurrentActivity;
@@ -38,6 +39,8 @@ namespace policy.app.Droid
 			ImageCircleRenderer.Init();
 			Platform.Init(this, savedInstanceState);
 			Forms.Init(this, savedInstanceState);
+			
+			CachedImageRenderer.Init(true);
 			LoadApplication(new App());
 		}
 		#endregion

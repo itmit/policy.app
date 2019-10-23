@@ -5,6 +5,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="policy.app.Pages.UserPage">
     <ContentPage.Content>
@@ -14,10 +15,11 @@
             RefreshCommand="{Binding RefreshCommand}"
             IsRefreshing="{Binding IsRefreshing}">
                 <StackLayout Orientation="Vertical">
-                    <Image HorizontalOptions="FillAndExpand"
-                       VerticalOptions="FillAndExpand"
-                       Source="{Binding Gopher.PhotoSource}"
-                       Aspect="AspectFill" />
+                    <forms:CachedImage HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"
+                                       DownsampleToViewSize="true"
+                                       Source="{Binding Gopher.PhotoSource}"
+                                       Aspect="AspectFill"/>
                     <StackLayout Margin="15">
                         <Grid RowSpacing="4">
                             <Grid.RowDefinitions>

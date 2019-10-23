@@ -1,7 +1,9 @@
 ﻿using System;
+using FFImageLoading;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using FFImageLoading.Views;
 
 namespace policy.app.Pages
 {
@@ -12,6 +14,7 @@ namespace policy.app.Pages
 		public UserPage()
 		{
 			InitializeComponent();
+			
 		}
 		#endregion
 
