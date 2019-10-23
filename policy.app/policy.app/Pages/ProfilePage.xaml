@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:properties="clr-namespace:policy.app.Properties"
              xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="policy.app.Pages.ProfilePage">
     <ContentPage.Content>
         <ScrollView>
@@ -12,14 +13,14 @@
             RefreshCommand="{Binding RefreshCommand}"
             IsRefreshing="{Binding IsRefreshing}">
                 <StackLayout Orientation="Vertical">
-                    <Image HorizontalOptions="FillAndExpand"
+                    <forms:CachedImage HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
                        Source="{Binding User.PhotoSource}"
                        Aspect="AspectFill">
-                        <Image.GestureRecognizers>
+                        <forms:CachedImage.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding SetAvatarCommand}" />
-                        </Image.GestureRecognizers>
-                    </Image>
+                        </forms:CachedImage.GestureRecognizers>
+                    </forms:CachedImage>
                     <StackLayout Margin="15">
                         <ImageButton Source="user_blue.png" WidthRequest="30" BackgroundColor="Transparent"
                                      HorizontalOptions="End" Command="{Binding OpenEditPage}" />
