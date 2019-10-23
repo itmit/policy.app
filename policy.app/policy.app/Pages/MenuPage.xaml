@@ -16,7 +16,6 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <forms:CachedImage Grid.Row="0" Grid.Column="0" Source="{Binding UserPicture}" Margin="0,0,15,0" Aspect="AspectFill" WidthRequest="65"
                                 HeightRequest="65" >
@@ -24,8 +23,8 @@
                         <transformations:RoundedTransformation Radius="200"/>
                     </forms:CachedImage.Transformations>
                 </forms:CachedImage>
-                <Label Grid.Row="1" Grid.Column="1" Text="{Binding UserName}" TextColor="#19365f" VerticalOptions="Center" FontAttributes="Bold"
-                       FontSize="30" />
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding UserName}" Margin="0,0,15,0" TextColor="#19365f" FontAttributes="Bold"
+                       FontSize="30" VerticalOptions="Start" HorizontalTextAlignment="End"/>
             </Grid>
             <ListView x:Name="ll" SelectionMode="Single" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                       ItemsSource="{Binding MenuCollection}" HasUnevenRows="True" SeparatorColor="#19365f"
