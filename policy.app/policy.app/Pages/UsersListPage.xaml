@@ -10,19 +10,17 @@
                 <SearchBar Placeholder="Поиск" Margin="15" />
                 <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
             </StackLayout>
-            <ScrollView>
-                <StackLayout Margin="0,5,0,0">
-                    <ListView HasUnevenRows="True" ItemsSource="{Binding Users}"
+            <StackLayout Margin="0,5,0,0">
+                <ListView HasUnevenRows="True" ItemsSource="{Binding Users}"
                               SelectedItem="{Binding SelectedGopher}"
                               ItemSelected="ListView_OnItemSelected">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <viewCells:UserViewCell />
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackLayout>
-            </ScrollView>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <viewCells:UserViewCell />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
