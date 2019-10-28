@@ -22,6 +22,8 @@ namespace policy.app.Services
 		/// </summary>
 		private const string AddToFavoritesUri = "http://policy.itmit-studio.ru/api/suslik/addToFav";
 
+		private const string StorageUri = "http://policy.itmit-studio.ru/storage/susliks/";
+
 		/// <summary>
 		/// Адрес для получения категорий.
 		/// </summary>
@@ -171,8 +173,23 @@ namespace policy.app.Services
 				Debug.WriteLine(jsonString);
 
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
-
+				SetPictures(jsonData.Data);
 				return await Task.FromResult(jsonData.Data);
+			}
+		}
+
+		private void SetPictures(IEnumerable<IGopher> users)
+		{
+			foreach (var user in users)
+			{
+				if (IsNullOrEmpty(user.PhotoSource))
+				{
+					user.PhotoSource = "about:blank";
+				}
+				else
+				{
+					user.PhotoSource = StorageUri + user.PhotoSource;
+				}
 			}
 		}
 
@@ -204,7 +221,7 @@ namespace policy.app.Services
 				Debug.WriteLine(jsonString);
 
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
-
+				SetPictures(jsonData.Data);
 				return await Task.FromResult(jsonData.Data);
 			}
 		}
@@ -277,7 +294,7 @@ namespace policy.app.Services
 				{
 					gopher.Category = category;
 				}
-
+				SetPictures(jsonData.Data);
 				return await Task.FromResult(jsonData.Data);
 			}
 		}

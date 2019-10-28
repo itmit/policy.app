@@ -62,6 +62,7 @@ namespace policy.app.Models
 		string PhotoSource
 		{
 			get;
+			set;
 		}
 
 		/// <summary>

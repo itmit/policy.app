@@ -14,7 +14,7 @@ using Platform = Xamarin.Essentials.Platform;
 
 namespace policy.app.Droid
 {
-	[Activity(Label = "policy.app",
+	[Activity(Label = "Политика",
 		Icon = "@mipmap/icon",
 		Theme = "@style/MainTheme",
 		MainLauncher = true,
