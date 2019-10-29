@@ -274,10 +274,6 @@ namespace policy.app.PageModels
 		{
 			IsFavorite = _user.FavoriteGophers.Any(favoriteGopher => favoriteGopher.Guid.Equals(guid));
 			var gopher = await _service.GetGopher(guid);
-			if (string.IsNullOrEmpty(gopher.PhotoSource))
-			{
-				gopher.PhotoSource = "def_profile";
-			}
 			Likes = gopher.Likes;
 			Neutrals = gopher.Neutrals;
 			Dislikes = gopher.Dislikes;

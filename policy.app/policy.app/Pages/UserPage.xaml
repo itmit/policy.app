@@ -18,6 +18,8 @@
                     <forms:CachedImage HorizontalOptions="FillAndExpand"
                                        VerticalOptions="FillAndExpand"
                                        DownsampleToViewSize="true"
+                                       LoadingPlaceholder="def_profile"
+                                       ErrorPlaceholder="def_profile"
                                        Source="{Binding Gopher.PhotoSource}"
                                        Aspect="AspectFill"/>
                     <StackLayout Margin="15">

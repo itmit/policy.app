@@ -99,14 +99,9 @@ namespace policy.app.PageModels
 			new FreshAwaitCommand((obj, tcs) =>
 			{
 				IsRefreshing = true;
-
 				var repository = new UserRepository(_app.RealmConfiguration);
 				var users = repository.All();
 				User = users.SingleOrDefault();
-				if (User != null && string.IsNullOrEmpty(User.PhotoSource))
-				{
-					User.PhotoSource = "def_profile";
-				}
 				IsRefreshing = false;
 				tcs.SetResult(true);
 			});
