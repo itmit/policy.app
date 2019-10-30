@@ -52,8 +52,15 @@ namespace policy.app.PageModels
 				IUserService service = new UserService();
 				var user = _repository.All()
 									  .SingleOrDefault();
+
 				if (user == null)
 				{
+					return;
+				}
+
+				if (SelectCategory == null || string.IsNullOrEmpty(Theme) || string.IsNullOrEmpty(Text))
+				{
+					await _app.MainPage.DisplayAlert("Уведомление", "Все поля должны быть заполнены.", "Ok");
 					return;
 				}
 
