@@ -6,25 +6,25 @@
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
              x:Class="policy.app.Pages.FavoritesPage">
     <ContentPage.Content>
-        <pullToRefresh:PullToRefreshLayout
+        <StackLayout Margin="0,5,0,0">
+            <pullToRefresh:PullToRefreshLayout
             IsPullToRefreshEnabled="True"
             RefreshCommand="{Binding RefreshCommand}"
             IsRefreshing="{Binding IsRefreshing}"
             RefreshColor="Blue">
-            <StackLayout Margin="0,5,0,0">
-                <ListView ItemsSource="{Binding Gophers}"
+            <ListView ItemsSource="{Binding Gophers}"
                           HasUnevenRows="True"
                           VerticalOptions="FillAndExpand"
                           HorizontalOptions="FillAndExpand"
                           SelectedItem="{Binding SelectedGopher}"
                           ItemSelected="ListView_OnItemSelected">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <viewCells:FavoriteUserViewCell />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
-        </pullToRefresh:PullToRefreshLayout>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <viewCells:FavoriteUserViewCell />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </pullToRefresh:PullToRefreshLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
