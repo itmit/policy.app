@@ -27,6 +27,8 @@ namespace policy.app.Services
 		/// </summary>
 		private const string GetPullUri = "http://policy.itmit-studio.ru/api/poll/getPollList";
 
+		private const string GetPollCategoriesUri = "http://policy.itmit-studio.ru/api/poll/getPollCategoryList";
+
 		/// <summary>
 		/// Адрес для прохождения опроса.
 		/// </summary>
@@ -61,17 +63,53 @@ namespace policy.app.Services
 		#endregion
 
 		#region IPollService members
-		/// <summary>
-		/// Возвращает список опросов.
-		/// </summary>
-		/// <returns>Список опросов.</returns>
-		public async Task<IEnumerable<Poll>> GetPolls()
+
+		public async Task<IEnumerable<PollCategory>> GetPollCategories()
 		{
 			using (_httpClient)
 			{
 				_httpClient.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				var response = await _httpClient.PostAsync(GetPollCategoriesUri, null);
 
-				var response = await _httpClient.PostAsync(GetPullUri, null);
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<PollCategory>>>(jsonString);
+
+				if (jsonData.Data != null)
+				{
+					return await Task.FromResult(jsonData.Data);
+				}
+
+				return await Task.FromResult(new List<PollCategory>());
+			}
+		}
+
+		/// <summary>
+		/// Возвращает список опросов.
+		/// </summary>
+		/// <returns>Список опросов.</returns>
+		public async Task<IEnumerable<Poll>> GetPolls(Guid pollCategoryGuid)
+		{
+			using (_httpClient)
+			{
+				_httpClient.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				FormUrlEncodedContent content;
+				if (pollCategoryGuid.Equals(Guid.Empty))
+				{
+					content = null;
+				}
+				else
+				{
+					content = new FormUrlEncodedContent(
+						new Dictionary<string, string>
+						{
+							{
+								"category_uuid", pollCategoryGuid.ToString()
+							}
+						});
+				}
+				var response = await _httpClient.PostAsync(GetPullUri, content);
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 

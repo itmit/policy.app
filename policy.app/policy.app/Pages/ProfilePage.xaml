@@ -42,25 +42,23 @@
                                Style="{StaticResource StartLabelProfilePage}" />
                             <Label Grid.Row="0" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" Text="{Binding User.Name}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                            <Label Grid.Row="1" Text="{x:Static properties:Translate.City}"
+                            <Label Grid.Row="1" Grid.Column="0" Text="{x:Static properties:Translate.City}"
                                Style="{StaticResource StartLabelProfilePage}" />
                             <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.City}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                            <Label Grid.Row="2" Text="{x:Static properties:Translate.FieldOfActivity}"
+                            <Label Grid.Row="2" Grid.Column="0" Text="{x:Static properties:Translate.FieldOfActivity}"
                                Style="{StaticResource StartLabelProfilePage}" />
-                            <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Activity}"
+                            <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.FieldOfActivity}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                            <Label Grid.Row="3" Text="{x:Static properties:Translate.Organization}"
+                            <Label Grid.Row="3" Grid.Column="0" Text="{x:Static properties:Translate.Organization}"
                                Style="{StaticResource StartLabelProfilePage}" />
                             <Label Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Organization}"
                                Style="{StaticResource EndLabelProfilePage}" />
-                            <Label Grid.Row="4" Text="{x:Static properties:Translate.Position}"
+                            <Label Grid.Row="4" Grid.Column="0" Text="{x:Static properties:Translate.Position}"
                                Style="{StaticResource StartLabelProfilePage}" />
                             <Label Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Position}"
                                Style="{StaticResource EndLabelProfilePage}" />
                         </Grid>
-                        <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc"
-                                FontSize="16" Clicked="Button_Clicked" HorizontalOptions="Start" />
                         <Frame Padding="0" Margin="0,20" HasShadow="True">
                             <StackLayout HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
                                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal">

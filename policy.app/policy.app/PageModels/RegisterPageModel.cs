@@ -27,11 +27,11 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Возвращает или устанавливает дату рождения.
 		/// </summary>
-		public DateTime DateOfBirthday
+		public int DateOfBirthday
 		{
 			get;
 			set;
-		} = new DateTime(2000, 01, 01);
+		}
 
 		/// <summary>
 		/// Возвращает или устанавливает email вводимый пользователем.
@@ -82,7 +82,7 @@ namespace policy.app.PageModels
 
 		#region Private
 		/// <summary>
-		/// Вызывает регистрацию пользователя, через IAuthService, а также сохраняет нового пользователя.
+		/// Вызывает регистрацию пользователя, через <see cref="IAuthService"/>, а также сохраняет нового пользователя.
 		/// </summary>
 		private async void RegisterAsync()
 		{
@@ -91,7 +91,7 @@ namespace policy.app.PageModels
 			{
 				Email = Email,
 				PhoneNumber = PhoneNumber,
-				Birthday = DateOfBirthday
+				Birthday = new DateTime(DateOfBirthday, 1, 1)
 			};
 
 			try

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Input;
-using FFImageLoading;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;

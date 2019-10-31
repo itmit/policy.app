@@ -261,10 +261,6 @@ namespace policy.app.Services
 				if (jsonData.Data != null)
 				{
 					var gopher = await Task.FromResult(jsonData.Data);
-					if (IsNullOrEmpty(gopher.PhotoSource))
-					{
-						return gopher;
-					}
 
 					if (IsNullOrEmpty(gopher.PhotoSource))
 					{

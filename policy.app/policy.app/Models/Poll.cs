@@ -24,7 +24,7 @@ namespace policy.app.Models
 		/// Возвращает или устанавливает дату конца опроса.
 		/// </summary>
 		[JsonProperty("end_at")]
-		public DateTime EndAt
+		public DateTime? EndAt
 		{
 			get;
 			set;
@@ -71,7 +71,7 @@ namespace policy.app.Models
 		/// Возвращает или устанавливает дату начала опроса.
 		/// </summary>
 		[JsonProperty("start_at")]
-		public DateTime StartAt
+		public DateTime? StartAt
 		{
 			get;
 			set;

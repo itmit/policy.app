@@ -57,7 +57,7 @@
                                TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold" />
                         </StackLayout>
                         <StackLayout>
-                            <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc"
+                            <Button Text="{Binding Gopher.Link}" BackgroundColor="Transparent" TextColor="#228bcc"
                                 FontSize="16" Clicked="Button_Clicked" HorizontalOptions="Start" />
                         </StackLayout>
                         <ScrollView Orientation="Horizontal">
