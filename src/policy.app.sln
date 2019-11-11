@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "policy.app.Android", "policy.app\policy.app.Android\policy.app.Android.csproj", "{286378B2-0DFE-4C34-8847-7FF48DDAE1E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "policy.app.Android", "policy.app.Android\policy.app.Android.csproj", "{286378B2-0DFE-4C34-8847-7FF48DDAE1E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "policy.app.iOS", "policy.app\policy.app.iOS\policy.app.iOS.csproj", "{D1521F44-7A86-44D4-9ED5-8FEC010C7042}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "policy.app.iOS", "policy.app.iOS\policy.app.iOS.csproj", "{D1521F44-7A86-44D4-9ED5-8FEC010C7042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "policy.app", "policy.app\policy.app\policy.app.csproj", "{288834CC-00C7-4ED1-BD90-12FA8B273E87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "policy.app", "policy.app\policy.app.csproj", "{288834CC-00C7-4ED1-BD90-12FA8B273E87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
