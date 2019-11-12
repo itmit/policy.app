@@ -133,6 +133,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microcharts">
+      <Version>0.7.1</Version>
+    </PackageReference>
     <PackageReference Include="TouchView">
       <Version>4.0.21</Version>
     </PackageReference>
