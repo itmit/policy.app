@@ -99,11 +99,7 @@ namespace policy.app.PageModels
 			var repository = new UserRepository(_app.RealmConfiguration);
 			var user = repository.All()
 								 .Single();
-			_service = new PollService(new UserToken
-									   {
-										   Token = user.Token.Token,
-										   TokenType = user.Token.TokenType
-									   },
+			_service = new PollService(user.Token,
 									   new HttpClient());
 
 			if (initData is Poll poll)

@@ -93,6 +93,11 @@ namespace policy.app.Models
 			set;
 		}
 
+		public string Link
+		{
+			get;
+		}
+
 		/// <summary>
 		/// Возвращает или устанавливает количество отрицательных оценок.
 		/// </summary>

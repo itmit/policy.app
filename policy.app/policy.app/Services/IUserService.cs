@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using policy.app.Models;
 
 namespace policy.app.Services
@@ -41,7 +42,7 @@ namespace policy.app.Services
 		/// </summary>
 		/// <param name="user">Пользователь, от имени которого отправляется форма.</param>
 		/// <param name="feedback">Данные из формы обратной связи.</param>
-		void SendFeedBack(User user, Feedback feedback);
+		Task<bool> SendFeedBack(User user, Feedback feedback);
 		#endregion
 	}
 }

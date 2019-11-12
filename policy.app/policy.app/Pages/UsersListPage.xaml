@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <SearchBar Placeholder="Поиск" Margin="15" />
+                <SearchBar Placeholder="Поиск" Margin="15" Text="{Binding Query}"/>
                 <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
             </StackLayout>
             <StackLayout Margin="0,5,0,0">

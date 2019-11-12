@@ -23,6 +23,11 @@ namespace policy.app.Services
 		private const string AddToFavoritesUri = "http://policy.itmit-studio.ru/api/suslik/addToFav";
 
 		/// <summary>
+		/// Адрес для получения картинок.
+		/// </summary>
+		private const string StorageUri = "http://policy.itmit-studio.ru/storage/susliks/";
+
+		/// <summary>
 		/// Адрес для получения категорий.
 		/// </summary>
 		private const string CategoriesUri = "http://policy.itmit-studio.ru/api/suslik/getCategoryList";
@@ -171,8 +176,23 @@ namespace policy.app.Services
 				Debug.WriteLine(jsonString);
 
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
-
+				SetPictures(jsonData.Data);
 				return await Task.FromResult(jsonData.Data);
+			}
+		}
+
+		private void SetPictures(IEnumerable<IGopher> users)
+		{
+			foreach (var user in users)
+			{
+				if (IsNullOrEmpty(user.PhotoSource))
+				{
+					user.PhotoSource = "about:blank";
+				}
+				else
+				{
+					user.PhotoSource = StorageUri + user.PhotoSource;
+				}
 			}
 		}
 
@@ -185,7 +205,6 @@ namespace policy.app.Services
 		/// <returns>Список сусликов.</returns>
 		public async Task<IEnumerable<IGopher>> Search(string ratingSortDirect, string query = null, Category category = null)
 		{
-
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
@@ -193,9 +212,15 @@ namespace policy.app.Services
 
 				var dictionary = new Dictionary<string, string>
 				{
-					{"ratingOrderBy", ratingSortDirect},
-					{"name", query},
-					{"category", category?.Uuid.ToString() }
+					{
+						"ratingOrderBy", ratingSortDirect
+					},
+					{
+						"name", query
+					},
+					{
+						"category", category?.Uuid.ToString()
+					}
 				};
 
 				var response = await client.PostAsync(SearchUri, new FormUrlEncodedContent(dictionary));
@@ -204,7 +229,7 @@ namespace policy.app.Services
 				Debug.WriteLine(jsonString);
 
 				var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Gopher>>>(jsonString);
-
+				SetPictures(jsonData.Data);
 				return await Task.FromResult(jsonData.Data);
 			}
 		}
@@ -236,12 +261,15 @@ namespace policy.app.Services
 				if (jsonData.Data != null)
 				{
 					var gopher = await Task.FromResult(jsonData.Data);
+
 					if (IsNullOrEmpty(gopher.PhotoSource))
 					{
-						return gopher;
+						gopher.PhotoSource = "about:blank";
 					}
-
-					gopher.PhotoSource = "http://policy.itmit-studio.ru/storage/susliks/" + gopher.PhotoSource;
+					else
+					{
+						gopher.PhotoSource = StorageUri + gopher.PhotoSource;
+					}
 					return gopher;
 				}
 
@@ -277,7 +305,7 @@ namespace policy.app.Services
 				{
 					gopher.Category = category;
 				}
-
+				SetPictures(jsonData.Data);
 				return await Task.FromResult(jsonData.Data);
 			}
 		}

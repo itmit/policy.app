@@ -15,9 +15,8 @@
                               PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
             <ex:EntryAuthPage Placeholder="Подтверждение пароля" Text="{Binding ConfirmPassword}" IsPassword="true"
                               FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
-            <DatePicker MinimumDate="01/01/1900"
-                        MaximumDate="12/31/2002"
-                        Date="{Binding DateOfBirthday}" />
+            <ex:EntryAuthPage Keyboard="Numeric"
+                        Text="{Binding DateOfBirthday}" />
             <Button x:Name="RegisterButton" Text="Зарегистрироваться" Clicked="Button_OnClicked"
                     Command="{Binding OnRegisterButtonClicked}" BorderColor="#228bcc" BorderWidth="1"
                     BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="300" HeightRequest="60"

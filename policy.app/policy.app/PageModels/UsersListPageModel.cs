@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using FreshMvvm;
 using policy.app.Models;
@@ -21,10 +23,26 @@ namespace policy.app.PageModels
 		private Category _category;
 		private IGopher _selectedGopher;
 		private IGopherService _service;
+		private List<IGopher> _allUsers;
+		private string _query = "";
 		#endregion
 		#endregion
 
 		#region Properties
+		public string Query
+		{
+			get => _query;
+			set
+			{
+				if (value == null || value.Equals(Query))
+				{
+					return;
+				}
+				_query = value.ToLower();
+				Users = new ObservableCollection<IGopher>(_allUsers.Where(user => user.Name.ToLower().Contains(_query)));
+			}
+		}
+
 		public ObservableCollection<IGopher> Users
 		{
 			get;
@@ -66,12 +84,7 @@ namespace policy.app.PageModels
 					var repository = new UserRepository(_app.RealmConfiguration);
 					var user = repository.All()
 										 .Single();
-					var token = new UserToken
-					{
-						Token = (string) user.Token.Token.Clone(),
-						TokenType = (string) user.Token.TokenType.Clone()
-					};
-					_service = new GopherService(token);
+					_service = new GopherService(user.Token);
 					LoadGophers();
 				}
 			}
@@ -81,7 +94,8 @@ namespace policy.app.PageModels
 		#region Private
 		private async void LoadGophers()
 		{
-			Users = new ObservableCollection<IGopher>(await _service.GetGophers(_category));
+			_allUsers = new List<IGopher>(await _service.GetGophers(_category));
+			Users = new ObservableCollection<IGopher>(_allUsers.Where(user => user.Name.ToLower().Contains(Query)));
 		}
 		#endregion
 	}

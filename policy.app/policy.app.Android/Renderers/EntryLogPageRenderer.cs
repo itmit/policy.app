@@ -31,14 +31,8 @@ namespace policy.app.Droid.Renderers
 				return;
 			}
 
-			if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
-			{
-				Control.BackgroundTintList = ColorStateList.ValueOf(Color.Rgb(25, 54, 95));
-			}
-			else
-			{
-				Control.Background.SetColorFilter(Color.Rgb(25, 54, 95), PorterDuff.Mode.SrcAtop);
-			}
+			Control.BackgroundTintList = ColorStateList.ValueOf(Color.Rgb(25, 54, 95));
+			Control.Background.SetColorFilter(Color.Rgb(25, 54, 95), PorterDuff.Mode.SrcAtop);
 		}
 		#endregion
 	}

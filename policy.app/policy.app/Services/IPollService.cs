@@ -15,7 +15,7 @@ namespace policy.app.Services
 		/// Возвращает список опросов.
 		/// </summary>
 		/// <returns>Список опросов.</returns>
-		Task<IEnumerable<Poll>> GetPolls();
+		Task<IEnumerable<Poll>> GetPolls(Guid pollCategoryGuid);
 
 		/// <summary>
 		/// Возвращает список вопросов опроса.
@@ -23,6 +23,8 @@ namespace policy.app.Services
 		/// <param name="guid">Ид опроса.</param>
 		/// <returns>Список вопросов.</returns>
 		Task<IEnumerable<Question>> GetQuestions(Guid guid);
+
+		Task<IEnumerable<PollCategory>> GetPollCategories();
 
 		/// <summary>
 		/// Отправляет запрос на прохождение опроса.

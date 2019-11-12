@@ -16,6 +16,11 @@ namespace policy.app.Models
 			get;
 		}
 
+		string Link
+		{
+			get;
+		}
+
 		/// <summary>
 		/// Возвращает или устанавливает количество отрицательных оценок.
 		/// </summary>
@@ -62,6 +67,7 @@ namespace policy.app.Models
 		string PhotoSource
 		{
 			get;
+			set;
 		}
 
 		/// <summary>

@@ -18,6 +18,8 @@
                     <forms:CachedImage HorizontalOptions="FillAndExpand"
                                        VerticalOptions="FillAndExpand"
                                        DownsampleToViewSize="true"
+                                       LoadingPlaceholder="def_profile"
+                                       ErrorPlaceholder="def_profile"
                                        Source="{Binding Gopher.PhotoSource}"
                                        Aspect="AspectFill"/>
                     <StackLayout Margin="15">
@@ -55,7 +57,7 @@
                                TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold" />
                         </StackLayout>
                         <StackLayout>
-                            <Button Text="https://ru.wikipedia.org/wiki/" BackgroundColor="Transparent" TextColor="#228bcc"
+                            <Button Text="{Binding Gopher.Link}" BackgroundColor="Transparent" TextColor="#228bcc"
                                 FontSize="16" Clicked="Button_Clicked" HorizontalOptions="Start" />
                         </StackLayout>
                         <ScrollView Orientation="Horizontal">

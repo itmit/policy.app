@@ -17,6 +17,15 @@ namespace policy.app.ViewModel
 			Gopher = gopher;
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает источник фотографии.
+		/// </summary>
+		public string PhotoSource
+		{
+			get;
+			set;
+		}
+
 		public ICommand SelectCommand =>
 			new FreshAwaitCommand((param, tcs) =>
 			{

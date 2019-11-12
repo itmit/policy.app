@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
+using System.Threading.Tasks;
 using policy.app.Models;
 
 namespace policy.app.Services
@@ -19,6 +20,8 @@ namespace policy.app.Services
 		private const string EditUri = "http://policy.itmit-studio.ru/api/user/edit";
 
 		private const string UploadAvatarUri = "http://policy.itmit-studio.ru/api/user/changePhoto";
+
+		private const string SendFeedBackUri = "http://policy.itmit-studio.ru/api/user/sendFeedback";
 		#endregion
 		#endregion
 
@@ -33,7 +36,6 @@ namespace policy.app.Services
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{user.Token.TokenType} {user.Token.Token}");
-
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
 				var byteArrayContent = new ByteArrayContent(image);
@@ -120,9 +122,34 @@ namespace policy.app.Services
 		/// </summary>
 		/// <param name="user">Пользователь, от имени которого отправляется форма.</param>
 		/// <param name="feedback">Данные из формы обратной связи.</param>
-		public void SendFeedBack(User user, Feedback feedback)
+		public async Task<bool> SendFeedBack(User user, Feedback feedback)
 		{
-			throw new NotImplementedException();
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{user.Token.TokenType} {user.Token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var response = await client.PostAsync(SendFeedBackUri,
+													  new FormUrlEncodedContent(new Dictionary<string, string>
+													  {
+														  {
+															  "uid", feedback.Guid.ToString()
+														  },
+														  {
+															  "title", feedback.Title
+														  },
+														  {
+															  "category", feedback.Category.Uuid.ToString()
+														  },
+														  {
+															  "message", feedback.Message
+														  }
+													  }));
+				var json = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(json);
+
+				return await Task.FromResult(response.IsSuccessStatusCode);
+			}
 		}
 		#endregion
 	}

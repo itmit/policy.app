@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ListView = Xamarin.Forms.ListView;
 
 namespace policy.app.Pages
 {
@@ -20,5 +21,10 @@ namespace policy.app.Pages
 			Navigation.PushAsync(new AllQuestionsPage());
 		}
 		#endregion
+
+		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+		{
+			((ListView) sender).SelectedItem = null;
+		}
 	}
 }

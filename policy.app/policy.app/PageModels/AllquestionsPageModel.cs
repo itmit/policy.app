@@ -26,6 +26,7 @@ namespace policy.app.PageModels
 		private readonly App _app = App.Current;
 		private Poll _selectedPoll;
 		private IPollService _service;
+		private PollCategory _pollCategory;
 		#endregion
 		#endregion
 
@@ -49,16 +50,6 @@ namespace policy.app.PageModels
 				{
 					CoreMethods.PushPageModel<SurveyPageModel>(poll);
 				}
-			});
-
-		/// <summary>
-		/// Возвращает команду для открытия опроса.
-		/// </summary>
-		public ICommand OpenSurveyPage =>
-			new FreshAwaitCommand((param, tcs) =>
-			{
-				CoreMethods.PushPageModel<SurveyPageModel>();
-				tcs.SetResult(true);
 			});
 
 		/// <summary>
@@ -87,6 +78,11 @@ namespace policy.app.PageModels
 		public override void Init(object initData)
 		{
 			base.Init(initData);
+
+			if (initData is PollCategory pollCategory)
+			{
+				_pollCategory = pollCategory;
+			}
 
 			if (_app == null)
 			{
@@ -121,7 +117,7 @@ namespace policy.app.PageModels
 				return;
 			}
 
-			var polls = new ObservableCollection<Poll>(await _service.GetPolls());
+			var polls = new ObservableCollection<Poll>(await _service.GetPolls(_pollCategory.Guid));
 			for (var i = 0; i < polls.Count; i++)
 			{
 				polls[i]

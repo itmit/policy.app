@@ -56,7 +56,7 @@ namespace policy.app.Services
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{token.TokenType} {token.Token}");
 
-				var response = await client.PostAsync(new Uri(DetailsUri), null);
+				var response = await client.PostAsync(DetailsUri, null);
 
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
@@ -69,7 +69,7 @@ namespace policy.app.Services
 						jsonData.Data.Token = token;
 						if (string.IsNullOrEmpty(jsonData.Data.PhotoSource))
 						{
-							jsonData.Data.PhotoSource = string.Empty;
+							jsonData.Data.PhotoSource = "about:blank";
 						}
 						else
 						{

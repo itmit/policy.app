@@ -21,7 +21,10 @@ namespace policy.app.Pages
 		#region Private
 		private void Button_Clicked(object sender, EventArgs e)
 		{
-			Browser.OpenAsync("https://ru.wikipedia.org/wiki/", BrowserLaunchMode.SystemPreferred);
+			if (sender is Button btn)
+			{
+				Browser.OpenAsync(btn.Text, BrowserLaunchMode.SystemPreferred);
+			}
 		}
 		#endregion
 	}

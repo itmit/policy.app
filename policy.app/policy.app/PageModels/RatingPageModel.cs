@@ -22,12 +22,39 @@ namespace policy.app.PageModels
 	{
 		#region Data
 		#region Fields
+		/// <summary>
+		/// Текущее приложение.
+		/// </summary>
 		private readonly App _app = App.Current;
+		
+		/// <summary>
+		/// Сервис для работы с сусликами.
+		/// </summary>
 		private IGopherService _service;
+
+		/// <summary>
+		/// Выбранная категория.
+		/// </summary>
 		private Category _selectedCategory;
+
+		/// <summary>
+		/// Поисковый запрос.
+		/// </summary>
 		private string _query;
+
+		/// <summary>
+		/// Выбранная сортировка.
+		/// </summary>
 		private string _selectedSort;
+
+		/// <summary>
+		/// Тип сортировки.
+		/// </summary>
 		private string _sort = "desc";
+
+		/// <summary>
+		/// Репозиторий для работы с данными пользователя.
+		/// </summary>
 		private UserRepository _repository;
 		#endregion
 		#endregion
@@ -48,12 +75,6 @@ namespace policy.app.PageModels
 			{
 				_service = new GopherService(token.Token);
 			}
-		}
-
-		public Category SelectCategory
-		{
-			get;
-			set;
 		}
 
 		public Category SelectedCategory
