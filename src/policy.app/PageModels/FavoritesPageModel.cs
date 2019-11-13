@@ -143,6 +143,7 @@ namespace policy.app.PageModels
 								 .SingleOrDefault();
 			if (user != null)
 			{
+				Gophers = new ObservableCollection<IGopher>(user.FavoriteGophers);
 				_service = new GopherService(user.Token);
 			}
 		}
@@ -171,6 +172,8 @@ namespace policy.app.PageModels
 			_repository.Update(user);
 		}
 		#endregion
+
+		public bool IsEmptyList => Gophers.Count == 0;
 
 		public override void LoadData()
 		{

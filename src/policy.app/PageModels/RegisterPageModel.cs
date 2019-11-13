@@ -14,6 +14,8 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class RegisterPageModel : FreshBasePageModel
 	{
+		private int _dateOfBirthday = 2000;
+
 		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает значение поля подтверждения пароля.
@@ -29,8 +31,19 @@ namespace policy.app.PageModels
 		/// </summary>
 		public int DateOfBirthday
 		{
-			get;
-			set;
+			get => _dateOfBirthday;
+			set
+			{
+				if (value <= 1900 || value >= DateTime.Now.Year)
+				{
+					_dateOfBirthday = 0;
+					MessageLabel = "Год рождения должен быть задан в промежутке между 1900 и текущим годом.";
+					return;
+				}
+
+				MessageLabel = "";
+				_dateOfBirthday = value;
+			}
 		}
 
 		/// <summary>
@@ -75,6 +88,10 @@ namespace policy.app.PageModels
 		public ICommand OnRegisterButtonClicked =>
 			new FreshAwaitCommand((param, tcs) =>
 			{
+				if (_dateOfBirthday == 0)
+				{
+					return;
+				}
 				RegisterAsync();
 				tcs.SetResult(true);
 			});
@@ -93,17 +110,26 @@ namespace policy.app.PageModels
 				PhoneNumber = PhoneNumber,
 				Birthday = new DateTime(DateOfBirthday, 1, 1)
 			};
-
+			UserToken token = null;
+			
 			try
 			{
-				user.Token = await service.RegisterAsync(user, Password, ConfirmPassword);
+				token = await service.RegisterAsync(user, Password, ConfirmPassword);
 			}
-			catch (AuthenticationException e)
+			catch (Exception e)
 			{
-				Debug.WriteLine(e);
-				MessageLabel = "Ошибка регистрации";
+				Console.WriteLine(e);
+				MessageLabel = "Ошибка сервера.";
 				return;
 			}
+
+			if (token == null)
+			{
+				MessageLabel = service.LastError;
+				return;
+			}
+
+			user.Token = token;
 
 			var app = Application.Current as App;
 			if (app == null)

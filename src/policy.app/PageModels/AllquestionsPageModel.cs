@@ -70,6 +70,12 @@ namespace policy.app.PageModels
 		}
 		#endregion
 
+		public string Title
+		{
+			get;
+			set;
+		} = "Все опросы.";
+
 		#region Overrided
 		/// <summary>
 		/// Инициализирует модель представления.
@@ -82,6 +88,7 @@ namespace policy.app.PageModels
 			if (initData is PollCategory pollCategory)
 			{
 				_pollCategory = pollCategory;
+				Title = _pollCategory.Name;
 			}
 
 			if (_app == null)

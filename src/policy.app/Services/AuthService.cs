@@ -108,21 +108,26 @@ namespace policy.app.Services
 					}
 				});
 
-				var response = await client.PostAsync(new Uri(AuthUri), encodedContent);
+				var response = await client.PostAsync(AuthUri, encodedContent);
 
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 
-				if (response.IsSuccessStatusCode)
+				if (string.IsNullOrEmpty(jsonString))
 				{
-					if (jsonString != null)
-					{
-						var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
-						return await Task.FromResult(jsonData.Data);
-					}
+					LastError = "Ошибка сервера.";
+					return null;
 				}
 
-				throw new AuthenticationException($"Возникла ошибка при авторизации. Логин: {login}");
+				if (response.IsSuccessStatusCode)
+				{
+					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
+					return await Task.FromResult(jsonData.Data);
+				}
+
+				var jsonError = JsonConvert.DeserializeObject<JsonDataResponse<string>>(jsonString);
+				LastError = jsonError.Data;
+				return null;
 			}
 		}
 
@@ -166,18 +171,28 @@ namespace policy.app.Services
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 
-				if (response.IsSuccessStatusCode)
+				if (string.IsNullOrEmpty(jsonString))
 				{
-					if (jsonString != null)
-					{
-						var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
-						return await Task.FromResult(jsonData.Data);
-					}
+					LastError = "Ошибка сервера.";
+					return null;
 				}
 
-				// TODO: Написать нормальную ошибку с сообщением из api.
-				throw new AuthenticationException("Возникла ошибка при авторизации. Логин: ");
+				if (response.IsSuccessStatusCode)
+				{
+					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserToken>>(jsonString);
+					return await Task.FromResult(jsonData.Data);
+				}
+
+				var jsonError = JsonConvert.DeserializeObject<JsonDataResponse<string>>(jsonString);
+				LastError = jsonError.Data;
+				return null;
 			}
+		}
+
+		public string LastError
+		{
+			get;
+			set;
 		}
 		#endregion
 	}

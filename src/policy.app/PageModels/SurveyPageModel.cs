@@ -47,6 +47,12 @@ namespace policy.app.PageModels
 			set;
 		}
 
+		public string Title
+		{
+			get;
+			set;
+		}
+
 		public ICommand PassPollCommand =>
 			new FreshAwaitCommand(async (obj, tcs) =>
 			{
@@ -105,6 +111,7 @@ namespace policy.app.PageModels
 			if (initData is Poll poll)
 			{
 				_poll = poll;
+				Title = _poll.Name;
 				LoadQuestions();
 			}
 		}

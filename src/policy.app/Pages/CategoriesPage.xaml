@@ -6,14 +6,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:properties="clr-namespace:policy.app.Properties"
              xmlns:ex="clr-namespace:policy.app.Controls"
+             Title="Категории"
              mc:Ignorable="d"
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Padding="20">
                 <ex:ListViewNoSelect x:Name="NativeList"
-                                         WidthRequest="230"
-                                         HorizontalOptions="Center"
+                                         HorizontalOptions="Fill"
                                          ItemsSource="{Binding Categories}"
                                          ItemSelected="ListView_OnItemSelected"
                                          SelectedItem="{Binding SelectedCategory}"
@@ -23,11 +23,13 @@
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
-                                    <StackLayout Margin="15">
+                                    <StackLayout Margin="15" 
+                                                 WidthRequest="200"
+                                                 HorizontalOptions="Center">
                                         <!-- #19365f -->
                                         <Frame BackgroundColor="#19365f" Padding="15" CornerRadius="10"
                                                    HorizontalOptions="Fill">
-                                            <Label Text="{Binding Title}" FontSize="18" TextColor="White"
+                                            <Label Text="{Binding Title}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="18" TextColor="White"
                                                        HorizontalOptions="Center" VerticalOptions="Center" />
                                         </Frame>
                                     </StackLayout>

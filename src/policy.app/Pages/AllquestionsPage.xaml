@@ -3,6 +3,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
+             Title="{Binding Title}"
              x:Class="policy.app.Pages.AllQuestionsPage">
     <ContentPage.Content>
         <StackLayout>

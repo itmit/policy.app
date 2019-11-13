@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Security.Authentication;
 using System.Windows.Input;
 using FreshMvvm;
@@ -77,16 +78,21 @@ namespace policy.app.PageModels
 		private async void OnLoginClicked()
 		{
 			User user;
+			var service = new AuthService();
 			try
 			{
-				var service = new AuthService();
-
 				user = await service.GetUserByTokenAsync(await service.LoginAsync(Email, Password));
 			}
-			catch (AuthenticationException e)
+			catch (Exception e)
 			{
-				Debug.WriteLine(e);
-				MessageLabel = "Неверно указаны email или пароль";
+				Console.WriteLine(e);
+				MessageLabel = "Неверно указаны email или пароль.";
+				return;
+			}
+
+			if (user == null)
+			{
+				MessageLabel = service.LastError;
 				return;
 			}
 

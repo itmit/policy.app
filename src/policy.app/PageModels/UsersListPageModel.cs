@@ -43,6 +43,15 @@ namespace policy.app.PageModels
 			}
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает заголовок страницы.
+		/// </summary>
+		public string Title
+		{
+			get;
+			set;
+		}
+
 		public ObservableCollection<IGopher> Users
 		{
 			get;
@@ -78,6 +87,7 @@ namespace policy.app.PageModels
 			if (initData is Category category)
 			{
 				_category = category;
+				Title = _category.Title;
 				_app = Application.Current as App;
 				if (_app != null)
 				{

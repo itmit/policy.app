@@ -7,6 +7,7 @@
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
              xmlns:controls="clr-namespace:policy.app.Controls"
              mc:Ignorable="d"
+             Title="{Binding Title}"
              x:Class="policy.app.Pages.SurveyPage">
     <ContentPage.Content>
         <ScrollView>
