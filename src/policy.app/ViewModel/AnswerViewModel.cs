@@ -7,26 +7,42 @@ using PropertyChanged;
 
 namespace policy.app.ViewModel
 {
+	/// <summary>
+	/// Представляет модель представления для строки с ответом.
+	/// </summary>
 	[AddINotifyPropertyChangedInterface]
 	public class AnswerViewModel : INotifyPropertyChanged
 	{
 		#region Data
 		#region Fields
+		/// <summary>
+		/// Родительская модель представления для вопроса.
+		/// </summary>
 		private readonly QuestionViewModel _question;
 		#endregion
 		#endregion
 
 		#region .ctor
+		/// <summary>
+		/// Инициализирует <see cref="AnswerViewModel"/>, с родительской моделью представления.
+		/// </summary>
+		/// <param name="question">Родительская модель представления, вопроса.</param>
 		public AnswerViewModel(QuestionViewModel question) => _question = question;
 		#endregion
 
 		#region Properties
+		/// <summary>
+		/// Возвращает или устанавливает модель вопроса.
+		/// </summary>
 		public Answer Answer
 		{
 			get;
 			set;
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает выбран ли ответ.
+		/// </summary>
 		public bool IsSelected
 		{
 			get => Answer.IsSelected;
@@ -61,17 +77,26 @@ namespace policy.app.ViewModel
 			}
 		}
 
+		/// <summary>
+		/// Уведомляет представление об изменении выбранного ответа.
+		/// </summary>
 		public void NotifySelectedChanged()
 		{
 			OnPropertyChanged(new PropertyChangedEventArgs(nameof(IsSelected)));
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает текст другого варианта ответа.
+		/// </summary>
 		public bool IsVisibleOtherText
 		{
 			get;
 			set;
 		}
 
+		/// <summary>
+		/// Возвращает команду для выбора варианта ответа.
+		/// </summary>
 		public ICommand SelectCommand =>
 			new FreshAwaitCommand((param, tcs) =>
 			{
@@ -79,7 +104,7 @@ namespace policy.app.ViewModel
 				tcs.SetResult(true);
 			});
 		#endregion
-
+		
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		protected void OnPropertyChanged(PropertyChangedEventArgs eventArgs)

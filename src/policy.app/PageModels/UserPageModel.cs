@@ -32,6 +32,7 @@ namespace policy.app.PageModels
 		/// Пользователь приложения.
 		/// </summary>
 		private User _user;
+		private bool _isVoted = true;
 		#endregion
 		#endregion
 
@@ -189,6 +190,10 @@ namespace policy.app.PageModels
 				var res = await _service.Rate(Gopher, RateType.Dislikes);
 				if (res)
 				{
+					_isVoted = false;
+					SetDislike.CanExecute(null);
+					SetLike.CanExecute(null);
+					SetNeutral.CanExecute(null);
 					UpdateUser?.Invoke();
 				}
 				else
@@ -196,7 +201,7 @@ namespace policy.app.PageModels
 					Dislikes--;
 				}
 				tcs.SetResult(true);
-			});
+			}, obj => _isVoted);
 
 		/// <summary>
 		/// Возвращает команду для установки положительных оценок.
@@ -208,6 +213,10 @@ namespace policy.app.PageModels
 				var res = await _service.Rate(Gopher, RateType.Likes);
 				if (res)
 				{
+					_isVoted = false;
+					SetDislike.CanExecute(null);
+					SetLike.CanExecute(null);
+					SetNeutral.CanExecute(null);
 					UpdateUser?.Invoke();
 				}
 				else
@@ -215,7 +224,7 @@ namespace policy.app.PageModels
 					Likes--;
 				}
 				tcs.SetResult(true);
-			});
+			}, obj => _isVoted);
 
 		/// <summary>
 		/// Возвращает команду для установки нейтральных оценок.
@@ -227,6 +236,10 @@ namespace policy.app.PageModels
 				var res = await _service.Rate(Gopher, RateType.Neutrals);
 				if (res)
 				{
+					_isVoted = false;
+					SetDislike.CanExecute(null);
+					SetLike.CanExecute(null);
+					SetNeutral.CanExecute(null);
 					UpdateUser?.Invoke();
 				}
 				else
@@ -234,7 +247,7 @@ namespace policy.app.PageModels
 					Neutrals--;
 				}
 				tcs.SetResult(res);
-			});
+			}, obj => _isVoted);
 		#endregion
 
 		#region Overrided

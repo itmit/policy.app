@@ -10,10 +10,13 @@ namespace policy.app.PageModels
 	public class AboutPageModel : FreshBasePageModel
 	{
 		#region Properties
+		/// <summary>
+		/// Возвращает команду для перехода на страницу "Напишите нам".
+		/// </summary>
 		public FreshAwaitCommand AskCommand =>
 			new FreshAwaitCommand((param, tcs) =>
 			{
-				// TODO: Написать функционал для задания вопроса.
+				CoreMethods.PushPageModel<WriteToUsPageModel>();
 				tcs.SetResult(true);
 			});
 		#endregion

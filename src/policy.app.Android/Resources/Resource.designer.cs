@@ -3196,6 +3196,7 @@ namespace policy.app.Droid
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_id = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_inflatedId = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_layout = global::policy.app.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Microcharts.Droid.Resource.String.library_name = global::policy.app.Droid.Resource.String.library_name;
 			global::TouchEffect.Droid.Resource.Animation.abc_fade_in = global::policy.app.Droid.Resource.Animation.abc_fade_in;
 			global::TouchEffect.Droid.Resource.Animation.abc_fade_out = global::policy.app.Droid.Resource.Animation.abc_fade_out;
 			global::TouchEffect.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::policy.app.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;

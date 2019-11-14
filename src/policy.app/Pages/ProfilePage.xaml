@@ -60,15 +60,6 @@
                             <Label Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Position}"
                                Style="{StaticResource EndLabelProfilePage}" />
                         </Grid>
-                        <Frame Padding="0" Margin="0,20" HasShadow="True">
-                            <StackLayout HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
-                                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                                    <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
-                                    <Label FontSize="30" Text="{x:Static properties:Translate.Statistics}"
-                                       VerticalOptions="Center" TextColor="#19365f" />
-                                </StackLayout>
-                            </StackLayout>
-                        </Frame>
                     </StackLayout>
                 </StackLayout>
             </pullToRefresh:PullToRefreshLayout>

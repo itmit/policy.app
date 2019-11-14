@@ -6,9 +6,15 @@ using PropertyChanged;
 
 namespace policy.app.ViewModel
 {
+	/// <summary>
+	/// Представляет модель представления для суслика на странице поиска. 
+	/// </summary>
 	[AddINotifyPropertyChangedInterface]
 	public class SearchGopherViewModel
 	{
+		/// <summary>
+		/// Базовая модель представления.
+		/// </summary>
 		private FreshBasePageModel _parent;
 
 		public SearchGopherViewModel(IGopher gopher, FreshBasePageModel parent)
@@ -26,6 +32,9 @@ namespace policy.app.ViewModel
 			set;
 		}
 
+		/// <summary>
+		/// Возвращает команду для выбора суслика.
+		/// </summary>
 		public ICommand SelectCommand =>
 			new FreshAwaitCommand((param, tcs) =>
 			{
@@ -33,6 +42,9 @@ namespace policy.app.ViewModel
 				tcs.SetResult(true);
 			});
 
+		/// <summary>
+		/// Возвращает суслика.
+		/// </summary>
 		public IGopher Gopher
 		{
 			get;

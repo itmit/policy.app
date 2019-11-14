@@ -16,6 +16,9 @@ namespace policy.app.Models
 			get;
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает ссылку с информацией о суслике. 
+		/// </summary>
 		string Link
 		{
 			get;

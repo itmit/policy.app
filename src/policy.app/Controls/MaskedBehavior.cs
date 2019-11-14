@@ -3,6 +3,9 @@ using Xamarin.Forms;
 
 namespace policy.app.Controls
 {
+	/// <summary>
+	/// Представляет маску для поля ввода.
+	/// </summary>
 	public class MaskedBehavior : Behavior<Entry>
 	{
 		#region Data
@@ -14,6 +17,9 @@ namespace policy.app.Controls
 		#endregion
 
 		#region Properties
+		/// <summary>
+		/// Возвращает или устанавливает маску для ввода.
+		/// </summary>
 		public string Mask
 		{
 			get => _mask;
@@ -26,6 +32,7 @@ namespace policy.app.Controls
 		#endregion
 
 		#region Overrided
+
 		protected override void OnAttachedTo(Entry entry)
 		{
 			entry.TextChanged += OnEntryTextChanged;
@@ -40,6 +47,11 @@ namespace policy.app.Controls
 		#endregion
 
 		#region Private
+		/// <summary>
+		/// Выполняется при изменении текста в поле ввода.
+		/// </summary>
+		/// <param name="sender">Отправитель.</param>
+		/// <param name="args">Параметры.</param>
 		private void OnEntryTextChanged(object sender, TextChangedEventArgs args)
 		{
 			if (sender is Entry entry)
@@ -76,6 +88,9 @@ namespace policy.app.Controls
 			}
 		}
 
+		/// <summary>
+		/// Устанавливает позиции символов в поле ввода.
+		/// </summary>
 		private void SetPositions()
 		{
 			if (string.IsNullOrEmpty(Mask))

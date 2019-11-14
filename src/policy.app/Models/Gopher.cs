@@ -4,6 +4,9 @@ using PropertyChanged;
 
 namespace policy.app.Models
 {
+	/// <summary>
+	/// Представляет модель для суслика.
+	/// </summary>
 	[AddINotifyPropertyChangedInterface]
 	public class Gopher : IGopher
 	{
@@ -17,6 +20,9 @@ namespace policy.app.Models
 			set;
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает ссылку с информацией о суслике. 
+		/// </summary>
 		public string Link
 		{
 			get;

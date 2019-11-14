@@ -68,34 +68,40 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" HorizontalOptions="Center">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetLike}"/>
+                                    </Grid.GestureRecognizers>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Likes}" FontSize="30" TextColor="#228bcc" />
-                                    <ImageButton Source="img_131540" WidthRequest="25" Grid.Column="1"
-                                             BackgroundColor="Transparent"
-                                             Command="{Binding SetLike}" />
+                                    <Image Source="img_131540" WidthRequest="25" Grid.Column="1"
+                                             BackgroundColor="Transparent" />
                                 </Grid>
                                 <Grid Grid.Column="1" HorizontalOptions="Center">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetNeutral}"/>
+                                    </Grid.GestureRecognizers>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Neutrals}" FontSize="30" TextColor="#101821" />
-                                    <ImageButton Source="meh" WidthRequest="25" Grid.Column="1"
-                                             BackgroundColor="Transparent"
-                                             Command="{Binding SetNeutral}" />
+                                    <Image Source="meh" WidthRequest="25" Grid.Column="1"
+                                             BackgroundColor="Transparent" />
                                 </Grid>
                                 <Grid Grid.Column="2" HorizontalOptions="Center">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetDislike}"/>
+                                    </Grid.GestureRecognizers>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label x:Name="Dislike" Text="{Binding Dislikes}" FontSize="30" TextColor="#f07d14" />
-                                    <ImageButton Source="img_1315401" WidthRequest="25" Grid.Column="1"
-                                             BackgroundColor="Transparent"
-                                             Command="{Binding SetDislike}" />
+                                    <Label Text="{Binding Dislikes}" FontSize="30" TextColor="#f07d14" />
+                                    <Image Source="img_1315401" WidthRequest="25" Grid.Column="1"
+                                             BackgroundColor="Transparent" />
                                 </Grid>
                             </Grid>
                         </ScrollView>
