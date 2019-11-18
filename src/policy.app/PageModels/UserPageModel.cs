@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
@@ -65,6 +67,37 @@ namespace policy.app.PageModels
 				RefreshCommand.Execute(null);
 			}
 		}
+
+		/// <summary>
+		/// Возвращает команду для открытия статистики.
+		/// </summary>
+		public ICommand OpenStatisticsCommand 
+			=> new FreshAwaitCommand(async (obj, tcs) =>
+			{
+				using (var client = new HttpClient())
+				{
+					client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_user.Token.TokenType} {_user.Token.Token}");
+
+					var response = await client.GetAsync($"http://policy.itmit-studio.ru/api/statistic/{Gopher.Guid}");
+
+					var html = await response.Content.ReadAsStringAsync();
+					var page = new ContentPage
+					{
+						Title = "Статистика"
+					};
+					var view = new WebView
+					{
+						Source = new HtmlWebViewSource
+						{
+							Html = html
+						}
+					};
+					page.Content = view;
+
+					await Application.Current.MainPage.Navigation.PushModalAsync(page);
+					tcs.SetResult(true);
+				}
+			});
 
 		/// <summary>
 		/// Возвращает или устанавливает количество отрицательных оценок сусликов.

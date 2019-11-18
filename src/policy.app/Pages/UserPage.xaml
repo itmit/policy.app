@@ -106,6 +106,9 @@
                             </Grid>
                         </ScrollView>
                         <Frame Padding="0" Margin="0,20" HasShadow="True">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenStatisticsCommand}"/>
+                            </Frame.GestureRecognizers>
                             <StackLayout HorizontalOptions="Fill" BackgroundColor="#f4f5f6">
                                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
                                     <Image Source="icon" Margin="0,0,15,0" WidthRequest="50" />
