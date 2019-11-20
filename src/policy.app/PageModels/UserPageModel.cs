@@ -8,6 +8,7 @@ using policy.app.Models;
 using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace policy.app.PageModels
@@ -43,6 +44,19 @@ namespace policy.app.PageModels
 		/// Представляет метод обновления профиля.
 		/// </summary>
 		public delegate void UpdateUserEventHandler();
+
+		public ICommand OpenBrowserCommand => new FreshAwaitCommand(async (obj, tcs) =>
+			{
+				if (Uri.IsWellFormedUriString(Gopher.Link, UriKind.Absolute))
+				{
+					await Browser.OpenAsync(Gopher.Link);
+					tcs.SetResult(true);
+					return;
+				}
+
+				await _app.MainPage.DisplayAlert("Внимание", "Неправильный формат ссылки.", "Ок");
+				tcs.SetResult(false);
+			});
 
 		/// <summary>
 		/// Происходит после обновлений данных у пользователя.

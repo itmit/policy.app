@@ -17,15 +17,5 @@ namespace policy.app.Pages
 			
 		}
 		#endregion
-
-		#region Private
-		private void Button_Clicked(object sender, EventArgs e)
-		{
-			if (sender is Button btn)
-			{
-				Browser.OpenAsync(btn.Text, BrowserLaunchMode.SystemPreferred);
-			}
-		}
-		#endregion
 	}
 }
