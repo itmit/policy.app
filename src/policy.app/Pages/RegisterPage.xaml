@@ -3,32 +3,105 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ex="clr-namespace:policy.app.Controls"
+             Title="Регистрация"
              x:Class="policy.app.Pages.RegisterPage">
     <ContentPage.Content>
-        <StackLayout Margin="25">
-            <Label Text="{Binding MessageLabel}" />
-            <ex:EntryAuthPage Placeholder="E-mail" Text="{Binding Email}" FontSize="16" PlaceholderColor="#19365f"
-                              TextColor="#19365f" Margin="0,0,0,10" />
-            <ex:EntryAuthPage Placeholder="Телефон" Text="{Binding PhoneNumber}" FontSize="16"
-                              PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" Keyboard="Numeric">
-                <ex:EntryAuthPage.Behaviors>
-                    <ex:MaskedBehavior Mask="+7 (XXX) XXX-XX-XX" />
-                </ex:EntryAuthPage.Behaviors>
-            </ex:EntryAuthPage>
-            <ex:EntryAuthPage Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
-                              PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
+        <ScrollView>
+            <StackLayout Margin="25">
+                <Label Text="{Binding MessageLabel}" />
+                <ex:EntryAuthPage Placeholder="E-mail" Text="{Binding Email}" FontSize="16" PlaceholderColor="#19365f"
+                                  TextColor="#19365f" Margin="0,0,0,10" />
+                <ex:EntryAuthPage Placeholder="Телефон" Text="{Binding PhoneNumber}" FontSize="16"
+                                  PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" Keyboard="Numeric">
+                    <ex:EntryAuthPage.Behaviors>
+                        <ex:MaskedBehavior Mask="+7 (XXX) XXX-XX-XX" />
+                    </ex:EntryAuthPage.Behaviors>
+                </ex:EntryAuthPage>
 
-            <ex:EntryAuthPage Placeholder="Подтверждение пароля" Text="{Binding ConfirmPassword}" IsPassword="true"
-                              FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
+                <ex:PickerRating Title="Пол" BackgroundColor="#f4f5f6"
+                                 HorizontalOptions="FillAndExpand"
+                                 SelectedItem="{Binding Gender}"
+                                 FontSize="16">
+                    <ex:PickerRating.Items>
+                        <x:String>мужской</x:String>
+                        <x:String>женский</x:String>
+                    </ex:PickerRating.Items>
+                </ex:PickerRating>
 
-            <ex:EntryAuthPage Keyboard="Numeric" Placeholder="Год рождения"
-                              FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"
-                              Text="{Binding DateOfBirthday, Mode=OneWayToSource}" />
+                <ex:EntryAuthPage Keyboard="Numeric" Placeholder="Год рождения"
+                                  FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"
+                                  Text="{Binding DateOfBirthday, Mode=OneWayToSource}" />
 
-            <Button x:Name="RegisterButton" Text="Зарегистрироваться" Clicked="Button_OnClicked"
-                    Command="{Binding OnRegisterButtonClicked}" BorderColor="#228bcc" BorderWidth="1"
-                    BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="300" HeightRequest="60"
-                    TextColor="#228bcc" CornerRadius="30" FontSize="16" />
-        </StackLayout>
+                <ex:PickerRating Title="Образование"
+                                 BackgroundColor="#f4f5f6"
+                                 HorizontalOptions="FillAndExpand"
+                                 SelectedItem="{Binding Education}"
+                                 FontSize="16">
+                    <ex:PickerRating.Items>
+                        <x:String>высшее или неполное высшее</x:String>
+                        <x:String>среднее (профессиональное)</x:String>
+                        <x:String>среднее (полное)</x:String>
+                        <x:String>среднее (общее) или ниже</x:String>
+                    </ex:PickerRating.Items>
+                </ex:PickerRating>
+
+                <ex:PickerRating Title="Тип населенного пункта"
+                                 BackgroundColor="#f4f5f6"
+                                 HorizontalOptions="FillAndExpand"
+                                 SelectedItem="{Binding SettlementType}"
+                                 FontSize="16">
+                    <ex:PickerRating.Items>
+                        <x:String>Район</x:String>
+                        <x:String>Город</x:String>
+                        <x:String>Посёлок городского типа</x:String>
+                        <x:String>Рабочий посёлок</x:String>
+                        <x:String>Курортный посёлок</x:String>
+                        <x:String>Кишлак</x:String>
+                        <x:String>Поселковый совет</x:String>
+                        <x:String>Сельсовет</x:String>
+                        <x:String>Сомон</x:String>
+                        <x:String>Волость</x:String>
+                        <x:String>Дачный поселковый совет</x:String>
+                        <x:String>Посёлок сельского типа</x:String>
+                        <x:String>Населённый пункт</x:String>
+                        <x:String>Посёлок при станции</x:String>
+                        <x:String>Железнодорожная станция</x:String>
+                        <x:String>Село</x:String>
+                        <x:String>Местечко</x:String>
+                        <x:String>Деревня</x:String>
+                        <x:String>Слобода</x:String>
+                        <x:String>Станция</x:String>
+                        <x:String>Станица</x:String>
+                        <x:String>Хутор</x:String>
+                        <x:String>Улус</x:String>
+                        <x:String>Разъезд</x:String>
+                        <x:String>Колхоз</x:String>
+                        <x:String>Совхоз</x:String>
+                        <x:String>Зимовье</x:String>
+                        <x:String>Опустевший населённый пункт</x:String>
+                    </ex:PickerRating.Items>
+                </ex:PickerRating>
+
+                <ex:EntryAuthPage Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
+                                  PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
+
+                <ex:EntryAuthPage Placeholder="Подтверждение пароля" Text="{Binding ConfirmPassword}" IsPassword="true"
+                                  FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
+
+                <ex:PickerRating Title="Регион"
+                                 Margin="0,0,0,10"
+                                 BackgroundColor="#f4f5f6"
+                                 HorizontalOptions="FillAndExpand"
+                                 ItemsSource="{Binding Regions}"
+                                 ItemDisplayBinding="{Binding Name}"
+                                 SelectedItem="{Binding Region}"
+                                 FontSize="16"/>
+
+                <Button x:Name="RegisterButton" Text="Зарегистрироваться" Clicked="Button_OnClicked"
+                        Command="{Binding OnRegisterButtonClicked}" BorderColor="#228bcc" BorderWidth="1"
+                        BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="300" HeightRequest="60"
+                        TextColor="#228bcc" CornerRadius="30" FontSize="16" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

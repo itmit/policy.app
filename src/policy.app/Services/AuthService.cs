@@ -13,7 +13,7 @@ namespace policy.app.Services
 	/// <summary>
 	/// Представляет сервис для авторизации.
 	/// </summary>
-	public class AuthService
+	public class AuthService : IAuthService
 	{
 		#region Data
 		#region Consts
@@ -23,20 +23,28 @@ namespace policy.app.Services
 		private const string AuthUri = "http://policy.itmit-studio.ru/api/login";
 
 		/// <summary>
-		/// Задает адрес для получения пользователя.
+		/// Адрес для получения пользователя.
 		/// </summary>
 		private const string DetailsUri = "http://policy.itmit-studio.ru/api/details";
 
 		/// <summary>
-		/// Задает адрес для регистрации пользователя.
+		/// Адрес для регистрации пользователя.
 		/// </summary>
 		private const string RegisterUri = "http://policy.itmit-studio.ru/api/register";
 
 		/// <summary>
-		/// Задает ключ к api для авторизации.
+		/// Ключ к api для авторизации.
 		/// </summary>
 		private const string SecretKey = "jENrJI1gVHx16kyly2BMQRONNYctwCDd98FWgn38";
 
+		/// <summary>
+		/// Адрес для получения регионов.
+		/// </summary>
+		private const string GetRegionsUri = "http://policy.itmit-studio.ru/api/getRegions";
+
+		/// <summary>
+		/// Адрес для получения файлов в хранилище.
+		/// </summary>
 		private const string StorageUri = "http://policy.itmit-studio.ru/storage";
 		#endregion
 		#endregion
@@ -54,6 +62,7 @@ namespace policy.app.Services
 		{
 			using (var client = new HttpClient())
 			{
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{token.TokenType} {token.Token}");
 
 				var response = await client.PostAsync(DetailsUri, null);
@@ -96,6 +105,7 @@ namespace policy.app.Services
 		{
 			using (var client = new HttpClient())
 			{
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(SecretKey);
 
 				var encodedContent = new FormUrlEncodedContent(new Dictionary<string, string>
@@ -142,6 +152,7 @@ namespace policy.app.Services
 		{
 			using (var client = new HttpClient())
 			{
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(SecretKey);
 				var date = user.Birthday.ToString("yyyy-MM-dd");
 				var encodedContent = new FormUrlEncodedContent(new Dictionary<string, string>
@@ -153,20 +164,32 @@ namespace policy.app.Services
 						"phone", user.PhoneNumber
 					},
 					{
+						"birthday", date
+					},
+					{
+						"sex", user.Gender
+					},
+					{
+						"education", user.Education
+					},
+					{
 						"password", password
+					},
+					{
+						"region", user.Region.Name
 					},
 					{
 						"c_password", confirmPassword
 					},
 					{
-						"birthday", date
+						"uid", user.Guid.ToString()
 					},
 					{
-						"uid", user.Guid.ToString()
+						"city_type", user.SettlementType
 					}
 				});
 
-				var response = await client.PostAsync(new Uri(RegisterUri), encodedContent);
+				var response = await client.PostAsync(RegisterUri, encodedContent);
 
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
@@ -186,6 +209,35 @@ namespace policy.app.Services
 				var jsonError = JsonConvert.DeserializeObject<JsonDataResponse<string>>(jsonString);
 				LastError = jsonError.Data;
 				return null;
+			}
+		}
+
+		/// <summary>
+		/// Получает регионы.
+		/// </summary>
+		/// <returns>Список регионов.</returns>
+		public async Task<IEnumerable<Region>> GetRegions()
+		{
+			using (var client = new HttpClient())
+			{
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var response = await client.GetAsync(GetRegionsUri);
+				var jsonString = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(jsonString);
+
+				if (string.IsNullOrEmpty(jsonString))
+				{
+					return new List<Region>();
+				}
+
+				if (response.IsSuccessStatusCode)
+				{
+					var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<List<Region>>>(jsonString);
+					return await Task.FromResult(jsonData.Data);
+				}
+
+				return new List<Region>();
 			}
 		}
 

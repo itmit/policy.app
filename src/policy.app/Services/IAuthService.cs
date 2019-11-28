@@ -1,4 +1,5 @@
-﻿using System.Security.Authentication;
+﻿using System.Collections.Generic;
+using System.Security.Authentication;
 using System.Threading.Tasks;
 using policy.app.Models;
 
@@ -34,6 +35,12 @@ namespace policy.app.Services
 		/// <param name="confirmPassword">подтверждение пароля.</param>
 		/// <returns>Токен нового пользователя.</returns>
 		Task<UserToken> RegisterAsync(User user, string password, string confirmPassword);
+
+		/// <summary>
+		/// Получает регионы.
+		/// </summary>
+		/// <returns>Список регионов.</returns>
+		Task<IEnumerable<Region>> GetRegions();
 		#endregion
 	}
 }

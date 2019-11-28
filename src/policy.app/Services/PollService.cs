@@ -182,7 +182,7 @@ namespace policy.app.Services
 						fields.Add($"user_answer[{question.Guid}][{answer.Guid}]", answer.OtherText);
 					}
 				}
-
+				fields.Add("uuid", poll.Guid.ToString());
 				var response = await client.PostAsync(PassPullUri,
 														   new FormUrlEncodedContent(fields));
 				var jsonString = await response.Content.ReadAsStringAsync();

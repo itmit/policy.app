@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Security.Authentication;
 using System.Windows.Input;
@@ -8,6 +10,7 @@ using policy.app.Repositories;
 using policy.app.Services;
 using PropertyChanged;
 using Xamarin.Forms;
+using Region = policy.app.Models.Region;
 
 namespace policy.app.PageModels
 {
@@ -16,7 +19,33 @@ namespace policy.app.PageModels
 	{
 		private int _dateOfBirthday = 2000;
 
+		public override async void Init(object initData)
+		{
+			base.Init(initData);
+
+			var service = new AuthService();
+			Regions = new ObservableCollection<Region>(await service.GetRegions());
+		}
+
 		#region Properties
+		/// <summary>
+		/// Возвращает или устанавливает регионы.
+		/// </summary>
+		public ObservableCollection<Region> Regions
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает регион.
+		/// </summary>
+		public Region Region
+		{
+			get;
+			set;
+		}
+
 		/// <summary>
 		/// Возвращает или устанавливает значение поля подтверждения пароля.
 		/// </summary>
@@ -108,7 +137,12 @@ namespace policy.app.PageModels
 			{
 				Email = Email,
 				PhoneNumber = PhoneNumber,
-				Birthday = new DateTime(DateOfBirthday, 1, 1)
+				Birthday = new DateTime(DateOfBirthday, 1, 1),
+				Education = Education,
+				SettlementType = SettlementType,
+				Region = Region,
+				Gender = Gender
+
 			};
 			UserToken token = null;
 			
@@ -141,6 +175,24 @@ namespace policy.app.PageModels
 
 			repository.Add(user);
 			app.MainPage = app.InitMainTabbedPage();
+		}
+
+		public string Gender
+		{
+			get;
+			set;
+		}
+
+		public string SettlementType
+		{
+			get;
+			set;
+		}
+
+		public string Education
+		{
+			get;
+			set;
 		}
 		#endregion
 	}

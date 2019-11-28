@@ -39,10 +39,49 @@ namespace policy.app.Models
 			set;
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает избранных сусликов.
+		/// </summary>
 		public IList<Gopher> FavoriteGophers
 		{
 			get;
 		} = new List<Gopher>();
+
+		/// <summary>
+		/// Возвращает или устанавливает пол пользователя.
+		/// </summary>
+		public string Gender
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает образование.
+		/// </summary>
+		public string Education
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает тип населенного пункта.
+		/// </summary>
+		public string SettlementType
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает регион.
+		/// </summary>
+		public Region Region
+		{
+			get;
+			set;
+		}
 
 		/// <summary>
 		/// Возвращает или устанавливает область деятельности пользователя.
@@ -93,6 +132,9 @@ namespace policy.app.Models
 			set;
 		}
 
+		/// <summary>
+		/// Возвращает или устанавливает ссылку подробной информации.
+		/// </summary>
 		public string Link
 		{
 			get;
