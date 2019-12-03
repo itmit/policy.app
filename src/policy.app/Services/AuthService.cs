@@ -5,7 +5,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
 using System.Threading.Tasks;
+using AutoMapper;
 using Newtonsoft.Json;
+using policy.app.DTO;
 using policy.app.Models;
 
 namespace policy.app.Services
@@ -46,10 +48,19 @@ namespace policy.app.Services
 		/// Адрес для получения файлов в хранилище.
 		/// </summary>
 		private const string StorageUri = "http://policy.itmit-studio.ru/storage";
-		#endregion
-		#endregion
+        #endregion
+        #endregion
 
-		#region .ctor
+        #region .ctor
+        public AuthService()
+        {
+            var mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+
+                cfg.CreateMap<UserDto, User>()
+                    .ForPath(m => m.Region.Name, o => o.MapFrom(q => q.Region));
+            }));
+        }
 		#endregion
 
 		#region Public
@@ -74,8 +85,8 @@ namespace policy.app.Services
 				{
 					if (jsonString != null)
 					{
-						var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<User>>(jsonString);
-						jsonData.Data.Token = token;
+                        var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserDto>>(jsonString);
+						//jsonData.Data.Token = token;
 						if (string.IsNullOrEmpty(jsonData.Data.PhotoSource))
 						{
 							jsonData.Data.PhotoSource = "about:blank";
@@ -85,8 +96,9 @@ namespace policy.app.Services
 							jsonData.Data.PhotoSource = jsonData.Data.PhotoSource.Replace("public", "");
 							jsonData.Data.PhotoSource = StorageUri + jsonData.Data.PhotoSource;
 						}
-
-						return await Task.FromResult(jsonData.Data);
+                        var user = new User();
+                        user.Token = token;
+                        return await Task.FromResult(user);
 					}
 				}
 
