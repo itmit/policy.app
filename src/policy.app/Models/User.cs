@@ -214,6 +214,6 @@ namespace policy.app.Models
 			get;
 			set;
 		}
-		#endregion
-	}
+        #endregion
+    }
 }

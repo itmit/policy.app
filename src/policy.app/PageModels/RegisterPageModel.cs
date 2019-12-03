@@ -46,10 +46,19 @@ namespace policy.app.PageModels
 			set;
 		}
 
-		/// <summary>
-		/// Возвращает или устанавливает значение поля подтверждения пароля.
-		/// </summary>
-		public string ConfirmPassword
+        /// <summary>
+        /// Возвращает или устанавливает строку, введенную пользователем
+        /// </summary>
+        public string City 
+        { 
+            get; 
+            set; 
+        }
+
+        /// <summary>
+        /// Возвращает или устанавливает значение поля подтверждения пароля.
+        /// </summary>
+        public string ConfirmPassword
 		{
 			get;
 			set;
@@ -141,8 +150,8 @@ namespace policy.app.PageModels
 				Education = Education,
 				SettlementType = SettlementType,
 				Region = Region,
-				Gender = Gender
-
+				Gender = Gender,
+                City = City
 			};
 			UserToken token = null;
 			

@@ -169,6 +169,9 @@ namespace policy.app.Services
 					{
 						"sex", user.Gender
 					},
+                    { 
+                        "city", user.City
+                    },
 					{
 						"education", user.Education
 					},

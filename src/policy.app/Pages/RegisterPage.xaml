@@ -32,18 +32,14 @@
                                   FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"
                                   Text="{Binding DateOfBirthday, Mode=OneWayToSource}" />
 
-                <ex:PickerRating Title="Образование"
+                <ex:PickerRating Title="Регион"
+                                 Margin="0,0,0,10"
                                  BackgroundColor="#f4f5f6"
                                  HorizontalOptions="FillAndExpand"
-                                 SelectedItem="{Binding Education}"
-                                 FontSize="16">
-                    <ex:PickerRating.Items>
-                        <x:String>высшее или неполное высшее</x:String>
-                        <x:String>среднее (профессиональное)</x:String>
-                        <x:String>среднее (полное)</x:String>
-                        <x:String>среднее (общее) или ниже</x:String>
-                    </ex:PickerRating.Items>
-                </ex:PickerRating>
+                                 ItemsSource="{Binding Regions}"
+                                 ItemDisplayBinding="{Binding Name}"
+                                 SelectedItem="{Binding Region}"
+                                 FontSize="16"/>
 
                 <ex:PickerRating Title="Тип населенного пункта"
                                  BackgroundColor="#f4f5f6"
@@ -82,20 +78,27 @@
                     </ex:PickerRating.Items>
                 </ex:PickerRating>
 
+                <ex:EntryAuthPage Text="{Binding City}" Placeholder="Название населенного пункта" FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"/>
+
+                <ex:PickerRating Title="Образование"
+                                 BackgroundColor="#f4f5f6"
+                                 HorizontalOptions="FillAndExpand"
+                                 SelectedItem="{Binding Education}"
+                                 FontSize="16">
+                    <ex:PickerRating.Items>
+                        <x:String>высшее или неполное высшее</x:String>
+                        <x:String>среднее (профессиональное)</x:String>
+                        <x:String>среднее (полное)</x:String>
+                        <x:String>среднее (общее)</x:String>
+                        <x:String>начальное</x:String>
+                    </ex:PickerRating.Items>
+                </ex:PickerRating>
+
                 <ex:EntryAuthPage Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
                                   PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
 
                 <ex:EntryAuthPage Placeholder="Подтверждение пароля" Text="{Binding ConfirmPassword}" IsPassword="true"
                                   FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
-
-                <ex:PickerRating Title="Регион"
-                                 Margin="0,0,0,10"
-                                 BackgroundColor="#f4f5f6"
-                                 HorizontalOptions="FillAndExpand"
-                                 ItemsSource="{Binding Regions}"
-                                 ItemDisplayBinding="{Binding Name}"
-                                 SelectedItem="{Binding Region}"
-                                 FontSize="16"/>
 
                 <Button x:Name="RegisterButton" Text="Зарегистрироваться" Clicked="Button_OnClicked"
                         Command="{Binding OnRegisterButtonClicked}" BorderColor="#228bcc" BorderWidth="1"
