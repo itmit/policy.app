@@ -21,6 +21,7 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или устанавливает номер региона.
 		/// </summary>
+		[JsonProperty("id")]
 		public int Number
 		{
 			get;
@@ -35,6 +36,8 @@ namespace policy.app.Models
 			get;
 			set;
 		}
+
+		public string ListName => $"{Number} {Name}";
 
 		/// <summary>
 		/// Возвращает или устанавливает дату создания.

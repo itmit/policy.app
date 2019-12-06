@@ -49,6 +49,8 @@ namespace policy.app
 
 			InitializeComponent();
 
+			Application.Current.On<TabBar.Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
+
 			var loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
 			var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
 
@@ -79,7 +81,7 @@ namespace policy.app
 			get
 			{
 				var configuration = RealmConfiguration.DefaultConfiguration;
-				configuration.SchemaVersion = 6;
+				configuration.SchemaVersion = 7;
 				return (RealmConfiguration) configuration;
 			}
 		}

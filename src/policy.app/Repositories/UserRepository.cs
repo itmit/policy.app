@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
+using AutoMapper.EquivalencyExpression;
+using policy.app.DTO;
 using policy.app.Models;
 using policy.app.RealmObjects;
 using Realms;
@@ -20,7 +22,26 @@ namespace policy.app.Repositories
 		{
 			_config = config;
 			var app = App.Current;
-			var mapperConfiguration = app.Configuration;
+			var mapperConfiguration = new MapperConfiguration(cfg =>
+			{
+				cfg.AddCollectionMappers();
+
+				cfg.CreateMap<User, UserRealmObject>()
+				   .ForMember(q => q.FavoriteGophers, opt => opt.MapFrom(q => q.FavoriteGophers))
+				   .ForPath(m => m.Region, o => o.MapFrom(q => q.Region.Name));
+
+				cfg.CreateMap<Gopher, GopherRealmObject>();
+				cfg.CreateMap<UserToken, TokenRealmObject>();
+				cfg.CreateMap<Category, CategoryRealmObject>();
+
+				cfg.CreateMap<UserRealmObject, User>()
+				   .ForPath(m => m.Region.Name, o => o.MapFrom(q => q.Region))
+				   .ForMember(q => q.FavoriteGophers, opt => opt.MapFrom(q => q.FavoriteGophers));
+
+				cfg.CreateMap<GopherRealmObject, Gopher>();
+				cfg.CreateMap<TokenRealmObject, UserToken>();
+				cfg.CreateMap<CategoryRealmObject, Category>();
+			});
 			_mapper = mapperConfiguration.CreateMapper();
 		}
 		#endregion

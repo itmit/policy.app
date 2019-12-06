@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using FFImageLoading.Cache;
+using FFImageLoading.Forms;
 using Newtonsoft.Json;
+using Nito.AsyncEx;
 using PropertyChanged;
 
 namespace policy.app.Models
@@ -11,6 +14,8 @@ namespace policy.app.Models
 	[AddINotifyPropertyChangedInterface]
 	public class User : IGopher
 	{
+		private string _photoSource;
+
 		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает дату рождения пользователя.
@@ -86,7 +91,6 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или устанавливает область деятельности пользователя.
 		/// </summary>
-		[JsonProperty("field_of_activity")]
 		public string FieldOfActivity
 		{
 			get;
@@ -105,7 +109,6 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или задает номер телефона пользователя.
 		/// </summary>
-		[JsonProperty("phone_number")]
 		public string PhoneNumber
 		{
 			get;
@@ -152,7 +155,6 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или устанавливает ид пользователя.
 		/// </summary>
-		[JsonProperty("uid")]
 		public Guid Guid
 		{
 			get;
@@ -189,17 +191,19 @@ namespace policy.app.Models
 		/// <summary>
 		/// Возвращает или устанавливает источник фотографии.
 		/// </summary>
-		[JsonProperty("photo")]
 		public string PhotoSource
 		{
-			get;
-			set;
+			get => _photoSource;
+			set
+			{
+				_photoSource = value;
+				CachedImage.InvalidateCache(_photoSource, CacheType.All, true);
+			}
 		}
 
 		/// <summary>
 		/// Возвращает или устанавливает имя пользователя.
 		/// </summary>
-		[JsonProperty("place_of_work")]
 		public string PlaceOfWork
 		{
 			get;

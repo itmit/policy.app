@@ -158,5 +158,41 @@ namespace policy.app.RealmObjects
 			set;
 		}
 		#endregion
+
+		/// <summary>
+		/// Возвращает или устанавливает пол пользователя.
+		/// </summary>
+		public string Gender
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает образование.
+		/// </summary>
+		public string Education
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает образование.
+		/// </summary>
+		public string Region
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает тип населенного пункта.
+		/// </summary>
+		public string SettlementType
+		{
+			get;
+			set;
+		}
 	}
 }

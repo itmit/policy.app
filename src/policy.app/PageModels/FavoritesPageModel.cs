@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -162,7 +163,15 @@ namespace policy.app.PageModels
 
 			var user = _repository.All()
 								 .Single();
-			Gophers = new ObservableCollection<IGopher>(await _service.GetFavorites(user));
+			try
+			{
+				Gophers = new ObservableCollection<IGopher>(await _service.GetFavorites(user));
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+				Gophers = new ObservableCollection<IGopher>();
+			}
 			user.FavoriteGophers.Clear();
 			foreach (var gopher in Gophers)
 			{

@@ -17,6 +17,8 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class LoginPageModel : FreshBasePageModel
 	{
+		private bool _isBusy;
+
 		#region Properties
 		/// <summary>
 		/// Возвращает или устанавливает email вводимый пользователем.
@@ -66,7 +68,13 @@ namespace policy.app.PageModels
 		public ICommand OnRegisterButtonClicked =>
 			new FreshAwaitCommand((param, tcs) =>
 			{
+				if (_isBusy)
+				{
+					return;
+				}
+				_isBusy = true;
 				CoreMethods.PushPageModel<RegisterPageModel>();
+				_isBusy = false;
 				tcs.SetResult(true);
 			});
 		#endregion
@@ -77,8 +85,15 @@ namespace policy.app.PageModels
 		/// </summary>
 		private async void OnLoginClicked()
 		{
+			if (_isBusy)
+			{
+				return;
+			}
+			
+			_isBusy = true;
 			User user;
 			var service = new AuthService();
+			
 			try
 			{
 				user = await service.GetUserByTokenAsync(await service.LoginAsync(Email, Password));
@@ -86,6 +101,7 @@ namespace policy.app.PageModels
 			catch (Exception e)
 			{
 				Console.WriteLine(e);
+				_isBusy = false;
 				MessageLabel = "Неверно указаны email или пароль.";
 				return;
 			}
@@ -100,13 +116,13 @@ namespace policy.app.PageModels
 
 			if (app == null)
 			{
+				_isBusy = false;
 				return;
 			}
 
+			_isBusy = false;
 			var repository = new UserRepository(app.RealmConfiguration);
-
 			repository.Add(user);
-
 			app.MainPage = app.InitMainTabbedPage();
 		}
 		#endregion

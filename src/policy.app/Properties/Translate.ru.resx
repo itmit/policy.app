@@ -120,8 +120,17 @@
   <data name="City" xml:space="preserve">
     <value>Город</value>
   </data>
+  <data name="Education" xml:space="preserve">
+    <value>Образование</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
   <data name="FieldOfActivity" xml:space="preserve">
     <value>Сфера деятельности</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Пол</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Имя</value>
@@ -129,13 +138,25 @@
   <data name="Organization" xml:space="preserve">
     <value>Организация</value>
   </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
   <data name="Position" xml:space="preserve">
     <value>Должность</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Регион</value>
+  </data>
+  <data name="SettlementType" xml:space="preserve">
+    <value>Тип населенного пункта</value>
   </data>
   <data name="Statistics" xml:space="preserve">
     <value>Статистика</value>
   </data>
   <data name="Votes" xml:space="preserve">
     <value>Опросы</value>
+  </data>
+  <data name="YearOfBirth" xml:space="preserve">
+    <value>Год рожения</value>
   </data>
 </root>

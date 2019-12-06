@@ -17,6 +17,8 @@ namespace policy.app.Services
 	/// </summary>
 	public class AuthService : IAuthService
 	{
+		private Mapper _mapper;
+
 		#region Data
 		#region Consts
 		/// <summary>
@@ -54,7 +56,7 @@ namespace policy.app.Services
         #region .ctor
         public AuthService()
         {
-            var mapper = new Mapper(new MapperConfiguration(cfg =>
+            _mapper = new Mapper(new MapperConfiguration(cfg =>
             {
 
                 cfg.CreateMap<UserDto, User>()
@@ -67,7 +69,7 @@ namespace policy.app.Services
 		/// <summary>
 		/// Получает данные авторизованного пользователя по токену.
 		/// </summary>
-		/// <param name="token">Токен для получения пользователя</param>
+		/// <param name="token">Токен для получения пользователя.</param>
 		/// <returns>Авторизованный пользователь.</returns>
 		public async Task<User> GetUserByTokenAsync(UserToken token)
 		{
@@ -86,7 +88,7 @@ namespace policy.app.Services
 					if (jsonString != null)
 					{
                         var jsonData = JsonConvert.DeserializeObject<JsonDataResponse<UserDto>>(jsonString);
-						//jsonData.Data.Token = token;
+						
 						if (string.IsNullOrEmpty(jsonData.Data.PhotoSource))
 						{
 							jsonData.Data.PhotoSource = "about:blank";
@@ -96,9 +98,10 @@ namespace policy.app.Services
 							jsonData.Data.PhotoSource = jsonData.Data.PhotoSource.Replace("public", "");
 							jsonData.Data.PhotoSource = StorageUri + jsonData.Data.PhotoSource;
 						}
-                        var user = new User();
-                        user.Token = token;
-                        return await Task.FromResult(user);
+						var user = _mapper.Map<User>(jsonData.Data);
+						user.Token = token;
+						user.Birthday = user.Birthday.AddDays(2);
+						return await Task.FromResult(user);
 					}
 				}
 
@@ -201,6 +204,9 @@ namespace policy.app.Services
 					},
 					{
 						"city_type", user.SettlementType
+					},
+					{
+						"name", user.Name
 					}
 				});
 

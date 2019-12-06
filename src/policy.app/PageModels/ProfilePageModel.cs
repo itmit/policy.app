@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -100,8 +101,16 @@ namespace policy.app.PageModels
 			{
 				IsRefreshing = true;
 				var repository = new UserRepository(_app.RealmConfiguration);
-				var users = repository.All();
-				User = users.SingleOrDefault();
+				var user = repository.All().SingleOrDefault();
+				if (user != null && string.IsNullOrEmpty(user.PhoneNumber))
+				{
+					user.PhoneNumber = null;
+				}
+				if (user != null && string.IsNullOrEmpty(user.PhotoSource))
+				{
+					user.PhotoSource = "about:blank";
+				}
+				User = user;
 				IsRefreshing = false;
 				tcs.SetResult(true);
 			});
@@ -112,6 +121,7 @@ namespace policy.app.PageModels
 		public FreshAwaitCommand SetAvatarCommand =>
 			new FreshAwaitCommand(async (obj, tcs) =>
 			{
+				tcs.SetResult(true);
 				if (await CheckPermission(Permission.Storage, "Для загрузки аватара необходимо разрешение на использование хранилища."))
 				{
 					if (!CrossMedia.Current.IsPickPhotoSupported)
@@ -145,7 +155,6 @@ namespace policy.app.PageModels
 				}
 				RefreshCommand.Execute(null);
 				MenuPageModel.InvokeUpdateUser();
-				tcs.SetResult(true);
 			});
 		#endregion
 
@@ -178,12 +187,25 @@ namespace policy.app.PageModels
 			var status = await CrossPermissions.Current.CheckPermissionStatusAsync(permission);
 			if (status != PermissionStatus.Granted)
 			{
+				bool wasModalShowed = false;
 				if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(permission))
 				{
+					wasModalShowed = true;
 					await Application.Current.MainPage.DisplayAlert("Внимание", message, "OK");
 				}
 
-				await CrossPermissions.Current.RequestPermissionsAsync(permission);
+				try
+				{
+					await CrossPermissions.Current.RequestPermissionsAsync(permission);
+				}
+				catch (TaskCanceledException e)
+				{
+					Console.WriteLine(e);
+					if (!wasModalShowed)
+					{
+						await Application.Current.MainPage.DisplayAlert("Внимание", message, "OK");
+					}
+				}
 
 				status = await CrossPermissions.Current.CheckPermissionStatusAsync(permission);
 			}

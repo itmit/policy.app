@@ -183,8 +183,17 @@ namespace policy.app.Services
 
 		private void SetPictures(IEnumerable<IGopher> users)
 		{
+			if (users == null)
+			{
+				return;
+			}
+
 			foreach (var user in users)
 			{
+				if (user == null)
+				{
+					continue;
+				}
 				if (IsNullOrEmpty(user.PhotoSource))
 				{
 					user.PhotoSource = "about:blank";

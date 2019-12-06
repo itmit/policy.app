@@ -5,6 +5,7 @@
              xmlns:properties="clr-namespace:policy.app.Properties"
              xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:converters="clr-namespace:policy.app.Converters;assembly=policy.app"
              Title="Профиль"
              x:Class="policy.app.Pages.ProfilePage">
     <ContentPage.Content>
@@ -28,7 +29,14 @@
                         <ImageButton Source="user_blue.png" WidthRequest="30" BackgroundColor="Transparent"
                                      HorizontalOptions="End" Command="{Binding OpenEditPage}" />
                         <Grid>
+                            <Grid.Resources>
+                                <converters:NullToBoolConverter x:Key="NullToBoolConverter" />
+                            </Grid.Resources>
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
@@ -39,25 +47,58 @@
                                 <ColumnDefinition Width="200" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Row="0" Text="{x:Static properties:Translate.Name}"
+                            <Label Grid.Row="0" Text="{x:Static properties:Translate.Email}"
+                                   IsVisible="{Binding User.Email, Converter={StaticResource NullToBoolConverter}}"
+                                   IsEnabled="{Binding User.Email, Converter={StaticResource NullToBoolConverter}}"
+                                   Style="{StaticResource StartLabelProfilePage}" />
+                            <Label Grid.Row="0" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" 
+                                   Text="{Binding User.Email}"
+                                   IsVisible="{Binding User.Email, Converter={StaticResource NullToBoolConverter}}"
+                                   IsEnabled="{Binding User.Email, Converter={StaticResource NullToBoolConverter}}"
+                                   Style="{StaticResource EndLabelProfilePage}" />
+                            <Label Grid.Row="1" Grid.Column="0" Text="{x:Static properties:Translate.PhoneNumber}"
+                                   IsVisible="{Binding User.PhoneNumber, Converter={StaticResource NullToBoolConverter}}"
+                                   IsEnabled="{Binding User.PhoneNumber, Converter={StaticResource NullToBoolConverter}}"
+                                   Style="{StaticResource StartLabelProfilePage}" />
+                            <Label Grid.Row="1" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" 
+                                   Text="{Binding User.PhoneNumber}"
+                                   IsVisible="{Binding User.PhoneNumber, Converter={StaticResource NullToBoolConverter}}"
+                                   IsEnabled="{Binding User.PhoneNumber, Converter={StaticResource NullToBoolConverter}}"
+                                   Style="{StaticResource EndLabelProfilePage}" />
+                            <Label Grid.Row="2" Grid.Column="0" Text="{x:Static properties:Translate.Name}"
+                                   Style="{StaticResource StartLabelProfilePage}" />
+                            <Label Grid.Row="2" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" 
+                                   Text="{Binding User.Name}"
+                                   Style="{StaticResource EndLabelProfilePage}" />
+                            <Label Grid.Row="3" Grid.Column="0" Text="{x:Static properties:Translate.Gender}"
+                                   Style="{StaticResource StartLabelProfilePage}" />
+                            <Label Grid.Row="3" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" 
+                                   Text="{Binding User.Gender}"
+                                   Style="{StaticResource EndLabelProfilePage}" />
+                            <Label Grid.Row="4" Grid.Column="0" Text="{x:Static properties:Translate.YearOfBirth}"
+                                   Style="{StaticResource StartLabelProfilePage}" />
+                            <Label Grid.Row="4" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" 
+                                   Text="{Binding User.Birthday, StringFormat='{0:yyyy}'}"
+                                   Style="{StaticResource EndLabelProfilePage}" />
+                            <Label Grid.Row="5" Grid.Column="0" Text="{x:Static properties:Translate.Education}"
+                                   Style="{StaticResource StartLabelProfilePage}" />
+                            <Label Grid.Row="5" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" 
+                                   Text="{Binding User.Education}"
+                                   Style="{StaticResource EndLabelProfilePage}" />
+                            <Label Grid.Row="6" Grid.Column="0" Text="{x:Static properties:Translate.Region}"
+                                   Style="{StaticResource StartLabelProfilePage}" />
+                            <Label Grid.Row="6" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" 
+                                   Text="{Binding User.Region.Name}"
+                                   Style="{StaticResource EndLabelProfilePage}" />
+                            <Label Grid.Row="7" Grid.Column="0" Text="{x:Static properties:Translate.SettlementType}"
+                                   Style="{StaticResource StartLabelProfilePage}" />
+                            <Label Grid.Row="7" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" 
+                                   Text="{Binding User.SettlementType}"
+                                   Style="{StaticResource EndLabelProfilePage}" />
+
+                            <Label Grid.Row="8" Grid.Column="0" Text="{x:Static properties:Translate.City}"
                                Style="{StaticResource StartLabelProfilePage}" />
-                            <Label Grid.Row="0" Grid.Column="1" MinimumHeightRequest="200" HorizontalTextAlignment="End" Text="{Binding User.Name}"
-                               Style="{StaticResource EndLabelProfilePage}" />
-                            <Label Grid.Row="1" Grid.Column="0" Text="{x:Static properties:Translate.City}"
-                               Style="{StaticResource StartLabelProfilePage}" />
-                            <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.City}"
-                               Style="{StaticResource EndLabelProfilePage}" />
-                            <Label Grid.Row="2" Grid.Column="0" Text="{x:Static properties:Translate.FieldOfActivity}"
-                               Style="{StaticResource StartLabelProfilePage}" />
-                            <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.FieldOfActivity}"
-                               Style="{StaticResource EndLabelProfilePage}" />
-                            <Label Grid.Row="3" Grid.Column="0" Text="{x:Static properties:Translate.Organization}"
-                               Style="{StaticResource StartLabelProfilePage}" />
-                            <Label Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Organization}"
-                               Style="{StaticResource EndLabelProfilePage}" />
-                            <Label Grid.Row="4" Grid.Column="0" Text="{x:Static properties:Translate.Position}"
-                               Style="{StaticResource StartLabelProfilePage}" />
-                            <Label Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.Position}"
+                            <Label Grid.Row="8" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding User.City}"
                                Style="{StaticResource EndLabelProfilePage}" />
                         </Grid>
                     </StackLayout>

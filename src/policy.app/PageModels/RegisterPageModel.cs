@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Security.Authentication;
 using System.Windows.Input;
 using FreshMvvm;
@@ -17,17 +18,29 @@ namespace policy.app.PageModels
 	[AddINotifyPropertyChangedInterface]
 	public class RegisterPageModel : FreshBasePageModel
 	{
-		private int _dateOfBirthday = 2000;
+		private int _dateOfBirthday;
 
 		public override async void Init(object initData)
 		{
 			base.Init(initData);
 
 			var service = new AuthService();
-			Regions = new ObservableCollection<Region>(await service.GetRegions());
+			var regions = new ObservableCollection<Region>(await service.GetRegions());
+			regions.Move(regions.IndexOf(regions.Single(obj => obj.Number == 77)), 0);
+			regions.Move(regions.IndexOf(regions.Single(obj => obj.Number == 78)), 1);
+			Regions = regions;
 		}
 
 		#region Properties
+		/// <summary>
+		/// Возвращает или устанавливает ФИО или ник.
+		/// </summary>
+		public string Name
+		{
+			get;
+			set;
+		} = string.Empty;
+
 		/// <summary>
 		/// Возвращает или устанавливает регионы.
 		/// </summary>
@@ -128,6 +141,7 @@ namespace policy.app.PageModels
 			{
 				if (_dateOfBirthday == 0)
 				{
+					MessageLabel = "Год рождения не заполнен.";
 					return;
 				}
 				RegisterAsync();
@@ -145,8 +159,9 @@ namespace policy.app.PageModels
 			var user = new User
 			{
 				Email = Email,
+				Name = Name,
 				PhoneNumber = PhoneNumber,
-				Birthday = new DateTime(DateOfBirthday, 1, 1),
+				Birthday = new DateTime(DateOfBirthday, 1, 2),
 				Education = Education,
 				SettlementType = SettlementType,
 				Region = Region,

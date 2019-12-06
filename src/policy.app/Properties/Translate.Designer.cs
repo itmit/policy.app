@@ -70,11 +70,38 @@ namespace policy.app.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Образование.
+        /// </summary>
+        internal static string Education {
+            get {
+                return ResourceManager.GetString("Education", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Field of activity.
         /// </summary>
         internal static string FieldOfActivity {
             get {
                 return ResourceManager.GetString("FieldOfActivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gender.
+        /// </summary>
+        internal static string Gender {
+            get {
+                return ResourceManager.GetString("Gender", resourceCulture);
             }
         }
         
@@ -97,11 +124,38 @@ namespace policy.app.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Phone number.
+        /// </summary>
+        internal static string PhoneNumber {
+            get {
+                return ResourceManager.GetString("PhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Position.
         /// </summary>
         internal static string Position {
             get {
                 return ResourceManager.GetString("Position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Region.
+        /// </summary>
+        internal static string Region {
+            get {
+                return ResourceManager.GetString("Region", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settlement type.
+        /// </summary>
+        internal static string SettlementType {
+            get {
+                return ResourceManager.GetString("SettlementType", resourceCulture);
             }
         }
         
@@ -120,6 +174,15 @@ namespace policy.app.Properties {
         internal static string Votes {
             get {
                 return ResourceManager.GetString("Votes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year of birth.
+        /// </summary>
+        internal static string YearOfBirth {
+            get {
+                return ResourceManager.GetString("YearOfBirth", resourceCulture);
             }
         }
     }
