@@ -9,75 +9,106 @@
         <ScrollView>
             <StackLayout Margin="25">
                 <Label Text="{Binding MessageLabel}" />
-                <ex:EntryAuthPage Placeholder="E-mail" Text="{Binding Email}" FontSize="16" PlaceholderColor="#19365f"
-                                  TextColor="#19365f" Margin="0,0,0,10" />
-                <ex:EntryAuthPage Placeholder="Телефон" Text="{Binding PhoneNumber}" FontSize="16"
-                                  PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" Keyboard="Numeric">
-                    <ex:EntryAuthPage.Behaviors>
-                        <ex:MaskedBehavior Mask="+7 (XXX) XXX-XX-XX" />
-                    </ex:EntryAuthPage.Behaviors>
-                </ex:EntryAuthPage>
 
-                <ex:EntryAuthPage Placeholder="ФИО или никнейм" Text="{Binding Name}" FontSize="16" 
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red" Margin="0"/>
+                    <ex:EntryAuthPage Placeholder="E-mail" Text="{Binding Email}" FontSize="16" PlaceholderColor="#19365f"
+                                      TextColor="#19365f"  />
+                </Grid>
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red" Margin="0"/>
+                    <ex:EntryAuthPage Placeholder="Телефон" Text="{Binding PhoneNumber}" FontSize="16"
+                                  PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" Keyboard="Numeric">
+                        <ex:EntryAuthPage.Behaviors>
+                            <ex:MaskedBehavior Mask="+7 (XXX) XXX-XX-XX" />
+                        </ex:EntryAuthPage.Behaviors>
+                    </ex:EntryAuthPage>
+                </Grid>
+
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red" Margin="0"/>
+                    <ex:EntryAuthPage Placeholder="ФИО или никнейм" Text="{Binding Name}" FontSize="16" 
                                   PlaceholderColor="#19365f"
                                   TextColor="#19365f" Margin="0,0,0,10" />
+                </Grid>
 
-                <ex:PickerRating Title="Пол" BackgroundColor="#f4f5f6"
-                                 HorizontalOptions="FillAndExpand"
-                                 SelectedItem="{Binding Gender}"
-                                 FontSize="16">
-                    <ex:PickerRating.Items>
-                        <x:String>мужской</x:String>
-                        <x:String>женский</x:String>
-                    </ex:PickerRating.Items>
-                </ex:PickerRating>
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red"/>
+                    <ex:PickerRating Title="Пол" BackgroundColor="#f4f5f6"
+                                     Margin="5,0,0,0"
+                                     SelectedItem="{Binding Gender}"
+                                     FontSize="16">
+                        <ex:PickerRating.Items>
+                            <x:String>мужской</x:String>
+                            <x:String>женский</x:String>
+                        </ex:PickerRating.Items>
+                    </ex:PickerRating>
+                </Grid>
 
-                <ex:EntryAuthPage Keyboard="Numeric" Placeholder="Год рождения"
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red" Margin="0"/>
+                    <ex:EntryAuthPage Keyboard="Numeric" Placeholder="Год рождения"
                                   FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"
                                   Text="{Binding DateOfBirthday, Mode=OneWayToSource}" />
+                </Grid>
 
-                <ex:PickerRating Title="Регион"
-                                 Margin="0,0,0,10"
-                                 BackgroundColor="#f4f5f6"
-                                 HorizontalOptions="FillAndExpand"
-                                 ItemsSource="{Binding Regions}"
-                                 ItemDisplayBinding="{Binding ListName}"
-                                 SelectedItem="{Binding Region}"
-                                 FontSize="16"/>
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red"/>
+                    <ex:PickerRating Title="Регион"
+                                     TitleColor="#19365f"
+                                     Margin="5,0,0,0"
+                                     BackgroundColor="#f4f5f6"
+                                     ItemsSource="{Binding Regions}"
+                                     ItemDisplayBinding="{Binding ListName}"
+                                     SelectedItem="{Binding Region}"
+                                     FontSize="16"/>
+                </Grid>
 
-                <ex:PickerRating Title="Тип населенного пункта"
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red"/>
+                    <ex:PickerRating Title="Тип населенного пункта"
                                  BackgroundColor="#f4f5f6"
-                                 HorizontalOptions="FillAndExpand"
+                                 Margin="5,0,0,0"
                                  SelectedItem="{Binding SettlementType}"
                                  FontSize="16">
-                    <ex:PickerRating.Items>
-                        <x:String>Город</x:String>
-                        <x:String>Посёлок городского типа</x:String>
-                        <x:String>Сельская местность</x:String>
-                    </ex:PickerRating.Items>
-                </ex:PickerRating>
+                        <ex:PickerRating.Items>
+                            <x:String>Город</x:String>
+                            <x:String>Посёлок городского типа</x:String>
+                            <x:String>Сельская местность</x:String>
+                        </ex:PickerRating.Items>
+                    </ex:PickerRating>
+                </Grid>
 
                 <ex:EntryAuthPage Text="{Binding City}" Placeholder="Название населенного пункта" FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10"/>
 
-                <ex:PickerRating Title="Образование"
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red"/>
+                    <ex:PickerRating Title="Образование"
                                  BackgroundColor="#f4f5f6"
-                                 HorizontalOptions="FillAndExpand"
+                                 Margin="5,0,0,0"
                                  SelectedItem="{Binding Education}"
                                  FontSize="16">
-                    <ex:PickerRating.Items>
-                        <x:String>высшее или неполное высшее</x:String>
-                        <x:String>среднее (профессиональное)</x:String>
-                        <x:String>среднее (полное)</x:String>
-                        <x:String>среднее (общее)</x:String>
-                        <x:String>начальное</x:String>
-                    </ex:PickerRating.Items>
-                </ex:PickerRating>
+                        <ex:PickerRating.Items>
+                            <x:String>высшее или неполное высшее</x:String>
+                            <x:String>среднее (профессиональное)</x:String>
+                            <x:String>среднее (полное)</x:String>
+                            <x:String>среднее (общее)</x:String>
+                            <x:String>начальное</x:String>
+                        </ex:PickerRating.Items>
+                    </ex:PickerRating>
+                </Grid>
 
-                <ex:EntryAuthPage Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red" Margin="0"/>
+                    <ex:EntryAuthPage Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
                                   PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
+                </Grid>
 
-                <ex:EntryAuthPage Placeholder="Подтверждение пароля" Text="{Binding ConfirmPassword}" IsPassword="true"
+                <Grid Margin="0,0,0,10">
+                    <Label Text="*" TextColor="Red" Margin="0"/>
+                    <ex:EntryAuthPage Placeholder="Подтверждение пароля" Text="{Binding ConfirmPassword}" IsPassword="true"
                                   FontSize="16" PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
+                </Grid>
 
                 <Button x:Name="RegisterButton" Text="Зарегистрироваться" Clicked="Button_OnClicked"
                         Command="{Binding OnRegisterButtonClicked}" BorderColor="#228bcc" BorderWidth="1"

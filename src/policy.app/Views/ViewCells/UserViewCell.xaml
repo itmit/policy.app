@@ -31,11 +31,11 @@
                     </forms:CachedImage.Transformations>
                 </forms:CachedImage>
                 <Label Grid.Column="1" Grid.Row="1" Text="{Binding Name}" TextColor="#19365f" VerticalOptions="Center"
-                       HorizontalOptions="Center" FontSize="16" />
+                       HorizontalOptions="Center" FontSize="16" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="1" Grid.Row="3" Text="{Binding Category.Title}" TextColor="#19365f"
-                       VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" />
+                       VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="1" Grid.Row="4" Text="{Binding PlaceOfWork}" TextColor="#19365f"
-                       VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" />
+                       VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" HorizontalTextAlignment="Center"/>
             </Grid>
             <BoxView HeightRequest="1" BackgroundColor="#dee4ea" />
         </StackLayout>

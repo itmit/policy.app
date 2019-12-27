@@ -1,6 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using FreshMvvm;
+using policy.app.Pages;
 using policy.app.Repositories;
 using PropertyChanged;
 using Xamarin.Forms;
@@ -156,7 +158,11 @@ namespace policy.app.PageModels
 								 var rep = new UserRepository(_app.RealmConfiguration);
 								 rep.Remove(rep.All()
 											   .Single());
-								 CoreMethods.SwitchOutRootNavigation(NavigationContainerNames.AuthenticationContainer);
+
+								 var loginPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
+								 var loginContainer = new FreshNavigationContainer(loginPage, NavigationContainerNames.AuthenticationContainer);
+
+								 _app.MainPage = loginContainer;
 							 })
 				{
 					ImageSource = "menu_5_def.png"

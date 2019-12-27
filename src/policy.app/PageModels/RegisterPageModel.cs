@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Security.Authentication;
 using System.Windows.Input;
@@ -19,6 +20,7 @@ namespace policy.app.PageModels
 	public class RegisterPageModel : FreshBasePageModel
 	{
 		private int _dateOfBirthday;
+		private string _phoneNumber = string.Empty;
 
 		public override async void Init(object initData)
 		{
@@ -62,7 +64,7 @@ namespace policy.app.PageModels
         /// <summary>
         /// Возвращает или устанавливает строку, введенную пользователем
         /// </summary>
-        public string City 
+        public string City
         { 
             get; 
             set; 
@@ -129,9 +131,13 @@ namespace policy.app.PageModels
 		/// </summary>
 		public string PhoneNumber
 		{
-			get;
-			set;
-		} = string.Empty;
+			get => _phoneNumber;
+			set
+			{
+				_phoneNumber = value;
+			}
+
+		}
 
 		/// <summary>
 		/// Возвращает команду для кнопки регистрации.
@@ -144,6 +150,20 @@ namespace policy.app.PageModels
 					MessageLabel = "Год рождения не заполнен.";
 					return;
 				}
+
+				if (string.IsNullOrEmpty(Email) && string.IsNullOrEmpty(_phoneNumber))
+				{
+					MessageLabel = "E-mail или Телефон должен быть заполнен.";
+					return;
+				}
+
+				if (_phoneNumber.Contains(','))
+				{
+					MessageLabel = "Не правильно набран номер.";
+					return;
+				}
+
+				MessageLabel = "";
 				RegisterAsync();
 				tcs.SetResult(true);
 			});

@@ -78,6 +78,12 @@ namespace policy.app
 			get;
 		}
 
+		public Page MainPage
+		{
+			get;
+			set;
+		}
+
 		/// <summary>
 		/// Уведомляет потомков об остановке. 
 		/// </summary>
@@ -159,6 +165,11 @@ namespace policy.app
 		}
 		#endregion
 
+		/// <summary>
+		/// Событие при переключении закладок.
+		/// </summary>
+		/// <param name="sender">Отправитель.</param>
+		/// <param name="e">Параметры события.</param>
 		private void CurrentPageHasChanged(object sender, EventArgs e)
 		{
 			if ((sender as TabbedPage)?.CurrentPage is NavigationPage navigationPage)
@@ -172,6 +183,22 @@ namespace policy.app
 					pageModel.LoadData();
 				}
 			}
+		}
+
+		/// <summary>Event that is raised when the back button is pressed.</summary>
+		/// <returns>To be added.</returns>
+		/// <remarks>To be added.</remarks>
+		protected override bool OnBackButtonPressed()
+		{
+			if (CurrentPage is NavigationPage navPage)
+			{
+				if (navPage.StackDepth == 1)
+				{
+					CurrentPage = MainPage;
+					return true;
+				}
+			}
+			return base.OnBackButtonPressed();
 		}
 
 		#region Private

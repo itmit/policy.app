@@ -206,6 +206,12 @@ namespace policy.app.PageModels
 			set;
 		}
 
+		public string Link
+		{
+			get;
+			private set;
+		}
+
 		/// <summary>
 		/// Возвращает команду для обновления списка избранных. 
 		/// </summary>
@@ -333,6 +339,10 @@ namespace policy.app.PageModels
 		{
 			IsFavorite = _user.FavoriteGophers.Any(favoriteGopher => favoriteGopher.Guid.Equals(guid));
 			var gopher = await _service.GetGopher(guid);
+			if (!string.IsNullOrEmpty(gopher.Link))
+			{
+				Link = "ССЫЛКА";
+			}
 			Likes = gopher.Likes;
 			Neutrals = gopher.Neutrals;
 			Dislikes = gopher.Dislikes;

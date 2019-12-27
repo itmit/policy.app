@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace policy.app.Pages
@@ -12,5 +13,10 @@ namespace policy.app.Pages
 			InitializeComponent();
 		}
 		#endregion
+
+		private void ImageButton_OnClicked(object sender, EventArgs e)
+		{
+			PasswordEntry.IsPassword = !PasswordEntry.IsPassword;
+		}
 	}
 }

@@ -188,8 +188,28 @@ namespace policy.app.Services
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 
-				return await Task.FromResult(response.IsSuccessStatusCode);
+				if (response.IsSuccessStatusCode)
+				{
+					return true;
+				}
+
+				var data = JsonConvert.DeserializeObject<JsonDataResponse<string>>(jsonString);
+				Error = data.Data;
+				ErrorMessage = data.Message;
+				return false;
 			}
+		}
+
+		public string ErrorMessage
+		{
+			get;
+			set;
+		}
+
+		public string Error
+		{
+			get;
+			set;
 		}
 		#endregion
 	}

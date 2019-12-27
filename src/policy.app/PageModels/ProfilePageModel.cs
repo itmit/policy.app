@@ -106,6 +106,10 @@ namespace policy.app.PageModels
 				{
 					user.PhoneNumber = null;
 				}
+				if (user != null && string.IsNullOrEmpty(user.Email))
+				{
+					user.Email = null;
+				}
 				if (user != null && string.IsNullOrEmpty(user.PhotoSource))
 				{
 					user.PhotoSource = "about:blank";

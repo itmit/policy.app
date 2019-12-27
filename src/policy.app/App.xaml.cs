@@ -22,7 +22,6 @@ namespace policy.app
 {
 	public partial class App : Application
 	{
-
 		#region .ctor
 		public App()
 		{
@@ -93,6 +92,7 @@ namespace policy.app
 			var tabbedNavigation = new MainTabbedPage(NavigationContainerNames.MainContainer);
 
 			tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<CategoriesPageModel>("Категории", "ic_action_home.png");
+			tabbedNavigation.MainPage = tabbedNavigation.CurrentPage;
 			tabbedNavigation.AddTab<FavoritesPageModel>("Избранные", "star_2.png");
 			tabbedNavigation.AddTab<RatingPageModel>("Поиск", "ic_action_search.png");
 			tabbedNavigation.AddTab<MenuPageModel>("Меню", "ic_action_dehaze.png");

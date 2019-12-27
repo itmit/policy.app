@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Windows.Input;
@@ -33,7 +34,7 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Сервис для работы с опросом.
 		/// </summary>
-		private IPollService _service;
+		private PollService _service;
 		#endregion
 		#endregion
 
@@ -60,10 +61,25 @@ namespace policy.app.PageModels
 				var users = repository.All();
 				var user = users.SingleOrDefault();
 
-				await _service.PassPull(_poll, user);
+				bool result = false;
+				try
+				{
+					result = await _service.PassPull(_poll, user);
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine(e);
+				}
 
-				await _app.MainPage.DisplayAlert("Уведомление", "Опрос пройден.", "ОK");
-				await CoreMethods.PopPageModel();
+				if (result)
+				{
+					await CoreMethods.PushPageModel<PollResultPageModel>(_poll.Guid);
+				}
+				else
+				{
+					await _app.MainPage.DisplayAlert("Уведомление", _service.Error, "Ок");
+					await CoreMethods.PopPageModel();
+				}
 
 				tcs.SetResult(false);
 			});

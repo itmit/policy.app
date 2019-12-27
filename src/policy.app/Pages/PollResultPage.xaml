@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="policy.app.Pages.PollResultPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Опрос успешно пройден."
+                   FontSize="20"
+                   TextColor="#228bcc"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Просмотреть результаты"
+                    Command="{Binding OpenResultsCommand}"
+                    TextColor="White"
+                    Padding="15,10"
+                    Margin="0,0,0,20"
+                    BackgroundColor="#228bcc"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="Center" />
+
+            <Button Text="Вернуться"
+                    Command="{Binding BackCommand}"
+                    TextColor="White"
+                    Padding="15,10"
+                    Margin="0,0,0,20"
+                    BackgroundColor="#228bcc"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

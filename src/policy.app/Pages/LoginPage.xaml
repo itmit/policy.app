@@ -28,8 +28,11 @@
                     <Label Text="{Binding MessageLabel}" />
                     <ex:EntryAuthPage Placeholder="E-mail или номер мобильного" Text="{Binding Email}" FontSize="16"
                                       PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" />
-                    <ex:EntryAuthPage Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
-                                      PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,25" />
+                    <Grid>
+                        <ex:EntryAuthPage x:Name="PasswordEntry" Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
+                                          PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,25" />
+                        <ImageButton WidthRequest="36" HeightRequest="36" HorizontalOptions="End" VerticalOptions="Center" Source="eye" Clicked="ImageButton_OnClicked"/>
+                    </Grid>
                 </StackLayout>
                 <StackLayout>
                     <Button Text="ВОЙТИ" Command="{Binding OnLoginButtonClicked}" BorderColor="#228bcc" BorderWidth="1"
