@@ -45,6 +45,8 @@ namespace policy.app.PageModels
 		/// </summary>
 		public delegate void UpdateUserEventHandler();
 
+		public string FavImageSource => IsFavorite ? "icons8_star_100" : "Star_def";
+
 		public ICommand OpenBrowserCommand => new FreshAwaitCommand(async (obj, tcs) =>
 			{
 				if (Uri.IsWellFormedUriString(Gopher.Link, UriKind.Absolute))
@@ -239,6 +241,7 @@ namespace policy.app.PageModels
 		public FreshAwaitCommand SetDislike =>
 			new FreshAwaitCommand(async (obj, tcs) =>
 			{
+				DislikesImageSource = "dislike";
 				Dislikes++;
 				var res = await _service.Rate(Gopher, RateType.Dislikes);
 				if (res)
@@ -251,6 +254,7 @@ namespace policy.app.PageModels
 				}
 				else
 				{
+					DislikesImageSource = "img_1315401";
 					Dislikes--;
 				}
 				tcs.SetResult(true);
@@ -262,6 +266,7 @@ namespace policy.app.PageModels
 		public FreshAwaitCommand SetLike =>
 			new FreshAwaitCommand(async (obj, tcs) =>
 			{
+				LikeImageSource = "like";
 				Likes++;
 				var res = await _service.Rate(Gopher, RateType.Likes);
 				if (res)
@@ -274,6 +279,7 @@ namespace policy.app.PageModels
 				}
 				else
 				{
+					LikeImageSource = "img_131540";
 					Likes--;
 				}
 				tcs.SetResult(true);
@@ -285,6 +291,7 @@ namespace policy.app.PageModels
 		public FreshAwaitCommand SetNeutral =>
 			new FreshAwaitCommand(async (obj, tcs) =>
 			{
+				NeutralsImageSource = "neutral";
 				Neutrals++;
 				var res = await _service.Rate(Gopher, RateType.Neutrals);
 				if (res)
@@ -297,6 +304,7 @@ namespace policy.app.PageModels
 				}
 				else
 				{
+					NeutralsImageSource = "meh";
 					Neutrals--;
 				}
 				tcs.SetResult(res);
@@ -330,6 +338,24 @@ namespace policy.app.PageModels
 		}
 		#endregion
 
+		public string LikeImageSource
+		{
+			get;
+			set;
+		} = "img_131540";
+
+		public string NeutralsImageSource
+		{
+			get;
+			set;
+		} = "meh";
+
+		public string DislikesImageSource
+		{
+			get;
+			set;
+		} = "img_1315401";
+
 		#region Private
 		/// <summary>
 		/// Загружает данные суслика.
@@ -347,6 +373,24 @@ namespace policy.app.PageModels
 			Neutrals = gopher.Neutrals;
 			Dislikes = gopher.Dislikes;
 			Gopher = gopher;
+
+			if (gopher.Mark == null)
+			{
+				return;
+			}
+
+			if (gopher.Mark.Equals("likes"))
+			{
+				LikeImageSource = "like";
+			}
+			if (gopher.Mark.Equals("neutrals"))
+			{
+				NeutralsImageSource = "neutral";
+			}
+			if (gopher.Mark.Equals("dislikes"))
+			{
+				DislikesImageSource = "dislike";
+			}
 		}
 		#endregion
 	}

@@ -16,7 +16,6 @@
                                       TextColor="#19365f"  />
                 </Grid>
                 <Grid Margin="0,0,0,10">
-                    <Label Text="*" TextColor="Red" Margin="0"/>
                     <ex:EntryAuthPage Placeholder="Телефон" Text="{Binding PhoneNumber}" FontSize="16"
                                   PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,0,0,10" Keyboard="Numeric">
                         <ex:EntryAuthPage.Behaviors>

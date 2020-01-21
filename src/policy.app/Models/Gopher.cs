@@ -10,6 +10,12 @@ namespace policy.app.Models
 	[AddINotifyPropertyChangedInterface]
 	public class Gopher : IGopher
 	{
+		public string Mark
+		{
+			get;
+			set;
+		}
+
 		#region IGopher members
 		/// <summary>
 		/// Возвращает или устанавливает категорию.

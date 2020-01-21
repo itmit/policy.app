@@ -49,9 +49,9 @@
                         </Grid>
                         <StackLayout Orientation="Horizontal">
                             <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding AddOrRemoveFavoritesCommand}" />
+                                <TapGestureRecognizer Command="{Binding AddOrRemoveFavoritesCommand}"/>
                             </StackLayout.GestureRecognizers>
-                            <Image Source="Star_def.png" WidthRequest="25" HeightRequest="25" />
+                            <Image Source="{Binding FavImageSource}" WidthRequest="25" HeightRequest="25" />
                             <Label Text="{Binding FavoriteButtonLabel}" Margin="10,0,0,0" FontSize="14"
                                TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold" />
                         </StackLayout>
@@ -75,7 +75,7 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Likes}" FontSize="30" TextColor="#228bcc" />
-                                    <Image Source="img_131540" WidthRequest="25" Grid.Column="1"
+                                    <Image Source="{Binding LikeImageSource}" WidthRequest="25" Grid.Column="1"
                                              BackgroundColor="Transparent" />
                                 </Grid>
                                 <Grid Grid.Column="1" HorizontalOptions="Center">
@@ -87,7 +87,7 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Neutrals}" FontSize="30" TextColor="#101821" />
-                                    <Image Source="meh" WidthRequest="25" Grid.Column="1"
+                                    <Image Source="{Binding NeutralsImageSource}" WidthRequest="25" Grid.Column="1"
                                              BackgroundColor="Transparent" />
                                 </Grid>
                                 <Grid Grid.Column="2" HorizontalOptions="Center">
@@ -99,7 +99,7 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Dislikes}" FontSize="30" TextColor="#f07d14" />
-                                    <Image Source="img_1315401" WidthRequest="25" Grid.Column="1"
+                                    <Image Source="{Binding DislikesImageSource}" WidthRequest="25" Grid.Column="1"
                                              BackgroundColor="Transparent" />
                                 </Grid>
                             </Grid>
