@@ -38,9 +38,10 @@
 "/>
                 </StackLayout>
                 <BoxView HeightRequest="2" BackgroundColor="#19365f" />
-                <Entry Text="{Binding Theme}" Placeholder="Тема" FontSize="16" />
+                <Entry Text="{Binding Theme}" Placeholder="Тема" FontSize="16" PlaceholderColor="Black"/>
                 <ex:PickerRating Title="Категории"
                                  BackgroundColor="#f4f5f6"
+                                 TitleColor="Black"
                                  FontSize="16"
                                  HorizontalOptions="FillAndExpand"
                                  ItemDisplayBinding="{Binding Title}"
@@ -51,7 +52,7 @@
                     <Editor HeightRequest="120"
                             FontSize="16" 
                             Text="{Binding Text}" 
-                            Placeholder="Введите текст..." />
+                            Placeholder="Введите текст..." PlaceholderColor="Black"/>
                 </Frame>
                 <Frame Padding="0" Margin="0,20" HasShadow="True">
                     <Frame.GestureRecognizers>

@@ -31,7 +31,7 @@
                     <Grid>
                         <ex:EntryAuthPage x:Name="PasswordEntry" Placeholder="Пароль" Text="{Binding Password}" IsPassword="true" FontSize="16"
                                           PlaceholderColor="#19365f" TextColor="#19365f" Margin="0,25" />
-                        <ImageButton WidthRequest="36" HeightRequest="36" HorizontalOptions="End" VerticalOptions="Center" Source="eye" Clicked="ImageButton_OnClicked"/>
+                        <ImageButton WidthRequest="24" HeightRequest="24" HorizontalOptions="End" VerticalOptions="Center" Source="eye" Clicked="ImageButton_OnClicked" BackgroundColor="Transparent"/>
                     </Grid>
                 </StackLayout>
                 <StackLayout>

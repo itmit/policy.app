@@ -36,7 +36,8 @@
                     <ex:PickerRating Title="Пол" BackgroundColor="#f4f5f6"
                                      Margin="5,0,0,0"
                                      SelectedItem="{Binding Gender}"
-                                     FontSize="16">
+                                     FontSize="16"
+                                     TitleColor="#19365f">
                         <ex:PickerRating.Items>
                             <x:String>мужской</x:String>
                             <x:String>женский</x:String>
@@ -67,6 +68,7 @@
                     <Label Text="*" TextColor="Red"/>
                     <ex:PickerRating Title="Тип населенного пункта"
                                  BackgroundColor="#f4f5f6"
+                                 TitleColor="#19365f"
                                  Margin="5,0,0,0"
                                  SelectedItem="{Binding SettlementType}"
                                  FontSize="16">
@@ -85,6 +87,7 @@
                     <ex:PickerRating Title="Образование"
                                  BackgroundColor="#f4f5f6"
                                  Margin="5,0,0,0"
+                                 TitleColor="#19365f"
                                  SelectedItem="{Binding Education}"
                                  FontSize="16">
                         <ex:PickerRating.Items>

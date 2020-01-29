@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using FFImageLoading.Forms.Platform;
 using policy.app.Services;
 using UIKit;
 using Xamarin.Forms;
@@ -25,6 +26,7 @@ namespace policy.app.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			Forms.Init();
+			CachedImageRenderer.Init();
 			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);
