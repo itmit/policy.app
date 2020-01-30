@@ -328,15 +328,15 @@
     <EmbeddedResource Include="Resources\ic_action_arrow_back.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\ic_action_dehaze.png" />
+    <BundleResource Include="Resources\baseline_home_white_24pt_1x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_action_home.png" />
+    <BundleResource Include="Resources\baseline_dehaze_white_24pt_1x.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\ic_action_search.png" />
+    <BundleResource Include="Resources\baseline_search_white_24pt_1x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\star_2.png" />
+    <BundleResource Include="Resources\baseline_star_white_24pt_1x.png" />
   </ItemGroup>
 </Project>
