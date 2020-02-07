@@ -3,5 +3,5 @@
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-	<application android:label="Политика" android:usesCleartextTraffic="true"></application>
+	<application android:usesCleartextTraffic="true" android:label="Простая статистика" android:icon="@mipmap/icon"></application>
 </manifest>
