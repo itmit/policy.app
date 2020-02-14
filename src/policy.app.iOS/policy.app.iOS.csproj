@@ -369,4 +369,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\baseline_star_white_24pt_1x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_arrow_back_ios.png" />
+  </ItemGroup>
 </Project>
