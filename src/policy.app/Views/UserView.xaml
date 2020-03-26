@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             mc:Ignorable="d"
+             x:Class="policy.app.Views.UserView">
+    <ContentView.Content>
+        <StackLayout>
+            <Grid ColumnSpacing="5" Margin="15,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <forms:CachedImage Grid.Column="1" Grid.Row="0" Aspect="AspectFill"
+                                   ErrorPlaceholder="User_def"
+                                   LoadingPlaceholder="User_def"
+                                   VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="65"
+                                   HeightRequest="65" Source="{Binding PhotoSource}" >
+                    <forms:CachedImage.Transformations>
+                        <transformations:RoundedTransformation Radius="300"/>
+                    </forms:CachedImage.Transformations>
+                </forms:CachedImage>
+                <Label Grid.Column="1" Grid.Row="1" Text="{Binding Name}" TextColor="#19365f" VerticalOptions="Center"
+                       HorizontalOptions="Center" FontSize="16" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="3" Text="{Binding Category.Title}" TextColor="#19365f"
+                       VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="4" Text="{Binding PlaceOfWork}" TextColor="#19365f"
+                       VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" HorizontalTextAlignment="Center"/>
+            </Grid>
+            <BoxView HeightRequest="1" BackgroundColor="#dee4ea" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

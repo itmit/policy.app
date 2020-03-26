@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using policy.app.Models;
+using policy.app.PageModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace policy.app.Pages
@@ -13,11 +16,10 @@ namespace policy.app.Pages
 		}
 		#endregion
 
-		#region Private
-		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+		private void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
 		{
-			((ListView) sender).SelectedItem = null;
+			((UsersListPageModel) BindingContext).SelectedGopher = (sender as View)?.BindingContext as Gopher;
 		}
-		#endregion
+
 	}
 }

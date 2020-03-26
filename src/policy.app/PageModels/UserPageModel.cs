@@ -403,7 +403,7 @@ namespace policy.app.PageModels
 			var gopher = await _service.GetGopher(guid);
 			if (!string.IsNullOrEmpty(gopher.Link))
 			{
-				Link = "ССЫЛКА";
+				Link = "Дополнительная информация>>";
 			}
 			Likes = gopher.Likes;
 			Neutrals = gopher.Neutrals;
