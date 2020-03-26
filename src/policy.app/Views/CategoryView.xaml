@@ -5,9 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="policy.app.Views.CategoryView">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+    <ContentView.Content>
+        <Frame BackgroundColor="#19365f" Padding="15" Margin="0,15" CornerRadius="10" HorizontalOptions="Fill">
+            <Label Text="{Binding Title}" FontSize="Medium" TextColor="White" HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </Frame>
+    </ContentView.Content>
 </ContentView>

@@ -77,10 +77,12 @@ namespace policy.app.PageModels
 				}
 			}
 		}
+
+		public ObservableCollection<Category> Categories { get; private set; }
 		#endregion
 
 		#region Overrided
-		public override void Init(object initData)
+		public async override void Init(object initData)
 		{
 			base.Init(initData);
 
@@ -96,6 +98,7 @@ namespace policy.app.PageModels
 										 .Single();
 					_service = new GopherService(user.Token);
 					LoadGophers();
+					Categories = new ObservableCollection<Category>(await _service.GetCategories(_category.Uuid));
 				}
 			}
 		}
@@ -108,5 +111,11 @@ namespace policy.app.PageModels
 			Users = new ObservableCollection<IGopher>(_allUsers.Where(user => user.Name.ToLower().Contains(Query)));
 		}
 		#endregion
+
+
+		internal void OpenCategory(Category category)
+		{
+			CoreMethods.PushPageModel<UsersListPageModel>(category);
+		}
 	}
 }

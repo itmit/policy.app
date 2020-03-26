@@ -33,6 +33,11 @@ namespace policy.app.Services
 		private const string CategoriesUri = "http://policy.itmit-studio.ru/api/suslik/getCategoryList";
 
 		/// <summary>
+		/// Адрес для подполучения категорий.
+		/// </summary>
+		private const string SubCategoriesUri = "http://policy.itmit-studio.ru/api/suslik/getSubCategoryList";
+
+		/// <summary>
 		/// Адрес для получения избранных сусликов.
 		/// </summary>
 		private const string FavoritesGophersUri = "http://policy.itmit-studio.ru/api/suslik/getFavsList";
@@ -130,14 +135,29 @@ namespace policy.app.Services
 		/// Возвращает все категории сусликов.
 		/// </summary>
 		/// <returns>Список категорий.</returns>
-		public async Task<IEnumerable<Category>> GetCategories()
+		public async Task<IEnumerable<Category>> GetCategories(Guid? uuid = null)
 		{
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-				var response = await client.PostAsync(CategoriesUri, null);
+				HttpResponseMessage response;
+				if (uuid == null)
+				{
+					response = await client.PostAsync(CategoriesUri, null);
+				}
+				else
+				{
+					response = await client.PostAsync(SubCategoriesUri,
+													  new FormUrlEncodedContent(new Dictionary<string, string>
+													  {
+														  {
+															  "uuid", uuid.Value.ToString()
+														  }
+													  }));
+				}
+
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 

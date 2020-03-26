@@ -9,18 +9,22 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <StackLayout Margin="0,5,0,0">
-                    <StackLayout Margin="0,5,0,0"
-                                 BindableLayout.ItemsSource="{Binding Users}">
+                <StackLayout Margin="15"
+                             WidthRequest="200"
+                             HorizontalOptions="Center"
+                             BindableLayout.ItemsSource="{Binding Categories}">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
-                                <viewCells:UserViewCell />
+                                <views:CategoryView >
+                                    <views:UserView.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                    </views:UserView.GestureRecognizers>
+                                </views:CategoryView>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
                     </StackLayout>
-                </StackLayout>
 
-                <StackLayout>
+                    <StackLayout>
                     <SearchBar Placeholder="Поиск" Margin="15" Text="{Binding Query}"/>
                     <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
                 </StackLayout>

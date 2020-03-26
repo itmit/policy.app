@@ -14,10 +14,10 @@
             IsPullToRefreshEnabled="True"
             RefreshCommand="{Binding RefreshCommand}"
             IsRefreshing="{Binding IsRefreshing}">
-                <StackLayout Orientation="Vertical" Margin="15">
-                    <Grid RowSpacing="4">
+                <StackLayout Orientation="Vertical">
+                    <Grid Margin="15,0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="350"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -28,7 +28,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <forms:CachedImage Grid.Row="1"
+                        <forms:CachedImage Grid.Row="0"
                                            Grid.ColumnSpan="2"
                                            HorizontalOptions="FillAndExpand"
                                            VerticalOptions="FillAndExpand"
@@ -51,64 +51,65 @@
                         <Label Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding Gopher.Position}"
                                Style="{StaticResource EndLabelProfilePage}" />
                     </Grid>
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding AddOrRemoveFavoritesCommand}"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="{Binding FavImageSource}" WidthRequest="25" HeightRequest="25" />
-                        <Label Text="{Binding FavoriteButtonLabel}" Margin="10,0,0,0" FontSize="14"
-                               TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold" />
-                    </StackLayout>
-                    <StackLayout>
-                        <Button Text="{Binding Link}" BackgroundColor="Transparent" TextColor="#228bcc"
-                                FontSize="16" Command="{Binding OpenBrowserCommand}"  HorizontalOptions="Start" />
-                    </StackLayout>
-                    <ScrollView Orientation="Horizontal">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid Grid.Column="0" HorizontalOptions="Center">
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding SetLike}"/>
-                                </Grid.GestureRecognizers>
+                    <StackLayout Margin="15">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddOrRemoveFavoritesCommand}"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="{Binding FavImageSource}" WidthRequest="25" HeightRequest="25" />
+                            <Label Text="{Binding FavoriteButtonLabel}" Margin="10,0,0,0" FontSize="14"
+                                   TextColor="{Binding FavoriteButtonColor}" FontAttributes="Bold" />
+                        </StackLayout>
+                        <StackLayout>
+                            <Button Text="{Binding Link}" BackgroundColor="Transparent" TextColor="#228bcc"
+                                    FontSize="16" Command="{Binding OpenBrowserCommand}"  HorizontalOptions="Start" />
+                        </StackLayout>
+                        <ScrollView Orientation="Horizontal">
+                            <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Likes}" FontSize="30" TextColor="#228bcc" />
-                                <Image Source="{Binding LikeImageSource}" WidthRequest="25" Grid.Column="1"
-                                             BackgroundColor="Transparent" />
+                                <Grid Grid.Column="0" HorizontalOptions="Center">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetLike}"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Likes}" FontSize="30" TextColor="#228bcc" />
+                                    <Image Source="{Binding LikeImageSource}" WidthRequest="25" Grid.Column="1"
+                                                 BackgroundColor="Transparent" />
+                                </Grid>
+                                <Grid Grid.Column="1" HorizontalOptions="Center">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetNeutral}"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Neutrals}" FontSize="30" TextColor="#101821" />
+                                    <Image Source="{Binding NeutralsImageSource}" WidthRequest="25" Grid.Column="1"
+                                                 BackgroundColor="Transparent" />
+                                </Grid>
+                                <Grid Grid.Column="2" HorizontalOptions="Center">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetDislike}"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Dislikes}" FontSize="30" TextColor="#f07d14" />
+                                    <Image Source="{Binding DislikesImageSource}" WidthRequest="25" Grid.Column="1"
+                                                 BackgroundColor="Transparent" />
+                                </Grid>
                             </Grid>
-                            <Grid Grid.Column="1" HorizontalOptions="Center">
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding SetNeutral}"/>
-                                </Grid.GestureRecognizers>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Neutrals}" FontSize="30" TextColor="#101821" />
-                                <Image Source="{Binding NeutralsImageSource}" WidthRequest="25" Grid.Column="1"
-                                             BackgroundColor="Transparent" />
-                            </Grid>
-                            <Grid Grid.Column="2" HorizontalOptions="Center">
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding SetDislike}"/>
-                                </Grid.GestureRecognizers>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Dislikes}" FontSize="30" TextColor="#f07d14" />
-                                <Image Source="{Binding DislikesImageSource}" WidthRequest="25" Grid.Column="1"
-                                             BackgroundColor="Transparent" />
-                            </Grid>
-                        </Grid>
-                    </ScrollView>
-                    <Frame Padding="0" Margin="0,20" HasShadow="True">
+                        </ScrollView>
+                        <Frame Padding="0" Margin="0,20" HasShadow="True">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding OpenStatisticsCommand}"/>
                         </Frame.GestureRecognizers>
@@ -119,6 +120,7 @@
                             </StackLayout>
                         </StackLayout>
                     </Frame>
+                    </StackLayout>
                 </StackLayout>
             </pullToRefresh:PullToRefreshLayout>
         </ScrollView>

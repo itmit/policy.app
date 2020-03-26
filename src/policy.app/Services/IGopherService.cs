@@ -23,7 +23,7 @@ namespace policy.app.Services
 		/// Возвращает все категории сусликов.
 		/// </summary>
 		/// <returns>Список категорий.</returns>
-		Task<IEnumerable<Category>> GetCategories();
+		Task<IEnumerable<Category>> GetCategories(Guid? uuid = null);
 
 		/// <summary>
 		/// Возвращает сусликов добавленных в избранное.
