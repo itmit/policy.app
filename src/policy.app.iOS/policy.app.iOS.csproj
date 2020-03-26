@@ -156,7 +156,9 @@
       <Visible>false</Visible>
     </ImageAsset>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <ImageAsset Include="Assets.xcassets\AppIcons1.appiconset\Bez_imeni-1-vosstanovleno%281%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons1.appiconset\Bez_imeni-1-vosstanovleno%281%29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
