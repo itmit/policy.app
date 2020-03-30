@@ -2,19 +2,36 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
+             xmlns:views="clr-namespace:policy.app.Views;assembly=policy.app"
              Title="{Binding Title}"
              x:Class="policy.app.Pages.AllQuestionsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView ItemsSource="{Binding Polls}" HasUnevenRows="True" SelectedItem="{Binding SelectedPoll}"
-                      ItemSelected="ListView_OnItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <viewCells:PollViewCell />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout BindableLayout.ItemsSource="{Binding PollCategories}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <views:PollCategoryView>
+                                <views:PollCategoryView.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped1"/>
+                                </views:PollCategoryView.GestureRecognizers>
+                            </views:PollCategoryView>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+
+                <StackLayout BindableLayout.ItemsSource="{Binding Polls}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <views:PollView >
+                                <views:PollView.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
+                                </views:PollView.GestureRecognizers>
+                            </views:PollView>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -1,6 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
@@ -27,6 +29,7 @@ namespace policy.app.PageModels
 		private Poll _selectedPoll;
 		private IPollService _service;
 		private PollCategory _pollCategory;
+		private PollCategory _selectedPollCategory;
 		#endregion
 		#endregion
 
@@ -109,11 +112,63 @@ namespace policy.app.PageModels
 										   },
 										   new HttpClient());
 				LoadPolls();
+				LoadPollCategories();
 			}
 		}
 		#endregion
 
 		#region Private
+		private async void LoadPollCategories()
+		{
+			if (Connectivity.NetworkAccess != NetworkAccess.Internet || _service == null)
+			{
+				return;
+			}
+
+			var polls = new ObservableCollection<PollCategory>(await _service.GetPollCategories(_pollCategory.Guid));
+			foreach (var pollCategory in polls)
+			{
+				pollCategory.ImageSource = "OurPoll";
+			}
+			PollCategories = polls;
+		}
+
+
+		/// <summary>
+		/// Возвращает или устанавливает выбранную категорию опросов.
+		/// </summary>
+		public PollCategory SelectedPollCategory
+		{
+			get => _selectedPollCategory;
+			set
+			{
+				_selectedPollCategory = value;
+
+				if (value != null)
+				{
+					EventSelected1.Execute(value);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Возвращает или устанавливает команду при выборе опроса.
+		/// </summary>
+		public Command<PollCategory> EventSelected1 =>
+			new Command<PollCategory>(obj =>
+			{
+				if (obj is PollCategory poll)
+				{
+					CoreMethods.PushPageModel<AllQuestionsPageModel>(poll);
+				}
+			});
+
+		public ObservableCollection<PollCategory> PollCategories
+		{
+			get;
+			set;
+		}
+
 		/// <summary>
 		/// Загружает опросы.
 		/// </summary>

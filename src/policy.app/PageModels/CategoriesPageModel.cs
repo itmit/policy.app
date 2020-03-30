@@ -91,6 +91,7 @@ namespace policy.app.PageModels
 			}
 
 			_service = new GopherService(token.Token);
+			Task.Run(LoadData);
 		}
 		#endregion
 

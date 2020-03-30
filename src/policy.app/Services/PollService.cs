@@ -28,6 +28,7 @@ namespace policy.app.Services
 		private const string GetPullUri = "http://policy.itmit-studio.ru/api/poll/getPollList";
 
 		private const string GetPollCategoriesUri = "http://policy.itmit-studio.ru/api/poll/getPollCategoryList";
+		private const string GetPollSubCategoriesUri = "http://policy.itmit-studio.ru/api/poll/getSubCategoryList";
 
 		/// <summary>
 		/// Адрес для прохождения опроса.
@@ -64,12 +65,23 @@ namespace policy.app.Services
 
 		#region IPollService members
 
-		public async Task<IEnumerable<PollCategory>> GetPollCategories()
+		public async Task<IEnumerable<PollCategory>> GetPollCategories(Guid? uuid = null)
 		{
 			using (_httpClient)
 			{
 				_httpClient.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
-				var response = await _httpClient.PostAsync(GetPollCategoriesUri, null);
+				HttpResponseMessage response;
+				if (uuid == null)
+				{
+					response = await _httpClient.PostAsync(GetPollCategoriesUri, null);
+				}
+				else
+				{
+					response = await _httpClient.PostAsync(GetPollSubCategoriesUri, new FormUrlEncodedContent(new Dictionary<string, string>
+					{
+						{"uuid", uuid.Value.ToString() }
+					}));
+				}
 
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);

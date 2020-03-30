@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using policy.app.Models;
+using policy.app.PageModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace policy.app.Pages
@@ -19,5 +22,15 @@ namespace policy.app.Pages
 			((ListView) sender).SelectedItem = null;
 		}
 		#endregion
+
+		private void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
+		{
+			((AllQuestionsPageModel) BindingContext).SelectedPoll = ((View) sender).BindingContext as Poll;
+		}
+
+		private void TapGestureRecognizer_OnTapped1(object sender, EventArgs e)
+		{
+			((AllQuestionsPageModel)BindingContext).SelectedPollCategory = ((View)sender).BindingContext as PollCategory;
+		}
 	}
 }

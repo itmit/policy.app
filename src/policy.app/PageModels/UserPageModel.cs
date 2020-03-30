@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using FreshMvvm;
 using policy.app.Models;
@@ -46,7 +47,7 @@ namespace policy.app.PageModels
 		/// </summary>
 		public delegate void UpdateUserEventHandler();
 
-		public string FavImageSource => IsFavorite ? "icons8_star_100" : "Star_def";
+		public string FavImageSource => IsFavorite ? "Star_def" : "icons8_star_100";
 
 		public ICommand OpenBrowserCommand => new FreshAwaitCommand(async (obj, tcs) =>
 			{
@@ -256,9 +257,12 @@ namespace policy.app.PageModels
 		public ICommand RefreshCommand =>
 			new FreshAwaitCommand((obj, tcs) =>
 			{
-				IsRefreshing = true;
-				LoadGopher(Gopher.Guid);
-				IsRefreshing = false;
+				Task.Run(() =>
+				{
+					IsRefreshing = true;
+					LoadGopher(Gopher.Guid);
+					IsRefreshing = false;
+				});
 			});
 
 		/// <summary>
@@ -366,9 +370,13 @@ namespace policy.app.PageModels
 					var repository = new UserRepository(_app.RealmConfiguration);
 					_user = repository.All()
 									  .Single();
-					_service = new GopherService(_user.Token);
 
-					LoadGopher(gopher.Guid);
+					Task.Run(() =>
+					{
+
+						_service = new GopherService(_user.Token);
+						LoadGopher(gopher.Guid);
+					});
 				}
 			}
 		}

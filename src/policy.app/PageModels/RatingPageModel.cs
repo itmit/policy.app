@@ -86,7 +86,7 @@ namespace policy.app.PageModels
 
 				if (value != null)
 				{
-					LoadGophers();
+					Task.Run(LoadGophers);
 				}
 			}
 		}
@@ -114,7 +114,7 @@ namespace policy.app.PageModels
 				{
 					_sort = "asc";
 				}
-				LoadGophers();
+				Task.Run(LoadGophers);
 			}
 		}
 
@@ -173,7 +173,7 @@ namespace policy.app.PageModels
 					return;
 				}
 
-				LoadGophers();
+				await Task.Run(LoadGophers);
 				Categories = new ObservableCollection<Category>(await _service.GetCategories());
 
 				IsRefreshing = false;
@@ -188,7 +188,7 @@ namespace policy.app.PageModels
 				_query = value;
 				if (value != null)
 				{
-					LoadGophers();
+					Task.Run(LoadGophers);
 				}
 			}
 		}
@@ -202,10 +202,14 @@ namespace policy.app.PageModels
 			set;
 		}
 
-		public override async void LoadData()
+		public override void LoadData()
 		{
-			LoadGophers();
-			Categories = new ObservableCollection<Category>(await _service.GetCategories());
+			Task.Run(async () =>
+			{
+				LoadGophers();
+				Categories = new ObservableCollection<Category>(await _service.GetCategories());
+			});
+			
 		}
 	}
 }

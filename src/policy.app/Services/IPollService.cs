@@ -24,7 +24,7 @@ namespace policy.app.Services
 		/// <returns>Список вопросов.</returns>
 		Task<IEnumerable<Question>> GetQuestions(Guid guid);
 
-		Task<IEnumerable<PollCategory>> GetPollCategories();
+		Task<IEnumerable<PollCategory>> GetPollCategories(Guid? uuid = null);
 
 		/// <summary>
 		/// Отправляет запрос на прохождение опроса.

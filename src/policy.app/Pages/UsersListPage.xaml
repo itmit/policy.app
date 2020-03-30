@@ -16,9 +16,9 @@
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
                                 <views:CategoryView >
-                                    <views:UserView.GestureRecognizers>
+                                <views:CategoryView.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                                    </views:UserView.GestureRecognizers>
+                                    </views:CategoryView.GestureRecognizers>
                                 </views:CategoryView>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
