@@ -8,6 +8,7 @@
              xmlns:controls="clr-namespace:policy.app.Controls"
              mc:Ignorable="d"
              Title="{Binding Title}"
+             BackgroundImageSource="background"
              x:Class="policy.app.Pages.SurveyPage">
     <ContentPage.Content>
         <ScrollView>

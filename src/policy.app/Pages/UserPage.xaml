@@ -7,6 +7,7 @@
              xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
+             BackgroundImageSource="background"
              x:Class="policy.app.Pages.UserPage">
     <ContentPage.Content>
         <ScrollView>

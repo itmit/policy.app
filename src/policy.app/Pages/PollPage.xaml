@@ -6,6 +6,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells;assembly=policy.app"
              mc:Ignorable="d"
+             BackgroundImageSource="background"
              x:Class="policy.app.Pages.PollPage"
              Title="Опросы">
     <ContentPage.Content>

@@ -5,6 +5,7 @@
              xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
              Title="Избранные"
+             BackgroundImageSource="background"
              x:Class="policy.app.Pages.FavoritesPage">
     <ContentPage.Content>
         <Grid>

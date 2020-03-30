@@ -5,6 +5,7 @@
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
              xmlns:views="clr-namespace:policy.app.Views;assembly=policy.app"
              Title="{Binding Title}"
+             BackgroundImageSource="background"
              x:Class="policy.app.Pages.UsersListPage">
     <ContentPage.Content>
         <ScrollView>

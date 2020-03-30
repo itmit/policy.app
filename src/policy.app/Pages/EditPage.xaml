@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:policy.app.Controls"
              Title="Редактирование профиля"
+             BackgroundImageSource="background"
              x:Class="policy.app.Pages.EditPage">
     <ContentPage.Content>
         <StackLayout Margin="25">

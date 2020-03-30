@@ -6,6 +6,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ex="clr-namespace:policy.app.Controls"
              mc:Ignorable="d"
+             BackgroundImageSource="background"
              Title="Напишите нам"
              x:Class="policy.app.Pages.WriteToUsPage">
     <ContentPage.Content>

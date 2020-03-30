@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
+             BackgroundImageSource="background"
              x:Class="policy.app.Pages.HomePage">
     <ContentPage.Content>
         <ListView SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding MenuCollection}" HasUnevenRows="True">

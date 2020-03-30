@@ -32,6 +32,7 @@ namespace policy.app
 			CurrentPageChanged += CurrentPageHasChanged;
 			NavigationServiceName = navigationServiceName;
 			RegisterNavigation();
+			BackgroundImageSource = ImageSource.FromFile("background");
 		}
 		#endregion
 

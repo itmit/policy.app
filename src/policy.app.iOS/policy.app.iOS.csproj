@@ -374,4 +374,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\ic_arrow_back_ios.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background.png" />
+  </ItemGroup>
 </Project>
