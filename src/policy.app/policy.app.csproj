@@ -14,7 +14,6 @@
     <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="AutoMapper.Collection" Version="6.0.0" />
     <PackageReference Include="FreshMvvm" Version="3.0.0" />
-    <PackageReference Include="Microcharts" Version="0.7.1" />
     <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.2.4" />
     <PackageReference Include="Realm" Version="4.2.0" />
