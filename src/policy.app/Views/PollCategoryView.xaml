@@ -7,9 +7,9 @@
              x:Class="policy.app.Views.PollCategoryView">
     <ContentView.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" Margin="20,25,20,20">
-                <Image Source="{Binding ImageSource}" WidthRequest="50" HeightRequest="50" />
-                <Label Text="{Binding Name}" TextColor="#228bcc" FontSize="25" Margin="8,0,0,0" FontAttributes="Bold"
+            <StackLayout Orientation="Horizontal" Margin="20,10,20,10">
+                <Image Source="{Binding ImageSource}" WidthRequest="25" HeightRequest="50" />
+                <Label Text="{Binding Name}" TextColor="#228bcc" FontSize="18" Margin="8,0,0,0" FontAttributes="Bold"
                        VerticalOptions="Center" />
             </StackLayout>
             <BoxView HeightRequest="1" BackgroundColor="#dee4ea" />

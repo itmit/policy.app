@@ -3,16 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:policy.app.Views;assembly=policy.app"
              mc:Ignorable="d"
              x:Class="policy.app.Views.ViewCells.PollCategoryViewCell">
     <ViewCell.View>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal" Margin="20,25,20,20">
-                <Image Source="{Binding ImageSource}" WidthRequest="50" HeightRequest="50" />
-                <Label Text="{Binding Name}" TextColor="#228bcc" FontSize="25" Margin="8,0,0,0" FontAttributes="Bold"
-                       VerticalOptions="Center" />
-            </StackLayout>
-            <BoxView HeightRequest="1" BackgroundColor="#dee4ea" />
-        </StackLayout>
+        <views:PollCategoryView/>
     </ViewCell.View>
 </ViewCell>
