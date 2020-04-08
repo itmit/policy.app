@@ -10,7 +10,7 @@
              BackgroundImageSource="background"
              BackgroundColor="#f4f5f6">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView Scrolled="ScrollView_OnScrolled">
             <pullToRefresh:PullToRefreshLayout
             IsPullToRefreshEnabled="True"
             RefreshCommand="{Binding RefreshCommand}"
@@ -43,6 +43,7 @@
                     <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
                     <ex:RepeaterView ItemsSource="{Binding Gophers}"
                           VerticalOptions="FillAndExpand"
+                          x:Name="Gophers"
                           HorizontalOptions="FillAndExpand">
                         <ex:RepeaterView.ItemTemplate>
                             <DataTemplate>

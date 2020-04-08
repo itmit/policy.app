@@ -23,7 +23,13 @@ namespace policy.app.PageModels
 		private Category _category;
 		private IGopher _selectedGopher;
 		private IGopherService _service;
-		private List<IGopher> _allUsers;
+
+		public List<IGopher> AllUsers
+		{
+			get;
+			private set;
+		}
+
 		private string _query = "";
 		#endregion
 		#endregion
@@ -39,7 +45,7 @@ namespace policy.app.PageModels
 					return;
 				}
 				_query = value.ToLower();
-				Users = new ObservableCollection<IGopher>(_allUsers.Where(user => user.Name.ToLower().Contains(_query)));
+				Users = new ObservableCollection<IGopher>(AllUsers.Where(user => user.Name.ToLower().Contains(_query)));
 			}
 		}
 
@@ -56,7 +62,7 @@ namespace policy.app.PageModels
 		{
 			get;
 			set;
-		}
+		} = new ObservableCollection<IGopher>();
 
 		public Command<IGopher> EventSelected =>
 			new Command<IGopher>(obj =>
@@ -79,10 +85,16 @@ namespace policy.app.PageModels
 		}
 
 		public ObservableCollection<Category> Categories { get; private set; }
+
+		public bool IsBusy
+		{
+			get;
+			set;
+		}
 		#endregion
 
 		#region Overrided
-		public async override void Init(object initData)
+		public override async void Init(object initData)
 		{
 			base.Init(initData);
 
@@ -104,14 +116,49 @@ namespace policy.app.PageModels
 		}
 		#endregion
 
+		public int Page
+		{
+			get;
+			set;
+		} = -1;
+
+		public int PageSize
+		{
+			get;
+			set;
+		} = 10;
+
 		#region Private
 		private async void LoadGophers()
 		{
-			_allUsers = new List<IGopher>(await _service.GetGophers(_category));
-			Users = new ObservableCollection<IGopher>(_allUsers.Where(user => user.Name.ToLower().Contains(Query)));
+			IsBusy = true;
+			AllUsers = new List<IGopher>(await _service.GetGophers(_category));
+			Page = -1;
+			MoveNext();
 		}
 		#endregion
 
+		public void MoveNext()
+		{
+			IsBusy = true;
+			Page++;
+			var offset = Page * PageSize;
+			if (offset >= AllUsers.Count)
+			{
+				return;
+			}
+
+			var limit = PageSize;
+			limit = AllUsers.Count - offset < limit ? AllUsers.Count - offset : limit;
+			var a = AllUsers.Where(user => user.Name.ToLower()
+											   .Contains(Query))
+							.ToList()
+							.GetRange(offset, limit);
+			var list = Users.ToList();
+			list.AddRange(a);
+			Users = new ObservableCollection<IGopher>(list);
+			IsBusy = false;
+		}
 
 		internal void OpenCategory(Category category)
 		{

@@ -125,7 +125,13 @@ namespace policy.app.PageModels
 		{
 			get;
 			set;
-		}
+		} = new ObservableCollection<SearchGopherViewModel>();
+
+		public ObservableCollection<SearchGopherViewModel> AllGophers
+		{
+			get;
+			set;
+		} = new ObservableCollection<SearchGopherViewModel>();
 
 		/// <summary>
 		/// Загружает опросы.
@@ -147,7 +153,9 @@ namespace policy.app.PageModels
 				vmGophers.Add(new SearchGopherViewModel(gopher, this));
 			}
 
-			Gophers = vmGophers;
+			AllGophers = vmGophers;
+			PageNumber = -1;
+			MoveNext();
 			repository.Update(user);
 		}
 
@@ -211,5 +219,37 @@ namespace policy.app.PageModels
 			});
 			
 		}
+
+		public void MoveNext()
+		{
+			PageNumber++;
+
+			var offset = PageNumber * PageSize;
+			if (offset >= AllGophers.Count)
+			{
+				return;
+			}
+
+			var limit = PageSize;
+			limit = AllGophers.Count - offset < limit ? Gophers.Count - offset : limit;
+
+			var a = AllGophers.ToList().GetRange(offset, limit);
+			var list = Gophers.ToList();
+			list.AddRange(a);
+			Gophers = new ObservableCollection<SearchGopherViewModel>(list);
+			IsRefreshing = false;
+		}
+
+		public int PageSize
+		{
+			get;
+			set;
+		} = 50;
+
+		public int PageNumber
+		{
+			get;
+			set;
+		} = -1;
 	}
 }
