@@ -222,22 +222,25 @@ namespace policy.app.PageModels
 
 		public void MoveNext()
 		{
-			PageNumber++;
-
-			var offset = PageNumber * PageSize;
-			if (offset >= AllGophers.Count)
+			Task.Run(() =>
 			{
-				return;
-			}
+				PageNumber++;
 
-			var limit = PageSize;
-			limit = AllGophers.Count - offset < limit ? Gophers.Count - offset : limit;
+				var offset = PageNumber * PageSize;
+				if (offset >= AllGophers.Count)
+				{
+					return;
+				}
 
-			var a = AllGophers.ToList().GetRange(offset, limit);
-			var list = Gophers.ToList();
-			list.AddRange(a);
-			Gophers = new ObservableCollection<SearchGopherViewModel>(list);
-			IsRefreshing = false;
+				var limit = PageSize;
+				limit = AllGophers.Count - offset < limit ? Gophers.Count - offset : limit;
+
+				var a = AllGophers.ToList().GetRange(offset, limit);
+				var list = Gophers.ToList();
+				list.AddRange(a);
+				Gophers = new ObservableCollection<SearchGopherViewModel>(list);
+				IsRefreshing = false;
+			});
 		}
 
 		public int PageSize

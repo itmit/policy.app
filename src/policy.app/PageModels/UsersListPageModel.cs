@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.Repositories;
@@ -140,24 +141,27 @@ namespace policy.app.PageModels
 
 		public void MoveNext()
 		{
-			IsBusy = true;
-			Page++;
-			var offset = Page * PageSize;
-			if (offset >= AllUsers.Count)
+			Task.Run(() =>
 			{
-				return;
-			}
+				IsBusy = true;
+				Page++;
+				var offset = Page * PageSize;
+				if (offset >= AllUsers.Count)
+				{
+					return;
+				}
 
-			var limit = PageSize;
-			limit = AllUsers.Count - offset < limit ? AllUsers.Count - offset : limit;
-			var a = AllUsers.Where(user => user.Name.ToLower()
-											   .Contains(Query))
-							.ToList()
-							.GetRange(offset, limit);
-			var list = Users.ToList();
-			list.AddRange(a);
-			Users = new ObservableCollection<IGopher>(list);
-			IsBusy = false;
+				var limit = PageSize;
+				limit = AllUsers.Count - offset < limit ? AllUsers.Count - offset : limit;
+				var a = AllUsers.Where(user => user.Name.ToLower()
+												   .Contains(Query))
+								.ToList()
+								.GetRange(offset, limit);
+				var list = Users.ToList();
+				list.AddRange(a);
+				Users = new ObservableCollection<IGopher>(list);
+				IsBusy = false;
+			});
 		}
 
 		internal void OpenCategory(Category category)
