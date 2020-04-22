@@ -50,5 +50,10 @@
 	<string>Photo usage description</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Calendar usage description</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CormorantGaramondRegular.ttf</string>
+		<string>CormorantGaramondSemibold.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -25,7 +25,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFloat32>true</MtouchFloat32>
     <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
@@ -119,15 +119,6 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <BundleResource Include="Resources\tab_about.png" />
-    <BundleResource Include="Resources\tab_about%402x.png" />
-    <BundleResource Include="Resources\tab_about%403x.png" />
-    <BundleResource Include="Resources\tab_feed.png" />
-    <BundleResource Include="Resources\tab_feed%402x.png" />
-    <BundleResource Include="Resources\tab_feed%403x.png" />
-    <BundleResource Include="Resources\xamarin_logo.png" />
-    <BundleResource Include="Resources\xamarin_logo%402x.png" />
-    <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcons1.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -196,6 +187,10 @@
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </BundleResource>
+    <BundleResource Include="Resources\ic_action_dehaze%402x.png" />
+    <BundleResource Include="Resources\ic_action_home%402x.png" />
+    <BundleResource Include="Resources\ic_action_search%402x.png" />
+    <BundleResource Include="Resources\star_2%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\baseline_grade_white_18dp.png">
@@ -373,5 +368,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\CormorantGaramondRegular.ttf" />
+    <AndroidAsset Include="Resources\CormorantGaramondSemibold.ttf" />
   </ItemGroup>
 </Project>
