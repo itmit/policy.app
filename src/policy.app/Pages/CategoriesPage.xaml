@@ -29,7 +29,7 @@
                                                  HorizontalOptions="Center">
                                         <!-- #19365f -->
                                         <Frame BackgroundColor="#19365f" Padding="15" CornerRadius="10"
-                                                   HorizontalOptions="Fill">
+                                                   HorizontalOptions="Fill" HasShadow="False" >
                                             <Label Text="{Binding Title}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="18" TextColor="White"
                                                        HorizontalOptions="Center" VerticalOptions="Center" />
                                         </Frame>

@@ -91,23 +91,11 @@ namespace policy.app
 		{
 			var tabbedNavigation = new MainTabbedPage(NavigationContainerNames.MainContainer);
 
-			var home = "ic_action_home.png";
-			var star = "star_2.png";
-			var search = "ic_action_search.png";
-			var dehaze = "ic_action_dehaze.png";
-			if (Device.iOS == Device.RuntimePlatform)
-			{
-				home = "baseline_home_white_24pt_1x.png";
-				star = "baseline_star_white_24pt_1x.png";
-				search = "baseline_search_white_24pt_1x.png";
-				dehaze = "baseline_dehaze_white_24pt_1x.png";
-			}
-
-			tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<CategoriesPageModel>("Категории", home);
+			tabbedNavigation.CurrentPage = tabbedNavigation.AddTab<CategoriesPageModel>("Категории", "ic_action_home.png");
 			tabbedNavigation.MainPage = tabbedNavigation.CurrentPage;
-			tabbedNavigation.AddTab<FavoritesPageModel>("Избранные", star);
-			tabbedNavigation.AddTab<RatingPageModel>("Поиск", search);
-			tabbedNavigation.AddTab<MenuPageModel>("Меню", dehaze);
+			tabbedNavigation.AddTab<FavoritesPageModel>("Избранные", "star_2.png");
+			tabbedNavigation.AddTab<RatingPageModel>("Поиск", "ic_action_search.png");
+			tabbedNavigation.AddTab<MenuPageModel>("Меню", "ic_action_dehaze.png");
 			
 			tabbedNavigation.Effects.Add(new NoShiftEffect());
 			tabbedNavigation.On<TabBar.Android>()
