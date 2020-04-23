@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace policy.app.Views.ViewCells
+namespace policy.app.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SearchUserViewCell : ViewCell
+	public partial class FavoriteUserView : ContentView
 	{
-		public SearchUserViewCell()
+		public FavoriteUserView()
 		{
 			InitializeComponent();
 		}

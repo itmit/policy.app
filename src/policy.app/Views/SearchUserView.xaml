@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-             x:Class="policy.app.Views.ViewCells.SearchUserViewCell">
-  <ViewCell.View>
+             mc:Ignorable="d"
+             x:Class="policy.app.Views.SearchUserView">
+    <ContentView.Content>
         <StackLayout>
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding SelectCommand}"/>
@@ -29,5 +32,5 @@
             </Grid>
             <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
         </StackLayout>
-  </ViewCell.View>
-</ViewCell>
+    </ContentView.Content>
+</ContentView>

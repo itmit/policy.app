@@ -2,8 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
-             xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
+             xmlns:views="clr-namespace:policy.app.Views;assembly=policy.app"
              Title="Избранные"
              BackgroundImageSource="background"
              x:Class="policy.app.Pages.FavoritesPage">
@@ -16,25 +15,23 @@
                    Text="Список избранных пуст."
                    IsVisible="{Binding IsEmptyList}"/>
             <StackLayout Margin="0,5,0,0">
-                <pullToRefresh:PullToRefreshLayout
-                    IsPullToRefreshEnabled="True"
-                    RefreshCommand="{Binding RefreshCommand}"
-                    IsRefreshing="{Binding IsRefreshing}"
-                    RefreshColor="Blue">
-                    <ListView ItemsSource="{Binding Gophers}"
-                              HasUnevenRows="True"
-                              VerticalOptions="FillAndExpand"
-                              HorizontalOptions="FillAndExpand"
-                              SelectedItem="{Binding SelectedGopher}"
-                              ItemSelected="ListView_OnItemSelected">
-                        <ListView.ItemTemplate>
+                <RefreshView Command="{Binding RefreshCommand}"
+                             IsRefreshing="{Binding IsRefreshing}"
+                             RefreshColor="Blue">
+                    <CollectionView ItemsSource="{Binding Gophers}"
+                                  VerticalOptions="FillAndExpand"
+                                  HorizontalOptions="FillAndExpand"
+                                  SelectedItem="{Binding SelectedGopher}"
+                                  SelectionMode="Single">
+                        <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <viewCells:FavoriteUserViewCell />
+                                <views:FavoriteUserView/>
                             </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </pullToRefresh:PullToRefreshLayout>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </RefreshView>
             </StackLayout>
+            <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center" IsVisible="True" Color="Blue" IsRunning="{Binding IsBusy}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

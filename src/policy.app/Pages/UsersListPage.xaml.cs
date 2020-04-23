@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using FreshMvvm;
 using policy.app.Models;
 using policy.app.PageModels;
@@ -29,7 +30,8 @@ namespace policy.app.Pages
 			((UsersListPageModel)BindingContext).OpenCategory((sender as View)?.BindingContext as Category);
 		}
 
-		private void ScrollView_OnScrolled(object sender, ScrolledEventArgs e)
+
+		private void ItemsView_OnScrolled(object sender, ItemsViewScrolledEventArgs e)
 		{
 			if (ViewModel == null)
 			{
@@ -40,9 +42,10 @@ namespace policy.app.Pages
 				return;
 			}
 
-			var y = (int)e.ScrollY;
-			if (Users.Height - 600 < y)
+			if (e.LastVisibleItemIndex == ViewModel.Users.Count)
 			{
+				ViewModel.IsBusy = true;
+
 				ViewModel.MoveNext();
 			}
 		}

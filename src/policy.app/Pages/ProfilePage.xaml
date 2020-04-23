@@ -3,7 +3,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:properties="clr-namespace:policy.app.Properties"
-             xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:converters="clr-namespace:policy.app.Converters;assembly=policy.app"
              Title="Профиль"
@@ -11,10 +10,8 @@
              x:Class="policy.app.Pages.ProfilePage">
     <ContentPage.Content>
         <ScrollView>
-            <pullToRefresh:PullToRefreshLayout
-            IsPullToRefreshEnabled="True"
-            RefreshCommand="{Binding RefreshCommand}"
-            IsRefreshing="{Binding IsRefreshing}">
+            <RefreshView Command="{Binding RefreshCommand}"
+                         IsRefreshing="{Binding IsRefreshing}">
                 <StackLayout Orientation="Vertical">
                     <forms:CachedImage HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
@@ -104,7 +101,7 @@
                         </Grid>
                     </StackLayout>
                 </StackLayout>
-            </pullToRefresh:PullToRefreshLayout>
+            </RefreshView>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

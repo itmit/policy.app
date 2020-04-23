@@ -46,7 +46,9 @@ namespace policy.app.PageModels
 					return;
 				}
 				_query = value.ToLower();
-				Users = new ObservableCollection<IGopher>(AllUsers.Where(user => user.Name.ToLower().Contains(_query)));
+				Users.Clear();
+				Page = -1;
+				MoveNext();
 			}
 		}
 
@@ -127,7 +129,7 @@ namespace policy.app.PageModels
 		{
 			get;
 			set;
-		} = 10;
+		} = 15;
 
 		#region Private
 		private async void LoadGophers()
@@ -141,27 +143,45 @@ namespace policy.app.PageModels
 
 		public void MoveNext()
 		{
-			Task.Run(() =>
+			IsBusy = true;
+			Page++;
+
+			if (string.IsNullOrWhiteSpace(Query))
 			{
-				IsBusy = true;
-				Page++;
 				var offset = Page * PageSize;
 				if (offset >= AllUsers.Count)
 				{
+					IsBusy = false;
 					return;
 				}
 
 				var limit = PageSize;
 				limit = AllUsers.Count - offset < limit ? AllUsers.Count - offset : limit;
-				var a = AllUsers.Where(user => user.Name.ToLower()
-												   .Contains(Query))
-								.ToList()
-								.GetRange(offset, limit);
-				var list = Users.ToList();
-				list.AddRange(a);
-				Users = new ObservableCollection<IGopher>(list);
-				IsBusy = false;
-			});
+				for (int i = offset; i < offset + limit; i++)
+				{
+					Users.Add(AllUsers[i]);
+				}
+			}
+			else
+			{
+				var array = AllUsers.Where(user => user.Name.ToLower()
+													   .Contains(Query)).ToArray();
+				var offset = Page * PageSize;
+				if (offset >= array.Length)
+				{
+					IsBusy = false;
+					return;
+				}
+
+				var limit = PageSize;
+				limit = array.Length - offset < limit ? array.Length - offset : limit;
+				for (int i = offset; i < offset + limit; i++)
+				{
+					Users.Add(array[i]);
+				}
+			}
+			RaisePropertyChanged(nameof(Users));
+			IsBusy = false;
 		}
 
 		internal void OpenCategory(Category category)

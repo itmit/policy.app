@@ -118,12 +118,18 @@ namespace policy.app.PageModels
 			get => _selectedGopher;
 			set
 			{
-				_selectedGopher = value;
-
-				if (value != null)
+				if (value == null)
 				{
-					EventSelected.Execute(value);
+					return;
 				}
+				
+				_selectedGopher = value;
+				RaisePropertyChanged(nameof(SelectedGopher));
+				
+				EventSelected.Execute(value);
+				
+				_selectedGopher = null;
+				RaisePropertyChanged(nameof(SelectedGopher));
 			}
 		}
 		#endregion

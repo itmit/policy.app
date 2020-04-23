@@ -155,7 +155,7 @@ namespace policy.app.PageModels
 
 			AllGophers = vmGophers;
 			PageNumber = -1;
-			MoveNext();
+			Device.BeginInvokeOnMainThread(MoveNext);
 			repository.Update(user);
 		}
 
@@ -222,25 +222,24 @@ namespace policy.app.PageModels
 
 		public void MoveNext()
 		{
-			Task.Run(() =>
+			IsBusy = true;
+			PageNumber++;
+
+			var offset = PageNumber * PageSize;
+			if (offset >= AllGophers.Count)
 			{
-				PageNumber++;
+				IsBusy = false;
+				return;
+			}
 
-				var offset = PageNumber * PageSize;
-				if (offset >= AllGophers.Count)
-				{
-					return;
-				}
-
-				var limit = PageSize;
-				limit = AllGophers.Count - offset < limit ? Gophers.Count - offset : limit;
-
-				var a = AllGophers.ToList().GetRange(offset, limit);
-				var list = Gophers.ToList();
-				list.AddRange(a);
-				Gophers = new ObservableCollection<SearchGopherViewModel>(list);
-				IsRefreshing = false;
-			});
+			var limit = PageSize;
+			limit = AllGophers.Count - offset < limit ? AllGophers.Count - offset : limit;
+			for (int i = offset; i < offset + limit; i++)
+			{
+				Gophers.Add(AllGophers[i]);
+			}
+			RaisePropertyChanged(nameof(Gophers));
+			IsBusy = false;
 		}
 
 		public int PageSize
@@ -254,5 +253,11 @@ namespace policy.app.PageModels
 			get;
 			set;
 		} = -1;
+
+		public bool IsBusy
+		{
+			get;
+			set;
+		}
 	}
 }

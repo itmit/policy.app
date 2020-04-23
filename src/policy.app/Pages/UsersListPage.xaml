@@ -2,47 +2,49 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells"
              xmlns:views="clr-namespace:policy.app.Views;assembly=policy.app"
              Title="{Binding Title}"
              BackgroundImageSource="background"
              x:Class="policy.app.Pages.UsersListPage">
     <ContentPage.Content>
-        <ScrollView Scrolled="ScrollView_OnScrolled">
-            <StackLayout>
-                <StackLayout Margin="15"
-                             WidthRequest="200"
-                             HorizontalOptions="Center"
-                             BindableLayout.ItemsSource="{Binding Categories}">
-                        <BindableLayout.ItemTemplate>
-                            <DataTemplate>
-                                <views:CategoryView >
-                                <views:CategoryView.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                                    </views:CategoryView.GestureRecognizers>
-                                </views:CategoryView>
-                            </DataTemplate>
-                        </BindableLayout.ItemTemplate>
-                    </StackLayout>
+        <Grid>
+            <CollectionView Margin="0,10,0,0"
+                            Scrolled="ItemsView_OnScrolled"
+                            ItemsSource="{Binding Users}">
+                <CollectionView.Header>
+                    <StackLayout>
+                        <StackLayout Margin="15"
+                                             WidthRequest="200"
+                                             HorizontalOptions="Center"
+                                             BindableLayout.ItemsSource="{Binding Categories}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <views:CategoryView >
+                                        <views:CategoryView.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </views:CategoryView.GestureRecognizers>
+                                    </views:CategoryView>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
 
-                <StackLayout>
-                    <SearchBar Placeholder="Поиск" Margin="15" Text="{Binding Query}"/>
-                    <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
-                </StackLayout>
-                <StackLayout Margin="0,10,0,0"
-                                 x:Name="Users"
-                                 BindableLayout.ItemsSource="{Binding Users}">
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <views:UserView>
-                                <views:UserView.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
-                                </views:UserView.GestureRecognizers>
-                            </views:UserView>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
+                        <StackLayout>
+                            <SearchBar Placeholder="Поиск" Margin="15" Text="{Binding Query}"/>
+                            <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
+                        </StackLayout>
+                    </StackLayout>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <views:UserView>
+                            <views:UserView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
+                            </views:UserView.GestureRecognizers>
+                        </views:UserView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center" IsVisible="True" Color="Blue" IsRunning="{Binding IsBusy}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

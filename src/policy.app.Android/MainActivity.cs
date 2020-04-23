@@ -8,7 +8,6 @@ using FFImageLoading.Forms.Platform;
 using Firebase.Messaging;
 using ImageCircle.Forms.Plugin.Droid;
 using policy.app.Services;
-using Plugin.CurrentActivity;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Platform = Xamarin.Essentials.Platform;
@@ -61,7 +60,6 @@ namespace policy.app.Droid
 		 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
-			CrossCurrentActivity.Current.Init(this, savedInstanceState);
 			TabLayoutResource = Resource.Layout.Tabbar;
 			ToolbarResource = Resource.Layout.Toolbar;
 
