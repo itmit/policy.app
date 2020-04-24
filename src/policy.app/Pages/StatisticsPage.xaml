@@ -13,16 +13,6 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
-            <ImageButton BackgroundColor="Transparent"
-                         VerticalOptions="Start"
-                         HorizontalOptions="Start"
-                         x:Name="ImageButton"
-                         Command="{Binding BackModalCommand}"
-                         Source="ic_arrow_back_ios.png"
-                         HeightRequest="35"
-                         WidthRequest="35"/>
-
             <Picker Grid.Row="1"
                     Title="Неделя"
                     SelectedItem="{Binding SelectedItem}"

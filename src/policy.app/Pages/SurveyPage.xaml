@@ -22,7 +22,7 @@
                     </controls:RepeaterView.ItemTemplate>
                 </controls:RepeaterView>
                 <Button Text="Закончить опрос" TextColor="White" Padding="15,10" Margin="0,0,0,20"
-                        BackgroundColor="#228bcc" VerticalOptions="EndAndExpand" HorizontalOptions="Center"
+                        BackgroundColor="#228bcc" VerticalOptions="EndAndExpand"
                         Command="{Binding PassPollCommand}" />
             </StackLayout>
         </ScrollView>

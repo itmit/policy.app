@@ -7,7 +7,11 @@
              x:Class="policy.app.Views.CategoryView">
     <ContentView.Content>
         <Frame BackgroundColor="#19365f" Padding="15" Margin="0,15" CornerRadius="10" HorizontalOptions="Fill">
-            <Label Text="{Binding Title}" FontSize="Medium" TextColor="White" HorizontalOptions="Center"
+            <Label Text="{Binding Title}"
+                   FontSize="Medium"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
                    VerticalOptions="Center" />
         </Frame>
     </ContentView.Content>

@@ -15,14 +15,6 @@ namespace policy.app.Pages
 		public StatisticsPage()
 		{
 			InitializeComponent();
-			
-			var top = 0;
-			if (Device.iOS == Device.RuntimePlatform)
-			{
-				top = 50;
-			}
-
-			ImageButton.Margin = new Thickness(10, top, 0, 0);
 		}
 	}
 }

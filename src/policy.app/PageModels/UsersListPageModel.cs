@@ -45,12 +45,19 @@ namespace policy.app.PageModels
 				{
 					return;
 				}
+
 				_query = value.ToLower();
-				Users.Clear();
-				Page = -1;
-				MoveNext();
+
 			}
 		}
+
+		public FreshAwaitCommand SearchCommand => new FreshAwaitCommand((obj, tcs) =>
+		{
+			Users.Clear();
+			Page = -1;
+			MoveNext();
+			tcs.SetResult(true);
+		});
 
 		/// <summary>
 		/// Возвращает или устанавливает заголовок страницы.
@@ -136,7 +143,7 @@ namespace policy.app.PageModels
 		private async void LoadGophers()
 		{
 			IsBusy = true;
-			AllUsers = new List<IGopher>((await _service.GetGophers(_category)).OrderByDescending(o => o.Name));
+			AllUsers = new List<IGopher>((await _service.GetGophers(_category)).OrderBy(o => o.Name));
 			Page = -1;
 			MoveNext();
 		}

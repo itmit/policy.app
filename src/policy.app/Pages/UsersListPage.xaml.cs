@@ -44,5 +44,10 @@ namespace policy.app.Pages
 				ViewModel.MoveNext();
 			}
 		}
+
+		private void VisualElement_OnFocused(object sender, FocusEventArgs e)
+		{
+			
+		}
 	}
 }

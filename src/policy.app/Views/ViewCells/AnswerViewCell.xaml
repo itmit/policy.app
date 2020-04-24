@@ -10,7 +10,9 @@
                     <TapGestureRecognizer Command="{Binding SelectCommand}" />
                 </StackLayout.GestureRecognizers>
                 <CheckBox Color="#228bcc" IsChecked="{Binding IsSelected}" />
-                <Label Text="{Binding Answer.AnswersText}" TextColor="#19365f" FontSize="16"
+                <Label Text="{Binding Answer.AnswersText}"
+                       TextColor="#19365f"
+                       FontSize="18"
                        FontFamily="CormorantGaramondRegular.ttf#CormorantGaramondRegular"
                        VerticalOptions="Center" />
             </StackLayout>

@@ -44,18 +44,6 @@ namespace policy.app.PageModels
 		}
 
 		/// <summary>
-		/// Возвращает или устанавливает команду при выборе опроса.
-		/// </summary>
-		public Command<Poll> EventSelected =>
-			new Command<Poll>(obj =>
-			{
-				if (obj is Poll poll)
-				{
-					CoreMethods.PushPageModel<SurveyPageModel>(poll);
-				}
-			});
-
-		/// <summary>
 		/// Возвращает или устанавливает выбранный опрос.
 		/// </summary>
 		public Poll SelectedPoll
@@ -63,12 +51,18 @@ namespace policy.app.PageModels
 			get => _selectedPoll;
 			set
 			{
-				_selectedPoll = value;
-
-				if (value != null)
+				if (value == null)
 				{
-					EventSelected.Execute(value);
+					return;
 				}
+
+				_selectedPoll = value;
+				RaisePropertyChanged(nameof(SelectedPoll));
+
+				CoreMethods.PushPageModel<SurveyPageModel>(value);
+
+				_selectedPoll = null;
+				RaisePropertyChanged(nameof(SelectedPoll));
 			}
 		}
 		#endregion

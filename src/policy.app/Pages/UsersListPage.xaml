@@ -15,10 +15,14 @@
                             ItemsSource="{Binding Users}">
                 <CollectionView.Header>
                     <StackLayout>
+                        <StackLayout>
+                            <SearchBar Placeholder="Поиск" Margin="15" Text="{Binding Query}" SearchCommand="{Binding SearchCommand}"/>
+                            <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
+                        </StackLayout>
                         <StackLayout Margin="15"
-                                             WidthRequest="200"
-                                             HorizontalOptions="Center"
-                                             BindableLayout.ItemsSource="{Binding Categories}">
+                                     WidthRequest="200"
+                                     HorizontalOptions="Center"
+                                     BindableLayout.ItemsSource="{Binding Categories}">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
                                     <views:CategoryView >
@@ -28,11 +32,6 @@
                                     </views:CategoryView>
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>
-                        </StackLayout>
-
-                        <StackLayout>
-                            <SearchBar Placeholder="Поиск" Margin="15" Text="{Binding Query}"/>
-                            <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />
                         </StackLayout>
                     </StackLayout>
                 </CollectionView.Header>
