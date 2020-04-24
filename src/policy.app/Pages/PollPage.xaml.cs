@@ -14,17 +14,5 @@ namespace policy.app.Pages
 			InitializeComponent();
 		}
 		#endregion
-
-		#region Private
-		private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-		{
-			Navigation.PushAsync(new AllQuestionsPage());
-		}
-		#endregion
-
-		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-		{
-			((ListView) sender).SelectedItem = null;
-		}
 	}
 }

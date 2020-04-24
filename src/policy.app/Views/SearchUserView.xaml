@@ -9,9 +9,6 @@
              x:Class="policy.app.Views.SearchUserView">
     <ContentView.Content>
         <StackLayout>
-            <StackLayout.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding SelectCommand}"/>
-            </StackLayout.GestureRecognizers>
             <Grid Margin="10,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -22,12 +19,12 @@
                                    ErrorPlaceholder="User_def"
                                    LoadingPlaceholder="User_def"
                                    VerticalOptions="Start" HorizontalOptions="CenterAndExpand" WidthRequest="50"
-                                   HeightRequest="50" Source="{Binding Gopher.PhotoSource}" >
+                                   HeightRequest="50" Source="{Binding PhotoSource}" >
                     <forms:CachedImage.Transformations>
                         <transformations:RoundedTransformation Radius="300"/>
                     </forms:CachedImage.Transformations>
                 </forms:CachedImage>
-                <Label Grid.Column="1" Margin="5,0,5,0" Text="{Binding Gopher.Name}" VerticalOptions="Center"
+                <Label Grid.Column="1" Margin="5,0,5,0" Text="{Binding Name}" VerticalOptions="Center"
                        FontSize="16" />
             </Grid>
             <BoxView HeightRequest="2" BackgroundColor="#dee4ea" />

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Статистика"
+             x:Class="policy.app.Pages.StatisticsPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ImageButton BackgroundColor="Transparent"
+                         VerticalOptions="Start"
+                         HorizontalOptions="Start"
+                         x:Name="ImageButton"
+                         Command="{Binding BackModalCommand}"
+                         Source="ic_arrow_back_ios.png"
+                         HeightRequest="35"
+                         WidthRequest="35"/>
+
+            <Picker Grid.Row="1"
+                    Title="Неделя"
+                    SelectedItem="{Binding SelectedItem}"
+                    BackgroundColor="#f4f5f6"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="16">
+                <Picker.Items>
+                    <x:String>Неделя</x:String>
+                    <x:String>Месяц</x:String>
+                    <x:String>Квартал</x:String>
+                    <x:String>Год</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <WebView Grid.Row="2" Source="{Binding HtmlSource}" HorizontalOptions="FillAndExpand" BackgroundColor="MediumAquamarine" VerticalOptions="FillAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

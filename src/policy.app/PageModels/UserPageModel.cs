@@ -90,58 +90,10 @@ namespace policy.app.PageModels
 		/// Возвращает команду для открытия статистики.
 		/// </summary>
 		public ICommand OpenStatisticsCommand 
-			=> new FreshAwaitCommand(async (obj, tcs) =>
+			=> new FreshAwaitCommand((obj, tcs) =>
 			{
-				using (var client = new HttpClient())
-				{
-					client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_user.Token.TokenType} {_user.Token.Token}");
-
-					var response = await client.GetAsync($"http://policy.itmit-studio.ru/api/statistic/{Gopher.Guid}");
-
-					var html = await response.Content.ReadAsStringAsync();
-
-					var page = new ContentPage
-					{
-						Title = "Статистика"
-					};
-
-					var view = new WebView
-					{
-						Source = new HtmlWebViewSource
-						{
-							Html = html
-						}
-					};
-
-
-					var top = 0;
-					if (Device.iOS == Device.RuntimePlatform)
-					{
-						top = 50;
-					}
-
-					var imageButton = new ImageButton
-					{
-						BackgroundColor = Color.Transparent,
-						VerticalOptions = LayoutOptions.Start,
-						HorizontalOptions = LayoutOptions.Start,
-						Margin = new Thickness(10, top, 0, 0),
-						Source = "ic_arrow_back_ios.png",
-						HeightRequest = 35,
-						WidthRequest = 35,
-						Command = BackModalCommand
-					};
-
-					var grid = new Grid();
-					grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-					grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-					grid.Children.Add(imageButton, 0, 1);
-					grid.Children.Add(view, 0, 2);
-					page.Content = grid;
-
-					await Application.Current.MainPage.Navigation.PushModalAsync(page);
-					tcs.SetResult(true);
-				}
+				CoreMethods.PushPageModel<StatisticsPageModel>(Gopher.Guid);
+				tcs.SetResult(true);
 			});
 
 

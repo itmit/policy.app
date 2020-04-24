@@ -20,11 +20,6 @@ namespace policy.app.Pages
 
 		public UsersListPageModel ViewModel => BindingContext as UsersListPageModel;
 
-		private void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
-		{
-			((UsersListPageModel) BindingContext).SelectedGopher = (sender as View)?.BindingContext as Gopher;
-		}
-
 		private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 		{
 			((UsersListPageModel)BindingContext).OpenCategory((sender as View)?.BindingContext as Category);

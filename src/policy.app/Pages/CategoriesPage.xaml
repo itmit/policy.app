@@ -8,6 +8,7 @@
              xmlns:ex="clr-namespace:policy.app.Controls"
              Title="Категории"
              mc:Ignorable="d"
+             x:Name="Page"
              BackgroundImageSource="background"
              x:Class="policy.app.Pages.CategoriesPage">
     <ContentPage.Content>

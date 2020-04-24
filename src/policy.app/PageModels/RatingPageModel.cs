@@ -56,6 +56,7 @@ namespace policy.app.PageModels
 		/// Репозиторий для работы с данными пользователя.
 		/// </summary>
 		private UserRepository _repository;
+		private IGopher _selectedGopher;
 		#endregion
 		#endregion
 
@@ -91,15 +92,6 @@ namespace policy.app.PageModels
 			}
 		}
 
-		/// <summary>
-		/// Возвращает или устанавливает команду при выборе суслика.
-		/// </summary>
-		public Command<IGopher> EventSelectedGopher =>
-			new Command<IGopher>(obj =>
-			{
-				CoreMethods.PushPageModel<UserPageModel>(obj);
-			});
-
 		public string SelectedSort
 		{
 			get => _selectedSort;
@@ -121,17 +113,17 @@ namespace policy.app.PageModels
 		/// <summary>
 		/// Возвращает или устанавливает сусликов в избранном.
 		/// </summary>
-		public ObservableCollection<SearchGopherViewModel> Gophers
+		public ObservableCollection<IGopher> Gophers
 		{
 			get;
 			set;
-		} = new ObservableCollection<SearchGopherViewModel>();
+		} = new ObservableCollection<IGopher>();
 
-		public ObservableCollection<SearchGopherViewModel> AllGophers
+		public ObservableCollection<IGopher> AllGophers
 		{
 			get;
 			set;
-		} = new ObservableCollection<SearchGopherViewModel>();
+		} = new ObservableCollection<IGopher>();
 
 		/// <summary>
 		/// Загружает опросы.
@@ -146,17 +138,32 @@ namespace policy.app.PageModels
 			var repository = new UserRepository(_app.RealmConfiguration);
 			var user = repository.All()
 								 .Single();
-			var gophers = new ObservableCollection<IGopher>(await _service.Search(_sort, _query, _selectedCategory));
-			var vmGophers = new ObservableCollection<SearchGopherViewModel>();
-			foreach (var gopher in gophers)
-			{
-				vmGophers.Add(new SearchGopherViewModel(gopher, this));
-			}
-
-			AllGophers = vmGophers;
+			AllGophers = new ObservableCollection<IGopher>(await _service.Search(_sort, _query, _selectedCategory));
+			Gophers.Clear();
 			PageNumber = -1;
 			Device.BeginInvokeOnMainThread(MoveNext);
 			repository.Update(user);
+		}
+
+		public IGopher SelectedGopher
+		{
+			get => _selectedGopher;
+			set
+			{
+				if (value == null)
+				{
+					return;
+				}
+
+				_selectedGopher = value;
+				RaisePropertyChanged(nameof(SelectedGopher));
+
+				CoreMethods.PushPageModel<UserPageModel>(value);
+
+				_selectedGopher = null;
+				RaisePropertyChanged(nameof(SelectedGopher));
+
+			}
 		}
 
 		/// <summary>

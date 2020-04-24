@@ -67,23 +67,24 @@ namespace policy.app.PageModels
 			set;
 		} = new ObservableCollection<IGopher>();
 
-		public Command<IGopher> EventSelected =>
-			new Command<IGopher>(obj =>
-			{
-				CoreMethods.PushPageModel<UserPageModel>(obj);
-			});
-
 		public IGopher SelectedGopher
 		{
 			get => _selectedGopher;
 			set
 			{
-				_selectedGopher = value;
-
-				if (value != null)
+				if (value == null)
 				{
-					EventSelected.Execute(value);
+					return;
 				}
+
+				_selectedGopher = value;
+				RaisePropertyChanged(nameof(SelectedGopher));
+
+				CoreMethods.PushPageModel<UserPageModel>(value);
+
+				_selectedGopher = null;
+				RaisePropertyChanged(nameof(SelectedGopher));
+
 			}
 		}
 
@@ -135,7 +136,7 @@ namespace policy.app.PageModels
 		private async void LoadGophers()
 		{
 			IsBusy = true;
-			AllUsers = new List<IGopher>(await _service.GetGophers(_category));
+			AllUsers = new List<IGopher>((await _service.GetGophers(_category)).OrderByDescending(o => o.Name));
 			Page = -1;
 			MoveNext();
 		}

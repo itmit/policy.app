@@ -72,8 +72,7 @@ namespace policy.app.PageModels
 										   {
 											   Token = user.Token.Token,
 											   TokenType = user.Token.TokenType
-										   },
-										   new HttpClient());
+										   });
 				LoadPollCategories();
 			}
 		}
@@ -107,26 +106,21 @@ namespace policy.app.PageModels
 			get => _selectedPollCategory;
 			set
 			{
-				_selectedPollCategory = value;
-
-				if (value != null)
+				if (value == null)
 				{
-					EventSelected.Execute(value);
+					return;
 				}
+
+				_selectedPollCategory = value;
+				RaisePropertyChanged(nameof(SelectedPollCategory));
+
+				CoreMethods.PushPageModel<AllQuestionsPageModel>(value);
+
+				_selectedPollCategory = null;
+				RaisePropertyChanged(nameof(SelectedPollCategory));
+
 			}
 		}
-
-		/// <summary>
-		/// Возвращает или устанавливает команду при выборе опроса.
-		/// </summary>
-		public Command<PollCategory> EventSelected =>
-			new Command<PollCategory>(obj =>
-			{
-				if (obj is PollCategory poll)
-				{
-					CoreMethods.PushPageModel<AllQuestionsPageModel>(poll);
-				}
-			});
 
 		public ObservableCollection<PollCategory> PollCategories
 		{

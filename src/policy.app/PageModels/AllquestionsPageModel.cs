@@ -105,14 +105,20 @@ namespace policy.app.PageModels
 
 			if (user != null)
 			{
-				_service = new PollService(new UserToken
-										   {
-											   Token = user.Token.Token,
-											   TokenType = user.Token.TokenType
-										   },
-										   new HttpClient());
-				LoadPolls();
-				LoadPollCategories();
+				try
+				{
+					_service = new PollService(new UserToken
+											   {
+												   Token = user.Token.Token,
+												   TokenType = user.Token.TokenType
+											   });
+					LoadPolls();
+					LoadPollCategories();
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine(e);
+				}
 			}
 		}
 		#endregion

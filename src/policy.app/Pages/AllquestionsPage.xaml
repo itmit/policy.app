@@ -7,8 +7,10 @@
              BackgroundImageSource="background"
              x:Class="policy.app.Pages.AllQuestionsPage">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
+        <CollectionView ItemsSource="{Binding Polls}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedPoll}">
+            <CollectionView.Header>
                 <StackLayout BindableLayout.ItemsSource="{Binding PollCategories}">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
@@ -20,19 +22,12 @@
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </StackLayout>
-
-                <StackLayout BindableLayout.ItemsSource="{Binding Polls}">
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <views:PollView >
-                                <views:PollView.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
-                                </views:PollView.GestureRecognizers>
-                            </views:PollView>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <views:PollView/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </ContentPage>

@@ -90,15 +90,6 @@ namespace policy.app.PageModels
 		}
 
 		/// <summary>
-		/// Возвращает или устанавливает команду при выборе опроса.
-		/// </summary>
-		public Command<IGopher> EventSelected =>
-			new Command<IGopher>(obj =>
-			{
-				CoreMethods.PushPageModel<UserPageModel>(obj);
-			});
-
-		/// <summary>
 		/// Возвращает команду для обновления списка избранных. 
 		/// </summary>
 		public ICommand RefreshCommand =>
@@ -125,9 +116,9 @@ namespace policy.app.PageModels
 				
 				_selectedGopher = value;
 				RaisePropertyChanged(nameof(SelectedGopher));
-				
-				EventSelected.Execute(value);
-				
+
+				CoreMethods.PushPageModel<UserPageModel>(value);
+
 				_selectedGopher = null;
 				RaisePropertyChanged(nameof(SelectedGopher));
 			}

@@ -10,6 +10,8 @@
         <Grid>
             <CollectionView Margin="0,10,0,0"
                             Scrolled="ItemsView_OnScrolled"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding SelectedGopher}"
                             ItemsSource="{Binding Users}">
                 <CollectionView.Header>
                     <StackLayout>
@@ -36,11 +38,7 @@
                 </CollectionView.Header>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <views:UserView>
-                            <views:UserView.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
-                            </views:UserView.GestureRecognizers>
-                        </views:UserView>
+                        <views:UserView/>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

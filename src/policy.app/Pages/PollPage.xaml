@@ -4,21 +4,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewCells="clr-namespace:policy.app.Views.ViewCells;assembly=policy.app"
+             xmlns:views="clr-namespace:policy.app.Views;assembly=policy.app"
              mc:Ignorable="d"
              BackgroundImageSource="background"
              x:Class="policy.app.Pages.PollPage"
              Title="Опросы">
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding PollCategories}" HasUnevenRows="True" SelectedItem="{Binding SelectedPollCategory}"
-                      ItemSelected="ListView_OnItemSelected">
-                <ListView.ItemTemplate>
+            <CollectionView ItemsSource="{Binding PollCategories}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding SelectedPollCategory}">
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <viewCells:PollCategoryViewCell/>
+                        <views:PollCategoryView/>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

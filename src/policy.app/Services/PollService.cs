@@ -38,11 +38,6 @@ namespace policy.app.Services
 
 		#region Fields
 		/// <summary>
-		/// Клиент для отправки запросов.
-		/// </summary>
-		private readonly HttpClient _httpClient;
-
-		/// <summary>
 		/// Токен пользователя для доступа к api.
 		/// </summary>
 		private readonly UserToken _token;
@@ -54,12 +49,9 @@ namespace policy.app.Services
 		/// Инициализирует новый экземпляр <see cref="PollService" />.
 		/// </summary>
 		/// <param name="token">Токен пользователя, для доступа к api.</param>
-		/// <param name="httpClient"></param>
-		public PollService(UserToken token, HttpClient httpClient)
+		public PollService(UserToken token)
 		{
 			_token = token;
-			_httpClient = httpClient;
-			_httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 		}
 		#endregion
 
@@ -67,17 +59,18 @@ namespace policy.app.Services
 
 		public async Task<IEnumerable<PollCategory>> GetPollCategories(Guid? uuid = null)
 		{
-			using (_httpClient)
+			using (var client = new HttpClient())
 			{
-				_httpClient.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
 				HttpResponseMessage response;
 				if (uuid == null)
 				{
-					response = await _httpClient.PostAsync(GetPollCategoriesUri, null);
+					response = await client.PostAsync(GetPollCategoriesUri, null);
 				}
 				else
 				{
-					response = await _httpClient.PostAsync(GetPollSubCategoriesUri, new FormUrlEncodedContent(new Dictionary<string, string>
+					response = await client.PostAsync(GetPollSubCategoriesUri, new FormUrlEncodedContent(new Dictionary<string, string>
 					{
 						{"uuid", uuid.Value.ToString() }
 					}));
@@ -103,9 +96,10 @@ namespace policy.app.Services
 		/// <returns>Список опросов.</returns>
 		public async Task<IEnumerable<Poll>> GetPolls(Guid pollCategoryGuid)
 		{
-			using (_httpClient)
+			using (var client = new HttpClient())
 			{
-				_httpClient.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
 				FormUrlEncodedContent content;
 				if (pollCategoryGuid.Equals(Guid.Empty))
 				{
@@ -121,7 +115,7 @@ namespace policy.app.Services
 							}
 						});
 				}
-				var response = await _httpClient.PostAsync(GetPullUri, content);
+				var response = await client.PostAsync(GetPullUri, content);
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 
@@ -143,17 +137,18 @@ namespace policy.app.Services
 		/// <returns>Список вопросов.</returns>
 		public async Task<IEnumerable<Question>> GetQuestions(Guid guid)
 		{
-			using (_httpClient)
+			using (var client = new HttpClient())
 			{
-				_httpClient.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
 
-				var response = await _httpClient.PostAsync(GetPullQuestionsUri,
-														   new FormUrlEncodedContent(new Dictionary<string, string>
-														   {
-															   {
-																   "poll_uuid", guid.ToString()
-															   }
-														   }));
+				var response = await client.PostAsync(GetPullQuestionsUri,
+														  new FormUrlEncodedContent(new Dictionary<string, string>
+														  {
+															  {
+																  "poll_uuid", guid.ToString()
+															  }
+														  }));
 				var jsonString = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(jsonString);
 
@@ -179,7 +174,7 @@ namespace policy.app.Services
 			using (var client = new HttpClient())
 			{
 				client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"{_token.TokenType} {_token.Token}");
-				_httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
 				var fields = new Dictionary<string, string>();
 				foreach (var question in poll.Questions)

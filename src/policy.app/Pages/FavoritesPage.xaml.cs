@@ -12,12 +12,5 @@ namespace policy.app.Pages
 			InitializeComponent();
 		}
 		#endregion
-
-		#region Private
-		private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-		{
-			((ListView) sender).SelectedItem = null;
-		}
-		#endregion
 	}
 }

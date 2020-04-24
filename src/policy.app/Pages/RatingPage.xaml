@@ -16,6 +16,8 @@
                 <StackLayout>
                     <CollectionView ItemsSource="{Binding Gophers}"
                                     VerticalOptions="FillAndExpand"
+                                    SelectedItem="{Binding SelectedGopher}"
+                                    SelectionMode="Single"
                                     Scrolled="Gophers_OnScrolled"
                                     HorizontalOptions="FillAndExpand">
                         <CollectionView.Header>
