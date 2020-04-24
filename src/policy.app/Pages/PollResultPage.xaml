@@ -18,20 +18,17 @@
             <Button Text="Просмотреть результаты"
                     Command="{Binding OpenResultsCommand}"
                     TextColor="White"
-                    Padding="15,10"
-                    Margin="0,0,0,20"
+                    Padding="15,10" Margin="20,10"
                     BackgroundColor="#228bcc"
-                    VerticalOptions="EndAndExpand"
-                    HorizontalOptions="Center" />
+                    VerticalOptions="EndAndExpand"/>
 
             <Button Text="Вернуться"
                     Command="{Binding BackCommand}"
                     TextColor="White"
-                    Padding="15,10"
-                    Margin="0,0,0,20"
+                    Padding="15,10" Margin="20,10"
                     BackgroundColor="#228bcc"
                     VerticalOptions="EndAndExpand"
-                    HorizontalOptions="Center" />
+                    />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
